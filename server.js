@@ -8,7 +8,7 @@ var ServeMe = require('serve-me');
 var port = 3000;
 var options = {
     home: "index.html",
-    directory: "./public",
+    directory: "./www",
     debug: true,
     log: true,
     secure: false,
