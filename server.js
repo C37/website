@@ -5,7 +5,7 @@ var ServeMe = require('serve-me');
 // HTTP SERVER
 // Only server the html & other files
 //*******************************
-var port = 3000;
+var port = 80;
 var options = {
     home: "index.html",
     directory: "./www",
