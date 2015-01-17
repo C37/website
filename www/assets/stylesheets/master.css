@@ -373,8 +373,8 @@ hr {
     bottom: 0;
     right: 0;
     width: 36px;
-    background: url(../images/sprite.png) no-repeat;
-    background-position: -156px -95px;
+    background: url(../images/arrow-right.png) no-repeat;
+/*    background-position: -156px -95px;*/
     background-color: #4cc2e4;
 }
 .mailing-list li {
@@ -477,8 +477,8 @@ hr {
     bottom: 0;
     right: 0;
     width: 36px;
-    background: url(../images/sprite.png) no-repeat;
-    background-position: -156px -95px;
+    background: url(../images/arrow-right.png) no-repeat;
+/*    background-position: -156px -95px;*/
     background-color: #4cc2e4;
 }
 /*---------------------------------------------------
