@@ -547,11 +547,14 @@ hr {
 .icon-router {
     background: url(../images/logo-router.png) no-repeat;
 }
+.icon-help {
+    background: url(../images/help.png) no-repeat;
+}
 .icon-c37 {
     background: url(../images/logo-c37.png) no-repeat;
 }
-.icon-help {
-    background: url(../images/help.png) no-repeat;
+.icon-suggestion {
+    background: url(../images/suggestion.png) no-repeat;
 }
 .icon-specifications {
     background: url(../images/specifications.png) no-repeat;
