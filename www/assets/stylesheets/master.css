@@ -337,6 +337,7 @@ hr {
 .mailing-list {
     width: 100%;
     margin-bottom: 24px;
+    text-align: justify;
 }
 .mailing-list a {
     position: absolute;
