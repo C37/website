@@ -788,8 +788,8 @@ a.pt-about {
     
     
     .icon {
-        background-size: 40px;
-        padding: 31px 0px 20px 48px;
+        background-size: 33px;
+        padding: 23px 0px 20px 48px;
     }
     
     .platforms-list,
@@ -849,7 +849,7 @@ a.pt-about {
         height: 260px;
     }
     .icon {
-        padding: 22px 16px 20px 35px;
+        padding: 25px 16px 20px 35px;
     }
     h2 {
         font-size: 20px;
