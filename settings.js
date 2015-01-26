@@ -1,48 +1,35 @@
-
-
 module.exports = {
-    db: {
-        User : {
-            hosts: [
-                'localhost:27017'
-            ],
+    private_key: 'ol111973',
+    data_index: {
+        user: {
+            hosts: [ '192.168.0.21:9200' ],
             username: '',
             password: '',
-            database: 'user'
-        },
-        Site : {
-            hosts: [
-                'localhost:27017'
-            ],
-            username: '',
-            password: '',
-            database: 'site'
-        },
-        Version : {
-            hosts: [
-                'localhost:27017'
-            ],
-            username: '',
-            password: '',
-            database: 'version'
-        },
-        Logging: {
-            hosts: [
-                'localhost:27017'
-            ],
-            username: '',
-            password: '',
-            database: 'logging'
-        }
-    },
-    search: {
-        Logging: {
-            host: 'search-001.c37.co:9200',
-            index: 'logging'
-        },
-        User: {
-            host: 'search-001.c37.co:9200',
             index: 'user'
+        },
+        site: {
+            hosts: [
+                '192.168.0.21:9200'
+            ],
+            username: '',
+            password: '',
+            index: 'site'
+        },
+        version: {
+            hosts: [
+                '192.168.0.21:9200'
+            ],
+            username: '',
+            password: '',
+            index: 'version'
+        },
+        logging: {
+            hosts: [
+                '192.168.0.21:9200'
+            ],
+            username: '',
+            password: '',
+            index: 'logging'
         }
     }
 }

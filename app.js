@@ -8,7 +8,7 @@ var express = require("express"),
     app = express();
 
 // Express
-app.set("port", 5000);
+app.set("port", 5001);
 app.set("views", __dirname + "/views");
 app.set("view engine", "jade");
 app.set('view options', { layout: false });
@@ -19,6 +19,9 @@ app.use(express.session());
 app.use(express.compress());
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(app.router);
+
+// Helper functions
+app.locals._ = require("underscore");
 
 // Routes
 require("./routers")(app);

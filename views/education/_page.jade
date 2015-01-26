@@ -1,97 +1,67 @@
 extends ../layout/page
 
+include _header
+
 block content
-    section.section-wrapper
-        .container
-            .row
-                .span4
-                    a(href="/education")
-                        h2 Ensino
-                .span8
 
-                    ul.nav.nav-tabs.pull-right
+    .gd
+        .cll-5-12
+            .hlm
+                a(href="/ensino")
+                    h1 Ensino
+
+        .cll-7-12.txt-rgt
+            .btn-grp
+                a.btn(href='/ensino/meu-proprio-negocio') Meu Próprio Negócio
+                a.btn(href='/ensino/tecnologia') Tecnologia
+                a.btn(href='/ensino/ferramentas-cax') Ferramentas CAX
+
+            script
+                $('a[href*="' + location.pathname.split("/")[2] + '"]').addClass("bl");
+
+    .gd
+        .cll-9-12
+            block content-education
+        .cll-3-12
+            h2
+                i.cn-cmp-td-bk
+                | Passo a Passo
+            if (categories.length)
+                ul.grp-slr
+                    - _.where(categories, {category_group: ""}).forEach(function(category_group) {
                         li
-                            a(href='/education/my-business') Meu Próprio Negócio
-                        li
-                            a(href='/education/technology') Tecnologia
-                        li
-                            a(href='/education/cax-tool') Ferramentas CAx
+                            a #{category_group.name}
+                            ul
+                                - _.where(categories, {category_group: category_group.key}).forEach(function(category) {
+                                    li
+                                        a.b-rgt(href="/ensino/#{section}/#{category.name.toLowerCase().split(' ').join('-')}")
+                                            | #{category.name}
+                                - })
+                    - })
 
-                    script
-                        $('a[href*="' + location.pathname.split("/")[2] + '"]').parent().addClass("active");
-
-            br
-            section
-                .container
-                    .row
-                        .span8
-                            block content-education
-
-                        .span4
-                            .blog-side-bar
-                                .blog-categories.widget-tp
-                                    h3
-                                        i.icon-th-list
-                                        | Categorias
-                                    ul
-                                        li
-                                            a(href='#') Administração
-                                        li
-                                            a(href='#') Financeiro
-                                        li
-                                            a(href='#') Contabilidade
-                                        li
-                                            a(href='#') Marketing
-                                        li
-                                            a(href='#') Propaganda
-                                        li
-                                            a(href='#') Produção
-
-                                if (context.member)
-                                    .blog-side-text-block.widget-filled.widget-yellow
-                                        h3 Contribua você também!
-                                        p
-                                            | Ut diam arcu, dictum ut vulputate sed, iaculis nec lorem. Fusce pharetra nisl vitae nisl ultricies ut malesuada leo fringilla.
-                                        p
-                                            | Sed euismod, metus sed congue rutrum, justo elit malesuada quam, id pulvinar velit massa et justo. Etiam molestie nibh vitae turpis euismod ornare. Etiam dapibus ullamcorper tellus, nec suscipit eros imperdiet id.
-
-                                        p.text-right.hidden-phone
-                                            a.btn.btn-warning(href="/education/my-business/article-new")
-                                                i.icon-file
-                                                span #{" Novo artigo "}
-                                else
-                                    .blog-side-text-block.widget-filled.widget-yellow
-                                        h3 Contribua você também!
-                                        p
-                                            | Ut diam arcu, dictum ut vulputate sed, iaculis nec lorem. Fusce pharetra nisl vitae nisl ultricies ut malesuada leo fringilla.
-                                        p
-                                            | Sed euismod, metus sed congue rutrum, justo elit malesuada quam, id pulvinar velit massa et justo. Etiam molestie nibh vitae turpis euismod ornare. Etiam dapibus ullamcorper tellus, nec suscipit eros imperdiet id.
-                                        p.text-right.hidden-phone
-                                            a.btn.btn-warning(href="/signup")
-                                                i.icon-user
-                                                span #{" Junte-se a c37! "}
+                script
+                    $('a[href*="' + decodeURIComponent(location.pathname).split("/")[3] + '"]').addClass("slc")
 
 
-                                .blog-side-tags.widget-tp
-                                    h3
-                                        i.icon-tags
-                                        | Popular Tags
-                                    ul
-                                        li
-                                            a.side-tag(href='#') CSS
-                                        li
-                                            a.side-tag(href='#') JS
-                                        li
-                                            a.side-tag(href='#') Tablets
-                                        li
-                                            a.side-tag(href='#') Monitors
-                                        li
-                                            a.side-tag(href='#') Keyboards
-                                        li
-                                            a.side-tag(href='#') Apple
-                                        li
-                                            a.side-tag(href='#') Microsoft
-                                        li
-                                            a.side-tag(href='#') Samsung
-                                        li
-                                            a.side-tag(href='#') Bootstrap
+                h3
+                    i.cn-cmp-tg-bk
+                    | Mais sobre
+                //ul.tg.hd
+                    li.tg-tm
+                        a(href='#') CSS
+                    li.tg-tm
+                        a(href='#') JS
+                    li.tg-tm
+                        a(href='#') Tablets
+                    li.tg-tm
+                        a(href='#') Monitors
+                    li.tg-tm
+                        a(href='#') Keyboards
+                    li.tg-tm
+                        a(href='#') Apple
+                    li.tg-tm
+                        a(href='#') Microsoft
+                    li.tg-tm
+                        a(href='#') Samsung
+                    li.tg-tm
+                        a(href='#') Bootstrap

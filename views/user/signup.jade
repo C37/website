@@ -1,119 +1,120 @@
 extends ../layout/page
 
 block content
-    section.section-wrapper
-        .container
-            .row
-                .span9
-                    .white-card.extra-padding
-                        form(action="/signup", method="post")
-                            input(type="hidden", name="_id", value=doc._id)
-                            fieldset
-                                .row-fluid
-                                    .span12
-                                        h1.form-header Criar sua conta na c37
-                                .row-fluid(class=(doc.validate_message.length ? '' : 'hidden'))
-                                    .span12
-                                        .form-side-info
-                                            if (doc.validate_message.length)
-                                                - doc.validate_message.forEach(function(message){
-                                                    | #{message}
-                                                    br
-                                                - })
-                                .row
-                                    .span4
-                                        .control-group
-                                            label Escolha seu nome de usuário
-                                            input.span4(type='text', name='name_user', value=doc.fields[0].value)
-                                    .span4
-                                        .control-group
-                                            label Nome completo
-                                            input.span4(type='text', name='name_complete', value=doc.fields[1].value)
-                                .row
-                                    .span4
-                                        .controls-row
-                                            label Data de nascimento
-                                            input.span1(type='number', min=1, max=31, placeholder="Dia", name='birth_day', value=doc.fields[2].value)
-                                            select.span2(name='birth_mounth')
-                                                option(value='') Mês
-                                                option(selected=((doc.fields[3].value.indexOf("Janeiro") >= 0) ? true : false)) Janeiro
-                                                option(selected=((doc.fields[3].value.indexOf("Fevereiro") >= 0) ? true : false)) Fevereiro
-                                                option(selected=((doc.fields[3].value.indexOf("Março") >= 0) ? true : false)) Março
-                                                option(selected=((doc.fields[3].value.indexOf("Abril") >= 0) ? true : false)) Abril
-                                                option(selected=((doc.fields[3].value.indexOf("Maio") >= 0) ? true : false)) Maio
-                                                option(selected=((doc.fields[3].value.indexOf("Junho") >= 0) ? true : false)) Junho
-                                                option(selected=((doc.fields[3].value.indexOf("Julho") >= 0) ? true : false)) Julho
-                                                option(selected=((doc.fields[3].value.indexOf("Agosto") >= 0) ? true : false)) Agosto
-                                                option(selected=((doc.fields[3].value.indexOf("Setembro") >= 0) ? true : false)) Setembro
-                                                option(selected=((doc.fields[3].value.indexOf("Outubro") >= 0) ? true : false)) Outubro
-                                                option(selected=((doc.fields[3].value.indexOf("Novembro") >= 0) ? true : false)) Novembro
-                                                option(selected=((doc.fields[3].value.indexOf("Dezembro") >= 0) ? true : false)) Dezembro
-                                            input.span1(type='number', min=1900, max=2010, placeholder="Ano", name='birth_year', value=doc.fields[4].value)
-                                    .span4
-                                        .control-group
-                                            label Sexo
-                                            label.radio.pull-left
-                                                input(type='radio', name='gender', value='Feminino', checked=((doc.fields[5].value.indexOf("Feminino") >= 0) ? true : false))
-                                                | Feminino &nbsp; &nbsp;
-                                            label.radio.pull-left
-                                                input(type='radio', name='gender', value='Masculino', checked=((doc.fields[5].value.indexOf("Masculino") >= 0) ? true : false))
-                                                | Masculino
+    .gd
+        .cll-8-12
+            .grp-bx
+                .hdr
+                    h3.nbm Criar sua conta na c37
+                .cnt
+                    form(action="#{context.url}", method="post")
+                        input(type="hidden", name="key", value=_.findWhere(member.fields,{name:"key"}).value)
+                        input(type="hidden", name="created", value=_.findWhere(member.fields,{name:"created"}).value)
 
-                                .row
-                                    .span4
-                                        label Cidade - Estado
-                                        input.span4(type='text', name='location', value=doc.fields[6].value)
-                                    .span4
-                                        label Área de atuação
-                                        select.span4(name='expertise_area')
-                                            option(value='') Tenho interesse na c37 para...
-                                            option(selected=((doc.fields[7].value.indexOf("Eletrônica") >= 0) ? true : false)) Eletrônica
-                                            option(selected=((doc.fields[7].value.indexOf("Software") >= 0) ? true : false)) Software
-                                            option(selected=((doc.fields[7].value.indexOf("Marcenária") >= 0) ? true : false)) Marcenária
-                                            option(selected=((doc.fields[7].value.indexOf("Artesanato") >= 0) ? true : false)) Artesanato
-                                            option(selected=((doc.fields[7].value.indexOf("Hobbie") >= 0) ? true : false)) Hobbie
-                                            option(selected=((doc.fields[7].value.indexOf("Outros") >= 0) ? true : false)) Outros
+                        if (member.validate_message.length)
+                            .lrt-bx.ylw
+                                .hdr
+                                    strong Verifique&nbsp;
+                                    | as mensagens abaixo e continue
+                                .cnt
+                                    - member.validate_message.forEach(function(message){
+                                        | #{message}
+                                        br
+                                    - })
 
-                                .row
-                                    .span4
-                                        .control-group
-                                            label Email
-                                            input.span4(type='email', name='email', value=doc.fields[8].value)
+                        .rw
+                            .cll-6-12
+                                label Escolha seu nome de usuário
+                                input.span4(type='text', name='name_user', value=_.findWhere(member.fields,{name:"name_user"}).value)
+                            .cll-6-12
+                                label Nome completo
+                                input.span4(type='text', name='name_complete', value=_.findWhere(member.fields,{name:"name_complete"}).value)
+                        .rw
+                            .cll-2-12
+                                label Nascimento
+                                input.span1(type='number', min=1, max=31, placeholder="Dia", name='birth_day', value=_.findWhere(member.fields,{name:"birth_day"}).value)
+                            .cll-2-12
+                                label &nbsp;
+                                select(name='birth_mounth')
+                                    option.dft Mês
+                                    option.ttl xxx
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Janeiro") >= 0) ? true : false)) Janeiro
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Fevereiro") >= 0) ? true : false)) Fevereiro
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Março") >= 0) ? true : false)) Março
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Abril") >= 0) ? true : false)) Abril
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Maio") >= 0) ? true : false)) Maio
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Junho") >= 0) ? true : false)) Junho
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Julho") >= 0) ? true : false)) Julho
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Agosto") >= 0) ? true : false)) Agosto
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Setembro") >= 0) ? true : false)) Setembro
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Outubro") >= 0) ? true : false)) Outubro
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Novembro") >= 0) ? true : false)) Novembro
+                                    option(selected=((_.findWhere(member.fields,{name:"birth_mounth"}).value.indexOf("Dezembro") >= 0) ? true : false)) Dezembro
+                            .cll-2-12
+                                label &nbsp;
+                                input.span1(type='number', min=1900, max=2010, placeholder="Ano", name='birth_year', value=_.findWhere(member.fields,{name:"birth_year"}).value)
+                            .cll-6-12
+                                label Sexo
+                                label.lft
+                                    input(type='radio', name='gender', value='Feminino', checked=((_.findWhere(member.fields,{name:"gender"}).value.indexOf("Feminino") >= 0) ? true : false))
+                                    | Feminino &nbsp; &nbsp;
+                                label.lft
+                                    input(type='radio', name='gender', value='Masculino', checked=((_.findWhere(member.fields,{name:"gender"}).value.indexOf("Masculino") >= 0) ? true : false))
+                                    | Masculino
+                        .rw
+                            .cll-6-12
+                                label Cidade - Estado
+                                input.span4(type='text', name='location', value=_.findWhere(member.fields,{name:"location"}).value)
+                            .cll-6-12
+                                label Área de atuação
+                                select.span4(name='expertise_area')
+                                    option.dft(value='') Tenho interesse na c37 para...
+                                    option.ttl ?
+                                    option(selected=((_.findWhere(member.fields,{name:"expertise_area"}).value.indexOf("Eletrônica") >= 0) ? true : false)) Eletrônica
+                                    option(selected=((_.findWhere(member.fields,{name:"expertise_area"}).value.indexOf("Software") >= 0) ? true : false)) Software
+                                    option(selected=((_.findWhere(member.fields,{name:"expertise_area"}).value.indexOf("Marcenária") >= 0) ? true : false)) Marcenária
+                                    option(selected=((_.findWhere(member.fields,{name:"expertise_area"}).value.indexOf("Artesanato") >= 0) ? true : false)) Artesanato
+                                    option(selected=((_.findWhere(member.fields,{name:"expertise_area"}).value.indexOf("Hobbie") >= 0) ? true : false)) Hobbie
+                                    option(selected=((_.findWhere(member.fields,{name:"expertise_area"}).value.indexOf("Outros") >= 0) ? true : false)) Outros
+                        .rw
+                            .cll-6-12
+                                label Email
+                                input.span4(type='email', name='email', value=_.findWhere(member.fields,{name:"email"}).value)
+                            .cll-6-12
+                                label Sua senha
+                                input.span4.required(type='password', name='password')
+                        .rw
+                            .cll-1
+                                small
+                                    | Ao clicar em Concluir, você concorda com nossos &nbsp;
+                                    a(href="/term") Termos
+                                    | &nbsp; e que leu e entendeu nossa
+                                    | Política de uso de dados, incluindo Uso de&nbsp;
+                                    a(href="/cookie") cookies
+                                    |.
+                                button.btn.bl.rgt(type='submit') Concluir
 
-                                    .span4
-                                        .control-group
-                                            label Sua senha
-                                            input.span4.required(type='password', name='password')
+        .cll-4-12
+            h3 Algumas dicas:
+            ul.big-iconed-tips
+                li
+                    i.icon-credit-card
+                    | Um cadastro para todos os serviços
+                li
+                    i.icon-lock
+                    | É 100% Seguro
+                li
+                    i.icon-comments
+                    | Estamos 24 Horas no Ar
+                li
+                    i.icon-cogs
+                    | Salve o coun
+                li
+                    i.icon-github
+                    | Participe das nossas Comunidades
+            p
+                | Ut diam arcu, dictum ut vulputate sed, iaculis nec lorem. Fusce pharetra nisl vitae nisl ultricies ut malesuada leo fringilla.
 
-                                .row-fluid
-                                    .span12
-                                        .form-actions.no-margin-bottom
-                                            small
-                                                | Ao clicar em Concluir, você concorda com nossos &nbsp;
-                                                a(href="/term") Termos
-                                                | &nbsp; e que leu e entendeu nossa
-                                                | Política de uso de dados, incluindo Uso de&nbsp;
-                                                a(href="/cookie") cookies
-                                                |.
-                                            button.btn.btn-primary.btn-large.pull-right(type='submit') Concluir
-                .span3
-                    .blog-side-text-block.widget-filled.widget-yellow
-                        h3 Algumas dicas:
-                        ul.big-iconed-tips
-                            li
-                                i.icon-credit-card
-                                | Seu cadastro é rápido e gratuito
-                            li
-                                i.icon-lock
-                                | É 100% Seguro
-                            li
-                                i.icon-comments
-                                | Estamos 24 Horas no Ar
-                            li
-                                i.icon-cogs
-                                | Salve o coun
-                            li
-                                i.icon-github
-                                | Participe das nossas Comunidades
-                        p
-                            | Ut diam arcu, dictum ut vulputate sed, iaculis nec lorem. Fusce pharetra nisl vitae nisl ultricies ut malesuada leo fringilla.
+
+        script
+            $('input[name="name_user"]').focus();

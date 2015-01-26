@@ -2,23 +2,23 @@
 
 	$.markdownEditor = {
 		buttons: {
-			'h1' : {'name': 'H1', 'icon':'', callback: function (caret) {caret.prependToLeadingLine('# ');}},
-			'h2' : {'name': 'H2', 'icon':'', callback: function (caret) {caret.prependToLeadingLine('## ');}},
-			'h3' : {'name': 'H3', 'icon':'', callback: function (caret) {caret.prependToLeadingLine('### ');}},
+			'h1' : {'name': 'h1', 'icon':'', callback: function (caret) {caret.prependToLeadingLine('# ');}},
+			'h2' : {'name': 'h2', 'icon':'', callback: function (caret) {caret.prependToLeadingLine('## ');}},
+			'h3' : {'name': 'h3', 'icon':'', callback: function (caret) {caret.prependToLeadingLine('### ');}},
 
-            'link' : {'name': 'Link', 'icon':'editor-icon-link', callback: function(caret) {caret.wrap('['+caret.text+'](', ')');}},
-            'image' : {'name': 'Imagem', 'icon':'icon-picture', callback: function(caret) {caret.wrap('!['+caret.text+'](', ')');}},
+            'link' : {'name': 'Link', 'icon':'cn-dtr-lnk-bl', callback: function(caret) {caret.wrap('['+caret.text+'](', ')');}},
+            'image' : {'name': 'Imagem', 'icon':'cn-dtr-mg-bl', callback: function(caret) {caret.wrap('!['+caret.text+'](', ')');}},
 
-            'bold'  : {'name': 'Negrito', 'icon':'editor-icon-bold', callback: function (caret) {caret.wrap('**', '**');}},
-			'italic': {'name': 'Italico', 'icon':'editor-icon-italic', callback: function (caret) {caret.wrap('_', '_');}},
-			'code'  : {'name': 'Código', 'icon':'editor-icon-code', callback: function (caret) {caret.wrap('`', '`');}},
+            'bold'  : {'name': 'Negrito', 'icon':'cn-dtr-bld-bl', callback: function (caret) {caret.wrap('**', '**');}},
+			'italic': {'name': 'Italico', 'icon':'cn-dtr-tlc-bl', callback: function (caret) {caret.wrap('_', '_');}},
+			'code'  : {'name': 'Código', 'icon':'cn-dtr-cd-bl', callback: function (caret) {caret.wrap('`', '`');}},
 
-            'unordered_list': {'name': 'Lista não ordenada', 'icon':'editor-icon-list-ul', callback: function (caret) {caret.prependToLeadingLine('* ');}},
-            'ordered_list': {'name': 'Lista ordenada', 'icon':'editor-icon-list-ol', callback: function (caret) {caret.prependToLeadingLine('1. ');}},
-            'quote' : {'name': 'Citação', 'icon':'editor-icon-quote', callback: function (caret) {caret.prependToLeadingLine('> ');}},
-			'rule' : {'name': 'Quebra de página', 'icon':'editor-icon-rule', callback: function (caret) {caret.wrap('', '\n ***');} },
+            'unordered_list': {'name': 'Lista não ordenada', 'icon':'cn-dtr-url-bl', callback: function (caret) {caret.prependToLeadingLine('* ');}},
+            'ordered_list': {'name': 'Lista ordenada', 'icon':'cn-dtr-rdl-bl', callback: function (caret) {caret.prependToLeadingLine('1. ');}},
+            'quote' : {'name': 'Citação', 'icon':'cn-dtr-qut-bl', callback: function (caret) {caret.prependToLeadingLine('> ');}},
+			'rule' : {'name': 'Quebra de página', 'icon':'cn-dtr-rl-bl', callback: function (caret) {caret.wrap('', '\n ***');} },
 
-			'help': {'name': 'Ajuda', 'icon':'editor-icon-help', callback: function () { window.open('http://daringfireball.net/projects/markdown/', '_blank');}}
+			'help': {'name': 'Ajuda', 'icon':'cn-dtr-hlp-bl', callback: function () { window.open('http://daringfireball.net/projects/markdown/', '_blank');}}
 		},
 		toolbars: {
 			'default': [['h1','h2','h3'], ['link', 'image'], ['bold','italic', 'code'], ['unordered_list', 'ordered_list', 'quote', 'rule'], ['help'] ]
@@ -63,11 +63,11 @@
 	$.markdownEditor.ui.prototype.rebuildToolbar = function (toolbar) {
 		var layout = $.markdownEditor.toolbars[toolbar]
 			, i = layout.length
-			, bar = $('<div></div>').prop('class', 'btn-toolbar');
+                , bar = $('<div style="margin-top: 11px"></div>')
 
 		for (var i = 0; i < layout.length; i++){
 			var group = layout[i];
-			var out = $("<div></div>").addClass('btn-group');
+			var out = $("<div></div>").addClass('btn-grp');
 
 			for (var j = 0; j < group.length; j++){
 			    var key = group[j];
@@ -80,7 +80,7 @@
 	}
 
 	$.markdownEditor.ui.prototype.makeButton = function(key, obj) {
-        var button = $("<a></a>").addClass('me-'+key).addClass('btn').addClass('btn-primary').addClass('btn-small').attr('alt', obj.name).click(this.clickHandler(obj.callback));
+        var button = $("<a></a>").addClass('me-'+key).addClass('btn').attr('alt', obj.name).click(this.clickHandler(obj.callback));
         button.addClass(obj.btn_class);
         if (obj.icon == '') {
 		    button.html(obj.name)
@@ -89,9 +89,9 @@
 		    button.append(icon);
             button.attr('rel', 'tooltip');
             button.attr('title', obj.name);
-            button.tooltip({"placement": "bottom"})
+            //button.tooltip({"placement": "bottom"}) lilo003
         }
-        return button
+        return button;
 
 	}
 
@@ -101,9 +101,9 @@
 	}
 
 	$.markdownEditor.layout = function (){
-	  var source = $('#source');
+	  //var source = $('#source');
 	  var preview = $('#preview');
-	  source.hide();
+	  //source.hide();
 	  preview.addClass('span12').removeClass('span6');
 	}
 

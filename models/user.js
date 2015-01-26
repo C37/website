@@ -2,20 +2,24 @@
  * Module dependencies
  */
 var model = require('../library/model'),
-    db = require("../library/database");
+    data_index = require("../library/data_index")
 
 exports.Member = function () {
-    member.prototype = model.Base;
-    return new member();
+    member.prototype = model.Base
+    return new member()
 }
 
 function member() {
-    this._id = db.keyCreate();
-    this.type = 'member';
-    this.display = 'Usuário';
-    this.db = db.User;
-    this.version = false;
+    this.type = 'member'
+    this.display = 'Usuário'
+    this.data_index = data_index.user
+    this.version = true
     this.fields = [
+        {
+            name: 'key',
+            validate: ['required'],
+            value: ''
+        },
         {
             name: 'name_user',
             display: 'Nome de usuário',
@@ -79,26 +83,26 @@ function member() {
         {
             name: 'created',
             display: '',
-            validate: ['make_now'],
+            validate: ['required'],
             value: ''
         }
-    ];
-    this.relationships = [];
-    this.validate_message = [];
+    ]
+    this.relationships = []
+    this.validate_message = []
 }
 
 exports.Signin = function () {
-    signin.prototype = model.Base;
-    return new signin();
+    signin.prototype = model.Base
+    return new signin()
 }
 
 function signin() {
-    this.type = 'member';
-    this.db = db.User;
+    this.type = 'member'
+    this.data_index = data_index.user
     this.fields = [
         {
-            name: 'name_user',
-            display: 'Nome de usuário',
+            name: 'name_user_email',
+            display: 'Nome de usuário ou Email',
             validate: ['required'],
             value: ''
         },
@@ -108,7 +112,7 @@ function signin() {
             validate: ['required'],
             value: ''
         }
-    ];
-    this.validate_message = [];
+    ]
+    this.validate_message = []
 }
 

@@ -2,7 +2,7 @@
 /**
  * Module dependencies
  */
-var db = require("./database"),
+var db = require("./data_index"),
     smtp = require("nodemailer");
 
 /**

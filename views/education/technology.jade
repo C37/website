@@ -1,133 +1,26 @@
-extends ../layout/_education
+extends _page
 
 block content-education
-
-
-    link(href='/gollum/css/gollum.css', media='all', rel='stylesheet', type='text/css')
-    link(href='/gollum/css/editor.css', media='all', rel='stylesheet', type='text/css')
-    link(href='/gollum/css/template.css', media='all', rel='stylesheet', type='text/css')
-
-    script(type='text/javascript', src='/gollum/javascript/mousetrap.min.js')
-    script(type='text/javascript', src='/gollum/javascript/gollum.js')
-    script(type='text/javascript', src='/gollum/javascript/gollum.dialog.js')
-    script(type='text/javascript', src='/gollum/javascript/gollum.placeholder.js')
-    script(type='text/javascript', src='/gollum/javascript/editor/gollum.editor.js')
-
-    script(type='text/javascript', src='/gollum/javascript/editor/identicon_canvas.js')
-
-
-
-
-    br
-    #head
-        ul.wiki-actions
-            li.gollum-minibutton
-                a.minibutton.bigger.action-view-page(href='/gollum/gollum/wiki') View Page
-            li.gollum-minibutton
-                a.minibutton.bigger.action-delete-page(href='/gollum/gollum/wiki', data-confirm='Are you sure you want to delete this page?', data-method='delete') Delete Page
-            li.gollum-minibutton
-                a.minibutton.bigger.action-page-history(href='/gollum/gollum/wiki/Home/_history') Page History
-            h1
-                | Editing
-                strong Home
-
-    .row-fluid
-        buttom#minibutton-rename-page sa
-
-        #gollum-editor-title-field.span12
-            label.jaws(for='page') Title
-
-            input#gollum-editor-page-title(name='name', type='hidden', value='test2')
-            input#gollum-editor-page-title.input-block(name='wiki[name]', type='text', value='test2')
-
-            #gollum-editor-function-bar.active
-                #gollum-editor-function-buttons
-                    .button-group
-                        a#function-h1.minibutton.function-button.disabled(href='#', title='Header 1', tabindex='-1')
-                            b h1
-                        a#function-h2.minibutton.function-button.disabled(href='#', title='Header 2', tabindex='-1')
-                            b h2
-                        a#function-h3.minibutton.function-button.disabled(href='#', title='Header 3', tabindex='-1')
-                            b h3
-                    .button-group
-                        a#function-link.minibutton.function-button(href='#', title='Link', tabindex='-1')
-                            span.mini-icon.mini-icon-link
-                        a#function-image.minibutton.function-button(href='#', title='Image', tabindex='-1')
-                            span.mini-icon.mini-icon-download-media
-                    .button-group
-                        a#function-bold.minibutton.function-button(href='#', title='Bold', tabindex='-1')
-                            b B
-                        a#function-italic.minibutton.function-button(href='#', title='Italic', tabindex='-1')
-                            em i
-                        a#function-code.minibutton.function-button(href='#', title='Code', tabindex='-1')
-                            span.mini-icon.mini-icon-code
-                    .button-group
-                        a#function-ul.minibutton.function-button(href='#', title='Unordered List', tabindex='-1')
-                            span.mini-icon.mini-icon-u-list
-                        a#function-ol.minibutton.function-button(href='#', title='Ordered List', tabindex='-1')
-                            span.mini-icon.mini-icon-o-list
-                        a#function-blockquote.minibutton.function-button(href='#', title='Blockquote', tabindex='-1')
-                            span.mini-icon.mini-icon-quotemark
-                        a#function-hr.minibutton.function-button(href='#', title='Horizontal Rule', tabindex='-1')
-                            span.mini-icon.mini-icon-horizontal-rule
-                    a#function-help.minibutton.function-button(href='#', title='Help', tabindex='-1')
-                        span.mini-icon.mini-icon-help
-                #gollum-editor-format-selector
-                    select#wiki_format(name='wiki[format]')
-                        option(value='asciidoc') AsciiDoc
-                        option(value='creole') Creole
-                        option(value='markdown') Markdown
-                        option(value='mediawiki') MediaWiki
-                        option(value='org') Org-mode
-                        option(value='pod') Pod
-                        option(value='rdoc') RDoc
-                        option(value='textile', selected='selected') Textile
-                        option(value='rest') reStructuredText
-                    label(for='wiki_format') Edit mode:
-            #gollum-editor-help(style='display: none;')
-                ul#gollum-editor-help-parent
-                    li
-                        a.selected(href='#', rel='0') Phrase Modifiers
-                    li
-                        a(href='#', rel='1') Block Modifiers
-                    li
-                        a(href='#', rel='2') Links / Images
-                ul#gollum-editor-help-list
-                    li
-                        a.selected(href='#', rel='0:0') Emphasis / Strength
-                    li
-                        a(href='#', rel='0:1') Citations / Editing
-                    li
-                        a(href='#', rel='0:2') Superscript / Subscript
-                    li
-                        a(href='#', rel='0:3') Code
-                    li
-                        a(href='#', rel='0:4') Acronyms
-                #gollum-editor-help-wrapper
-                    #gollum-editor-help-content
-                        p
-                            | To place emphasis or strength on inline text, simply place
-                            code _
-                            | (underscores) around the text for emphasis or
-                            code *
-                            | (asterisks) around the text for strength. In most browsers,
-                            code _mytext_
-                            | will appear as italics and
-                            code *mytext*
-                            | will appear as bold.
-                        p
-                            | To force italics or bold, simply double the characters:
-                            code __mytext__
-                            | will appear italic and
-                            code **mytext**
-                            | will appear as bold text.
-            #gollum-error-message
-            textarea#gollum-editor-body.input-block(data-markup-lang='textile', format='textile', name='wiki[body]')
-
-            #gollum-editor-edit-summary.singleline
-                label.jaws(for='wiki_commit') Edit Message
-                input#gollum-editor-message-field.input-block.ph(name='wiki[commit]', placeholder='Write a small message here explaining this change. (Optional)', type='text')
-            span.jaws
-                br
-            button#gollum-editor-submit.button.primary(type='submit') Save
-            a#gollum-editor-preview.button(href='/mongodb/node-mongodb-native/wiki/_preview', title='Preview this page') Preview
+    .grp-bx
+        .hdr
+            h2.nbm Era da informação
+            .nf
+                .tm
+                    | Mais sobre:
+                    ul.tg.hd
+                        li.tg-tm
+                            a(href='#') industrial
+                        li.tg-tm
+                            a(href='#') informação
+                        li.tg-tm
+                            a(href='#') tecnologia
+                        li.tg-tm
+                            a(href='#') mobilidade
+                        li.tg-tm
+                            a(href='#') acesso
+                .tm.thr
+                    | por:&nbsp;
+                    a(href='http://rili.c37.co/ser003', target='_blank') ser003
+                .tm.dt-cln
+                    | 2013-07-30T18:00:00.104Z
+        .cnt

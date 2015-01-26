@@ -1,141 +1,91 @@
 extends _page
 
 block content-education
+    .grp-bx
+        .hdr
+            h2.nbm Nada é por acaso
+            .nf
+                .tm
+                    | Mais sobre:
+                    ul.tg.hd
+                        li.tg-tm
+                            a(href='#') início
+                        li.tg-tm
+                            a(href='#') informação
+                        li.tg-tm
+                            a(href='#') estudo
+                        li.tg-tm
+                            a(href='#') perseverança
+                        li.tg-tm
+                            a(href='#') sucesso
+                .tm.thr
+                    | por:&nbsp;
+                    a(href='http://rili.c37.co/ser003', target='_blank') ser003
+                .tm.dt-cln
+                    | 2013-06-29T20:08:08.104Z
 
-    if (docs.length)
-        - docs.forEach(function(doc){
-            h4=doc.name
-            small=doc.member
-            !{doc.content}
-        br
-        - })
-
-
-    .row
-        .span4
-            .white-card.recent-post.clearfix
-                h5.recent-post-header
-                    a(href='single_post.html') Nullam velit diam, rhoncus sed
-                .post-info.clearfix
-                    .pull-left
-                        span.post-date January 15, 2011
-                        a.post-comments(href='single_post.html') 14 Comments
-                    .pull-right
-                        a.post-like(href='#')
-                            i.icon-heart
-                            | 250
-                //img.post-image(alt='Photo-card-big-3', src='/img/test-square.png')
-                p.post-content
-                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at.
-                    | Donec imperdiet nibh id metus adipiscing semper.
-                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
-        .span4
-            .white-card.recent-post.clearfix
-                h5.recent-post-header
-                    a(href='single_post.html') Nullam velit diam, rhoncus sed
-                .post-info.clearfix
-                    .pull-left
-                        span.post-date January 15, 2011
-                        a.post-comments(href='single_post.html') 14 Comments
-                    .pull-right
-                        a.post-like(href='#')
-                            i.icon-heart
-                            | 250
-                //img.post-image(alt='Photo-card-big-1', src='/img/test-square.png')
-                p.post-content
-                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at.
-                    | Donec imperdiet nibh id metus adipiscing semper.
-                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
-    .row
-        .span4
-            .white-card.recent-post.clearfix
-                h5.recent-post-header
-                    a(href='single_post.html') Nullam velit diam, rhoncus sed
-                .post-info.clearfix
-                    .pull-left
-                        span.post-date January 15, 2011
-                        a.post-comments(href='single_post.html') 14 Comments
-                    .pull-right
-                        a.post-like(href='#')
-                            i.icon-heart
-                            | 250
-                img.post-image(alt='Photo-card-big-3', src='/img/test-square.png')
-                p.post-content
-                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
-                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
-        .span4
-            .white-card.recent-post.clearfix
-                h5.recent-post-header
-                    a(href='single_post.html') Nullam velit diam, rhoncus sed
-                .post-info.clearfix
-                    .pull-left
-                        span.post-date January 15, 2011
-                        a.post-comments(href='single_post.html') 14 Comments
-                    .pull-right
-                        a.post-like(href='#')
-                            i.icon-heart
-                            | 250
-                img.post-image(alt='Photo-card-big-1', src='/img/test-square.png')
-                p.post-content
-                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
-                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
-    .row
-        .span4
-            .white-card.recent-post.clearfix
-                h5.recent-post-header
-                    a(href='single_post.html') Nullam velit diam, rhoncus sed
-                .post-info.clearfix
-                    .pull-left
-                        span.post-date January 15, 2011
-                        a.post-comments(href='single_post.html') 14 Comments
-                    .pull-right
-                        a.post-like(href='#')
-                            i.icon-heart
-                            | 250
-                img.post-image(alt='Photo-card-big-1', src='/img/test-square.png')
-                p.post-content
-                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
-                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
-        .span4
-            .white-card.recent-post.clearfix
-                h5.recent-post-header
-                    a(href='single_post.html') Nullam velit diam, rhoncus sed
-                .post-info.clearfix
-                    .pull-left
-                        span.post-date January 15, 2011
-                        a.post-comments(href='single_post.html') 14 Comments
-                    .pull-right
-                        a.post-like(href='#')
-                            i.icon-heart
-                            | 250
-                img.post-image(alt='Photo-card-big-2', src='/img/test-square.png')
-                p.post-content
-                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
-                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
-    .row
-        .span8
-            h3.section-header Pagination
-            .pagination
-                ul
-                    li
-                        a(href='#', rel='prev') Prev
-                    li.active
-                        a(href='#') 1
-                    li
-                        a(href='#') 2
-                    li
-                        a(href='#') 3
-                    li.visible-desktop-inline
-                        a(href='#') 4
-                    li.visible-desktop-inline
-                        a(href='#') 5
-                    li.visible-desktop-inline
-                        a(href='#') 6
-                    li
-                        a(href='#', rel='next') Next
-                    li
-                        a(href='view-all') Ver todos
-
-
-
-
+        .cnt
+            p
+                | Sabemos que muitos de nós sonham em ter seu negócio próprio, e que os fatos motivadores variam.
+            p
+                | Uns desejam não ter mais chefe, outros querem ter mais tempo para a família e para os amigos, algumas pessoas desejam aplicar seu dinheiro, há aqueles que querem ser independentes financeiramente, mulheres que desejam trabalhar em casa para não mandar seus filhos para a escolinha e muito mais...
+            p
+                | Mas, seja qual for o motivo, um ponto todos tem em comum: a insegurança, o medo.
+            p
+                | E estes sentimentos fazem saltar em nossas mentes afirmações e questionamentos como:
+            p
+                | - Eu quero, mas não sei como começar...
+                br
+                | - Um conhecido montou seu próprio negócio e não deu certo!
+                br
+                | - O que vou fazer? Como?
+                br
+                | - Onde procuro informações?
+            p
+                | Por isso nós criamos este espaço. Vamos ajudar voce oferecendo informações que auxiliam sua tomada de decisão. Voce não está sozinho nesta etapa.
+            p
+                | Elaboramos este&nbsp;
+                em passo a passo
+                | , dividindo os temas principais em tópicos do cotidiano, leia:
+            p
+                strong O que eu quero?&nbsp;
+                small - Preparação
+                ol
+                    li Por onde você irá começar
+                    li Classificando sua empresa
+                    li A personalidade da sua empresa
+                    li A aparencia da sua empresa
+            p
+                strong Como faço?&nbsp;
+                small - Planejamento
+                ol
+                    li Marketing
+                    li Propaganda
+                    li Planejamento Financeiro
+                    li Administração Financeira
+            p
+                strong Mãos a obra&nbsp;
+                small - Implementação
+                ol
+                    li Comprando
+                    li Montando
+                    li Formando o valor do seu produto
+                    li Conquistando o cliente
+            p
+                strong Controlando resultados&nbsp;
+                small - Administrar
+                ol
+                    li Estou indo bem?
+                    li Como posso melhorar?
+            p
+                | Sabemos que todo inicio tem uma historia de inspiração
+                br
+                | Pessoas que sonharam, que começaram do nada e hoje são bem sucedidas.
+                p
+                | Nós da c37 queremos ser o ambiente que influencia
+                br
+                | Queremos ser sua referencia
+                br
+                | Alguém para lhe dar exemplos...
+                p.txt-rgt
+                    strong Empreenda!

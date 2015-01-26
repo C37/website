@@ -1,163 +1,213 @@
 extends layout/page
 
 block content
-    #homepage-carousel.carousel.slide.over-something
-        .carousel-inner.slider-w
-            .active.item
-                .container
-                    h1.slider-header
-                        | Um jeito
-                        strong #{" novo  "}
-                        | de fazer as suas coisas.
-                    h2.slider-sub-header Maecenas fermentum sem in nunc sagittis iaculis.
-                    .cta
-                        a.btn.btn-cta.btn-warning(href='features/pricing_tables.html') Some Action Button
-                    .slider-browsers-w.clearfix
-                        .slider-browser.slider-browser-left.hidden-phone(data-position-bottom='-8%')
-                            a(href="#")
-                                img(alt='Browser-window-1', src='img/browser-window.png')
-                        .slider-browser.slider-browser-center(data-position-bottom='-9%')
-                            a(href="#")
-                                img(alt='Browser-window-2', src='img/browser-window.png')
-                        .slider-browser.slider-browser-right.hidden-phone(data-position-bottom='-8%')
-                            a(href="#")
-                                img(alt='Browser-window-3', src='img/browser-window.png')
-            .item
-                .container
-                    h1.slider-header I am always on skype, feel free to ask questions.
-                    h2.slider-sub-header Maecenas fermentum sem in nunc sagittis iaculis.
-                    .cta
-                        a.btn.btn-cta.btn-warning(href='features/pricing_tables.html') Some Action Button
-                    .row.zoomed-browsers-w
-                        .span4
-                            .zoomed-browser
-                                img(alt='Browser-window-1', src='img/browser-window.png')
-                        .span4
-                            .zoomed-browser.hidden-phone
-                                img(alt='Browser-window-2', src='img/browser-window.png')
-                        .span4
-                            .zoomed-browser.hidden-phone
-                                img(alt='Browser-window-3', src='img/browser-window.png')
-        a.carousel-control.left(data-slide='prev', href='#homepage-carousel')
-            i.icon-chevron-left
-        a.carousel-control.right(data-slide='next', href='#homepage-carousel')
-            i.icon-chevron-right
-    section.sub-slider-features
-        .container
-            .row
-                .span4
-                    .info-bullet
-                        i.icon-home
-                        p
-                            | Imagine poder trabalhar em casa, ter seu proprio negocio, mais tempo para a familia, mais tempo para os amigos...
-                .span4
-                    .info-bullet
-                        i.icon-money
-                        p
-                            | Pense em ter acesso a novos mercados, aumentar sua produção, diminuir seus custos, obter mais lucro
-                .span4
-                    .info-bullet
-                        i.icon-plane
-                        p
-                            | Aquele hobbie que parecia tão distante... Idéia (artesanato) Móvel (marcenaria)
-    section.section-wrapper
-        .container
-            .row.row-separated
-                .span7
-                    h3.section-header Ser Independente
-                    p.section-paragraph
-                        | Pense como seria maravilhoso voce mesmo poder executar os projetos que tem em mente
-                    p.section-paragraph
-                        | Pense poder replicar algos que um dia voce viu e gostou
-                    p.section-paragraph
-                        | Pense em ter liberdade para fazer tudo no seu tempo e da sua forma
-                .span5
-                    img(alt='Browser-window-2', src='img/browser-window.png')
-            .row.row-separated
-                .span5
-                    img(alt='Browser-window-3', src='img/browser-window.png')
-                .span7
-                    h3.section-header Ter Suporte
-                    p.section-paragraph
-                        | Imagine que existe uma empresa
-                    p.section-paragraph
-                        | uma empresa que torna tudo possível
-                    p.section-paragraph
-                        | que concretiza seus desejos
-                    p.section-paragraph
-                        | que provoca mudanças
-            .row.row-separated
-                .span7
-                    h3.section-header Criar Possibilidades
-                    strong Imagine...
-                    p.section-paragraph
-                        | Trace todos os caminhos que voce deseja percorrer e onde deseja estar
-                    strong Planeje...
-                    p.section-paragraph
-                        | avalie todas as variáveis e pondere os riscos
-                    strong Execute...
-                    p.section-paragraph
-                        | tenha iniciativa e de um passo de cada vez
-                    strong Premedite...
-                    p.section-paragraph
-                        | foco no futuro e siga os planos
-                    strong Tudo é Possivel
-                .span5
-                    img(alt='Browser-window-2', src='img/browser-window.png')
-            .row.row-separated
-                .span12.text-center
-                    h1 Aqui na c37 sua imaginação é o nosso limite
-            .row
-                .span3
-                    .white-card
-                        .img-w
-                            img(src='img/test-square.png')
-                        h5 Artesanato
-                        p
-                            | Faça em casa!
-                            br
-                            | Acessorios para o lar, lembrancinhas, brinquedos e artigos pessoais.
-                .span3
-                    .white-card
-                        .img-w
-                            img(src='img/test-square.png')
-                        h5 Marcenaria
-                        p
-                .span3
-                    .white-card
-                        .img-w
-                            img(src='img/test-square.png')
-                        h5 Hobbie
-                        p
-                            | Automodelismo
-                            br
-                            | Nautimodelismo
-                            br
-                            | Aeromodelismo e muito mais.
-                            br
-                            | Suas paixões sem limites!
-                .span3
-                    .white-card
-                        .img-w
-                            img(src='img/test-square.png')
-                        h5 Eletrônica
-                        p
-                            | Sua produção ainda mais precisa, com maior produtividade e em tempo reduzido.
-            .row
-                .span12.text-center
-                    h2 o que apenas nós fazemos por você
-    section.section-wrapper
-        .container
-            .row
-                .span3.text-center
-                    h4 Inovação
-                    p Impacto nos processos
-                .span3.text-center
-                    h4 Qualidade
-                    p Completos, selecionados e duráveis
-                .span3.text-center
-                    h4 Ensino
-                    p O caminho para o sucesso
-                .span3.text-center
-                    h4 Produto Brasileiro
-                    p Simplicidade e eficiencia
+    .gd
+        .cll-1
+            .sld
+                ul.mgs
+                    li
+                        a(href='#')
+                            img(src='/img/slider/slider-1-1.jpg')
+                        .ttl
+                            h2 Um jeito novo de fazer as suas coisas.
+                            h3 Com você em todas as etapas. Com você em todas as etapas. Com você em todas as etapas.
+                    li
+                        a(href='#')
+                            img(src='/img/slider/slider-1-2.jpg')
+                        .ttl
+                            h2 Compartilhando conhecimento, multiplicando resultados.
+                            h3 Criamos, inovamos e investimos em você. Criamos, inovamos e investimos em você. Criamos, inovamos e investimos em você.
+                    li
+                        a(href='#')
+                            img(src='/img/slider/slider-1-3.jpg')
+                        .ttl
+                            h2 Um jeito novo de fazer as suas coisas.
+                            h3 Com você em todas as etapas. Com você em todas as etapas. Com você em todas as etapas.
+
+                    li
+                        a(href='#')
+                            img(src='/img/slider/slider-1-4.jpg')
+                        .ttl
+                            h2 Um jeito novo de fazer as suas coisas.
+                            h3 Com você em todas as etapas. Com você em todas as etapas. Com você em todas as etapas.
+
+                    li
+                        a(href='#')
+                            img(src='/img/slider/slider-1-5.jpg')
+                        .ttl
+                            h2 Um jeito novo de fazer as suas coisas.
+                            h3 Com você em todas as etapas. Com você em todas as etapas. Com você em todas as etapas.
+
+
+                ul.ctl
+                    li.crt
+                    li
+                        a(href='#')
+                        img(src='/img/slider/slider-1-1.jpg')
+                    li
+                        a(href='#')
+                        img(src='/img/slider/slider-1-2.jpg')
+                    li
+                        a(href='#')
+                        img(src='/img/slider/slider-1-3.jpg')
+                    li
+                        a(href='#')
+                        img(src='/img/slider/slider-1-4.jpg')
+                    li
+                        a(href='#')
+                        img(src='/img/slider/slider-1-5.jpg')
+
+
+    br
+
+    .gd
+        .cll-1
+            .mn-scr
+                ul
+                    li.cll-4-12
+                        a(href='#')
+                            img.mn-scr-tm(src='/img/logotype/c37-full.png', width="65px", data-type="icon")
+                            h2.mn-scr-tm(data-type="mText") Independência
+                            p.mn-scr-tm(data-type="sText")
+                                | Trabalhar em casa, no seu próprio negocio, ter mais tempo para a familia, mais tempo para os amigos...
+
+                    li.cll-4-12
+                        a(href='#')
+                            img.mn-scr-tm(src='/img/logotype/c37-full.png', width="65px", data-type="icon")
+                            h2.mn-scr-tm(data-type="mText") Produtividade
+                            p.mn-scr-tm(data-type="sText")
+                                | Ter acesso a novos mercados, aumentar sua produção, diminuir seus custos, obter mais lucro...
+
+                    li.cll-4-12
+                        a(href='#')
+                            img.mn-scr-tm(src='/img/logotype/c37-full.png', width="65px", data-type="icon")
+                            h2.mn-scr-tm(data-type="mText") Diversão
+                            p.mn-scr-tm(data-type="sText")
+                                | Aeromodelismo, Automodelismo e Ferromodelismo, praticar aquele hobbie tão desejado...
+
+    br
+
+    .gd
+        .cll-7-12
+            h1 Hoje
+            p.pfc A c37 quer apoiar seu sonho, sua aspiração e seu talento
+            p.pfc Quer provocar em voce um desejo de mudança
+            p.pfc Alterar sua situação de uma forma planejada, estruturada e premeditada.
+
+        .cll-5-12
+            img(src="img/browser-window.png")
+
+    br
+    br
+
+    .gd
+        .cll-5-12
+            img(src="img/browser-window.png")
+
+        .cll-7-12
+            h1 Estamos aqui
+            p.pfc Pelo que se concretiza
+            p.pfc Pelo que se empreende
+            p.pfc Pelos riscos que se assume
+            p.pfc Pelas dificuldades que se enfrenta
+            p.pfc Pelo sucesso.
+
+    br
+    br
+
+    .gd
+        .cll-7-12
+            h1 Possibilidades
+            p.pfc Criamos caminhos para colocar em pratica seu desejo de transformação.
+            p.pfc
+                | Criamos caminhos para colocar em pratica seu desejo de transformação.
+            p.pfc
+                | Oferecemos uma estrutura completa de &nbsp;
+                a(href="/education") informações
+                | ,&nbsp;
+                a(href="/rizu") maquina-ferramenta
+                | ,&nbsp;
+                a(href="/lilo") softwares
+                | &nbsp;e troca de &nbsp;
+                a(href="/rili") experiencias
+                | &nbsp;para que voce adquira conhecimento, desenvolva habilidades e produza para alcançar sua  independencia profissional e financeira.
+
+        .cll-5-12
+            img(src="img/browser-window.png")
+
+    br
+
+    .gd
+        .cll-1
+            .bxt-l
+                h1 Aqui na c37 sua imaginação é o nosso limite
+                p Use it to provide information when no dynamic content exists.
+
+    br
+
+    .gd
+        .cll-3-12
+            img(src="img/browser-window.png")
+            h3 Artesanato
+            p
+                | Faça em casa!
+                br
+                | Acessorios para o lar, lembrancinhas, brinquedos e artigos pessoais.
+
+        .cll-3-12
+            img(src="img/browser-window.png")
+            h3 Marcenaria
+
+        .cll-3-12
+            img(src="img/browser-window.png")
+            h3 Hobbie
+            p
+                | Automodelismo, Nautimodelismo, Aeromodelismo e muito mais.
+                br
+                | Suas paixões sem limites!
+
+        .cll-3-12
+            img(src="img/browser-window.png")
+            h3 Eletrônica
+            p
+                | Sua produção ainda mais precisa, com maior produtividade e em tempo reduzido.
+
+    br
+    br
+
+    .gd
+        .cll-1.txt-cnt
+            em
+                h2 O que apenas nós fazemos por voce
+
+    .gd
+        .cll-1
+            .mn-vtc
+                ul
+                    li.cll-3-12
+                        img(src='/img/test-square.png')
+                        em
+                            h3 Inovação
+                        p Impacto nos processos
+
+                    li.cll-3-12
+                        img(src='/img/test-square.png')
+                        em
+                            h3 Qualidade
+                        p Completos, selecionados e duráveis
+
+                    li.cll-3-12
+                        img(src='/img/test-square.png')
+                        em
+                            h3 Ensino
+                        p O caminho para o sucesso
+
+                    li.cll-3-12
+                        img(src='/img/test-square.png')
+                        em
+                            h3 Produto Brasileiro
+                        p Simples e eficiênte
+
+    br
+    br
+    br

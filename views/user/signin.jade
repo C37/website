@@ -1,65 +1,69 @@
 extends ../layout/page
 
 block content
-    section.section-wrapper
-        .container
-            .row
-                .offset2.span5
-                    .white-card.extra-padding
-                        form(action="/signin", method="post")
-                            fieldset
-                                .row-fluid
-                                    .span12.text-center
-                                        img(src='/img/logotype/c37.png', style='width:130px')
-                                        h1.form-header Entre na c37
-                                .row-fluid(class=(doc.validate_message.length ? '' : 'hidden'))
-                                    .span12
-                                        .form-side-info
-                                            if (doc.validate_message.length)
-                                                - doc.validate_message.forEach(function(message){
-                                                    | #{message}
-                                                    br
-                                                - })
-                                .row-fluid
-                                    .span12
-                                        .control-group
-                                            label Nome de usuário
-                                            input.input-block-level(type='text', name='name_user')
-                                .row-fluid
-                                    .span12
-                                        .control-group
-                                            label Sua senha
-                                            input.input-block-level(type='password', name='password')
-                                        .text-right
-                                            a(href="/password") Esqueci minha senha
-                                .row-fluid
-                                    .span12
-                                        label.checkbox Mantenha-me conectado
-                                            input(name="remember", type="checkbox")
-                                .row-fluid
-                                    .span12
-                                        button.btn.btn-primary.pull-right(type="submit")
-                                            i.icon-ok.icon-white
-                                            span #{" Acessar"}
+    .gd
+        .cll-3-12
+        .cll-4-12
+            .grp-bx
+                .hdr
+                    h3.nbm Entrar
+                .cnt.txt-cnt
+                    img(src='/img/logotype/c37.png', style='width:130px;margin-top:11px')
+                    h1.nbm Entre na c37
 
-                .span3
-                    .blog-side-text-block.widget-filled.widget-yellow
-                        h3 Algumas dicas:
-                        ul.big-iconed-tips
-                            li
-                                i.icon-credit-card
-                                | Um cadastro para todos os serviços
-                            li
-                                i.icon-lock
-                                | É 100% Seguro
-                            li
-                                i.icon-comments
-                                | Estamos 24 Horas no Ar
-                            li
-                                i.icon-cogs
-                                | Salve o coun
-                            li
-                                i.icon-github
-                                | Participe das nossas Comunidades
-                        p
-                            | Ut diam arcu, dictum ut vulputate sed, iaculis nec lorem. Fusce pharetra nisl vitae nisl ultricies ut malesuada leo fringilla.
+                    form(action="#{context.url}", method="post")
+                        if (member.validate_message.length)
+                            .lrt-bx.ylw
+                                .hdr
+                                    strong Verifique&nbsp;
+                                    | as mensagens abaixo e continue
+                                .cnt
+                                    - member.validate_message.forEach(function(message){
+                                        | #{message}
+                                        br
+                                    - })
+
+                        .rw
+                            .cll-1
+                                label Nome de usuário ou Email
+                                input.input-block-level(type='text', name='name_user_email', value=_.findWhere(member.fields,{name:"name_user_email"}).value)
+
+                        .rw
+                            .cll-1
+                                label Sua senha
+                                input.input-block-level(type='password', name='password', value=_.findWhere(member.fields,{name:"password"}).value)
+                                .txt-rgt
+                                    br
+                                    a.ctv(href="/password") Esqueci minha senha
+
+                                label
+                                    input(name="remember", type="checkbox")
+                                    | Mantenha-me conectado
+
+                        .rw
+                            .cll-1.txt-rgt
+                                button.btn.bl(type="submit")
+                                    i.icon-ok.icon-white
+                                    span #{" Acessar"}
+
+        .cll-3-12
+            h3 Algumas dicas:
+            ul.big-iconed-tips
+                li
+                    i.icon-credit-card
+                    | Um cadastro para todos os serviços
+                li
+                    i.icon-lock
+                    | É 100% Seguro
+                li
+                    i.icon-comments
+                    | Estamos 24 Horas no Ar
+                li
+                    i.icon-cogs
+                    | Salve o coun
+                li
+                    i.icon-github
+                    | Participe das nossas Comunidades
+            p
+                | Ut diam arcu, dictum ut vulputate sed, iaculis nec lorem. Fusce pharetra nisl vitae nisl ultricies ut malesuada leo fringilla.
+        .cll-2-12

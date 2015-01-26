@@ -1,31 +1,21 @@
 extends page
 
 block content
-    section.section-wrapper.about-page-w
-        .container
-            .row
-                .span5
-                    a(href="/rili")
-                        img.pull-left(src="/img/logotype/c37-rili.png", style="margin-right:10px;width:70px")
-                    h3 RiLi
-                .span7.text-right
+    .gd
+        .cll-4-12
+            .hlm
+                a(href="/rili")
+                    img(src="/img/logotype/c37-rili.png", style="margin-right:10px;width:70px")
+                    h1 RiLi
+        .cll-8-12.txt-rgt
+            .btn-grp
+                a.btn(href='/rili/what-for') Para que serve o RiLi
+                a.btn(href='/rili/design') Design
+                a.btn(href='/rili/versions') Versões
 
-                    ul.nav.nav-tabs
-                        li
-                            a(href='/rili/what-for') Para que serve o RiLi
-                        li
-                            a(href='/rili/design') Design
-                        li
-                            a(href='/rili/versions') Versões
-                        li
-                            a(href='/rili/specifications') Especificações
+            a.btn.grn Assinar
 
-                        a.btn.btn-warning.hidden-phone(href="#")
-                            i.icon-shopping-cart
-                            span #{" Assinar "}
+            script
+                $('a[href*="' + location.pathname.split("/")[2] + '"]').addClass("bl");
 
-
-                    script
-                        $('a[href*="' + location.pathname.split("/")[2] + '"]').parent().addClass("active");
-
-            block content-rili
+    block content-rili

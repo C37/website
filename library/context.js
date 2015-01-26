@@ -2,7 +2,7 @@
 /**
  * Module dependencies
  */
-
+var identifier = require('./identifier');
 
 
 /**
@@ -16,8 +16,10 @@ module.exports = {
     get: function(req) {
 
         return {
-                    member: req.session.member,
-                    url: req.originalUrl
+                    user: req.session.user,
+                    url: req.originalUrl,
+                    now: new Date().toISOString(),
+                    uuid: identifier
                }
 
     },
