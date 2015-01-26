@@ -1,0 +1,86 @@
+extends ../../layout/_manager
+
+block content-manager
+    .rw
+        .cll-1
+            .grp-bx
+                .hdr
+                    h3.nbm #{category.display}
+                    .nf
+                        .tm.thr
+                            | por #{_.findWhere(category.fields, { name: "user" }).value}
+                        .tm.dt-cln
+                            | #{_.findWhere(category.fields, { name: "created" }).value}
+                .cnt
+                    form(action="#{context.url}", method="post")
+                        input(type="hidden", name="section", value=section)
+                        input(type="hidden", name="isNew", value="#{category.isNew}")
+                        input(type="hidden", name="key", value=_.findWhere(category.fields,{name:"key"}).value)
+                        input(type="hidden", name="user", value=_.findWhere(category.fields,{name:"user"}).value)
+                        input(type="hidden", name="created", value=_.findWhere(category.fields,{name:"created"}).value)
+
+                        if (category.validate_message.length)
+                            .lrt-bx.ylw
+                                .hdr
+                                    strong Verifique&nbsp;
+                                    | as mensagens abaixo e continue
+                                .cnt
+                                    - category.validate_message.forEach(function(message){
+                                        | #{message}
+                                        br
+                                    - })
+
+                        .rw
+                            .cll-3-12
+                                label Ordem
+                                input.input-block-level(type='number', min=0, name='order', value=_.findWhere(category.fields,{name:"order"}).value)
+                            .cll-9-12
+                                label Nome da Categoria
+                                input.input-block-level(type='text', name='name', value=_.findWhere(category.fields,{name:"name"}).value)
+
+                        .rw
+                            .cll-1
+                                label Agrupar na seguinte categoria
+                                select(name='category_group')
+                                    option.dft Selecione uma categoria para agrupar
+                                    option.ttl Duru :-]
+                                    if (categories.length)
+                                        - _.where(categories, {category_group: ""}).forEach(function(category_group){
+                                            option(value=category_group.key, selected=((_.findWhere(category.fields,{name:"category_group"}).value == category_group.key) ? true : false))
+                                                spam #{category_group.order}
+                                                | &nbsp;-&nbsp;
+                                                spam #{category_group.name}
+                                        - })
+                        .rw
+                            .cll-4-12
+                                if (!category.isNew)
+                                    a.btn.btn-dlt.rd(href="#")
+                                        i.cn-cmp-tsh-wht
+                                        | Excluir
+                            .cll-8-12.txt-rgt
+                                button.btn(type="reset")
+                                    i.cn-cmp-rmv-bl
+                                    | Cancelar
+                                &nbsp;
+                                button.btn.grn(type='submit')
+                                    i.cn-cmp-k-wht
+                                    | Salvar
+
+                            script
+                                $(".btn-dlt").click(function(e){
+                                    $.ajax({
+                                        url: "#{context.url}",
+                                            type: "delete"
+                                        }).done(function ( data ) {
+                                            if (data) {
+                                                alert(data);
+                                            } else {
+                                                setTimeout(function() {
+                                                    window.location="/manager/education/#{section}"
+                                                }, 2000)
+                                            }
+                                        })
+                                    })
+
+
+

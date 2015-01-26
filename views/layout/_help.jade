@@ -1,0 +1,52 @@
+extends page
+
+block content
+    .gd
+        .cll-1
+            .bxt-s
+                a.lft(href="/help")
+                    img(src="/img/logotype/c37-help.png", style="width:40px")
+                h2.lft Central de ajuda
+    .gd
+        .cll-3-12
+            ul.grp-slr
+                li
+                    a(href='#') Rizu
+                    ul
+                        li
+                            a(href='#') Como montar
+                        li
+                            a(href='#') Configurando
+                        li
+                            a(href='#') Utilização
+                li
+                    a(href='#') Lilo
+                    ul
+                        li
+                            a(href='#') Conceitos
+                        li
+                            a(href='#') Operação
+                //li
+                    a(href='#') RiLi
+                    ul
+                        li
+                            a(href='#') Gerencie sua conta
+                        li
+                            a(href='#') Compartilhamento
+                        li
+                            a(href='#') Mensagens
+            br
+            .mn-hrz
+                ul
+                    li
+                        a.b_lft(href="##") Fórum da comunidade
+
+
+
+            script
+                $('a[href*="' + location.pathname.split("/")[3] + '"]').parent().parent().parent().parent().addClass("in");
+                $('a[href*="' + location.pathname.split("/")[3] + '"]').addClass("slc");
+        .cll-9-12
+            block content-help
+
+

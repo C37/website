@@ -1,0 +1,99 @@
+/*!
+*  c37
+*
+*  Icons
+*
+*  Licenciado através de Creative Commons = BY-NC-SA
+*  http://creativecommons.org/licenses/by-nc-sa/3.0/deed.pt_BR
+*
+*  pardais :-]
+*
+*  2013-07-30-13:10
+*
+*/
+
+/** icon **/
+[class^="cn-"],
+[class*="cn-"] {
+    display: inline-block;
+
+    width: 16px; height: 16px;
+
+    margin: 0px 2px 0px 2px;
+    vertical-align: -3px;
+
+    background: url("../img/icon/components.png") 16px 500px no-repeat;
+    opacity: .5;
+
+    cursor: pointer;
+}
+
+[class^="cn-cmp"], [class*="cn-cmp-"] { background: url("../img/icon/components.png") 16px 500px no-repeat; } /* components - black & white */
+[class^="cn-dtr"], [class*="cn-dtr-"] { background: url("../img/icon/editor.png") 16px 500px no-repeat; } /* editor - black */
+
+[class^="cn-cmp"]:hover, [class*="cn-cmp"]:hover { opacity: 1 } /* components - black */
+[class^="cn-dtr"], [class*="cn-dtr"] { opacity: .7 } /* editor - black */
+
+[class^="-wht"], [class*="-wht"] { opacity: 1 } /* icon white */
+
+
+.cn-cmp-mp-bk { background-position: -20px -2px;  } /* icon components map */
+.cn-cmp-cl-bk { background-position: -56px -2px; } /* icon components close */
+.cn-cmp-sr-bk { background-position: -92px -2px; } /* icon components user */
+.cn-cmp-hp-bk { background-position: -128px -2px; } /* icon components help */
+
+.cn-cmp-k-wht { background-position: -146px -2px; } /* icon components ok */
+.cn-cmp-k-bk { background-position: -164px -2px; }
+
+.cn-cmp-xt-wht { background-position: -182px -2px; } /* icon components exit */
+.cn-cmp-xt-bl { background-position: -200px -2px; }
+
+.cn-cmp-stg-wht { background-position: -218px -2px; } /* icon components settings */
+.cn-cmp-stg-bl { background-position: -236px -2px; }
+
+.cn-cmp-tsh-wht { background-position: -254px -2px; } /* icon components trash */
+.cn-cmp-tsh-bl { background-position: -272px -2px; }
+
+.cn-cmp-rmv-wht { background-position: -290px -2px; } /* icon components remove */
+.cn-cmp-rmv-bl { background-position: -308px -2px; }
+
+.cn-cmp-dt-wht { background-position: -326px -2px; } /* icon components edit */
+.cn-cmp-dt-bl { background-position: -344px -2px; }
+
+.cn-cmp-tg-wht { background-position: -362px -2px;  } /* icon components tag */
+.cn-cmp-tg-bk { background-position: -380px -2px;  }
+
+.cn-cmp-td-wht { background-position: -398px -2px;  } /* icon components todo */
+.cn-cmp-td-bk { background-position: -416px -2px;  }
+
+
+.cn-dtr-lnk-wht { background-position: -2px -2px; } /* icon editor link */
+.cn-dtr-lnk-bl { background-position: -20px -2px; }
+
+.cn-dtr-mg-wht { background-position: -38px -2px; } /* icon editor image */
+.cn-dtr-mg-bl { background-position: -56px -2px; }
+
+.cn-dtr-bld-wht { background-position: -74px -2px; } /* icon editor bold */
+.cn-dtr-bld-bl { background-position: -92px -2px; }
+
+.cn-dtr-tlc-wht { background-position: -110px -2px; } /* icon editor italic */
+.cn-dtr-tlc-bl { background-position: -128px -2px; }
+
+.cn-dtr-cd-wht { background-position: -146px -2px; } /* icon editor code */
+.cn-dtr-cd-bl { background-position: -164px -2px; }
+
+.cn-dtr-url-wht { background-position: -182px -2px; } /* icon editor unordered list */
+.cn-dtr-url-bl { background-position: -200px -2px; }
+
+.cn-dtr-rdl-wht { background-position: -218px -2px; } /* icon editor ordered list */
+.cn-dtr-rdl-bl { background-position: -236px -2px; }
+
+.cn-dtr-qut-wht { background-position: -254px -2px; } /* icon editor quote */
+.cn-dtr-qut-bl { background-position: -272px -2px; }
+
+.cn-dtr-rl-wht { background-position: -290px -2px; } /* icon editor rule */
+.cn-dtr-rl-bl { background-position: -308px -2px; }
+
+.cn-dtr-hlp-wht { background-position: -326px -2px; } /* icon editor help */
+.cn-dtr-hlp-bl { background-position: -344px -2px; }
+/** icon **/

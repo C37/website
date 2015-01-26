@@ -1,0 +1,21 @@
+extends _page
+
+block content-education
+    .gd
+        .cll-3-12
+            - articles.forEach(function(article) {
+                .grp-bx
+                    .hdr
+                        h2.nbm #{article.name}
+                        .nf
+                            .tm.thr
+                                span por:&nbsp;
+                                a(href='http://rili.c37.co/ser003', target='_blank') #{article.user}
+                            .tm.dt-cln
+                                span #{article.created}
+
+                    .cnt
+                        p
+                            | !{article.content.substring(0, article.content.indexOf('</p>'))}
+                        a.btn(href='#{context.url}/#{article.name.toLowerCase().split(' ').join('-')}') Ler todo &rsaquo;
+            - })

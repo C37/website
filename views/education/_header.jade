@@ -1,0 +1,17 @@
+
+.gd
+    .cll-5-12
+        .hlm
+            a(href="/ensino")
+                h1 Ensino
+
+    .cll-7-12.txt-rgt
+        .btn-grp
+            a.btn(href='/ensino/meu-proprio-negocio') Meu Próprio Negócio
+            a.btn(href='/ensino/tecnologia') Tecnologia
+            a.btn(href='/ensino/ferramentas-cax') Ferramentas CAX
+
+        script
+            $('a[href*="' + location.pathname.split("/")[2] + '"]').addClass("bl");
+
+block content-education

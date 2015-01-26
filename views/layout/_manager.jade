@@ -1,0 +1,73 @@
+extends page
+
+block content
+    script
+        passer.mount([
+            { url: '/js/jquery-caret-1.02.js' },
+        ]);
+
+    script(src='/js/markdown-editor.js')
+
+    .gd
+        .cll-1
+            .bxt-m
+                a(href="/manager/").lft
+                    img.pull-left(src="/img/logotype/c37-manager.png", style="width:60px")
+                h2 c37 - Interface HTTP
+                p &ldquo;Duru, ruru e o ninho dos pardais = 4 Pardais + ² béchanos + ¹ auau&rdquo;
+    .gd
+        .cll-3-12
+            ul.grp-slr
+                li
+                    a(href='#') Ensino
+                    ul
+                        li
+                            a.b-lft(href='/manager/education/my-business') Meu próprio negócio
+                        li
+                            a.b-lft(href='/manager/education/technology') Tecnologia
+                        li
+                            a.b-lft(href='/manager/education/cax-tool') Ferramentas CAX
+                li
+                    a(href='#') Loja
+                    ul
+                        li
+                            a.b-lft(href='#') Pedidos
+                        li
+                            a.b-lft(href='#') Produtos
+                li
+                    a(href='#') Suporte
+                    ul
+                        li
+                            a.b-lft(href='#') Chamados
+                        li
+                            a.b-lft(href='#') Solicitações
+                li
+                    a(href='#') Dados
+                    ul
+                        li
+                            a.b-lft(href='/manager/data/administration') Administração
+
+            script
+                $('a[href*="' + location.pathname.split("/")[3] + '"]').parent().parent().parent().parent().addClass("in");
+                $('a[href*="' + location.pathname.split("/")[3] + '"]').addClass("slc");
+
+
+        .cll-9-12
+            ul.grp-nvt
+                li
+                    a(href='/manager', class="#{context.url.split('/').length <= 3 ? 'slc' : ''}") Home
+                if (context.url.split('/').length > 3)
+                    li
+                        case context.url.split('/')[3]
+                            when 'my-business': a(href='/manager/education/my-business', class="#{context.url.split('/').length == 4 ? 'slc' : ''}") Meu próprio negócio
+                            when 'technology': a(href='/manager/education/technology', class="#{context.url.split('/').length == 4 ? 'slc' : ''}") Tecnologia
+                            when 'cax-tool': a(href='/manager/education/cax-tool', class="#{context.url.split('/').length == 4 ? 'slc' : ''}") Ferramentas CAX
+
+                            when 'administration': a(href='/manager/data/administration', class="#{context.url.split('/').length == 4 ? 'slc' : ''}") Administração
+                if (context.url.split('/').length > 5)
+                    li
+                        case context.url.split('/')[4]
+                            when 'category-edit': a(href='#{context.url}', class="#{context.url.split('/').length == 6 ? 'slc' : ''}") Categoria
+                            when 'article-edit': a(href='#{context.url}', class="#{context.url.split('/').length == 6 ? 'slc' : ''}") Artigo
+
+            block content-manager

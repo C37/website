@@ -1,0 +1,124 @@
+extends ../../layout/_manager
+
+block content-manager
+    .rw.nm
+        .cll-1
+            a.btn.rgt(href="/manager/education/#{section}/category-edit/#{context.uuid.create(9, 16)}")
+                i.icon-plus
+                | #{" Novo agrupamento"}
+            h2.nbm Agrupamento de Categorias
+
+            if (categories.length)
+                .grp-tb
+                    .tb
+                        ul
+                            - var divider = 0;
+                            - _.where(categories, {category_group: ""}).forEach(function(category_group){
+                                - divider++
+                                li
+                                    a(href="#tab#{divider}", class="#{divider == 1 ? 'slc': ''}")
+                                        | #{category_group.order} - #{category_group.name}
+                                        i.rgt.cn-cmp-dt-bl(rel='#{category_group.key}')
+                            - })
+                    .cnt
+                        - var divider = 1;
+                        - _.where(categories, {category_group: ""}).forEach(function(category_group){
+                            div(id="tab#{divider}", class="#{divider == 1 ? 'active': ''}")
+                                .rw.nm
+                                    .cll-4-12
+                                        a.btn.rgt(href="/manager/education/#{section}/category-edit/#{context.uuid.create(9, 16)}")
+                                            i.icon-plus
+                                            | #{" Nova categoria"}
+                                        h3.nbm Categorias
+                                        - if (_.where(categories, {category_group: category_group.key}).length > 0) {
+                                            .mn-hrz
+                                                ul
+                                                    - _.where(categories, {category_group: category_group.key}).forEach(function(category) {
+                                                        li
+                                                            a.b-lft.btn-article-load(href="#", rel="#{category.key}")
+                                                                | #{category.order} - #{category.name}
+                                                                i.rgt.cn-cmp-dt-bl(rel='#{category.key}')
+                                                    - })
+                                        - }
+
+                                    .cll-8-12
+                                        a.btn.rgt(href="/manager/education/#{section}/article-edit/#{context.uuid.create(9, 16)}")
+                                            i.icon-plus
+                                            | #{" Nova artigo"}
+                                        h3.nbm Artigos
+
+                                        .div-article
+
+                                - divider++
+                        - })
+
+
+    script
+        $('.cn-cmp-dt-bl').click(function(e) {
+            e.stopImmediatePropagation();
+            window.location.href = '/manager/education/#{section}/category-edit/' + $(this).attr('rel')
+        })
+
+        $('.btn-article-load').click(function(e) {
+            e.stopImmediatePropagation();
+
+            $(this).parent().parent().find('a').removeClass('slc')
+            $(this).addClass('slc')
+
+            $.ajax({ url:'/manager/education/#{section}/' + $(this).attr('rel') }).done(function(data) {
+                var article_html = '',
+                    row_line = 0;
+                $('.div-article').html(article_html)
+
+                data.forEach(function(article, index) {
+                    if (row_line == 0) {
+                        article_html = article_html + '<div class="rw">'
+                    }
+                    row_line++
+
+
+                    article_html = article_html + '<div class="cll-6-12">'
+                    article_html = article_html + '<div class="grp-bx">'
+
+                    article_html = article_html + '<div class="hdr">'
+
+                    article_html = article_html + '<h3 class="nbm"><a target="_blank" href="/education/#{section}/' + article.name + '">' + article.name + '</a></h3>'
+
+                    article_html = article_html + '<div class="nf">'
+                    article_html = article_html + '<div class="tm thr"><span>por:&nbsp;</span>' + article.user + '</div>'
+                    article_html = article_html + '<div class="tm dt-cln"><span>' + article.created + '</span></div>'
+                    article_html = article_html + '</div>'
+
+                    article_html = article_html + '</div>'
+
+
+                    article_html = article_html + '<div class="cnt">'
+
+                    article_html = article_html + '<p>' + article.content.substring(0, article.content.indexOf('</p>')) + '</p>'
+                    article_html = article_html + '<a class="btn" href="/manager/education/#{section}/article-edit/' + article.key + '"><i class="icon-edit"></i> Editar &rsaquo;</a>'
+
+                    article_html = article_html + '</div>'
+
+                    article_html = article_html + '</div>'
+                    article_html = article_html + '</div>'
+
+                    if (row_line == 2) {
+                        article_html = article_html + '</div>'
+                        row_line = 0
+                    }
+
+                })
+
+                $('.div-article').html(article_html)
+
+                $(".dt-cln").text(function(){
+                    if (($(this).text() != "") && (moment($(this).text()).isValid())) {
+                        return moment($(this).text()).calendar();
+                    }
+                })
+
+            })
+        })
+
+
+

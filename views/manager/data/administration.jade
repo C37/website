@@ -1,0 +1,28 @@
+extends ../../layout/_manager
+
+block content-manager
+    .row-fluid
+        .span4
+            .btn-group
+                a.btn.btn-large(href='/manager/data/server') Server
+                a#btn_delete_index.btn.btn-large(href='#') Index
+                a.btn.btn-large(href='/manager/data/Type')  Type
+
+
+    script
+        $("#btn_delete_index").click(function(e){
+            $.ajax({
+                type: "POST",
+                url: "/manager/data/index",
+                success: function(){ alert('feito ;-)')}
+            });
+        });
+
+        $("#btn_create_index").click(function(e) {
+            $.ajax({
+                type: "POST",
+                url: "/manager/data/mapping",
+                data: {type: $('input[name="data_type"]').val(), mapping: $('textarea[name="data_mapping"]').val()},
+                success: function(){ alert('feito ;-)')}
+            });
+        })

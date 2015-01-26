@@ -1,0 +1,22 @@
+extends _page
+
+block content-education
+    .grp-bx
+        .hdr
+            h2.nbm #{article.name}
+            .nf
+                .tm
+                    span Mais sobre:
+                    ul.tg.hd
+                        - if (article.tags)
+                            - article.tags.split(' ').forEach(function(tag){
+                                li.tg-tm
+                                    a(href='#') #{tag}
+                            - })
+                .tm.thr
+                    span por:&nbsp;
+                    a(href='http://rili.c37.co/#{article.user}', target='_blank') #{article.user}
+                .tm.dt-cln
+                    span #{article.created}
+        .cnt
+            !{article.content}

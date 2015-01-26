@@ -1,0 +1,98 @@
+extends ../../layout/_manager
+
+block content-manager
+    .rw
+        .cll-1
+            .grp-bx
+                .hdr
+                    h3.nbm #{article.isNew ? "Novo artigo" : _.findWhere(article.fields,{name:"name"}).value}
+                    .nf
+                        .tm.thr
+                            | por #{_.findWhere(article.fields, { name: "user" }).value}
+                        .tm.dt-cln
+                            | #{_.findWhere(article.fields, { name: "created" }).value}
+                .cnt
+                    form(action="#{context.url}", method="post")
+                        input(type="hidden", name="isNew", value="#{article.isNew}")
+                        input(type="hidden", name="key", value=_.findWhere(article.fields,{name:"key"}).value)
+                        input(type="hidden", name="user", value=_.findWhere(article.fields,{name:"user"}).value)
+                        input(type="hidden", name="created", value=_.findWhere(article.fields,{name:"created"}).value)
+
+                        if (article.validate_message.length)
+                            .lrt-bx.ylw
+                                .hdr
+                                    strong Verifique&nbsp;
+                                    | as mensagens abaixo e continue
+                                .cnt
+                                    - article.validate_message.forEach(function(message){
+                                        | #{message}
+                                        br
+                                    - })
+
+                        .rw
+                            .cll-1
+                                label Nome do artigo
+                                input(name='name', value=_.findWhere(article.fields,{name:"name"}).value)
+
+                        .rw
+                            .cll-6-12
+                                label Categoria
+                                select(name='category')
+                                    option(value='').dft Selecione uma categoria
+                                    option.ttl hi! ;-}
+                                    if (categories.length)
+                                        - _.where(categories, {category_group: ""}).forEach(function(category_group){
+                                            - _.where(categories, {category_group: category_group.key}).forEach(function(category){
+                                                option(value=category.key, selected=((_.findWhere(article.fields,{name:"category"}).value == category.key) ? true : false))
+                                                    spam #{category.order}
+                                                    | &nbsp;-&nbsp;
+                                                    spam #{category.name}
+
+                                            - })
+                                        - })
+                            .cll-6-12
+                                label Tags
+                                input.tag(name='tags', value=_.findWhere(article.fields,{name:"tags"}).value)
+
+                        .rw
+                            .cll-1
+                                .editor-toolbar
+                                textarea.editor-content.input-block-level(rows="20", name='content')
+                                    !{_.findWhere(article.fields,{name:"content"}).value}
+                                script
+                                    $('.editor-content').markdownEditor({
+                                        toolbarLoc: $('.editor-toolbar'),
+                                        toolbar: 'default'
+                                    });
+
+                        .rw.nm
+                            .cll-4-12
+                                if (!article.isNew)
+                                    a.btn.btn-dlt.rd(href="#")
+                                        i.cn-cmp-tsh-wht
+                                        | Excluir
+                            .cll-8-12.txt-rgt
+                                button.btn(type="reset")
+                                    i.cn-cmp-rmv-bl
+                                    | Cancelar
+                                &nbsp;
+                                button.btn.grn(type='submit')
+                                    i.cn-cmp-k-wht
+                                    | Salvar
+
+                    script
+                        $(".btn-dlt").click(function(e){
+                            $.ajax({
+                                url: "#{context.url}",
+                                type: "delete",
+                                beforeSend: function ( xhr ) {
+                                    //alertManager("info", "Salvando suas alterações");
+                                }
+                            }).done(function ( data ) {
+                                if (data) {
+                                    alert(data);
+                                } else {
+                                    window.location="/manager/education/#{section}"
+                                }
+                            })
+                        })
