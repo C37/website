@@ -1,24 +1,15 @@
 {
-    "name": "c37-website",
-    "version": "1.0.0",
-    "description": "O Website da C37",
-    "homepage": "http://c37.co/",
-    "private": true,
-    "author": {
-        "name": "Ciro Cesar Maciel",
-        "email": "lilo@c37.co"
-    },
-    "contributors": [
-        {
-            "name": "Andréa Fabiana Maciel",
-            "email": "ser@c37.co"
-    }
-  ],
-    "dependencies": {
-        "serve-me": "latest"
-    },
-    "scripts": {
-        "preinstall": "npm install forever -g",
-        "start": "forever start server.js"
-    }
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.2.1",
+    "jade": "*",
+	"async": "*",
+	"markdown": "*",
+	"nodemailer": "*"
+  }
 }

@@ -1,0 +1,40 @@
+extends layout/page
+
+block content
+    br
+    .container
+        .row
+            .span4
+                img(alt='Not-found-error', src='/img/http/error-500.png')
+            .span8
+                h1 Erro interno no Servidor (erro no código)
+                h4 Sorry the page you requested may have been moved or deleted.
+                p Let's try one of the following remedies to get you back on track...
+
+                p #{error}
+
+                .btn-group
+                    a.btn(href='#')
+                        i.icon-circle-arrow-left
+                        | #{" Revisit the previous page"}
+                    a.btn(href='/')
+                        i.icon-home
+                        | #{" Go to the homepage"}
+                    a.btn(href='#')
+                        i.icon-th-list
+                        | #{" Check out latest posts"}
+
+                br
+                br
+
+                .white-card.extra-padding
+                    form.no-margin-bottom
+                        fieldset
+                            legend Or make use of the search
+                            .control-group
+                                .input-append
+                                    input.span3(placeholder='Search query...', type='text')
+                                    button.btn(type='submit') Search
+
+                br
+                br

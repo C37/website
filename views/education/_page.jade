@@ -1,0 +1,97 @@
+extends ../layout/page
+
+block content
+    section.section-wrapper
+        .container
+            .row
+                .span4
+                    a(href="/education")
+                        h2 Ensino
+                .span8
+
+                    ul.nav.nav-tabs.pull-right
+                        li
+                            a(href='/education/my-business') Meu Próprio Negócio
+                        li
+                            a(href='/education/technology') Tecnologia
+                        li
+                            a(href='/education/cax-tool') Ferramentas CAx
+
+                    script
+                        $('a[href*="' + location.pathname.split("/")[2] + '"]').parent().addClass("active");
+
+            br
+            section
+                .container
+                    .row
+                        .span8
+                            block content-education
+
+                        .span4
+                            .blog-side-bar
+                                .blog-categories.widget-tp
+                                    h3
+                                        i.icon-th-list
+                                        | Categorias
+                                    ul
+                                        li
+                                            a(href='#') Administração
+                                        li
+                                            a(href='#') Financeiro
+                                        li
+                                            a(href='#') Contabilidade
+                                        li
+                                            a(href='#') Marketing
+                                        li
+                                            a(href='#') Propaganda
+                                        li
+                                            a(href='#') Produção
+
+                                if (context.member)
+                                    .blog-side-text-block.widget-filled.widget-yellow
+                                        h3 Contribua você também!
+                                        p
+                                            | Ut diam arcu, dictum ut vulputate sed, iaculis nec lorem. Fusce pharetra nisl vitae nisl ultricies ut malesuada leo fringilla.
+                                        p
+                                            | Sed euismod, metus sed congue rutrum, justo elit malesuada quam, id pulvinar velit massa et justo. Etiam molestie nibh vitae turpis euismod ornare. Etiam dapibus ullamcorper tellus, nec suscipit eros imperdiet id.
+
+                                        p.text-right.hidden-phone
+                                            a.btn.btn-warning(href="/education/my-business/article-new")
+                                                i.icon-file
+                                                span #{" Novo artigo "}
+                                else
+                                    .blog-side-text-block.widget-filled.widget-yellow
+                                        h3 Contribua você também!
+                                        p
+                                            | Ut diam arcu, dictum ut vulputate sed, iaculis nec lorem. Fusce pharetra nisl vitae nisl ultricies ut malesuada leo fringilla.
+                                        p
+                                            | Sed euismod, metus sed congue rutrum, justo elit malesuada quam, id pulvinar velit massa et justo. Etiam molestie nibh vitae turpis euismod ornare. Etiam dapibus ullamcorper tellus, nec suscipit eros imperdiet id.
+                                        p.text-right.hidden-phone
+                                            a.btn.btn-warning(href="/signup")
+                                                i.icon-user
+                                                span #{" Junte-se a c37! "}
+
+
+                                .blog-side-tags.widget-tp
+                                    h3
+                                        i.icon-tags
+                                        | Popular Tags
+                                    ul
+                                        li
+                                            a.side-tag(href='#') CSS
+                                        li
+                                            a.side-tag(href='#') JS
+                                        li
+                                            a.side-tag(href='#') Tablets
+                                        li
+                                            a.side-tag(href='#') Monitors
+                                        li
+                                            a.side-tag(href='#') Keyboards
+                                        li
+                                            a.side-tag(href='#') Apple
+                                        li
+                                            a.side-tag(href='#') Microsoft
+                                        li
+                                            a.side-tag(href='#') Samsung
+                                        li
+                                            a.side-tag(href='#') Bootstrap

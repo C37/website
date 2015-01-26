@@ -1,0 +1,64 @@
+extends _page
+
+block content-education
+
+    script
+        passer.mount([
+            { url: '/js/jquery-caret-1.02.js' },
+            { url: '/js/markdown-editor.js' },
+            { url: '/js/jquery-ui-1.8.12.min.js' },
+            { url: '/js/tag-it.js' }
+        ]);
+
+    .single-post-w
+        h3.post-title.pull-left Criar novo artigo
+        blockquote.pull-right
+            p Sábado, 11 de Maio de 2013
+            small por #{ context.member.name_complete }
+
+        .row-fluid(class=(doc.validate_message.length ? '' : 'hidden'))
+            .span12
+                .form-side-info
+                    if (doc.validate_message.length)
+                        - doc.validate_message.forEach(function(message){
+                            | #{message}
+                            br
+                        - })
+
+        form(action="/education/my-business/article-new", method="post")
+            input(type="hidden", name="_id", value=doc._id)
+            input(type="hidden", name="type", value='#{article_type}')
+            .row-fluid
+                .span12
+                    label Nome do artigo
+                    input.input-block-level(name='name', value=doc.fields[0].value)
+            br
+            .row-fluid
+                .span6
+                    label Categoria
+                    select.input-block-level(name='category')
+                        option(value='') Selecione uma categoria
+                        - article_categories.forEach(function(category) {
+                            option(selected=((doc.category == category) ? true : false))= category
+                        - })
+                .span6
+                    label Tags
+                    input.tag_input.input-block-level(name='tags', value=doc.fields[3].value)
+
+            .row-fluid
+                .span12
+                    .editor-toolbar
+                    textarea.editor-content.input-block-level(rows="20", name='content', value=doc.fields[4].value)
+
+                    script
+                        $('.tag_input').tagit();
+
+                        $('.editor-content').markdownEditor({
+                            toolbarLoc: $('.editor-toolbar'),
+                            toolbar: 'default'
+                        });
+
+            .text-right
+                button.btn.btn-warning(type='submit')
+                    i.icon-save
+                    span #{" Pulicar o artigo"}

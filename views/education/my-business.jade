@@ -1,0 +1,141 @@
+extends _page
+
+block content-education
+
+    if (docs.length)
+        - docs.forEach(function(doc){
+            h4=doc.name
+            small=doc.member
+            !{doc.content}
+        br
+        - })
+
+
+    .row
+        .span4
+            .white-card.recent-post.clearfix
+                h5.recent-post-header
+                    a(href='single_post.html') Nullam velit diam, rhoncus sed
+                .post-info.clearfix
+                    .pull-left
+                        span.post-date January 15, 2011
+                        a.post-comments(href='single_post.html') 14 Comments
+                    .pull-right
+                        a.post-like(href='#')
+                            i.icon-heart
+                            | 250
+                //img.post-image(alt='Photo-card-big-3', src='/img/test-square.png')
+                p.post-content
+                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at.
+                    | Donec imperdiet nibh id metus adipiscing semper.
+                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
+        .span4
+            .white-card.recent-post.clearfix
+                h5.recent-post-header
+                    a(href='single_post.html') Nullam velit diam, rhoncus sed
+                .post-info.clearfix
+                    .pull-left
+                        span.post-date January 15, 2011
+                        a.post-comments(href='single_post.html') 14 Comments
+                    .pull-right
+                        a.post-like(href='#')
+                            i.icon-heart
+                            | 250
+                //img.post-image(alt='Photo-card-big-1', src='/img/test-square.png')
+                p.post-content
+                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at.
+                    | Donec imperdiet nibh id metus adipiscing semper.
+                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
+    .row
+        .span4
+            .white-card.recent-post.clearfix
+                h5.recent-post-header
+                    a(href='single_post.html') Nullam velit diam, rhoncus sed
+                .post-info.clearfix
+                    .pull-left
+                        span.post-date January 15, 2011
+                        a.post-comments(href='single_post.html') 14 Comments
+                    .pull-right
+                        a.post-like(href='#')
+                            i.icon-heart
+                            | 250
+                img.post-image(alt='Photo-card-big-3', src='/img/test-square.png')
+                p.post-content
+                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
+                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
+        .span4
+            .white-card.recent-post.clearfix
+                h5.recent-post-header
+                    a(href='single_post.html') Nullam velit diam, rhoncus sed
+                .post-info.clearfix
+                    .pull-left
+                        span.post-date January 15, 2011
+                        a.post-comments(href='single_post.html') 14 Comments
+                    .pull-right
+                        a.post-like(href='#')
+                            i.icon-heart
+                            | 250
+                img.post-image(alt='Photo-card-big-1', src='/img/test-square.png')
+                p.post-content
+                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
+                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
+    .row
+        .span4
+            .white-card.recent-post.clearfix
+                h5.recent-post-header
+                    a(href='single_post.html') Nullam velit diam, rhoncus sed
+                .post-info.clearfix
+                    .pull-left
+                        span.post-date January 15, 2011
+                        a.post-comments(href='single_post.html') 14 Comments
+                    .pull-right
+                        a.post-like(href='#')
+                            i.icon-heart
+                            | 250
+                img.post-image(alt='Photo-card-big-1', src='/img/test-square.png')
+                p.post-content
+                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
+                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
+        .span4
+            .white-card.recent-post.clearfix
+                h5.recent-post-header
+                    a(href='single_post.html') Nullam velit diam, rhoncus sed
+                .post-info.clearfix
+                    .pull-left
+                        span.post-date January 15, 2011
+                        a.post-comments(href='single_post.html') 14 Comments
+                    .pull-right
+                        a.post-like(href='#')
+                            i.icon-heart
+                            | 250
+                img.post-image(alt='Photo-card-big-2', src='/img/test-square.png')
+                p.post-content
+                    | Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
+                a.btn.btn-primary.btn-extra.pull-right(href='single_post.html') Read More >
+    .row
+        .span8
+            h3.section-header Pagination
+            .pagination
+                ul
+                    li
+                        a(href='#', rel='prev') Prev
+                    li.active
+                        a(href='#') 1
+                    li
+                        a(href='#') 2
+                    li
+                        a(href='#') 3
+                    li.visible-desktop-inline
+                        a(href='#') 4
+                    li.visible-desktop-inline
+                        a(href='#') 5
+                    li.visible-desktop-inline
+                        a(href='#') 6
+                    li
+                        a(href='#', rel='next') Next
+                    li
+                        a(href='view-all') Ver todos
+
+
+
+

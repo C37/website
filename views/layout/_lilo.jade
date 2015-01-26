@@ -1,0 +1,25 @@
+extends page
+
+block content
+    section.section-wrapper.about-page-w
+        .container
+            .row
+                .span5
+                    a(href="/lilo")
+                        img.pull-left(src="/img/logotype/c37-lilo.png", style="margin-right:10px;width:70px")
+                    h3 Lilo
+                .span7
+                    ul.nav.nav-tabs.pull-right
+                        li
+                            a(href='/lilo/what-for') Para que serve o Lilo
+                        li
+                            a(href='/lilo/design') Design
+                        li
+                            a(href='/lilo/versions') Versões
+                        li
+                            a(href='/lilo/specifications') Especificações
+
+                    script
+                        $('a[href*="' + location.pathname.split("/")[2] + '"]').parent().addClass("active");
+
+            block content-lilo

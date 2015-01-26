@@ -1,0 +1,31 @@
+extends page
+
+block content
+    section.section-wrapper.about-page-w
+        .container
+            .row-fluid
+                .span4
+                    a(href="/rizu")
+                        img.pull-left(src="/img/logotype/c37-rizu.png", style="margin-right:10px;width:50px")
+                    h3 Rizu
+                .span8.text-right
+
+                    ul.nav.nav-tabs
+                        li
+                            a(href='/rizu/what-for') Para que serve a Rizu
+                        li
+                            a(href='/rizu/design') Design
+                        li
+                            a(href='/rizu/versions') Versões
+                        li
+                            a(href='/rizu/specifications') Especificações
+                        li
+                            a(href='/rizu/accessories') Acessórios
+                        a.btn.btn-warning.hidden-phone(href="#")
+                            i.icon-shopping-cart
+                            span #{" Comprar "}
+
+                    script
+                        $('a[href*="' + location.pathname.split("/")[2] + '"]').parent().addClass("active");
+
+            block content-rizu

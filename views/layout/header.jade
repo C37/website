@@ -1,0 +1,67 @@
+header#header
+    div.navbar.navbar-fixed-top(class="#{context.url == '/' ? '': 'navbar-inverse'}")
+        .navbar-inner
+            .container
+                a.btn.btn-navbar(data-target='.nav-collapse', data-toggle='collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+
+                a.brand(href='/')
+                    img(src="/img/logotype/c37.png")
+                    | #{" c37"}
+
+                #top-navigation.pull-right
+                    ul.nav
+                        li
+                            a(href='/rizu') Rizu
+                        li
+                            a(href='/lilo') Lilo
+                        li
+                            a(href='/rili') RiLi
+                        li
+                            a(href='/education') Ensino
+                        li
+                            a(href='/store') Loja
+                        li
+                            a(href='/suport') Suporte
+                        li.visible-desktop
+                            .search
+                                .search-button Search:
+                                input(type='text', placeholder='O que você está procurando?')
+
+                    script
+                        $('a[href*="' + location.pathname.split("/")[1] + '"]').parent().addClass("active");
+
+                        $('.search input').hide();
+                        $('.search-button').click(function(){
+                            $('.search input').slideToggle('fast').focus();
+                            $(this).toggleClass('active');
+                        });
+
+                    .top-account-control
+                        if (context.member)
+                            a.top-user.dropdown-toggle(href='#', data-toggle="dropdown")
+                                i.icon-user
+                                span #{" " + context.member.name_complete}
+                            ul.dropdown-menu
+                                li
+                                    a(href='http://rili.c37.co/#{context.member.name_user}')
+                                        i.icon-group
+                                        span
+                                            | #{" " + context.member.name_complete + " "}
+                                            br
+                                            .text-right
+                                                small #{" " + context.member.email + " "}
+                                li
+                                    a(href='/article')
+                                        i.icon-copy
+                                        span #{" Meus artigos favoritos"}
+                                li.divider
+                                li
+                                    a(href='/signout')
+                                        i.icon-signout
+                                        span #{" Sair"}
+                        else
+                            a.top-create-account(href='/signup') Junte-se a c37
+                            a.top-sign-in(href='/signin') Entrar
