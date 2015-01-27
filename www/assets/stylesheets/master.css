@@ -3,6 +3,7 @@
     padding: 0;
     -webkit-text-size-adjust: none;
 }
+
 body,
 a {
     color: #3b4854;
@@ -14,17 +15,21 @@ a {
     -moz-transition: background 0.25s linear;
     transition: background 0.25s linear;
 }
+
 .animate {
     -webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;
     transition: all 0.25s linear;
 }
+
 .secondary-bg {
     background: url(../images/grid.png) #eeeeee 50% 0%;
 }
+
 .sprite {
     background: url(../images/sprite.png) no-repeat;
 }
+
 .ellipsis {
     overflow: hidden;
     display: block;
@@ -46,29 +51,35 @@ button {
     font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif;
     font-weight: 300;
 }
+
 h1,
 h2,
 h3,
 h4 {
     letter-spacing: 0.05em;
 }
+
 h1 {
     font-size: 34px;
 }
+
 h2 {
     font-size: 34px;
     padding: 48px 0;
 }
+
 b,
 strong {
     font-family: 'HelveticaNeue-Bold', Helvetica, Arial, sans-serif;
     font-weight: 900;
 }
+
 label {
     font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 12px;
 }
+
 .platforms-list li,
 .list-header.mini,
 .quick-links-header li {
@@ -82,22 +93,26 @@ label {
 a:hover {
     color: #4cc2e4;
 }
+
 p {
     line-height: 1.6em;
     text-align: justify;
 }
+
 p + p {
     margin-top: 1em;
 }
+
 .button-container {
     position: absolute;
     right: -5px;
     background: url(../images/shadow.png);
 }
+
 .button {
     display: block;
     background: url(../images/mind.png) no-repeat;
-    background-color: #4cc2e4;
+    background-color: #58cedf;
     background-position: 100% 0px;
     width: 288px;
     padding: 16px;
@@ -111,19 +126,23 @@ p + p {
     -moz-transition: background 0.25s linear;
     transition: background 0.25s linear;
 }
+
 .button:hover {
-    background-color: #4cd6fc;
+    background-color: #2AA3B4;
     color: #fff;
 }
+
 div.button,
 div.button:hover {
     background-color: #abafb0;
 }
+
 .button label {
     display: block;
     font-size: 0.5em;
     height: 16px;
 }
+
 .clear {
     clear: both;
 }
@@ -139,10 +158,12 @@ hr {
     margin: 0 auto;
     position: relative;
 }
+
 .grid {
     background: url(../images/grid.png) #eeeeee 50% 0%;
     padding: 32px 0;
 }
+
 hr {
     border: none;
     border-top: 1px solid #ddd;
@@ -156,6 +177,7 @@ hr {
 .header-placeholder {
     height: 90px;
 }
+
 #header {
     height: 90px;
     position: fixed;
@@ -165,6 +187,7 @@ hr {
     background: #fff;
     border-bottom: 1px solid #ddd;
 }
+
 #header .shadow {
     position: absolute;
     left: 0;
@@ -173,6 +196,7 @@ hr {
     height: 3px;
     background: url(../images/shadow.png);
 }
+
 .logo {
     background: url(../images/logo.png) no-repeat;
     -webkit-transition: background 0.25s linear;
@@ -185,12 +209,14 @@ hr {
     width: 82px;
     height: 61px;
 }
+
 .closing {
     background: url(../images/logo-64.png) no-repeat;
     -webkit-transition: background 0.25s linear;
     -moz-transition: background 0.25s linear;
     transition: background 0.25s linear;
     /*    background-color: #3b4854;*/
+    
     background-position: 0 0px;
     position: absolute;
     left: 0;
@@ -198,10 +224,12 @@ hr {
     width: 56px;
     height: 42px;
 }
+
 .menu {
     padding: 16px 0;
     float: right;
 }
+
 .menu a {
     text-decoration: none;
     -webkit-transition: background 0.25s linear;
@@ -211,9 +239,11 @@ hr {
     margin: 0 8px;
     line-height: 55px;
 }
+
 .menu a:hover {
     color: #4cc2e4;
 }
+
 .menu-dropdown {
     display: none;
     position: absolute;
@@ -221,6 +251,7 @@ hr {
     top: 32px;
     width: 40%;
 }
+
 .menu-dropdown select {
     width: 100%;
 }
@@ -231,28 +262,34 @@ hr {
 .leadin {
     margin-bottom: 32px;
 }
+
 .leadin .wrap {
     height: 368px;
 }
+
 .leadin .text-block {
     position: absolute;
     left: 384px;
     top: 64px;
 }
+
 .leadin img {
     position: absolute;
     top: 32px;
     left: 24px;
 }
+
 .leadin li {
     list-style: none;
     margin: 9px 8px;
 }
+
 .leadin h1 {
     background: #fff;
     display: inline;
     padding: 4px 8px;
 }
+
 .leadin .button-container {
     bottom: 0;
 }
@@ -266,15 +303,18 @@ hr {
     padding: 8px;
     position: relative;
 }
+
 .list-link {
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
 }
+
 .list {
     padding-top: 16px;
 }
+
 .list li {
     background: #fff;
     padding: 8px;
@@ -282,15 +322,18 @@ hr {
     list-style: none;
     margin-bottom: 16px;
 }
+
 .list-header {
     background: #fff;
     padding: 8px;
     position: relative;
     margin-top: 16px;
 }
+
 .list-header p {
     margin-bottom: 0;
 }
+
 .list-container {
     position: relative;
 }
@@ -300,11 +343,13 @@ hr {
     padding-top: 32px;
     width: 456px;
 }
+
 .platforms-list.second {
     position: absolute;
     right: 0;
     top: 0;
 }
+
 .platforms-list li a {
     position: absolute;
     top: 0;
@@ -318,16 +363,20 @@ hr {
     background-position: 3px -127px;
     background-color: #4cc2e4;
 }
+
 .platforms-list li a:hover {
     background-color: #4cd6fc;
 }
+
 .platforms-list li.first a {
     width: 108px;
 }
+
 .platforms-list li a.link-apache {
     right: 39px;
     background-position: 2px -94px;
 }
+
 .platforms-list li.first a.link-apache {
     width: 144px;
     right: 111px;
@@ -339,6 +388,7 @@ hr {
     margin-bottom: 24px;
     text-align: justify;
 }
+
 .mailing-list a {
     position: absolute;
     top: 0;
@@ -351,6 +401,7 @@ hr {
     padding: 8px;
     width: 608px;
 }
+
 .mailing-list span {
     position: absolute;
     display: block;
@@ -363,10 +414,12 @@ hr {
     height: auto;
     overflow: hidden;
 }
+
 .mailing-list a:hover {
     color: #fff;
     background: #4cc2e4;
 }
+
 .mailing-list a span {
     position: absolute;
     top: 0;
@@ -375,8 +428,10 @@ hr {
     width: 36px;
     background: url(../images/arrow-right.png) no-repeat;
     /*    background-position: -156px -95px;*/
+    
     background-color: #4cc2e4;
 }
+
 .mailing-list li {
     margin-bottom: 3px;
 }
@@ -385,30 +440,38 @@ hr {
 .download-pane .button-container {
     bottom: -70px;
 }
+
 .list-header.mini {
     display: inline;
 }
+
 .download-list-container {
     position: relative;
 }
+
 .download-list {
     width: 320px;
     margin-bottom: 24px;
 }
+
 .download-list.second,
 .download-list.third {
     position: absolute;
     top: 0;
 }
+
 .download-list.second {
     left: 344px;
 }
+
 .download-list.third {
     left: 688px;
 }
+
 .download-list li {
     height: 18px;
 }
+
 .download-list .version {
     position: absolute;
     top: 0;
@@ -428,9 +491,11 @@ hr {
     padding-left: 32px;
     width: 40%;
 }
+
 .download-list .version:hover {
     background-color: #4cd6fc;
 }
+
 .download-list .release {
     float: right;
     font-size: 12px;
@@ -441,6 +506,7 @@ hr {
 .list-header.mini {
     display: inline;
 }
+
 .quick-links,
 .quick-links-header li {
     float: left;
@@ -449,16 +515,20 @@ hr {
     list-style: none;
     position: relative;
 }
+
 .quick-links-header li {
     margin-bottom: 24px;
 }
+
 .quick-links.last,
 .quick-links-header li.last {
     margin-right: 0;
 }
+
 .quick-links li {
     padding: 0;
 }
+
 .quick-links a {
     -webkit-transition: background 0.25s linear;
     -moz-transition: background 0.25s linear;
@@ -467,10 +537,12 @@ hr {
     text-decoration: none;
     padding: 8px;
 }
+
 .quick-links a:hover {
     color: #fff;
     background: #4cc2e4;
 }
+
 .quick-links a span {
     position: absolute;
     top: 0;
@@ -479,6 +551,7 @@ hr {
     width: 36px;
     background: url(../images/arrow-right.png) no-repeat;
     /*    background-position: -156px -95px;*/
+    
     background-color: #4cc2e4;
 }
 /*---------------------------------------------------
@@ -488,13 +561,16 @@ hr {
 #footer {
     padding: 32px 0 14px;
 }
+
 #footer p {
     font-size: 12px;
     line-height: 1.5em;
     margin-bottom: 20px;
 }
+
 .closing {
     /*    background-position: 0 -725px;*/
+    
     left: auto;
     right: 0;
     top: 20px;
@@ -506,7 +582,6 @@ hr {
     background-color: #4cc2e4;
 }
 */
-
 /*---------------------------------------------------
 	Jira Search Form
 ---------------------------------------------------*/
@@ -516,6 +591,7 @@ hr {
     padding: 2px;
     min-width: 200px;
 }
+
 #jira-search-box,
 #jira-search-button {
     box-sizing: border-box;
@@ -525,6 +601,7 @@ hr {
     height: 1.8rem;
     vertical-align: bottom;
 }
+
 #jira-search-button {
     font-size: 14px;
     margin-left: -1px;
@@ -539,47 +616,60 @@ hr {
     background-position: 0 -220px;
     padding-left: 78px;
 }
+
 .icon-cad {
     background: url(../images/logo-cad.png) no-repeat;
 }
+
 .icon-cam {
     background: url(../images/logo-cam.png) no-repeat;
 }
+
 .icon-router {
     background: url(../images/logo-router.png) no-repeat;
 }
+
 .icon-help {
     background: url(../images/help.png) no-repeat;
 }
+
 .icon-c37 {
     background: url(../images/logo-c37.png) no-repeat;
 }
+
 .icon-suggestion {
     background: url(../images/suggestion.png) no-repeat;
 }
+
 .icon-specifications {
     background: url(../images/specifications.png) no-repeat;
 }
+
 .icon-link {
     background: url(../images/link.png) no-repeat;
 }
+
 .icon-location {
     display: inline-block;
     background-image: url(../images/location.png);
     width: 12px;
     height: 16px;
 }
+
 a.scroll-point {
     display: block;
     border-bottom: transparent 1px solid;
 }
+
 a.pt-top {
     border: none;
 }
+
 a.pt-about {
     margin: -100px 0 130px;
     border: none;
 }
+
 .corner,
 .quick-links .corner {
     background: url(../images/corner.png) no-repeat;
@@ -589,6 +679,7 @@ a.pt-about {
     width: 40px;
     height: 40px;
 }
+
 .button-container.middle {
     bottom: 0;
 }
@@ -633,6 +724,7 @@ a.pt-about {
         right: 16px;
     }
 }
+
 @media all and (max-width: 890px) {
     h1 {
         font-size: 24px;
@@ -667,6 +759,7 @@ a.pt-about {
         display: block;
     }
 }
+
 @media all and (max-width: 720px) {
     body {
         font-size: 16px;
@@ -732,6 +825,7 @@ a.pt-about {
         padding-right: 72px;
     }
 }
+
 @media all and (max-width: 630px) {
     body {
         /*        font-size: 14px;*/
@@ -761,6 +855,7 @@ a.pt-about {
         width: 22%;
     }
 }
+
 @media all and (max-width: 585px) {
     h1,
     h2,
@@ -786,13 +881,10 @@ a.pt-about {
     .leadin .wrap {
         height: 200px;
     }
-    
-    
     .icon {
         background-size: 33px;
         padding: 23px 0px 20px 48px;
     }
-    
     .platforms-list,
     .platforms-list.second {
         width: auto;
@@ -834,6 +926,7 @@ a.pt-about {
         padding-top: 0;
     }
 }
+
 @media all and (max-width: 440px) {
     .leadin .button-container {
         display: none;
@@ -859,3 +952,17 @@ a.pt-about {
         margin-top: 32px;
     }
 }
+/* customização */
+
+.button-buy {
+    background-color: #f1acab;
+    color: white;
+    font-weight: bold;
+}
+
+.button-buy:hover {
+    background-color: #F1615F;
+    color: white !important;
+    font-weight: bold;
+}
+/* customização */

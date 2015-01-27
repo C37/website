@@ -27,16 +27,36 @@
                 <a href="#cam">CAM</a>
                 <a href="#router-cnc">Fresadora CNC</a>
                 <a href="#suggestion">Sugestões Criativas</a>
-                <a href="#help">Ajuda</a>
+                <a href="http://produto.mercadolivre.com.br/MLB-624307714-fresadora-router-cnc-40x60cm-softwares-cadcamcontrolador-_JM" target="_blank" class="button-buy">Comprar</a>
             </div>
             <form class="menu-dropdown">
-                <select onchange="location = this.options[this.selectedIndex].value;">
+                <select id="menu-dropdown" onchange="location = this.options[this.selectedIndex].value;">
                     <option value="#cad">CAD</option>
                     <option value="#cam">CAM</option>
                     <option value="#router-cnc">Fresadora CNC</option>
-                    <a href="#suggestion">Sugestões Criativas</a>
-                    <option value="#help">Ajuda</option>
+                    <option value="#suggestion">Sugestões Criativas</option>
+                    <option value="http://produto.mercadolivre.com.br/MLB-624307714-fresadora-router-cnc-40x60cm-softwares-cadcamcontrolador-_JM">Comprar</option>
                 </select>
+                <script>
+                    document.querySelector('#menu-dropdown').addEventListener('change', function (event) {
+
+                        var value = this.value;
+
+                        if (value.indexOf('http') != -1) {
+                            location = '';
+
+                            var evLink = document.createElement('a');
+
+                            evLink.href = value;
+                            evLink.target = '_blank';
+                            document.body.appendChild(evLink);
+                            evLink.click();
+
+                            // Now delete it
+                            evLink.parentNode.removeChild(evLink);
+                        }
+                    });
+                </script>
             </form>
         </div>
         <div class="shadow"></div>
@@ -63,9 +83,7 @@
                 </li>
             </ul>
             <div class="button-container">
-
-                <a class="button" href="#solution">Conheça<label>Sua nova ferramenta CNC</label></a>
-
+                <a class="button" href="#solution">Conheça<label>Esta nova Máquina-Ferramenta</label></a>
             </div>
         </div>
     </div>
@@ -73,7 +91,9 @@
 
     <a class="scroll-point pt-about" id="solution"></a>
     <div class="wrap">
-        <h2 class="icon icon-c37">Uma solução completa</h2>
+        <h2 class="icon icon-c37">O que era distante agora está ao seu alcance</h2>
+
+        <p>Desenvolvemos a Fresadora CNC mais tecnológica do mercado e que acompanha <strong>gratuitamente</strong> todos os softwares para o seu projeto.</p>
 
         <p>Estas versões dos softwares CAD, CAM e Fresadora CNC(software) da C37 foram planejados e desenvolvidos de forma integrada com sua Fresadora CNC afim de oferecer um produto <strong>completo</strong>, nunca visto no mercado mundial. Sua Fresadora CNC acompanha <strong>gratuitamente</strong> todos os softwares necessários para realizar do início ao fim (desenho, plano de trabalho e controle de usinagem) a execução de seus trabalhos.</p>
 
@@ -313,7 +333,7 @@
         <h2 class="icon icon-link">Links Rápidos</h2>
         <ul class="quick-links-header">
             <li>Geral</li>
-            <li>Tecnologias</li>
+            <li>Artigos</li>
             <li class="last">Redes Sociais</li>
         </ul>
         <div class="clear"></div>
@@ -345,19 +365,22 @@
                 <ul class="list quick-links">
                     <li class="corner"></li>
 
+                    <!--
                     <li><a href="http://www.google.com.br/chrome/" target="_blank">Navegador Google Chrome<span></span></a>
+                    </li>
+-->
 
-                        <li><a href="http://en.wikipedia.org/wiki/Computer-aided_design" target="_blank">Wikipedia - CAD<span></span></a>
-                        </li>
+                    <li><a href="http://en.wikipedia.org/wiki/Computer-aided_design" target="_blank">Wikipedia - CAD<span></span></a>
+                    </li>
 
-                        <li><a href="http://en.wikipedia.org/wiki/Computer-aided_manufacturing" target="_blank">Wikipedia - CAM<span></span></a>
-                        </li>
+                    <li><a href="http://en.wikipedia.org/wiki/Computer-aided_manufacturing" target="_blank">Wikipedia - CAM<span></span></a>
+                    </li>
 
-                        <li><a href="http://en.wikipedia.org/wiki/CNC_router" target="_blank">Wikipedia - Fresadora CNC<span></span></a>
-                        </li>
+                    <li><a href="http://en.wikipedia.org/wiki/CNC_router" target="_blank">Wikipedia - Fresadora CNC<span></span></a>
+                    </li>
 
-                        <li><a href="http://pt.wikipedia.org/wiki/C%C3%B3digo_G" target="_blank">Wikipedia - Código G<span></span></a>
-                        </li>
+                    <li><a href="http://pt.wikipedia.org/wiki/C%C3%B3digo_G" target="_blank">Wikipedia - Código G<span></span></a>
+                    </li>
                 </ul>
 
                 <ul class="list quick-links last">
