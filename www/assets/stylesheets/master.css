@@ -304,13 +304,6 @@ hr {
     position: relative;
 }
 
-.list-link {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-}
-
 .list {
     padding-top: 16px;
 }
@@ -321,6 +314,15 @@ hr {
     position: relative;
     list-style: none;
     margin-bottom: 16px;
+}
+
+.list-link{
+    margin-left: 20px;
+}
+.list-link li {
+    padding: 5px;
+    list-style: disc;
+    margin-bottom: 0px;
 }
 
 .list-header {
