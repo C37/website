@@ -1,7 +1,7 @@
 {
-    "name": "c37-website",
+    "name": "website",
     "version": "1.0.0",
-    "description": "O Website da C37",
+    "description": "C37 - Website",
     "homepage": "http://c37.co/",
     "private": true,
     "author": {
