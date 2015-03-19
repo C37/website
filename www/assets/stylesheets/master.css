@@ -934,16 +934,29 @@ a.pt-about {
         display: none;
     }
     .leadin .text-block {
+        top: -15px;
+        right: -4px;
+    }
+/*
+    testes para correções na apresentação do celular
+    .leadin .text-block {
         top: 135px;
         left: -4px;
         right: -4px;
     }
+*/
     .leadin img {
         top: -8px;
     }
     .leadin .wrap {
+        height: 120px;
+    }
+/*    
+    testes para correções na apresentação do celular
+    .leadin .wrap {
         height: 260px;
     }
+*/
     .icon {
         padding: 25px 16px 20px 35px;
     }
