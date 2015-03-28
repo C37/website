@@ -1,466 +1,473 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <link rel="SHORTCUT ICON" href="favicon.ico" />
+    <head>
+        <link rel="SHORTCUT ICON" href="favicon.ico" />
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 
-    <title>C37 - CNC ao seu alcance</title>
+        <title>C37 - CNC ao seu alcance</title>
 
-    <link rel="stylesheet" href="assets/stylesheets/master.css">
+        <link rel="stylesheet" href="assets/stylesheets/master.css">
 
-    <script src="assets/scripts/smooth.js" type="text/javascript"></script>
-</head>
+        <script src="assets/scripts/smooth.js" type="text/javascript"></script>
+    </head>
 
-<body>
+    <body>
 
-    <a class="scroll-point pt-top" id="top"></a>
-    <div id="header">
-        <div class="wrap">
-            <a class="logo" href="#top" title="CNC ao seu alcance"></a>
-            <div class="menu">
-                <a href="#cad">CAD</a>
-                <a href="#cam">CAM</a>
-                <a href="#router-cnc">Fresadora CNC</a>
-                <a href="#suggestion">Sugestões Criativas</a>
-                <a href="http://produto.mercadolivre.com.br/MLB-624307714-fresadora-router-cnc-40x60cm-completa-cad-cam-controlador-_JM" target="_blank" class="button-buy">Comprar</a>
+        <a class="scroll-point pt-top" id="top"></a>
+        <div id="header">
+            <div class="wrap">
+                <a class="logo" href="#top" title="CNC ao seu alcance"></a>
+                <div class="menu">
+                    <a href="#cad">CAD</a>
+                    <a href="#cam">CAM</a>
+                    <a href="#router-cnc">Fresadora CNC</a>
+                    <a href="#suggestion">Sugestões Criativas</a>
+                    <a href="http://produto.mercadolivre.com.br/MLB-624307714-fresadora-router-cnc-40x60cm-completa-cad-cam-controlador-_JM" target="_blank" class="button-buy">Comprar</a>
+                </div>
+                <form class="menu-dropdown">
+                    <select id="menu-dropdown" onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="#cad">CAD</option>
+                        <option value="#cam">CAM</option>
+                        <option value="#router-cnc">Fresadora CNC</option>
+                        <option value="#suggestion">Sugestões Criativas</option>
+                        <option value="http://produto.mercadolivre.com.br/MLB-624307714-fresadora-router-cnc-40x60cm-completa-cad-cam-controlador-_JM">Comprar</option>
+                    </select>
+                    <script>
+                        document.querySelector('#menu-dropdown').addEventListener('change', function (event) {
+
+                            var value = this.value;
+
+                            if (value.indexOf('http') != -1) {
+                                location = '';
+
+                                var evLink = document.createElement('a');
+
+                                evLink.href = value;
+                                evLink.target = '_blank';
+                                document.body.appendChild(evLink);
+                                evLink.click();
+
+                                // Now delete it
+                                evLink.parentNode.removeChild(evLink);
+                            }
+                        });
+                    </script>
+                </form>
             </div>
-            <form class="menu-dropdown">
-                <select id="menu-dropdown" onchange="location = this.options[this.selectedIndex].value;">
-                    <option value="#cad">CAD</option>
-                    <option value="#cam">CAM</option>
-                    <option value="#router-cnc">Fresadora CNC</option>
-                    <option value="#suggestion">Sugestões Criativas</option>
-                    <option value="http://produto.mercadolivre.com.br/MLB-624307714-fresadora-router-cnc-40x60cm-completa-cad-cam-controlador-_JM">Comprar</option>
-                </select>
-                <script>
-                    document.querySelector('#menu-dropdown').addEventListener('change', function (event) {
-
-                        var value = this.value;
-
-                        if (value.indexOf('http') != -1) {
-                            location = '';
-
-                            var evLink = document.createElement('a');
-
-                            evLink.href = value;
-                            evLink.target = '_blank';
-                            document.body.appendChild(evLink);
-                            evLink.click();
-
-                            // Now delete it
-                            evLink.parentNode.removeChild(evLink);
-                        }
-                    });
-                </script>
-            </form>
+            <div class="shadow"></div>
         </div>
-        <div class="shadow"></div>
-    </div>
 
-    <div class="header-placeholder"></div>
+        <div class="header-placeholder"></div>
 
 
-    <div class="grid leadin">
+        <div class="grid leadin">
+            <div class="wrap">
+                <img src="assets/images/logo-bot.png" alt="" />
+                <ul class="text-block">
+                    <li>
+                        <h1>a <strong>C37</strong> desenvolveu</h1>
+                    </li>
+                    <li>
+                        <h1>uma <strong>Fresadora CNC</strong></h1>
+                    </li>
+                    <li>
+                        <h1>completa</h1>
+                    </li>
+                    <li>
+                        <h1>para <strong>voce</strong>.</h1>
+                    </li>
+                </ul>
+                <div class="button-container">
+                    <a class="button" href="#solution">Conheça<label>Esta nova Máquina-Ferramenta</label></a>
+                </div>
+            </div>
+        </div>
+
+
+        <a class="scroll-point pt-about" id="solution"></a>
         <div class="wrap">
-            <img src="assets/images/logo-bot.png" alt="" />
-            <ul class="text-block">
-                <li>
-                    <h1>a <strong>C37</strong> desenvolveu</h1>
-                </li>
-                <li>
-                    <h1>uma <strong>Fresadora CNC</strong></h1>
-                </li>
-                <li>
-                    <h1>completa</h1>
-                </li>
-                <li>
-                    <h1>para <strong>voce</strong>.</h1>
-                </li>
+            <h2 class="icon icon-c37">O que era distante agora está ao seu alcance</h2>
+
+
+
+            <p>Para voce que está chegando agora neste envolvente mundo das CNCs ou para voce que já acompanha a evolução destas máquinas-ferramentas, ficará surpreso com os diferencias que a C37 está trazendo.</p>
+
+            <p>Nossa Fresadora CNC foi projetada em Compensado, MDF, Aluminio e Nylon para que voce receba e monte seu equipamento. Estes materiais tornam o produto mais leve, de <strong>simples manuseio</strong> e ainda, sem perder a <strong>robustes</strong>.</p>
+
+            <p>Seu projeto moderno permite que os eixos sejam acionados através de cabos de aço, com configuração simples e <strong>precisa</strong>.</p>
+
+            <p>Possui fins de curso nos seus 3 eixos (X, Y e Z), botões de Pausa e Emergência e acionamento automático do Spindle. Oferece sistema para aspirar os cavacos e nichos apropriados para a fixação da matéria prima.</p>
+
+            <p>Uma característica pioneira é a conexão com a <strong>porta USB</strong>, proporcionando ao usuário a diversidade de utilizar computadores portáteis <strong>(notebooks)</strong> ou computadores de mesa <strong>(desktops)</strong>.</p>
+
+            <p>Porém, o ponto mais marcante deste segmento no <strong>mercado atual</strong> é a interação e <strong>disponibilidade gratuita</strong> dos softwares CAD, CAM e do Controlador da Fresadora CNC.</p>
+
+            <p>O resultado é um equipamento <strong>preciso</strong>, <strong>economico</strong>, <strong>produtivo</strong>, <strong>intuitivo</strong>, <strong>prátivo</strong>, <strong>comodo</strong> e o mais importante, <strong>acessível com um valor justo</strong>.</p>
+
+            <p>Para conhecer todos os detalhes e características, clique em:</p>
+
+            <ul class="list list-link">
+                <li><a href="#cad">CAD</a></li>
+                <li><a href="#cam">CAM</a></li>
+                <li><a href="#router-cnc">Fresadora CNC</a></li>
             </ul>
-            <div class="button-container">
-                <a class="button" href="#solution">Conheça<label>Esta nova Máquina-Ferramenta</label></a>
-            </div>
-        </div>
-    </div>
 
+            <br>
+            <br>
+            <br>
+            <br>
 
-    <a class="scroll-point pt-about" id="solution"></a>
-    <div class="wrap">
-        <h2 class="icon icon-c37">O que era distante agora está ao seu alcance</h2>
+            <p>Desenvolvemos a Fresadora CNC mais tecnológica do mercado e que acompanha <strong>gratuitamente</strong> todos os softwares para o seu projeto.</p>
 
+            <p>Estas versões dos softwares CAD, CAM e Fresadora CNC(software) da C37 foram planejados e desenvolvidos de forma integrada com sua Fresadora CNC afim de oferecer um produto <strong>completo</strong>, nunca visto no mercado mundial. Sua Fresadora CNC acompanha <strong>gratuitamente</strong> todos os softwares necessários para realizar do início ao fim (desenho, plano de trabalho e controle de usinagem) a execução de seus trabalhos.</p>
 
+            <p>
+                E a inovação não para por aqui. Além de você poder usufruir destas versões gratuitas, as <strong>novas tecnologias</strong> em que estes softwares foram desenvolvidos exigem apenas a utilização no navegador Google Chrome em qualquer sistema operacional em computadores desktop ou notebook.
+            </p>
 
-        <p>Para voce que está chegando agora neste envolvente mundo das CNCs ou para voce que já acompanha a evolução destas máquinas-ferramentas, ficará surpreso com os diferencias que a C37 está trazendo.</p>
+            <p>
+                Isso significa que voce <strong>não necessitará de um computador com características específicas</strong> de sistema operacional, processador, memória ou espaço em seu disco rigido, pois nossos softwares não ocupam a memória de seu computador e ainda mais, podem ser usados off-line(desconectados da internet). <a href="#specifications">Saiba quais são as especificações de funcionamento</a>
+            </p>
 
-        <p>Nossa Fresadora CNC foi projetada em Compensado, MDF, Aluminio e Nylon para que voce receba e monte seu equipamento. Estes materiais tornam o produto mais leve, de <strong>simples manuseio</strong> e ainda, sem perder a <strong>robustes</strong>.</p>
+            <p>Na C37 há tres etapas para obter seu produto final:</p>
 
-        <p>Seu projeto moderno permite que os eixos sejam acionados através de cabos de aço, com configuração simples e <strong>precisa</strong>.</p>
-
-        <p>Possui fins de curso nos seus 3 eixos (X, Y e Z), botões de Pausa e Emergência e acionamento automático do Spindle. Oferece sistema para aspirar os cavacos e nichos apropriados para a fixação da matéria prima.</p>
-
-        <p>Uma característica pioneira é a conexão com a <strong>porta USB</strong>, proporcionando ao usuário a diversidade de utilizar computadores portáteis <strong>(notebooks)</strong> ou computadores de mesa <strong>(desktops)</strong>.</p>
-
-        <p>Porém, o ponto mais marcante deste segmento no <strong>mercado atual</strong> é a interação e <strong>disponibilidade gratuita</strong> dos softwares CAD, CAM e do Controlador da Fresadora CNC.</p>
-
-        <p>O resultado é um equipamento <strong>preciso</strong>, <strong>economico</strong>, <strong>produtivo</strong>, <strong>intuitivo</strong>, <strong>prátivo</strong>, <strong>comodo</strong> e o mais importante, <strong>acessível com um valor justo</strong>.</p>
-
-        <p>Para conhecer todos os detalhes e características, clique em:</p>
-        
-        <ul class="list list-link">
-            <li><a href="#cad">CAD</a></li>
-            <li><a href="#cam">CAM</a></li>
-            <li><a href="#router-cnc">Fresadora CNC</a></li>
-        </ul>
-
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <p>Desenvolvemos a Fresadora CNC mais tecnológica do mercado e que acompanha <strong>gratuitamente</strong> todos os softwares para o seu projeto.</p>
-
-        <p>Estas versões dos softwares CAD, CAM e Fresadora CNC(software) da C37 foram planejados e desenvolvidos de forma integrada com sua Fresadora CNC afim de oferecer um produto <strong>completo</strong>, nunca visto no mercado mundial. Sua Fresadora CNC acompanha <strong>gratuitamente</strong> todos os softwares necessários para realizar do início ao fim (desenho, plano de trabalho e controle de usinagem) a execução de seus trabalhos.</p>
-
-        <p>
-            E a inovação não para por aqui. Além de você poder usufruir destas versões gratuitas, as <strong>novas tecnologias</strong> em que estes softwares foram desenvolvidos exigem apenas a utilização no navegador Google Chrome em qualquer sistema operacional em computadores desktop ou notebook.
-        </p>
-
-        <p>
-            Isso significa que voce <strong>não necessitará de um computador com características específicas</strong> de sistema operacional, processador, memória ou espaço em seu disco rigido, pois nossos softwares não ocupam a memória de seu computador e ainda mais, podem ser usados off-line(desconectados da internet). <a href="#specifications">Saiba quais são as especificações de funcionamento</a>
-        </p>
-
-        <p>Na C37 há tres etapas para obter seu produto final:</p>
-
-        <ul class="list mailing-list">
-            <li>
-                Criar seus projetos no CAD.
-            </li>
-            <li>
-                Configurar o plano de trabalho usando o CAM.
-            </li>
-            <li>
-                Controlar a usinagem na Fresadora CNC.
-            </li>
-        </ul>
-
-    </div>
-
-    <hr>
-
-    <a class="scroll-point pt-about" id="cad"></a>
-    <div class="wrap">
-        <h2 class="icon icon-cad">CAD - Desenho Auxiliado por Computador </h2>
-
-        <p>O CAD da C37 é um software 2D desenvolvido para voce criar, desenhar e obter os arquivos necessarios para a consolidação de seus trabalhos na sua Fresadora CNC. É o <strong>primeiro</strong> software CAD criado para a internet e que trabalha off-line</p>
-
-        <p>Feito com as principais ferramentas para voce desenvolver seus projetos:</p>
-
-        <ul class="list mailing-list">
-            <li>
-                Traços: Linha, Polilinha e Arco
-            </li>
-            <li>
-                Curvas: Spline , Bézier Cubica e Bézier Quadratica
-            </li>
-            <li>
-                Formas: Circulos, Quadrados/Retangulos e Poligonos
-            </li>
-            <li>
-                Utilitários: Textos, Régua e Cotas
-            </li>
-        </ul>
-
-        <p>Alguns pontos que destacamos:</p>
-
-        <ul class="list mailing-list">
-            <li>
-                <strong>Economico</strong>: Nosso CAD pode ser usado em qualquer desktop ou notebook. Por ser um software desenvolvido para internet (na “nuvem”), não requer características específicas de hardware, o que significa que voce pode manter sua maquina com as configurações atuais de velocidade e armazenamento. Sendo desnecessario o investimento em um outro equipamento.
-            </li>
-            <li>
-                <strong>Rentável</strong>: Sempre disponibilizaremos uma versão gratuita. Sem cobrança de licenças, nem mensalidades. Por ser um software <i>intuitivo e descomplicado</i>, não ha a necessidade de mão de obra especializada e nem de investimentos em cursos para adquirir conhecimento e desenvolver habilidades para voce iniciar seus projetos.
-            </li>
-            <li>
-                <strong>Produtivo</strong>: Editável e modificável, aceita importar outros projetos já criados. Desta forma voce pode criar mais, em menos tempo.
-            </li>
-            <li>
-                <strong>Intuitivo</strong>: Simples e descomplicado, em poucos minutos voce fica familiarizado com a interface.
-            </li>
-            <li>
-                <strong>Prático</strong>: Voce pode começar a trabalhar agora mesmo em nosso CAD, basta utilizar o navegador Google Chrome.
-            </li>
-            <li>
-                <strong>Comodidade</strong>: de qualquer lugar, falar mais dos beneficios de estar em qualquer lugar do mundo (fisico).
-            </li>
-        </ul>
-
-        <p>O CAD - C37 é o primeiro passo.</p>
-
-        <p>Video sobre <a href="http://www.youtube.com/playlist?list=PLCzJTkE2cXKG_ZXFeBFGi9uPCWgz5bgTT" target="_blank">Primeiros Passos</a>
-        </p>
-
-        <p>Agora faltam apenas dois para ter em suas mãos as suas idéias!</p>
-
-        <p>Clique <a href="https://chrome.google.com/webstore/detail/cad/bacjohjidiopikbeocnpebloihebiane" target="_blank">aqui</a> para instalar o C37 - CAD.</p>
-
-    </div>
-
-    <hr/>
-
-    <a class="scroll-point pt-about" id="cam"></a>
-    <div class="wrap">
-        <h2 class="icon icon-cam">CAM - Manufatura Auxiliada por Computador</h2>
-
-        <p>O que é uma ferramenta CAM, Código G, Wikipedia</p>
-
-        <p>Interligado com a ferramenta CAD, Simplicidade e Ferramentas</p>
-
-        <p>Versão Gratuita, o custo no investimento em uma ferramenta CAM</p>
-
-        <p>Video sobre <a href="http://www.youtube.com/playlist?list=PLCzJTkE2cXKHdyT5Q9xjk0oiK4uXK9NNk" target="_blank">Primeiros Passos</a>
-        </p>
-
-        <p>Clique <a href="https://chrome.google.com/webstore/detail/cam/kanmmcphjbpnojplaphiepkklcgmmkgd" target="_blank">aqui</a> para instalar o C37 - CAM.</p>
-    </div>
-
-    <hr/>
-
-    <a class="scroll-point pt-about" id="router-cnc"></a>
-    <div class="wrap">
-        <h2 class="icon icon-router">Fresadora CNC</h2>
-
-        <p>Uma ferramenta completa, Wikipedia</p>
-
-        <p>Seu tamanho, área util, robustez e segurança</p>
-
-        <p>O materiais que podem ser usinados</p>
-
-        <p>Seu custo, formas de pagamento, tempo para o envio, formas de envio, link para o anúncio no Mercado Livre</p>
-
-        <p>Video sobre Primeiros Passos</p>
-
-        <p>Video sobre <a href="http://www.youtube.com/playlist?list=PLCzJTkE2cXKGMCsb8UNkMs38FBkXpx9uQ" target="_blank">Primeiros Passos</a>
-        </p>
-
-        <p>Clique <a href="https://chrome.google.com/webstore/detail/fresadora-cnc/iodomfcbclgacbhdjmpjfcgdjecdkdhn" target="_blank">aqui</a> para instalar a C37 - Fresadora CNC.</p>
-    </div>
-
-    <hr/>
-
-    <a class="scroll-point pt-about" id="suggestion"></a>
-    <div class="wrap">
-        <h2 class="icon icon-suggestion">Sugestões Criativas</h2>
-
-        <p>Biblioteca com arquivos, download, com video explicando o inicio de uso</p>
-
-        <p>Artesanato, com video</p>
-
-        <p>Letras Caixa, com video</p>
-
-        <p>Brinquedos, com video</p>
-
-        <p>Tipos de Materiais, com video</p>
-
-    </div>
-
-    <hr/>
-
-    <a class="scroll-point pt-about" id="help"></a>
-    <div class="wrap">
-        <h2 class="icon icon-help">Ajuda</h2>
-
-        <p>Às vezes você só precisa de um pouco de ajuda</p>
-
-        <p>Videos</p>
-
-        <p>Comunidades</p>
-
-        <p>Wikipedia</p>
-
-    </div>
-
-    <hr/>
-
-    <a class="scroll-point pt-about" id="about"></a>
-    <div class="wrap">
-        <h2 class="icon icon-c37">Sobre a C37</h2>
-
-        <p>C37 - CNC ao seu alcance</p>
-
-        <p>Quais nossos planos</p>
-
-        <p>Horario de funcionamento, ligar e agendar visita</p>
-
-        <p>Endereço: Av. Andrade Neves, 1455 - Vila Helena, SP, 09175-360, Brasil
-            <a href="https://maps.google.com/maps?q=Av. Andrade Neves, 1455 - Vila Helena, SP, 09175-360, Brasil" target="_blank" title="Localize a C37 no mapa"><i class="icon-location"></i></a>
-            <br>Telefone: (11) 4902-3665
-            <br>E-mail: <a href="mailto:contato@c37.co">contato@c37.co</a>
-        </p>
-
-    </div>
-
-
-    <hr/>
-
-
-    <a class="scroll-point pt-about" id="specifications"></a>
-    <div class="wrap">
-        <h2 class="icon icon-specifications">Especificações</h2>
-    </div>
-
-    <div class="grid">
-        <div class="wrap">
-            <div class="corner"></div>
-            <br/>
-            <div class="list-header">
-                <strong>Softwares (CAD, CAM, Fresadora CNC)</strong>
-                <p>Os requisitos para a operação dos softwares são:</p>
-            </div>
             <ul class="list mailing-list">
                 <li>
-                    Um computador (desktop e ou notebook) PC Mac ou Linux com 01 porta UBS disponível</a>
+                    Criar seus projetos no CAD.
                 </li>
                 <li>
-                    Compátivel com os sistemas operacionais: Mac OS X v10.6.8 ou posterior, PC: Windows 7, Windows Vista, Windows XP Home ou Professional com Service Pack 3 ou posterior ou Linux: Ubuntu 10.04.4 LTS ou posterior
+                    Configurar o plano de trabalho usando o CAM.
                 </li>
                 <li>
-                    O Navegador Google Chrome instalado
+                    Controlar a usinagem na Fresadora CNC.
                 </li>
             </ul>
-            <br/>
-            <div class="list-header">
-                <strong>Hardware (Fresadora CNC)</strong>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-            </div>
-            <ul class="list mailing-list">
-                <li>Comprimento x Largura<span>90cm x 65cm</span>
-                </li>
-                <li>Área util de trabalho (X,Y,Z)<span>70cm x 50cm x 10cm</span>
-                </li>
-                <li>Peso<span>70cm x 50cm x 10cm</span>
-                </li>
-                <li>Requisitos Elétricos<span>Voltagem: 100V AC Frequência: 50Hz a 60Hz</span>
-                </li>
-                <li>Conteúdo da Caixa
-                    <br>
-                    <br><span>Componentes de Madeira, Componentes Eletrônicos, Motores de Passo, Cabo USB, Documentação Inicial</span>
-                </li>
-                <li>
-                    Lista com os Materiais usinados
-                </li>
-            </ul>
-            <br/>
+
         </div>
-    </div>
 
+        <hr>
 
-    <div class="wrap quick-links-pane">
-        <h2 class="icon icon-link">Links Rápidos</h2>
-        <ul class="quick-links-header">
-            <li>Geral</li>
-            <li>Artigos</li>
-            <li class="last">Redes Sociais</li>
-        </ul>
-        <div class="clear"></div>
-    </div>
-
-    <div class="grid">
+        <a class="scroll-point pt-about" id="cad"></a>
         <div class="wrap">
-            <div class="list-container">
-                <ul class="list quick-links">
-                    <li class="corner"></li>
+            <h2 class="icon icon-cad">CAD - Desenho Auxiliado por Computador </h2>
 
-                    <li><a href="#cad">CAD<span></span></a>
+            <p>O CAD da C37 é um software 2D desenvolvido para voce criar, desenhar e obter os arquivos necessarios para a consolidação de seus trabalhos na sua Fresadora CNC. É o <strong>primeiro</strong> software CAD criado para a internet e que trabalha off-line</p>
+
+            <p>Feito com as principais ferramentas para voce desenvolver seus projetos:</p>
+
+            <ul class="list mailing-list">
+                <li>
+                    Traços: Linha, Polilinha e Arco
+                </li>
+                <li>
+                    Curvas: Spline , Bézier Cubica e Bézier Quadratica
+                </li>
+                <li>
+                    Formas: Circulos, Quadrados/Retangulos e Poligonos
+                </li>
+                <li>
+                    Utilitários: Textos, Régua e Cotas
+                </li>
+            </ul>
+
+            <p>Alguns pontos que destacamos:</p>
+
+            <ul class="list mailing-list">
+                <li>
+                    <strong>Economico</strong>: Nosso CAD pode ser usado em qualquer desktop ou notebook. Por ser um software desenvolvido para internet (na “nuvem”), não requer características específicas de hardware, o que significa que voce pode manter sua maquina com as configurações atuais de velocidade e armazenamento. Sendo desnecessario o investimento em um outro equipamento.
+                </li>
+                <li>
+                    <strong>Rentável</strong>: Sempre disponibilizaremos uma versão gratuita. Sem cobrança de licenças, nem mensalidades. Por ser um software <i>intuitivo e descomplicado</i>, não ha a necessidade de mão de obra especializada e nem de investimentos em cursos para adquirir conhecimento e desenvolver habilidades para voce iniciar seus projetos.
+                </li>
+                <li>
+                    <strong>Produtivo</strong>: Editável e modificável, aceita importar outros projetos já criados. Desta forma voce pode criar mais, em menos tempo.
+                </li>
+                <li>
+                    <strong>Intuitivo</strong>: Simples e descomplicado, em poucos minutos voce fica familiarizado com a interface.
+                </li>
+                <li>
+                    <strong>Prático</strong>: Voce pode começar a trabalhar agora mesmo em nosso CAD, basta utilizar o navegador Google Chrome.
+                </li>
+                <li>
+                    <strong>Comodidade</strong>: de qualquer lugar, falar mais dos beneficios de estar em qualquer lugar do mundo (fisico).
+                </li>
+            </ul>
+
+            <p>O CAD - C37 é o primeiro passo.</p>
+
+            <p>Video sobre <a href="http://www.youtube.com/playlist?list=PLCzJTkE2cXKG_ZXFeBFGi9uPCWgz5bgTT" target="_blank">Primeiros Passos</a>
+            </p>
+
+            <p>Agora faltam apenas dois para ter em suas mãos as suas idéias!</p>
+
+            <p>Clique <a href="https://chrome.google.com/webstore/detail/cad/bacjohjidiopikbeocnpebloihebiane" target="_blank">aqui</a> para instalar o C37 - CAD.</p>
+
+        </div>
+
+        <hr/>
+
+        <a class="scroll-point pt-about" id="cam"></a>
+        <div class="wrap">
+            <h2 class="icon icon-cam">CAM - Manufatura Auxiliada por Computador</h2>
+
+            <p>O que é uma ferramenta CAM, Código G, Wikipedia</p>
+
+            <p>Interligado com a ferramenta CAD, Simplicidade e Ferramentas</p>
+
+            <p>Versão Gratuita, o custo no investimento em uma ferramenta CAM</p>
+
+            <p>Video sobre <a href="http://www.youtube.com/playlist?list=PLCzJTkE2cXKHdyT5Q9xjk0oiK4uXK9NNk" target="_blank">Primeiros Passos</a>
+            </p>
+
+            <p>Clique <a href="https://chrome.google.com/webstore/detail/cam/kanmmcphjbpnojplaphiepkklcgmmkgd" target="_blank">aqui</a> para instalar o C37 - CAM.</p>
+        </div>
+
+        <hr/>
+
+        <a class="scroll-point pt-about" id="router-cnc"></a>
+        <div class="wrap">
+            <h2 class="icon icon-router">Fresadora CNC</h2>
+
+            <p>Uma ferramenta completa, Wikipedia</p>
+
+            <p>Seu tamanho, área util, robustez e segurança</p>
+
+            <p>O materiais que podem ser usinados</p>
+
+            <p>Seu custo, formas de pagamento, tempo para o envio, formas de envio, link para o anúncio no Mercado Livre</p>
+
+            <p>Video sobre Primeiros Passos</p>
+
+            <p>Video sobre <a href="http://www.youtube.com/playlist?list=PLCzJTkE2cXKGMCsb8UNkMs38FBkXpx9uQ" target="_blank">Primeiros Passos</a>
+            </p>
+
+            <p>Clique <a href="https://chrome.google.com/webstore/detail/fresadora-cnc/iodomfcbclgacbhdjmpjfcgdjecdkdhn" target="_blank">aqui</a> para instalar a C37 - Fresadora CNC.</p>
+        </div>
+
+        <hr/>
+
+        <a class="scroll-point pt-about" id="suggestion"></a>
+        <div class="wrap">
+            <h2 class="icon icon-suggestion">Sugestões Criativas</h2>
+
+            <p>Biblioteca com arquivos, download, com video explicando o inicio de uso</p>
+
+            <p>Artesanato, com video</p>
+
+            <p>Letras Caixa, com video</p>
+
+            <p>Brinquedos, com video</p>
+
+            <p>Tipos de Materiais, com video</p>
+
+        </div>
+
+        <hr/>
+
+        <a class="scroll-point pt-about" id="help"></a>
+        <div class="wrap">
+            <h2 class="icon icon-help">Ajuda</h2>
+
+            <p>Às vezes você só precisa de um pouco de ajuda</p>
+
+            <p>Videos</p>
+
+            <p>Comunidades</p>
+
+            <p>Wikipedia</p>
+
+        </div>
+
+        <hr/>
+
+        <a class="scroll-point pt-about" id="about"></a>
+        <div class="wrap">
+            <h2 class="icon icon-c37">Sobre a C37</h2>
+
+            <p>C37 - CNC ao seu alcance</p>
+
+            <p>Quais nossos planos</p>
+
+            <p>Política de envios</p>
+
+            <p>
+                <strong>Escritório</strong>
+                <br>
+                Endereço: Av. Andrade Neves, 1455 
+                <!--<a href="https://maps.google.com/maps?q=Av. Andrade Neves, 1455 - Vila Helena, SP, 09175-360, Brasil" target="_blank" title="Localize a C37 no mapa"><i class="icon-location"></i></a>-->
+                <br>
+                Vila Helena - Santo André - SP - Brasil
+                <br>
+                CEP: 09175-360
+                <br>Telefone: (11) 4902-3665
+                <br>E-mail: <a href="mailto:contato@c37.co">contato@c37.co</a>
+            </p>
+
+        </div>
+
+
+        <hr/>
+
+
+        <a class="scroll-point pt-about" id="specifications"></a>
+        <div class="wrap">
+            <h2 class="icon icon-specifications">Especificações</h2>
+        </div>
+
+        <div class="grid">
+            <div class="wrap">
+                <div class="corner"></div>
+                <br/>
+                <div class="list-header">
+                    <strong>Softwares (CAD, CAM, Fresadora CNC)</strong>
+                    <p>Os requisitos para a operação dos softwares são:</p>
+                </div>
+                <ul class="list mailing-list">
+                    <li>
+                        Um computador (desktop e ou notebook) PC Mac ou Linux com 01 porta UBS disponível</a>
                     </li>
-
-                    <li><a href="#cam">CAM<span></span></a>
+                    <li>
+                        Compátivel com os sistemas operacionais: Mac OS X v10.6.8 ou posterior, PC: Windows 7, Windows Vista, Windows XP Home ou Professional com Service Pack 3 ou posterior ou Linux: Ubuntu 10.04.4 LTS ou posterior
                     </li>
-
-                    <li><a href="#router-cnc">Fresadora CNC<span></span></a>
+                    <li>
+                        O Navegador Google Chrome instalado
                     </li>
-
-                    <li><a href="#suggestion">Sugestões Criativas<span></span></a>
-                    </li>
-
-                    <li><a href="#help">Ajuda<span></span></a>
-                    </li>
-
                 </ul>
-
-                <ul class="list quick-links">
-                    <li class="corner"></li>
-
-                    <!--
-                    <li><a href="http://www.google.com.br/chrome/" target="_blank">Navegador Google Chrome<span></span></a>
+                <br/>
+                <div class="list-header">
+                    <strong>Hardware (Fresadora CNC)</strong>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                </div>
+                <ul class="list mailing-list">
+                    <li>Comprimento x Largura<span>90cm x 65cm</span>
                     </li>
--->
-
-                    <li><a href="http://en.wikipedia.org/wiki/Computer-aided_design" target="_blank">Wikipedia - CAD<span></span></a>
+                    <li>Área util de trabalho (X,Y,Z)<span>70cm x 50cm x 10cm</span>
                     </li>
-
-                    <li><a href="http://en.wikipedia.org/wiki/Computer-aided_manufacturing" target="_blank">Wikipedia - CAM<span></span></a>
+                    <li>Peso<span>70cm x 50cm x 10cm</span>
                     </li>
-
-                    <li><a href="http://en.wikipedia.org/wiki/CNC_router" target="_blank">Wikipedia - Fresadora CNC<span></span></a>
+                    <li>Requisitos Elétricos<span>Voltagem: 100V AC Frequência: 50Hz a 60Hz</span>
                     </li>
-
-                    <li><a href="http://pt.wikipedia.org/wiki/C%C3%B3digo_G" target="_blank">Wikipedia - Código G<span></span></a>
+                    <li>Conteúdo da Caixa
+                        <br>
+                        <br><span>Componentes de Madeira, Componentes Eletrônicos, Motores de Passo, Cabo USB, Documentação Inicial</span>
                     </li>
-                </ul>
-
-                <ul class="list quick-links last">
-                    <li class="corner"></li>
-
-                    <li><a href="https://plus.google.com/u/0/b/103521099751840432888/103521099751840432888/posts" target="_blank">Google+<span></span></a>
-                    </li>
-
-                    <li><a href="https://www.youtube.com/channel/UC_G4iPRsyX24cuyTe2qY3Vw" target="_blank">YouTube<span></span></a>
-                    </li>
-
-                    <li><a href="https://plus.google.com/u/0/b/103521099751840432888/communities/110830761191880608533" target="_blank">Suporte - CAD<span></span></a>
-                    </li>
-
-                    <li><a href="https://plus.google.com/u/0/b/103521099751840432888/communities/114864591131263072290" target="_blank">Suporte - CAM<span></span></a>
-                    </li>
-
-                    <li><a href="https://plus.google.com/u/0/b/103521099751840432888/communities/110187319475139503639" target="_blank">Suporte - Fresadora CNC<span></span></a>
+                    <li>
+                        Lista com os Materiais usinados
                     </li>
                 </ul>
-
-                <div class="clear"></div>
+                <br/>
             </div>
         </div>
-    </div>
 
 
-    <div id="footer">
-        <p>© C37²°¹<small>5</small>
-        </p>
-        <a class="closing" href="#top" title="CNC ao seu alcance"></a>
-    </div>
+        <div class="wrap quick-links-pane">
+            <h2 class="icon icon-link">Links Rápidos</h2>
+            <ul class="quick-links-header">
+                <li>Geral</li>
+                <li>Artigos</li>
+                <li class="last">Redes Sociais</li>
+            </ul>
+            <div class="clear"></div>
+        </div>
 
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        <div class="grid">
+            <div class="wrap">
+                <div class="list-container">
+                    <ul class="list quick-links">
+                        <li class="corner"></li>
 
-        ga('create', 'UA-36787725-2', 'auto');
-        ga('require', 'displayfeatures');
-        ga('send', 'pageview');
-    </script>
+                        <li><a href="#cad">CAD<span></span></a>
+                        </li>
 
-</body>
+                        <li><a href="#cam">CAM<span></span></a>
+                        </li>
+
+                        <li><a href="#router-cnc">Fresadora CNC<span></span></a>
+                        </li>
+
+                        <li><a href="#suggestion">Sugestões Criativas<span></span></a>
+                        </li>
+
+                        <li><a href="#help">Ajuda<span></span></a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list quick-links">
+                        <li class="corner"></li>
+
+                        <!--
+                        <li><a href="http://www.google.com.br/chrome/" target="_blank">Navegador Google Chrome<span></span></a>
+                        </li>
+                        -->
+
+                        <li><a href="http://en.wikipedia.org/wiki/Computer-aided_design" target="_blank">Wikipedia - CAD<span></span></a>
+                        </li>
+
+                        <li><a href="http://en.wikipedia.org/wiki/Computer-aided_manufacturing" target="_blank">Wikipedia - CAM<span></span></a>
+                        </li>
+
+                        <li><a href="http://en.wikipedia.org/wiki/CNC_router" target="_blank">Wikipedia - Fresadora CNC<span></span></a>
+                        </li>
+
+                        <li><a href="http://pt.wikipedia.org/wiki/C%C3%B3digo_G" target="_blank">Wikipedia - Código G<span></span></a>
+                        </li>
+                    </ul>
+
+                    <ul class="list quick-links last">
+                        <li class="corner"></li>
+
+                        <li><a href="http://google.com/+C37CoCNC" target="_blank">Google+<span></span></a>
+                        </li>
+
+                        <li><a href="http://www.youtube.com/c/C37CoCNC" target="_blank">YouTube<span></span></a>
+                        </li>
+
+                        <li><a href="https://plus.google.com/b/105967130780710051168/communities/104239233929060314598" target="_blank">C37 - CAD<span></span></a>
+                        </li>
+
+                        <li><a href="https://plus.google.com/b/105967130780710051168/communities/111492304377661492702" target="_blank">C37 - CAM<span></span></a>
+                        </li>
+
+                        <li><a href="https://plus.google.com/b/105967130780710051168/communities/100504676065535245720" target="_blank">C37 - Fresadora CNC<span></span></a>
+                        </li>
+                    </ul>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="footer">
+            <p>© C37²°¹<small>5</small>
+            </p>
+            <a class="closing" href="#top" title="CNC ao seu alcance"></a>
+        </div>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-36787725-2', 'auto');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+
+    </body>
 
 </html>
