@@ -561,7 +561,7 @@ hr {
 ---------------------------------------------------*/
 
 #footer {
-    padding: 32px 0 14px;
+    padding: 27px 0 14px;
 }
 
 #footer p {
@@ -987,4 +987,12 @@ a.pt-about {
     color: white !important;
     font-weight: bold;
 }
+
+.img-license{
+    display: block;
+    background-image: url('../images/license.png');
+    width: 80px;
+    height: 15px;
+}
+
 /* customização */
