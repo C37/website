@@ -37,7 +37,7 @@ a {
     white-space: nowrap;
 }
 /*---------------------------------------------------
-	Font
+        Font
 ---------------------------------------------------*/
 
 body,
@@ -84,10 +84,10 @@ label {
 .list-header.mini,
 .quick-links-header li {
     font-family: 'HelveticaNeue-Medium', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 /*---------------------------------------------------
-	Generic
+        Generic
 ---------------------------------------------------*/
 
 a:hover {
@@ -147,7 +147,7 @@ div.button:hover {
     clear: both;
 }
 /*---------------------------------------------------
-	Layout
+        Layout
 ---------------------------------------------------*/
 
 #wrap,
@@ -171,7 +171,7 @@ hr {
     margin-bottom: 32px;
 }
 /*---------------------------------------------------
-	Layout - Header
+        Layout - Header
 ---------------------------------------------------*/
 
 .header-placeholder {
@@ -216,7 +216,7 @@ hr {
     -moz-transition: background 0.25s linear;
     transition: background 0.25s linear;
     /*    background-color: #3b4854;*/
-    
+
     background-position: 0 0px;
     position: absolute;
     left: 0;
@@ -256,7 +256,7 @@ hr {
     width: 100%;
 }
 /*---------------------------------------------------
-	Layout - Leadin
+        Layout - Leadin
 ---------------------------------------------------*/
 
 .leadin {
@@ -294,8 +294,8 @@ hr {
     bottom: 0;
 }
 /*---------------------------------------------------
-	Layout - Contribution, Mailing List,
-	Download and Quick Links
+        Layout - Contribution, Mailing List,
+        Download and Quick Links
 ---------------------------------------------------*/
 
 .container-box {
@@ -430,7 +430,7 @@ hr {
     width: 36px;
     background: url(../images/arrow-right.png) no-repeat;
     /*    background-position: -156px -95px;*/
-    
+
     background-color: #4cc2e4;
 }
 
@@ -452,7 +452,7 @@ hr {
 }
 
 .download-list {
-    width: 320px;
+    width: 100%;
     margin-bottom: 24px;
 }
 
@@ -471,7 +471,30 @@ hr {
 }
 
 .download-list li {
-    height: 18px;
+    height: auto;
+    overflow: hidden;
+    /*height: 18px;*/
+}
+
+.download-list .type {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: background 0.25s linear;
+    -moz-transition: background 0.25s linear;
+    transition: background 0.25s linear;
+    background: url(../image/sprite.png) no-repeat;
+    background-position: -160px -127px;
+    background-color: #4cc2e4;
+    color: #fff;
+    text-decoration: none;
+    right: auto;
+    left: 0;
+    padding: 9px 8px 8px 8px !important;
+    padding-left: 11px;
+    width: 40%;
+    font-weight: 700;
 }
 
 .download-list .version {
@@ -492,6 +515,11 @@ hr {
     padding: 8px;
     padding-left: 32px;
     width: 40%;
+}
+
+.download-list .info {
+    float: right;
+    padding-top: 1px;
 }
 
 .download-list .version:hover {
@@ -553,11 +581,11 @@ hr {
     width: 36px;
     background: url(../images/arrow-right.png) no-repeat;
     /*    background-position: -156px -95px;*/
-    
+
     background-color: #4cc2e4;
 }
 /*---------------------------------------------------
-	Layout - Footer
+        Layout - Footer
 ---------------------------------------------------*/
 
 #footer {
@@ -572,7 +600,7 @@ hr {
 
 .closing {
     /*    background-position: 0 -725px;*/
-    
+
     left: auto;
     right: 0;
     top: 20px;
@@ -585,7 +613,7 @@ hr {
 }
 */
 /*---------------------------------------------------
-	Jira Search Form
+        Jira Search Form
 ---------------------------------------------------*/
 
 #jira-search-box {
@@ -610,7 +638,7 @@ hr {
     padding: 5px;
 }
 /*---------------------------------------------------
-	Misc
+        Misc
 ---------------------------------------------------*/
 
 .icon {
@@ -686,7 +714,7 @@ a.pt-about {
     bottom: 0;
 }
 /*---------------------------------------------------
-	Mobile
+        Mobile
 ---------------------------------------------------*/
 
 @media all and (max-width: 1024px) {
@@ -781,13 +809,13 @@ a.pt-about {
         top: 12px;
         left: 232px;
     }
-/*
-    testes para correções na apresentação do celular
-    .leadin .text-block {
-        top: 32px;
-        left: 232px;
-    }
-*/
+    /*
+        testes para correções na apresentação do celular
+        .leadin .text-block {
+            top: 32px;
+            left: 232px;
+        }
+    */
     .button {
         font-size: 20px;
         background-position: 100% -177px;
@@ -863,6 +891,18 @@ a.pt-about {
     .download-list .version {
         width: 22%;
     }
+    .download-list .type {
+        width: auto;
+        display: block;
+        position: static;
+        margin: -8px -8px 8px;
+    }
+    .download-list .info {
+        float: none;
+    }
+    .download-list li {
+        height: auto;
+    }    
 }
 
 @media all and (max-width: 585px) {
@@ -944,26 +984,26 @@ a.pt-about {
         top: -15px;
         right: -4px;
     }
-/*
-    testes para correções na apresentação do celular
-    .leadin .text-block {
-        top: 135px;
-        left: -4px;
-        right: -4px;
-    }
-*/
+    /*
+        testes para correções na apresentação do celular
+        .leadin .text-block {
+            top: 135px;
+            left: -4px;
+            right: -4px;
+        }
+    */
     .leadin img {
         top: -8px;
     }
     .leadin .wrap {
         height: 95px;
     }
-/*    
-    testes para correções na apresentação do celular
-    .leadin .wrap {
-        height: 260px;
-    }
-*/
+    /*    
+        testes para correções na apresentação do celular
+        .leadin .wrap {
+            height: 260px;
+        }
+    */
     .icon {
         padding: 25px 16px 20px 35px;
     }
