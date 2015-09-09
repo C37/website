@@ -111,7 +111,7 @@ p + p {
 
 .button {
     display: block;
-    background: url(../images/mind.png) no-repeat;
+    background: url(../images/button.png) no-repeat;
     background-color: #7ac5ce;
     background-position: 100% 0px;
     width: 288px;
@@ -663,12 +663,20 @@ hr {
     background: url(../images/help.png) no-repeat;
 }
 
+.icon-technology {
+    background: url(../images/technology.png) no-repeat;
+}
+
 .icon-c37 {
     background: url(../images/logo-c37.png) no-repeat;
 }
 
-.icon-suggestion {
-    background: url(../images/suggestion.png) no-repeat;
+.icon-with-you {
+    background: url(../images/with-you.png) no-repeat;
+}
+
+.icon-idea {
+    background: url(../images/idea.png) no-repeat;
 }
 
 .icon-specifications {
@@ -685,6 +693,7 @@ hr {
     width: 12px;
     height: 16px;
 }
+
 
 a.scroll-point {
     display: block;
