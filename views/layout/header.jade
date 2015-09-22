@@ -30,15 +30,6 @@ header#header
                                 .search-button Search:
                                 input(type='text', placeholder='O que você está procurando?')
 
-                    script
-                        $('a[href*="' + location.pathname.split("/")[1] + '"]').parent().addClass("active");
-
-                        $('.search input').hide();
-                        $('.search-button').click(function(){
-                            $('.search input').slideToggle('fast').focus();
-                            $(this).toggleClass('active');
-                        });
-
                     .top-account-control
                         if (context.member)
                             a.top-user.dropdown-toggle(href='#', data-toggle="dropdown")
@@ -65,3 +56,12 @@ header#header
                         else
                             a.top-create-account(href='/signup') Junte-se a c37
                             a.top-sign-in(href='/signin') Entrar
+
+//                    script
+//                        $('a[href*="' + location.pathname.split("/")[1] + '"]').parent().addClass("active");
+//
+//                        $('.search input').hide();
+//                        $('.search-button').click(function(){
+//                            $('.search input').slideToggle('fast').focus();
+//                            $(this).toggleClass('active');
+//                        });

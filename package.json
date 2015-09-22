@@ -1,15 +1,16 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node app.js"
-  },
-  "dependencies": {
-    "express": "3.2.1",
-    "jade": "*",
-	"async": "*",
-	"markdown": "*",
-	"nodemailer": "*"
-  }
+    "name": "website-v1",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "mongodb": "latest",
+        "express": "3.2.1",
+        "jade": "1.11.0",
+        "async": "*",
+        "markdown": "*",
+        "nodemailer": "*"
+    }
 }
