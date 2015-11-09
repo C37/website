@@ -269,14 +269,15 @@ hr {
 
 .leadin .text-block {
     position: absolute;
-    left: 384px;
-    top: 64px;
+    left: 500px;
+    top: 34px;
 }
 
 .leadin img {
     position: absolute;
-    top: 32px;
-    left: 24px;
+    top: 0px;
+    left: 30px;
+    width: 450px;
 }
 
 .leadin li {
@@ -778,12 +779,11 @@ a.pt-about {
         padding-top: 54px;
     }
     .leadin img {
-        top: 0;
+        top: 20px;
         width: 240px;
-        height: 270px;
     }
     .leadin .text-block {
-        top: 32px;
+        top: 30px;
         left: 290px;
     }
     .button {
@@ -815,16 +815,15 @@ a.pt-about {
         font-size: 22px;
         padding-top: 54px;
     }
-    .leadin img {
-        width: 192px;
-        height: 216px;
-    }
-    .leadin .text-block {
-        top: 12px;
-        left: 232px;
-    }
-    /*
-        testes para correções na apresentação do celular
+    /*    
+            testes para correções na apresentação do celular
+        .leadin img {
+                width: 192px !important;
+            }
+        .leadin .text-block {
+            top: 12px;
+            left: 232px;
+        }
         .leadin .text-block {
             top: 32px;
             left: 232px;
@@ -884,7 +883,6 @@ a.pt-about {
     .leadin img {
         left: -4px;
         width: 160px;
-        height: 180px;
     }
     .leadin .text-block {
         left: 175px;
@@ -895,6 +893,7 @@ a.pt-about {
     }
     .leadin .button-container {
         bottom: -10px;
+        right: 0px;
     }
     .button {
         font-size: 18px;
@@ -944,11 +943,10 @@ a.pt-about {
         font-size: 17.15px;
     }
     .leadin img {
-        width: 128px;
-        height: 144px;
+        height: 114px;
     }
     .leadin .text-block {
-        left: 130px;
+        left: 160px;
     }
     .wrap,
     #footer {
@@ -1010,28 +1008,18 @@ a.pt-about {
     }
     .leadin .text-block {
         top: -20px;
-        right: -4px;
+        left: 154px;
+        width: 153px;
     }
-    /*
-        testes para correções na apresentação do celular
-        .leadin .text-block {
-            top: 135px;
-            left: -4px;
-            right: -4px;
-        }
-    */
     .leadin img {
         top: -8px;
     }
     .leadin .wrap {
         height: 95px;
     }
-    /*    
-        testes para correções na apresentação do celular
-        .leadin .wrap {
-            height: 260px;
-        }
-    */
+    .leadin h1 {
+        font-size: 14px;
+    }
     .icon {
         padding: 25px 16px 20px 35px;
     }
