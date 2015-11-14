@@ -268,9 +268,9 @@ hr {
 }
 
 .leadin .text-block {
-    position: absolute;
-    left: 500px;
-    top: 34px;
+    position: relative;
+    top: 10px;
+    right: 50px;
 }
 
 .leadin img {
@@ -782,10 +782,10 @@ a.pt-about {
         top: 20px;
         width: 240px;
     }
-    .leadin .text-block {
+/*    .leadin .text-block {
         top: 30px;
         left: 290px;
-    }
+    }*/
     .button {
         width: 250px;
         padding: 12px;
@@ -882,11 +882,9 @@ a.pt-about {
     }
     .leadin img {
         left: 4px;
-        width: 160px;
     }
     .leadin .text-block {
-        left: 185px;
-        top: 11px;
+        top: -5px;
     }
     .leadin .wrap {
         height: 240px;
@@ -942,11 +940,12 @@ a.pt-about {
         font-size: 17.15px;
     }
     .leadin img {
-        height: 114px;
+        width: 240px;
+        top: 0px;
     }
-    .leadin .text-block {
+/*    .leadin .text-block {
         left: 160px;
-    }
+    }*/
     .wrap,
     #footer {
         margin-left: 12px;
@@ -1006,14 +1005,15 @@ a.pt-about {
         display: none;
     }
     .leadin .text-block {
-        top: -20px;
-        width: 155px;
-        left: 185px;
+        top: -29px;
+        right: -20px;
+        width: 150px;
     }
     .leadin img {
+        width: 160px;
         top: -17px;
         height: auto !important;
-        left: 10px;
+        left: 1px;
     }
     .leadin .wrap {
         height: 95px;
@@ -1032,37 +1032,6 @@ a.pt-about {
     }
 }    
 
-@media all and (max-width: 430px) {
-    .leadin .button-container {
-        display: none;
-    }
-    .leadin .text-block {
-        top: -20px;
-        width: 155px;
-        left: 151px !important;
-    }
-    .leadin img {
-        top: -17px;
-        height: auto !important;
-        left: 0px;
-        width: 150px;
-    }
-    .leadin .wrap {
-        height: 95px;
-    }
-    .leadin h1 {
-        font-size: 14px;
-    }
-    .icon {
-        padding: 25px 16px 20px 35px;
-    }
-    h2 {
-        font-size: 20px;
-    }
-    hr {
-        margin-top: 32px;
-    }
-}    
 /* customização */
 
 .button-buy {
