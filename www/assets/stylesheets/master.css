@@ -247,7 +247,7 @@ hr {
 .menu-dropdown {
     display: none;
     position: absolute;
-    right: 16px;
+    right: 30px;
     top: 32px;
     width: 40%;
 }
@@ -881,11 +881,11 @@ a.pt-about {
         /*        font-size: 14px;*/
     }
     .leadin img {
-        left: -4px;
+        left: 4px;
         width: 160px;
     }
     .leadin .text-block {
-        left: 175px;
+        left: 185px;
         top: 11px;
     }
     .leadin .wrap {
@@ -893,7 +893,6 @@ a.pt-about {
     }
     .leadin .button-container {
         bottom: -10px;
-        right: 0px;
     }
     .button {
         font-size: 18px;
@@ -1008,11 +1007,13 @@ a.pt-about {
     }
     .leadin .text-block {
         top: -20px;
-        left: 154px;
-        width: 153px;
+        width: 155px;
+        left: 185px;
     }
     .leadin img {
-        top: -8px;
+        top: -17px;
+        height: auto !important;
+        left: 10px;
     }
     .leadin .wrap {
         height: 95px;
@@ -1029,7 +1030,39 @@ a.pt-about {
     hr {
         margin-top: 32px;
     }
-}
+}    
+
+@media all and (max-width: 430px) {
+    .leadin .button-container {
+        display: none;
+    }
+    .leadin .text-block {
+        top: -20px;
+        width: 155px;
+        left: 151px !important;
+    }
+    .leadin img {
+        top: -17px;
+        height: auto !important;
+        left: 0px;
+        width: 150px;
+    }
+    .leadin .wrap {
+        height: 95px;
+    }
+    .leadin h1 {
+        font-size: 14px;
+    }
+    .icon {
+        padding: 25px 16px 20px 35px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    hr {
+        margin-top: 32px;
+    }
+}    
 /* customização */
 
 .button-buy {
