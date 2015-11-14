@@ -247,9 +247,10 @@ hr {
 .menu-dropdown {
     display: none;
     position: absolute;
-    right: 30px;
+    /*right: 30px;*/
     top: 32px;
-    width: 40%;
+    width: 100%;
+    text-align: right;
 }
 
 .menu-dropdown select {
@@ -1005,15 +1006,15 @@ a.pt-about {
         display: none;
     }
     .leadin .text-block {
-        top: -29px;
+        top: -19px;
         right: -20px;
-        width: 150px;
+        width: 160px;
     }
     .leadin img {
         width: 160px;
         top: -17px;
         height: auto !important;
-        left: 1px;
+        left: -5px;
     }
     .leadin .wrap {
         height: 95px;
