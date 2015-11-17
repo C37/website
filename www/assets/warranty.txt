@@ -1,0 +1,120 @@
+A garantia de sua maquina-ferramenta C37 - Router CNC
+Garantia Limitada da C37 - Router CNC pelo Prazo de 06 (seis) meses
+
+COMO A LEI CONSUMERISTA SE APLICA A ESTA GARANTIA
+ESTA GARANTIA CONCEDE AO ADQUIRENTE DETERMINADOS DIREITOS. NO ENTANTO, O CLIENTE TAMBÉM PODERÁ TER OUTROS DIREITOS QUE VARIAM DE ESTADO PARA ESTADO 
+(OU DE PAÍS OU PROVÍNCIA). COM EXCEÇÃO DO PERMITIDO POR LEI, A C37 NÃO EXCLUI, LIMITA OU SUSPENDE QUAISQUER DIREITOS DO CLIENTE, INCLUINDO AQUELES 
+DECORRENTES DA NÃO CONFORMIDADE COM O CONTRATO DE VENDA. PARA INFORMAÇÃO DE SEUS DIREITOS, O CLIENTE DEVE CONSULTAR AS LEIS APLICÁVEIS DE SEU PAÍS, 
+PROVÍNCIA OU ESTADO.
+
+LIMITAÇÕES DA GARANTIA
+DESDE QUE PERMITIDO POR LEI, ESTA GARANTIA E AS CONDIÇÕES ORA PREVISTAS SÃO EXCLUSIVAS E SUBSTITUEM TODAS AS OUTRAS GARANTIAS, REPARAÇÕES E CONDIÇÕES, 
+SEJAM VERBAIS, ESCRITAS, ESTATUTÁRIAS, EXPRESSAS OU IMPLÍCITAS. A C37 NAO RECONHECE GARANTIAS ESTATUTÁRIAS E IMPLÍCITAS, INCLUINDO, MAS NÃO SE LIMITANDO
+A: GARANTIAS MERCANTIS E DE APTIDÃO PARA USO ESPECÍFICO E GARANTIAS CONTRA DEFEITOS OCULTOS OU NÃO APARENTES, NA EXTENSÃO PERMITIDA POR LEI. NA MEDIDA 
+EM QUE TAIS GARANTIAS NÃO POSSAM SER DESCONSIDERADAS, A C37 RESPEITARÁ O PRAZO PREVISTO EM LEI, LIMITADO AO PRAZO DE DURAÇÃO DA GARANTIA EXPRESSA E 
+DOS SERVIÇOS DE REPARO OU SUBSTITUIÇÃO DESCRITOS ABAIXO, A SEU EXCLUSIVO CRITÉRIO. ALGUNS ESTADOS (PAÍSES E PROVÍNCIAS) NÃO PERMITEM LIMITAÇÕES DURANTE 
+A VIGÊNCIA DE UMA GARANTIA IMPLÍCITA (OU CONDIÇÃO), CASO EM QUE AS LIMITAÇÕES ACIMA NÃO SE APLICARÃO.
+
+O QUE ESTÁ COBERTO POR ESTA GARANTIA?
+A C37 garante a maquina-ferramenta Router CNC da marca C37 e os acessórios contidos na embalagem original ("Produto C37"), contra defeitos nos materiais e 
+mão-de-obra quando utilizados sob condições normais, de acordo com as diretrizes da C37, pelo prazo de 06 (SEIS) MESES, contado da data da compra do produto 
+Cliente ("Prazo de Garantia"). As diretrizes da C37 incluem, mas não se limitam a informações contidas nas especificações técnicas, nos manuais de uso e nas 
+comunicações de suporte. O Prazo de Garantia já inclui o prazo de garantia legal previsto pelo Código de Defesa do Consumidor.
+
+O QUE NÃO ESTÁ COBERTO POR ESTA GARANTIA?
+Esta garantia não é aplicável a nenhum produto de hardware que não seja da marca C37 e a nenhum software, ainda que embalado ou vendido com o hardware da C37. 
+Fabricantes, fornecedores ou editores que não fazem parte do grupo C37 poderão fornecer suas próprias garantias ao Cliente. A C37, na medida permitida por lei, 
+fornece os produtos "NO ESTADO EM QUE SE ENCONTRAM". O software distribuído pela C37, da marca C37 ou não (incluindo, mas, não se limitando ao software de sistema) 
+não está coberto por esta garantia. O Cliente deverá verificar o contrato de licença que acompanha o software para obter informações mais detalhadas sobre os 
+direitos de uso do referido software. A C37 não garante que o funcionamento do produto será ininterrupto ou livre de erros. A C37 não é responsável por danos 
+decorrentes de falha no cumprimento das instruções relacionadas ao uso dos Produtos C37.
+
+Esta garantia não é aplicável: 
+
+(a) a peças consumíveis, tais como fresas, a não ser que o dano tenha ocorrido devido a um defeito no material ou mão-de-obra; 
+(b) a danos cosméticos, que incluem mas, não se limitam a, arranhões, amassados e plástico quebrado nas portas; 
+(c) a danos causados pelo uso em conjunto com outros produtos; 
+(d) a danos causados por acidente, abuso, mau uso, contato com líquidos, incêndio, terremoto ou outras causas de origem externa; 
+(e) a danos causados pelo uso do produto em desacordo com as diretrizes publicadas pela C37; 
+(f) a danos causados por serviços (incluindo upgrades e expansões) prestados por qualquer pessoa que não seja um representante da C37 ou uma Assistência Técnica Autorizada C37 (ATAC); 
+(g) a um Produto C37 que tenha sido modificado de modo a alterar a sua funcionalidade ou a sua capacidade, sem a permissão por escrito da C37; 
+(h) a defeitos causados por desgaste natural ou de outra maneira devido ao desgaste normal do Produto C37; ou 
+(i) se qualquer número de série do produto C37 tiver sido removido ou alterado.
+
+RESPONSABILIDADES DO CLIENTE
+CASO HAJA POSSIBILIDADE DE ARMAZENAR PROGRAMAS DE SOFTWARE DADOS OU QUALQUER OUTRA INFORMAÇÃO EM SEU PRODUTO C37, O CLIENTE DEVERÁ EFETUAR CÓPIAS DE PROTEÇÃO (BACKUP) 
+PERIÓDICAS DAS INFORMAÇÕES CONTIDAS NA MÍDIA DE ARMAZENAMENTO DO PRODUTO c37 COMO FORMA DE PROTEÇÃO DOS CONTEÚDOS E DE PRECAUÇÃO CONTRA EVENTUAIS FALHAS OPERACIONAIS.
+
+Antes de receber um suporte em garantia, a C37 ou seus prepostos poderão solicitar ao Cliente que o mesmo forneça a prova de compra (nota fiscal), responda às perguntas 
+formuladas para auxílio no diagnóstico de potenciais problemas e siga os procedimentos da C37 para obtenção de suporte em garantia. Antes de enviar seu produto C37 para reparo 
+em garantia, o Cliente deverá: manter em separado uma cópia (backup) dos conteúdos da mídia de armazenamento, remover todas as informações pessoais que pretenda proteger 
+e desabilitar todas as senhas de segurança.
+
+Após a realização do suporte em garantia, será entregue ao Cliente o produto em questõa ou um produto da marca C37, em substituição, nas mesmas condições ou similar ao produto 
+inicialmente adquirido, com configurações idênticas ou similar, estando sujeito, no entanto, às atualizações aplicáveis.
+
+QUAIS MEDIDAS SERÃO ADOTADAS PELA C37, CASO UM REPARO EM GARANTIA SEJA NECESSÁRIO ?
+Se durante o Prazo de Garantia o Cliente submeter uma solicitação de suporte válida para a C37, a C37 irá, a seu exclusivo critério, (i) reparar o produto C37
+utilizando peças novas ou, peças recondicionadas e equivalentes a novas em termos de desempenho e confiabilidade, (ii) substituir o produto C37 por outro com funcionalidade 
+equivalente a do produto C37 e com partes e peças novas e/ou, recondicionadas e/ou equivalentes a novas, em termos de desempenho e confiabilidade.
+
+A C37 poderá solicitar ao Cliente a substituição de certas peças ou produtos cuja instalação possa ser feita diretamente pelo Cliente. A peça ou produto de reposição, incluindo a peça 
+que venha a ser instalada pelo Cliente, de acordo com as instruções da C37 estarão cobertos pela garantia por um prazo equivalente ao restante do período da garantia do produto 
+original ou por 90 (noventa) dias, contados da data da substituição ou reparo, o que for maior. Na hipótese de troca do produto ou de partes e peças, bem como de reembolso do 
+valor do produto ou de partes e peças, qualquer que seja o item de reposição, tal passará a ser de propriedade do Cliente, sendo que o item substituído passará a ser de propriedade da C37.
+
+COMO OBTER SUPORTE EM GARANTIA?
+O Cliente deverá acessar e verificar os recursos de ajuda online abaixo descritos, antes de solicitar um suporte em garantia. Caso o produto C37 não esteja funcionando adequadamente após 
+a adoção das medidas informadas, o Cliente deverá entrar em contato com a C37, conforme instruções abaixo. Um representante da C37 verificará se o produto C37 necessita ou não de suporte e, 
+caso positivo, informará o Cliente como a C37 realizará o suporte. Ao contatar a C37 por telefone, tarifas telefônicas poderão ser cobradas, dependendo da localidade do Cliente.
+
+Informações online com os detalhes sobre a obtenção de suporte em garantia constam ao final deste documento.
+
+OPÇÕES DE SUPORTE EM GARANTIA
+A C37 fornecerá suporte em garantia por meio de uma das seguintes opções:
+
+(i) Suporte mediante entrega pessoal. O Cliente poderá enviar o produto C37 para a empresa C37 mediante entrega pessoal. O serviço será realizado no próprio local. Quando o 
+Cliente for notificado acerca da conclusão do serviço, o Cliente deve, imediatamente, retirar o Produto C37 da empresa C37 ou o Produto C37 será enviado diretamente da empresa para 
+o endereço previamente informado pelo Cliente.
+
+(ii) Suporte mediante postagem. Caso a C37 determine que o produto C37 do Cliente é elegível ao suporte mediante postagem, a C37 enviará os documentos de postagem pré-pago ao Cliente e, se 
+aplicável, material de embalagem, para que o Cliente possa enviar o Produto C37 para a empresa C37, de acordo com as instruções da C37. Quando da finalização do serviço, a C37 devolverá o 
+produto C37 ao cliente. A C37 efetuará o pagamento dos custos de envio de e para a localidade do Cliente, se todas as instruções forem seguidas.
+
+(iii) Auto-Suporte ("Serviço DIY"). O Serviço DIY permite que o Cliente repare seu próprio Produto C37. Se o Serviço DIY estiver disponível, o seguinte procedimento será aplicável.
+
+(a) Suporte em que a C37 solicita o retorno do produto ou parte(s) substituída(s). A C37 poderá solicitar, por segurança, uma autorização de cobrança em cartão de crédito, no valor de varejo do 
+produto ou da peça de substituição e custos de envio aplicáveis. Caso o Cliente não possa fornecer a autorização de cobrança em cartão de crédito, o Serviço DIY poderá não estar disponível ao Cliente 
+e a C37 oferecerá meios alternativos de suporte. A C37 irá enviar um produto ou uma peça de substituição para o Cliente com instruções de instalação, se aplicável, e quaisquer outras instruções para 
+o retorno do produto ou da(s) peça(s) substituída(s). Se o Cliente seguir as instruções, a C37 irá cancelar a autorização de cobrança em cartão de crédito e o Cliente não será cobrado pelo produto 
+ou pela peça, bem como pelo envio de e para sua localização. Se o Cliente não retornar o produto ou a(s) peça(s) substituída(s) como instruído ou se devolver um produto ou uma peça que não seja elegível 
+para suporte, a C37 irá debitar no cartão de crédito do Cliente o valor autorizado.
+
+(b) Suporte em que a C37 não solicita o retorno do produto ou parte(s) substituída(s). A C37 irá enviar ao Cliente, sem custos, um produto ou uma peça de substituição acompanhada de instruções de instalação, 
+se aplicável, e quaisquer outras instruções.
+
+(c) A C37 não é responsável por quaisquer custos de mão de obra que o Cliente venha a incorrer com relação ao Serviço DIY. Caso o Cliente necessite de assistência adicional, deverá contatar a C37 através do número 
+de telefone listado abaixo e/ou as comunidades dos produtos C37 e/ou e-mail.
+
+A C37 se reserva o direito de alterar seus critérios de suporte em garantia. O suporte fica limitado às opções disponíveis no País em que o suporte é solicitado. Opções de suporte, disponibilidade de partes e peças 
+e tempo de resposta podem variar de País para País. O Cliente poderá ser responsável pelas despesas de envio e mão de obra, se o produto C37 não puder ser reparado no País em que estiver. Se o Cliente solicitar 
+suporte em um país que não seja o país da compra do produto C37, o Cliente deverá cumprir com todas as leis e regulamentos de importação e exportação aplicáveis e se responsabilizar por todas as taxas alfandegárias, 
+impostos adicionais e outras cobranças e tributos associados. Para locais em que o serviço internacional estiver disponível, a C37 poderá reparar ou substituir produto, partes e peças com produtos e peças similares 
+que atendam os padrões locais.
+
+LIMITAÇÃO DE RESPONSABILIDADE
+EXCETO CONFORME PREVISTO NESTA GARANTIA E NA MEDIDA MÁXIMA PERMITIDA PELA LEGISLAÇÃO APLICÁVEL, A C37 NÃO É RESPONSÁVEL POR DANOS DIRETOS, ESPECIAIS, INCIDENTAIS OU SUPERVENIENTES RESULTANTES DE QUALQUER VIOLAÇÃO 
+DE GARANTIA OU CONDIÇÃO, OU SOB QUALQUER OUTRA TEORIA LEGAL, INCLUINDO MAS, NÃO SE LIMITANDO A PERDA DE UTILIDADE; PERDA DE RENDA; LUCROS CESSANTES PRESENTES OU ANTECIPADOS (INCLUINDO LUCROS CESSANTES EM CONTRATOS); 
+PERDA DO USO DO DINHEIRO; PERDA DE POUPANÇA ANTECIPADA; PERDA DO NEGÓCIO; PERDA DE OPORTUNIDADE; PERDA DE FUNDO DE COMÉRCIO (GOODWILL); PERDA DE REPUTAÇÃO; PERDA, DANOS, COMPROMETIMENTO OU CORRUPÇÃO DE DADOS OU 
+QUAISQUER PERDAS OU DANOS INDIRETOS OU SUPERVENIENTES, INDEPENDENTEMENTE DA FORMA COMO FORAM CAUSADOS, INCLUINDO A SUBSTITUIÇÃO DE EQUIPAMENTO E PROPRIEDADE, QUAISQUER CUSTOS DE RECUPERAÇÃO, PROGRAMAÇÃO OU REPRODUÇÃO 
+DE QUALQUER PROGRAMA OU DADO ARMAZENADO OU UTILIZADO COM O PRODUTO C37 OU QUALQUER FALHA EM MANTER A CONFIDENCIALIDADE DOS DADOS ARMAZENADOS NO PRODUTO C37.
+
+A RESTRIÇÃO ACIMA NÃO SE APLICA ÀS REIVINDICAÇÕES POR MORTE OU LESÃO CORPORAL OU A QUALQUER OBRIGAÇÃO ESTATUTÁRIA POR ATOS E/OU OMISSÕES INTENCIONAIS. A C37 NÃO FORNECE QUALQUER GARANTIA DE QUE REPARARÁ QUALQUER 
+PRODUTO C37 SOB ESTA GARANTIA OU DE QUE FARÁ A TROCA DE PRODUTO C37 SEM RISCO.
+
+ALGUNS ESTADOS (PAÍSES E PROVÍNCIAS) NÃO PERMITEM A EXCLUSÃO OU LIMITAÇÃO DE DANOS INCIDENTAIS OU INDIRETOS, DE FORMA QUE A LIMITAÇÃO OU EXCLUSÃO ACIMA PODE NÃO SER APLICÁVEL.
+
+DISPOSIÇÕES GERAIS
+Nenhum revendedor, agente ou empregado da C37 está autorizado a efetuar qualquer modificação, extensão ou adição a esta garantia. Se qualquer termo for considerado ilegal ou inaplicável, a legalidade ou a 
+aplicabilidade dos termos restantes não serão afetadas ou prejudicadas. Esta garantia é regida e interpretada de acordo com as leis do País em que a compra do Produto C37 foi realizada. A C37 está identificada no 
+final deste documento, de acordo com o País ou região em que a compra do produto C37 foi realizada. A C37 ou seus sucessores são os garantidores desta garantia.
