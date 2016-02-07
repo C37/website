@@ -236,7 +236,7 @@ hr {
     -moz-transition: background 0.25s linear;
     transition: background 0.25s linear;
     padding: 8px;
-    margin: 0 8px;
+    margin: 0px;
     line-height: 55px;
 }
 
