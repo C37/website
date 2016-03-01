@@ -661,6 +661,10 @@ hr {
     background: url(../images/logo-router.png) no-repeat;
 }
 
+.icon-clients {
+    background: url(../images/clients.png) no-repeat;
+}
+
 .icon-help {
     background: url(../images/help.png) no-repeat;
 }
