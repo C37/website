@@ -36,6 +36,7 @@ a {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 /*---------------------------------------------------
         Font
 ---------------------------------------------------*/
@@ -787,10 +788,10 @@ a.pt-about {
         top: 20px;
         width: 240px;
     }
-/*    .leadin .text-block {
-        top: 30px;
-        left: 290px;
-    }*/
+    /*    .leadin .text-block {
+            top: 30px;
+            left: 290px;
+        }*/
     .button {
         width: 250px;
         padding: 12px;
@@ -948,9 +949,9 @@ a.pt-about {
         width: 240px;
         top: 0px;
     }
-/*    .leadin .text-block {
-        left: 160px;
-    }*/
+    /*    .leadin .text-block {
+            left: 160px;
+        }*/
     .wrap,
     #footer {
         margin-left: 12px;
@@ -1306,6 +1307,18 @@ a.pt-about {
     /*height: 340px;*/
 }
 
+.skill-card-2 {
+    background-color: #fff;
+    float: left;
+    width: 45.6%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
+    /*height: 340px;*/
+}
+
 
 @media (min-width: 960px) and (max-width: 1059px) {
 
@@ -1316,6 +1329,15 @@ a.pt-about {
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 20px;
+        position: relative;
+        /*height: 340px;*/
+    }
+
+    .skill-card-2 {
+        background-color: #fff;
+        float: left;
+        width: 45.6%;
+        padding: 10px;
         position: relative;
         /*height: 340px;*/
     }
@@ -1336,6 +1358,15 @@ a.pt-about {
         /*height: 340px;*/
     }
 
+    .skill-card-2 {
+        background-color: #fff;
+        float: left;
+        width: 45%;
+        padding: 10px;
+        position: relative;
+        /*height: 340px;*/
+    }
+
 }        
 
 @media (min-width: 541px) and (max-width: 850px) {
@@ -1350,6 +1381,17 @@ a.pt-about {
         position: relative;
         /*height: 340px;*/
     }
+
+    .skill-card-2 {
+        background-color: #fff;
+        float: left;
+        width: 95%;
+        padding: 15px;
+        position: relative;
+        /*height: 340px;*/
+    }
+    
+
 }        
 
 @media (max-width: 540px) {
@@ -1363,6 +1405,17 @@ a.pt-about {
         margin-bottom: 20px;
         position: relative;
         height: auto;
+    }
+
+    .skill-card-2 {
+        background-color: #fff;
+        float: left;
+        width: 94%;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        position: relative;
+        /*height: 340px;*/
     }
 
 }
