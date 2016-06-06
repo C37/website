@@ -1586,7 +1586,7 @@
             <p>Disponibilizamos para venda  um completo estoque de peças de reposição que garantem agilidade no processo de reparação da C37 - Router-CNC.</p>
             <br>
 
-            <strong>Feedback</strong>
+            <strong>Softwares</strong>
             <p>Saiba sobre todas as novidades, melhorias  e correções implementadas na C37 e quais nossos próximos passos no desenvolvimento de nossos softwares. E ainda, desejamos que você participe apontando quais melhorias gostaria  de ver em nossos softwares para que eles atendam cada vez  mais as suas necessidades</p>
 
             <ul class="list list-link">
@@ -1599,7 +1599,53 @@
                 <li>
                     <a href="https://trello.com/b/JiAr9kYI/controller" target="_blank">C37 - Controlador - Desenvolvimento</a>
                 </li>
-            </ul>            
+            </ul>   
+
+            <br>
+
+            <p>E, caso você encontre alguma dificuldade em utilizar nossos softwares, ou aquela correção e funcionalidade aguardada não esteja implementada, preparemos uma lista de softwares proprietários (pagos) ou open source para colaborar com seu processo de aprendizagem.</p>
+
+            <ul class="list list-link">
+                <li>
+                    <strong>CAD</strong>
+                    <br>
+                    <a href="http://www.autodesk.com.br/products/autocad/overview" target="_blank">Autodesk - AutoCAD</a>
+                    <br>
+                    <a href="http://www.coreldraw.com/br/" target="_blank">CorelDRAW</a>
+                    <br>
+                    <a href="http://www.adobe.com/br/products/illustrator.html" target="_blank">Adobe - Illustrator</a>
+                    <br>
+                    <a href="https://inkscape.org/pt/" target="_blank">Inkscape</a>
+                    <br>
+                    <a href="http://www.vectric.com/products/aspire.html" target="_blank">Vectric - Aspire</a>
+                    <br>
+                    <a href="http://www.artcam.com/" target="_blank">Delcam - ArtCAM</a>
+                </li>
+                <li>
+                    <strong>CAM</strong>
+                    <br>
+                    <a href="http://www.cambam.info/" target="_blank">CamBam</a>
+                    <br>
+                    <a href="http://www.autodesk.com/products/fusion-360/overview" target="_blank">FUSION 360</a>
+                    <br>
+                    <a href="http://flatcam.org/" target="_blank">FlatCAM</a>
+                    <br>
+                    <a href="http://www.makercam.com/" target="_blank">MakerCAM</a>
+                    <br>
+                    <a href="http://easel.inventables.com/" target="_blank">Easel</a>
+                    <br>
+                    <a href="http://www.cnc-club.ru/forum/viewtopic.php?t=35" target="_blank">Gcodetools</a>
+                    <br>
+                    <a href="http://onecnc.net/" target="_blank">OneCNC</a>
+                </li>
+                <li>
+                    <strong>Controlador</strong>
+                    <br>
+                    <a href="https://github.com/winder/Universal-G-Code-Sender" target="_blank">Universal-G-Code-Sender</a>
+                    <br>
+                    <a href="https://github.com/vlachoudis/bCNC" target="_blank">bCNC</a>
+                </li>
+            </ul>   
 
             <br>
 
@@ -1620,6 +1666,89 @@
                 <a href="assets/Firmware-VARIABLE_SPINDLE.hex">Versão 2.34.45</a>
                 <br>
             </p>
+
+            <p>Tabela para direção dos Eixos <small><strong>Comando</strong> $3=</small></p>
+            
+            <div class="row-fluid">
+                <div class="span5">
+
+                    <style type="text/css">
+                        tr:nth-child(2n) {
+                            background-color: #4cc2e4;
+                            color: white;
+                        }
+                    </style>
+
+                    <table style="width: 100%">
+                        <thead style="background-color: #4cc2e4;color: white;font-weight: bolder">
+                            <tr>
+                                <th>Valor</th>
+                                <th>X</th>
+                                <th>Y</th>
+                                <th>Z</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center">
+                            <tr>
+                                <td>0</td>
+                                <td>N</td>
+                                <td>N</td>
+                                <td>N</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>N</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>N</td>
+                                <td>Y</td>
+                                <td>N</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Y</td>
+                                <td>Y</td>
+                                <td>N</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>N</td>
+                                <td>N</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>N</td>
+                                <td>Y</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Y</td>
+                                <td>Y</td>
+                                <td>Y</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="span7">
+
+                </div>
+            </div>            
+
+
+
+
 
 
             <!--            <p>
@@ -1928,9 +2057,12 @@
         <div id="footer">
             <div style="float: left;">
                 <p style="text-align: center">
-                    <strong>C37&reg; - 2011 - 2016</strong> - <label>&copy; Todos os direitos reservados</label>
+                    <strong>C37&reg; - 2011 - 2016</strong>
+                    <br>
+                    <small><strong>CNPJ</strong> - 13.571.746/0001-05</small>
                     <br>
                     <a href="/assets/C37-Terms.pdf" target="_blank">Termos de uso</a> - <a href="/assets/C37-Privacy.pdf" target="_blank">Política de Privacidade</a>
+
                     <br>
 
                 </p>
