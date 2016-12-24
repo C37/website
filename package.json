@@ -8,17 +8,12 @@
         "name": "Ciro Cesar Maciel",
         "email": "lilo@c37.co"
     },
-    "contributors": [
-        {
-            "name": "Andréa Fabiana Maciel",
-            "email": "ser@c37.co"
-    }
-  ],
+    "contributors": [{
+        "name": "Andréa Fabiana Maciel",
+        "email": "ser@c37.co"
+    }],
     "dependencies": {
         "serve-me": "latest"
     },
-    "scripts": {
-        "preinstall": "npm install forever -g",
-        "start": "forever start server.js"
-    }
+    "scripts": {}
 }
