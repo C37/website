@@ -1,0 +1,25 @@
+# Jekyll configuration
+# http://jekyllrb.com/docs/home/
+
+name: C37 - CNC
+description: C37 - CNC website
+author:
+  name: C37 Team
+
+source: src
+destination: www
+
+url: http://c37.co
+atom_path: /blog/atom.xml
+
+timezone: America/Sao_Paulo
+
+# http://jekyllrb.com/docs/permalinks/
+permalink: /blog/:categories/:year/:month/:day/:title/
+
+markdown: redcarpet
+
+regeneration: true
+
+gems:
+  - jekyll-sitemap

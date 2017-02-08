@@ -1,0 +1,19 @@
+{
+    "name": "c37.website",
+    "version": "0.0.1",
+    "description": "C37 - Website",
+    "homepage": "http://c37.co/",
+    "private": true,
+    "author": {
+        "name": "Ciro Cesar Maciel",
+        "email": "ciro.maciel@c37.co"
+    },
+    "contributors": [{
+        "name": "Andréa Fabiana Maciel",
+        "email": "andrea.maciel@c37.co"
+    }],
+    "dependencies": {},
+    "scripts": {
+        "start": "jekyll serve"
+    }
+}
