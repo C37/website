@@ -6,8 +6,8 @@ description: C37 - CNC website
 author:
   name: C37 Team
 
-source: src
-destination: www
+source: 
+destination: _www
 
 url: http://beta.c37.co
 atom_path: /blog/atom.xml
@@ -17,10 +17,8 @@ timezone: America/Sao_Paulo
 # http://jekyllrb.com/docs/permalinks/
 permalink: /blog/:categories/:year/:month/:day/:title/
 
-markdown: redcarpet
+markdown: kramdown
 
 regeneration: true
 
 gems:
-  - jekyll-redirect-from
-  - jekyll-paginate
