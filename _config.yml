@@ -22,5 +22,4 @@ markdown: redcarpet
 regeneration: true
 
 gems:
-  - jekyll-sitemap
   - jekyll-redirect-from
