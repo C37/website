@@ -9,7 +9,7 @@ author:
 source: src
 destination: www
 
-url: http://c37.co
+url: http://beta.c37.co
 atom_path: /blog/atom.xml
 
 timezone: America/Sao_Paulo
@@ -23,3 +23,4 @@ regeneration: true
 
 gems:
   - jekyll-sitemap
+  - jekyll-redirect-from
