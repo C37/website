@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: blog
 title: C37 - Router CNC - Modelo 1109
 category: handcraft
 class: blog

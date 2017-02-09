@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        {% if page.title %}
+            <title>{{page.title}} | C37 - CNC</title>
+        {% else %}
+            <title>C37 - CNC - Com você em todas as etapas!</title>
+        {% endif %}
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/assets/css/master.css">
+        <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="C37 - CNC Blog Atom Feed">
+    </head>
+    <body>
+        {% if page.category != 404 %}
+            {% include header.html %}
+        {% endif %}
+
+            {{ content }}
+
+        {% if page.category != 404 %}
+            {% include footer.html %}
+        {% endif %}
+    </body>
+</html>

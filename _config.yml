@@ -15,7 +15,7 @@ atom_path: /blog/atom.xml
 timezone: America/Sao_Paulo
 
 # http://jekyllrb.com/docs/permalinks/
-#permalink: /blog/:categories/:year/:month/:day/:title/
+permalink: /blog/:categories/:year/:month/:day/:title.html
 
 markdown: kramdown
 
@@ -25,4 +25,3 @@ paginate: 8
 paginate_path: "/blog/page:num/"
 
 gems: [jekyll-paginate]
-#  -jekyll-paginate
