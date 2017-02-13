@@ -1,16 +1,66 @@
 ---
-layout: single-column
-title: C37 - CNC Blog Arquivos
-category: blog
+layout: base
+title: C37 - Blog Arquivos
 class: blog
 type: list
 ---
 
-{% for post in site.posts %}
-  <p>
-    <a href="{{ post.url }}" class="post-date">
-      &raquo; {{ post.title }}
-    </a>
-    - {{ post.date | date: "%B %e, %Y" }}
-  </p>
-{% endfor %}
+<div id="content">
+  <h2 class="page-title">
+    <span class="container">{{ page.title }}</span>
+  </h2>
+
+  <br>
+  <br>
+
+  <div class="container clearfix">
+    <article class="main">
+      <section class="content-chunk">
+
+        {% for post in site.posts %}
+          <p>
+            <a href="{{ post.url }}" class="post-date">
+              &raquo; {{ post.title }}
+            </a>
+            - {{ post.date | date: "%-d" }}
+              {% assign m = post.date | date: "%-m" %}
+              de
+              {% case m %}
+                {% when '1' %}Janeiro
+                {% when '2' %}Fevereiro	
+                {% when '3' %}Março
+                {% when '4' %}Abril
+                {% when '5' %}Maio
+                {% when '6' %}Junho
+                {% when '7' %}Julho
+                {% when '8' %}Agosto
+                {% when '9' %}Setembro
+                {% when '10' %}Outubro
+                {% when '11' %}Novembro
+                {% when '12' %}Dezembro
+              {% endcase %}
+              de
+              {{ post.date | date: "%Y" }}
+          </p>
+        {% endfor %}
+
+      </section>
+    </article>
+
+    <hr style="margin-top: 40px">
+    <a href="/blog">&laquo; Voltar para o Blog</a>
+    
+  </div>
+
+  {% if page.social_text %}
+    {% include social.html %}
+  {% endif %}
+
+
+  {% if page.class == 'documentation' %}
+    <div class="contribute-doc">
+      Found a typo? An unclear example? Help us improve our documentation by forking and sending your fixes and suggestions.
+      <br><a href="https://github.com/yeoman/yeoman.github.io/blob/source/app{{ page.url | replace:'.html','.md' }}">Improve this Page!</a>
+    </div>
+  {% endif %}
+</div>

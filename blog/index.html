@@ -1,16 +1,12 @@
 ---
-layout: base
-title: C37 - CNC Blog
-category: blog
+layout: blog
+title: C37 - Blog
 class: blog
 type: list
+sidebar: sidebars/blog.html
 sidebarHTML: true
 ---
 
-
-<br>
-<br>
-<br>
 
 {% for post in paginator.posts %}
   <article class="blog-post-preview">
@@ -21,21 +17,47 @@ sidebarHTML: true
     </h2>
 
     <a href="{{ post.url }}" class="blog-post-date">
-      Published: {{ post.date | date: "%B %e, %Y" }}
+      <!--http://jekyll.tips/jekyll-casts/date-formatting/-->
+      <!--Publicado: {{ post.date | date: "%B %e, %Y" }}-->
+      Publicado em:
+      {% assign m = post.date | date: "%-m" %}
+      {{ post.date | date: "%-d" }}
+      de
+      {% case m %}
+        {% when '1' %}Janeiro
+        {% when '2' %}Fevereiro	
+        {% when '3' %}Março
+        {% when '4' %}Abril
+        {% when '5' %}Maio
+        {% when '6' %}Junho
+        {% when '7' %}Julho
+        {% when '8' %}Agosto
+        {% when '9' %}Setembro
+        {% when '10' %}Outubro
+        {% when '11' %}Novembro
+        {% when '12' %}Dezembro
+      {% endcase %}
+      de
+      {{ post.date | date: "%Y" }}
+      <!--as {{ post.date | date: "%R" }}-->
     </a>
 
-    <div class="blog-post-content">{{ post.excerpt }}</div>
+    <div class="blog-post-content">{{post.excerpt}}</div>
 
-    <a href="{{ post.url }}">Read more &raquo;</a>
+    <a href="{{ post.url }}">Ver mais &raquo;</a>
   </article>
 {% endfor %}
+
+<div class="blog-posts-extra" style="float: right;width: 200px; text-align: right">
+  <a href="/blog/archive.html">Ver todos os Posts</a>
+</div>
 
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Anterior</a>
   {% else %}
-    <span>&laquo; Prev</span>
+    <span>&laquo; Anterior</span>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
@@ -49,14 +71,10 @@ sidebarHTML: true
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Próxima &raquo;</a>
   {% else %}
-    <span>Next &raquo;</span>
+    <span>Próxima &raquo;</span>
   {% endif %}
 </div>
 {% endif %}
 
-
-<div class="blog-posts-extra">
-  <a href="/blog/archive.html">View the Archives</a>
-</div>

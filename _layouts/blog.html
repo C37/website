@@ -1,26 +1,123 @@
-<!doctype html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        {% if page.title %}
-            <title>{{page.title}} | C37 - CNC</title>
-        {% else %}
-            <title>C37 - CNC - Com você em todas as etapas!</title>
-        {% endif %}
-        <meta name="viewport" content="width=device-width">
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
-        <link rel="stylesheet" href="/assets/css/master.css">
-        <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="C37 - CNC Blog Atom Feed">
-    </head>
-    <body>
-        {% if page.category != 404 %}
-            {% include header.html %}
-        {% endif %}
+---
+layout: base
+category: blog
+class: blog
+---
 
+
+<div id="content">
+
+  <h2 class="page-title">
+    <span class="container">{{ page.title }}</span>
+  </h2>
+
+  <div class="container clearfix{% if page.sidebar %} has-sidebar{% endif %}">
+    {% if page.category == nil %}
+      <nav class="context-nav">
+        <ul>
+          <li><a href="/blog/archive.html">Ver todos os Posts</a></li>
+
+          {% for post in site.posts  %}
+            {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+            {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+            {% if forloop.first %}
+            <li class="year_divider">
+              <a class="year_title">{{this_year}}</a>
+              <ul>
+            {% endif %}
+
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+
+            {% if forloop.last %}
+              </ul>
+            </li>
+            {% else %}
+              {% if this_year != next_year %}
+              </ul>
+            </li>
+            <li class="year_divider">
+              <a class="year_title">{{next_year}}</a>
+              <ul>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+
+    <article class="main">
+
+      <br>
+
+      {% if page.category != nil %}
+        <div class="social" style="padding: 10px; height: 20px; margin: auto 0; float: right">
+            <!--facebook-->
+            <!--https://developers.facebook.com/docs/plugins/share-button?locale=pt_BR-->
+            <div style="float:left; margin:0px 10px 0 0;">
+                <div class="fb-share-button" data-href="{{site.url}}{{page.url}}" data-layout="button_count" data-size="small" data-mobile-iframe="true" style="margin: 0px">
+                    <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"></a>
+                </div>
+            </div>
+            <!--facebook-->
+            <!--plus-->
+            <!--https://developers.google.com/+/web/share/-->
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+            <!--plus-->
+          </div>
+      {% endif %} 
+
+      <section class="content-chunk">
+
+        <section>
+          <div class="blog-post-meta clearfix">
+            {% if page.category %}
+              <p class="date">
+                <!--http://jekyll.tips/jekyll-casts/date-formatting/-->
+                <!--Publicado: {{ post.date | date: "%B %e, %Y" }}-->
+                Publicado em:
+                {% assign m = page.date | date: "%-m" %}
+                {{ page.date | date: "%-d" }}
+                de
+                {% case m %}
+                  {% when '1' %}Janeiro
+                  {% when '2' %}Fevereiro	
+                  {% when '3' %}Março
+                  {% when '4' %}Abril
+                  {% when '5' %}Maio
+                  {% when '6' %}Junho
+                  {% when '7' %}Julho
+                  {% when '8' %}Agosto
+                  {% when '9' %}Setembro
+                  {% when '10' %}Outubro
+                  {% when '11' %}Novembro
+                  {% when '12' %}Dezembro
+                {% endcase %}
+                de
+                {{ page.date | date: "%Y" }}
+              </p>
+            {% endif %}
+          </div>
+
+          <div class="post">
             {{ content }}
+          </div>
 
-        {% if page.category != 404 %}
-            {% include footer.html %}
+
+          {% if page.category %}
+            <hr style="margin-top: 30px;">
+            <a href="/blog">&laquo; Ver mais Posts</a>
+          {% endif %}
+
+        </section>
+
+        {% if page.class == 'documentation' %}
+          <div class="contribute-doc">
+            Found a typo? An unclear example? Help us improve our documentation by forking and sending your fixes and suggestions. <a href="https://github.com/yeoman/yeoman.github.io/blob/source/app{{ page.url | replace:'.html','.md' }}">Improve this Page!</a>
+          </div>
         {% endif %}
-    </body>
-</html>
+      </section>
+    </article>
+    
+  </div>
+</div>

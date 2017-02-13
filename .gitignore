@@ -3,3 +3,4 @@
 !/_www/.gitkeep
 *.!/_www/.gitkeep
 *.log
+.jekyll-metadata

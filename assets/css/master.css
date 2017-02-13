@@ -1884,7 +1884,7 @@ a.pt-about {
 }
 /* application cad */
 /* graphic */
-
+ 
 
 /*http://stackoverflow.com/questions/11872451/anchor-not-to-top-of-page-but-200px-down*/
 .anchor {
@@ -1894,3 +1894,269 @@ a.pt-about {
 }
 
 
+
+/* Blog */
+
+.blog-post-preview {
+  border-bottom: 1px solid #dfdfdf;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.blog-post-preview .blog-post-title {
+    padding: 20px 0 5px 0;
+}
+
+.blog-post-preview .blog-post-title a {
+  /*color: #222;*/
+  text-decoration: none;
+}
+
+.blog-post-preview .blog-post-date {
+    display: block;
+  margin: 0.1em 0 .4em;
+  font-size: 0.9em;
+  color: #444;
+  text-decoration: none;
+}
+
+.blog-post-preview .blog-post-content {
+    display: block;
+  margin: 1em 0 ;
+}
+
+
+.note {
+  background: #f2dede;
+  padding: 25px;
+}
+
+@media print {
+  pre .str, code .str { color: #060; }
+  pre .kwd, code .kwd { color: #006; font-weight: 700; }
+  pre .com, code .com { color: #600; font-style: italic; }
+  pre .typ, code .typ { color: #404; font-weight: 700; }
+  pre .lit, code .lit { color: #044; }
+  pre .pun, code .pun { color: #440; }
+  pre .pln, code .pln { color: #000; }
+  pre .tag, code .tag { color: #006; font-weight: 700; }
+  pre .atn, code .atn { color: #404; }
+  pre .atv, code .atv { color: #060; }
+}
+
+  .blog-post-meta .date {
+    float: left;
+  }
+
+  .blog-post-meta .social {
+    float: right;
+  }
+
+
+  .pagination{
+    width: 400px;
+  }
+
+
+
+
+
+
+/* Inside Pages
+========================================================================== */
+
+.page-title {
+  margin-top: 0;
+        background: #5aadbb;
+  font-size: .8em;
+  line-height: 1em;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+
+}
+
+@media only screen and (min-width: 60em) {
+
+    .page-title  .container {
+        display: block;
+  padding: 0.7em 0 0.7em;
+        font-size: 3em;
+        background: #5aadbb url(/assets/img/blog.svg) no-repeat 99%/7.5%;
+            max-width: 1000px;
+        font-weight: bolder;
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+}
+
+/*
+Context/Local Nav
+*/
+
+.context-nav {
+  padding: 0 1.2em;
+}
+
+.context-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.context-nav ul > li {
+  display: none;
+}
+
+.context-nav.open ul > li {
+  display: block;
+}
+
+.context-nav ul > li .active {
+  position: relative;
+}
+
+.context-nav ul > li .active:after {
+  top: 1.05em;
+  right: 1em;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: #fff;
+  border-width: 0.4em;
+}
+
+.context-nav.open ul > li .active:after {
+  opacity: 0.4;
+}
+
+.context-nav a {
+  display: block;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-bottom: 1px dotted rgba(0,0,0,0.2);
+  text-decoration: none;
+  color: #0096c7;
+  transition: all 0.5s ease;
+}
+
+.context-nav a:hover,
+.context-nav a:active {
+  background: #bfe6ed;
+  color: #207d8d;
+  text-decoration: none;
+}
+
+.context-nav ul > li .active {
+  color: #fff;
+  background: #5aadbb;
+  font-style: italic;
+}
+
+.context-nav.open ul > li .active,
+.context-nav ul > li .active:hover {
+  background: #228596;
+}
+
+.year_divider > ul {
+  display: none;
+}
+
+.year_divider.open > ul {
+  display: block;
+}
+
+.year_divider li a {
+  padding-left: 1.5em;
+}
+.context-nav.navbar-fixed {
+  position: fixed;
+  top: 6em;
+}
+
+.context-nav.navbar-absolute {
+  position: absolute;
+  right: 0;
+}
+
+
+
+
+@media only screen and (min-width: 60em) {
+  .container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .has-sidebar {
+    padding-right: 20em;
+    box-sizing: border-box;
+  }
+}
+
+
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+*/
+
+.clearfix {
+  *zoom: 1;
+}
+
+
+@media only screen and (min-width: 60em) {
+
+  .context-nav {
+    position: absolute;
+    top: 1.3em;
+    right: 0;
+    width: 17em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .context-nav ul > li {
+    display: block;
+  }
+
+  .context-nav ul > li .active:after {
+    display: none;
+  }
+    
+}
+
+@media only screen and (min-width: 35em) {
+  .context-nav {
+    max-width: 25em;
+  }
+}
