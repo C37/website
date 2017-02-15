@@ -17,8 +17,8 @@ timezone: America/Sao_Paulo
 # http://jekyllrb.com/docs/permalinks/
 permalink: /blog/:categories/:year/:month/:day/:title.html
 
-#markdown: kramdown
-markdown: redcarpet
+markdown: kramdown
+#markdown: redcarpet
 
 
 regeneration: true
