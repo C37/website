@@ -14,6 +14,8 @@ category: instructions
     - http://yeswejekyll.com/#_includes
     - http://jekyllrb.com/docs/home/
     - https://jekyllrb.com/docs/variables/
+    - https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors
+    - https://github.com/jekyll/jekyll-paginate
 
 <br>
 

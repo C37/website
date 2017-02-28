@@ -4,3 +4,5 @@
 *.!/_www/.gitkeep
 *.log
 .jekyll-metadata
+
+.vscode
