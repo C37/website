@@ -1,5 +1,49 @@
-<a class="scroll-point pt-top" id="top"></a>
-<div id="header">
+<a class="scroll-point pt-top" id="site-initial"></a>
+
+
+
+<header>
+    <div class="show-sm">
+        <div id="nav-toggle-box">
+            <div id="nav-toggle-brand">
+                <a href="/">Minha conta</a>
+            </div>
+            <a href="#" id="nav-toggle" data-component="toggleme" data-target="#top" data-loaded="true"><i class="kube-menu"></i></a>
+        </div>
+    </div>
+    <div id="top" class="hide-sm">
+        <nav id="top-nav-main">
+            <ul>
+                <li>
+                    <div id="top-brand">
+                        <a href="/"></a>
+                    </div>
+
+                </li>
+                <li><a href="/software/">Softwares</a></li>
+                <li><a href="/equipment/">Equipamentos</a></li>
+                <li><a href="/hardware/">Hardwares</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/learning/">Aprendizado</a></li>
+                <li><a href="/support/">Suporte</a></li>
+                <li>
+                    <i class="icon-search-header"></i>
+                </li>
+                <li>
+                    <i class="icon-user-header"></i>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+
+
+<!--<div id="header">
 
     <div class="wrap">
         {% if page.url != "/" %}
@@ -11,23 +55,17 @@
             <a href="/software/">Softwares</a>
             <a href="/equipment/">Equipamentos</a>
             <a href="/hardware/">Hardwares</a>
-            <!--<a href="/suggestion/">Sugestões Criativas</a>-->
             <a href="/blog/">Blog</a>
             <a href="/learning/">Aprendizado</a>
             <a href="/support/">Suporte</a>
-            <!--<a href="mailto:vendas@c37.co?Subject=Compra C37 - Router CNC - Híbrida" target="_top" class="button-buy" style="margin-left: 12px">Comprar</a>-->
         </div>
         <form class="menu-dropdown">
             <select id="menu-dropdown" onchange="location = this.options[this.selectedIndex].value;" style="width: 147px">
                         <option value="#router-cnc">Router CNC</option>
                         <option value="#cad">Softwares</option>
                         <option value="#our-clients">Nossos Clientes</option>
-                        <!--                        <option value="#cad">CAD</option>
-                                                <option value="#cam">CAM</option>
-                                                <option value="#controller">Controlador</option>-->
                         <option value="#support">Suporte & Assistência Técnica</option>
                         <option value="mailto:vendas@c37.co?Subject=Compra C37 - Router CNC - Híbrida">Comprar</option>
-                        <!--<option value="http://produto.mercadolivre.com.br/MLB-725940655-fresadora-router-cnc-70-x-45-x-05-softwares-completa-_JM">Comprar</option>-->
                     </select>
             <script>
                 document.querySelector('#menu-dropdown').addEventListener('change', function (event) {
@@ -54,4 +92,9 @@
     <div class="shadow"></div>
     
 </div>
-<div class="header-placeholder"></div>
+-->
+
+
+
+
+<!--<div class="header-placeholder"></div>-->

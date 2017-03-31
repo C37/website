@@ -3,6 +3,152 @@ layout: base
 title: Softwares
 ---
 
+
+
+<style>
+
+
+
+.chapternav {
+    background: rgba(242,242,242,0.7);
+    overflow: hidden;
+    padding: 0;
+    padding-top: 11px;
+    padding-bottom: 12px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 77px;
+    z-index: 9987
+}
+
+
+
+
+.chapternav-items {
+    list-style: none;
+    margin: 0 34px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 50px;
+    white-space: nowrap
+}
+
+
+.chapternav-item {
+    display: inline-block;
+        font-size: 13px;
+    padding: 0 15px;
+
+    animation: chapternav-slidein 350ms backwards;
+    
+}
+
+
+.icon-nav-cad {
+    display: block;
+    background: url('../assets/img/logo-cad.svg') no-repeat center/100%;
+    width: 60px;
+    height: 55px;
+    margin: 0 auto;
+}
+.icon-nav-cam {
+    display: block;
+    background: url('../assets/img/logo-cam.svg') no-repeat center/100%;
+    width: 60px;
+    height: 55px;
+    margin: 0 auto;
+}
+.icon-nav-controller {
+    display: block;
+    background: url('../assets/img/logo-controller.svg') no-repeat center/100%;
+    width: 60px;
+    height: 55px;
+    margin: 0 auto;
+}
+
+
+@keyframes chapternav-slidein {
+    0% {
+        opacity: 0
+    }
+
+    1% {
+        -webkit-transform: translateX(160px);
+        transform: translateX(160px)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+
+
+
+</style>
+
+<nav class="chapternav">
+
+    <ul class="chapternav-items">
+
+        <li class="chapternav-item">
+            <a href="/software/cad.html">
+                <i class="icon-nav-cad"></i>
+                <span>C37 - CAD</span>
+            </a>
+        </li>
+        <li class="chapternav-item">
+            <a href="/software/cam.html">
+                <i class="icon-nav-cam"></i>
+                <span>C37 - CAM</span>
+            </a>
+        </li>
+        <li class="chapternav-item">
+            <a href="/software/controller.html">
+                <i class="icon-nav-controller"></i>
+                <span>C37 - Controlador</span>
+            </a>
+        </li>
+        <li class="chapternav-item">
+            <a href="/software/cad.html">
+                <i class="icon-nav-cad"></i>
+                <span>C37 - Firmware</span>
+                
+            </a>
+        </li>
+        <li class="chapternav-item">
+            <a href="/software/cad.html">
+                <i class="icon-nav-cad"></i>
+                <span>C37 - Automatus</span>
+            </a>
+        </li>
+        <li class="chapternav-item">
+            <a href="/software/cad.html">
+                <i class="icon-nav-cad"></i>
+                <span>C37 - Production</span>
+            </a>
+        </li>
+
+
+
+
+    </ul>
+
+    
+</nav>
+
+
+
+
+
+
+
+
+
 <div class="wrap">
     <h2 class="icon icon-cad">CAD - Desenho Auxiliado por Computador </h2>
     <div class="row-fluid">
