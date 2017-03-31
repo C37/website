@@ -56,9 +56,11 @@ h3,
 h4,
 input,
 button {
-    font-size: 16px;
+    /*font-size: 16px;
     font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif;
-    font-weight: 300;
+    font-weight: 300;*/
+      font: 14px 'lucida grande', tahoma, verdana, arial, sans-serif;
+
 }
 
 h1,
@@ -2179,6 +2181,10 @@ Context/Local Nav
 
 
 
+/* novo css */
+
+
+
 
 
 
@@ -2224,7 +2230,7 @@ only screen and (min-resolution: 2dppx) {
     }
 }
 
-#top ul {
+#top>nav>ul {
     display: flex;
     align-items: center;
   justify-content: space-between; 
@@ -2296,6 +2302,18 @@ only screen and (min-resolution: 2dppx) {
 
 
 
+header .button:hover,
+header .button:active,
+header .button,
+header .option-group,
+header .option-group:hover {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    background-image: none;
+    outline: none;
+    -webkit-app-region: no-drag;
+}
 
 
 
@@ -2306,8 +2324,245 @@ only screen and (min-resolution: 2dppx) {
 
 
 
+ul.menu {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+ul.menu > li {
+  display: block;
+  background-color: #eaeaea;
+  background-image: linear-gradient(#fafafa, #eaeaea);
+  border: 1px solid #cccccc;
+  color: #3d3b36;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding: 3px 0 3px 0;
+  z-index: 1;
+  cursor: pointer !important;
+}
+ul.menu > li * {
+  cursor: pointer !important;
+}
+ul.menu > li:hover {
+  color: #393b3e;
+  background-image: linear-gradient(#fafafa, #d9d9d9);
+  border-color: #bdbdbd;
+  z-index: 2;
+}
+ul.menu > li:hover > i {
+  opacity: 1;
+}
+ul.menu > li.disabled {
+  background-color: #FBFBFB;
+  cursor: default !important;
+}
+ul.menu > li.disabled > i,
+ul.menu > li.disabled > strong {
+  cursor: default !important;
+  color: #000000 !important;
+  opacity: .4 !important;
+}
+ul.menu > li.disabled:hover {
+  color: #000000 !important;
+  background-image: linear-gradient(#fafafa, #eaeaea);
+  border-color: #cccccc;
+  z-index: 1;
+}
+ul.menu > li.disabled:hover * {
+  cursor: default !important;
+}
+ul.menu > li.selected {
+  background-color: #cccccc;
+  background-image: linear-gradient(#fafafa, #dadada);
+  background-repeat: repeat-x;
+  border-color: #cccccc;
+  color: #393b3e;
+}
+ul.menu > li > i {
+  margin: 1px;
+  opacity: .6;
+  vertical-align: middle;
+}
+ul.menu > li.selected > i {
+  opacity: 1;
+}
+ul.menu.horizontal {
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+ul.menu.horizontal > li {
+  margin-left: -1px;
+  margin-top: -1px;
+  text-align: center;
+  background-color: red;
+}
+ul.menu.horizontal > li:first-child {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+ul.menu.horizontal > li:last-child {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+ul.menu.vertical {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+ul.menu.vertical > li {
+  text-align: center;
+  margin-top: -1px;
+}
+ul.menu.vertical > li:first-child {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+ul.menu.vertical > li:last-child {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
 
 
+.option-group {
+  background-color: #eaeaea;
+  background-image: linear-gradient(#fafafa, #eaeaea);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  color: #393b3e;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  padding: 3px 9px;
+  position: relative;
+  font-size: 12px;
+}
+.option-group:hover {
+  background-color: #dadada;
+  background-image: linear-gradient(#fafafa, #dadada);
+  background-repeat: repeat-x;
+  border-color: #c5c5c5;
+}
+.option-group > i {
+  margin: 0px;
+  padding: 0px;
+}
+.option-group > strong:after {
+  content: '';
+  margin-left: 3px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 5.5px 0 5.5px;
+  border-color: #43484d transparent transparent transparent;
+}
+.option-group.press {
+  background-color: #dadada;
+  background-image: linear-gradient(#eaeaea, #dadada);
+  background-repeat: repeat-x;
+  border-color: #cccccc;
+  box-shadow: inset 0 2px 9px rgba(0, 0, 0, 0.15);
+  color: #393b3e;
+}
+.option-group > .menu {
+  display: none;
+  left: -1px;
+  padding-top: 6px;
+  position: absolute;
+  width: 165px;
+  z-index: 37;
+}
+.option-group > .menu.right {
+  left: auto;
+  right: -1px;
+}
+.option-group > .menu.left {
+  left: -1px;
+}
+.option-group > .menu > .content {
+  background: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.31);
+}
+.option-group > .menu > .content > .header {
+  background-color: #eeeeee;
+  background-image: linear-gradient(#fafafa, #eeeeee);
+  background-repeat: repeat-x;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border: 1px solid #c1c1c1;
+  border-bottom: none;
+  font-weight: bold;
+  padding: 8px 6px;
+}
+.option-group > .menu > .content > .option {
+  cursor: pointer;
+}
+.option-group > .menu > .content > .option:first-child {
+  border-top: none !important;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.option-group > .menu > .content > .option:last-child {
+  border-bottom: 1px solid #c1c1c1;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.option-group > .menu > .content > .option > li {
+  border-top: 1px solid #c1c1c1;
+  border-left: 1px solid #c1c1c1;
+  border-right: 1px solid #c1c1c1;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+.option-group > .menu > .content > .option > li:hover {
+  background: #599bcd;
+  color: white;
+}
+.option-group > .menu > .content > .option > a {
+  color: #666666;
+  display: inline-block;
+}
+.option-group > .menu > .content > .option > .icon {
+  display: table-cell;
+  width: 24px;
+}
+.option-group > .menu > .content > .option > .text {
+  display: table-cell;
+  padding: 0 0 0 3px;
+}
+.option-group > .menu > .content > .option > .selected {
+  background: #599bcd;
+  color: #ffffff;
+}
+.option-group > .menu > .content > .footer {
+  font-weight: 300;
+  padding: 6px;
+  border: 1px solid #c1c1c1;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+ul,
+li {
+  list-style: none;
+}
+p,
+ul,
+li {
+  color: #666665;
+}
 
 
 
