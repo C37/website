@@ -1,7 +1,187 @@
 
+<style>
+
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+footer{
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+footer>.container{
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1024px;
+}
+
+footer>.container > * {
+  padding: 10px;
+  flex: 1 auto;
+}
+
+
+footer>.container>.left,
+footer>.container>.right{
+    /*border: 1px solid rebeccapurple;*/
+      flex-grow: 1;
+
+}
+
+footer>.container>.right{
+    text-align: right;
+    padding-top: 0px !important;
+}
+
+footer>.container>.right>table{
+float: right;
+}
+
+
+@media all and (max-width: 768px) {
+  footer>.container>.left,
+  footer>.container>.right{ 
+      flex: 1 100%; 
+    /*border: 1px solid red;*/
+  }
+  footer>.container>.left>p>strong{
+      display: block;
+  }
+  footer>.container>.left>p{
+      text-align: center;
+  }
+  footer>.container>.right>table{
+      float: none;
+      margin: 0 auto;
+  }
+}
+
+
+.footer-logo {
+    display: block;
+    background: url('/assets/img/logo.svg') no-repeat center/100%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+
+.footer-social-facebook {
+    display: inline-block;
+    background: url('/assets/img/social-facebook.svg') no-repeat center/100%;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.footer-social-pinterest {
+    display: inline-block;
+    background: url('/assets/img/social-pinterest.svg') no-repeat center/100%;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;   
+    cursor: pointer;
+}
+.footer-social-instagram {
+    display: inline-block;
+    background: url('/assets/img/social-instagram.svg') no-repeat center/95%;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.footer-social-youtube {
+    display: inline-block;
+    background: url('/assets/img/social-youtube.svg') no-repeat center/100%;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+
+</style>
+
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="left">
+
+            <p>
+
+                <!--<strong>C37 - CNC</strong>&nbsp; 
+                <a href="/software/" target="_blank" style="text-decoration: none">Softwares</a>&nbsp;
+                <a href="/equipment/" target="_blank" style="text-decoration: none">Equipamentos</a>&nbsp;
+                <a href="/hardware/" target="_blank" style="text-decoration: none">Hardwares</a>&nbsp;
+                <a href="/blog/" target="_blank" style="text-decoration: none">Blog</a>&nbsp;
+                <a href="/learning/" target="_blank" style="text-decoration: none">Aprendizado</a>&nbsp;
+                <a href="/support/" target="_blank" style="text-decoration: none">Suporte</a>
+                <br>-->
+                <strong>Comunidade</strong>&nbsp;
+                <a href="/about.html" style="text-decoration: none">Sobre a C37</a>&nbsp;º
+                <a href="https://status.c37.co" style="text-decoration: none">Status</a>&nbsp;º
+                <a href="/open-source.html" style="text-decoration: none">Open Source</a>&nbsp;º
+                <a href="/assets/doc/C37-Terms.pdf" target="_blank" style="text-decoration: none">Termos</a> &nbsp;º
+                <a href="/assets/doc/C37-Privacy.pdf" target="_blank" style="text-decoration: none">Política</a>
+
+                <br>
+                <br>
+
+                <strong>Social</strong>&nbsp;
+                <a href="https://www.facebook.com/c37.cnc" target="_blank" style="text-decoration: none">
+                    <i class="footer-social-facebook"></i>
+                </a>&nbsp;
+
+
+                <a href="https://br.pinterest.com/c37cnc/" target="_blank" style="text-decoration: none">
+                                    <i class="footer-social-pinterest"></i>
+
+                </a>&nbsp;
+                <a href="https://www.instagram.com/c37.cnc/" target="_blank" style="text-decoration: none">
+                                    <i class="footer-social-instagram"></i>
+                
+                
+                </a>&nbsp;
+                <a href="https://www.youtube.com/c/c37-cnc/" target="_blank" style="text-decoration: none">
+                                    <i class="footer-social-youtube"></i>
+                
+                </a>
+                
+            </p>
+
+        </div>
+        <div class="right">
+
+            <table>
+                <tr>
+                    <td>
+                        <a href="#">
+                            <i class="footer-logo"></i>
+                            <strong>C37&reg; - {{ site.time | date: "%Y" }}</strong>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+
+
 
 <!--inspirado em footer de http://codepen.io/-->
-
+<!--
 <div id="footer" class="SiteFooter">
 
     <div style="float: left">
@@ -44,6 +224,8 @@
         </p>
     </div>
 </div>
+
+-->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
