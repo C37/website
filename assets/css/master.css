@@ -2184,7 +2184,8 @@ header{
 
 
 
-#top {
+#top,
+#nav-toggle-box {
     display: flex;
     align-items: center;
     max-width: 1024px;
@@ -2197,7 +2198,7 @@ header{
 
 /*https://css-tricks.com/almanac/properties/j/justify-content/*/
 
-#top #top-brand a {
+.top-brand a {
     margin-top: 3px;
     width: 60px;
     height: 47px;
@@ -2217,18 +2218,18 @@ only screen and (min-resolution: 2dppx) {
     }
 }
 
-#top>nav>ul {
+.top-nav-main ul {
     display: flex;
     align-items: center;
   justify-content: space-between; 
   list-style: none;
 }
 
-#top #top-nav-main {
+.top-nav-main {
     width: 100%;
 }
 
-#top #top-nav-main a {
+.top-nav-main a {
     font-size: 14px;
     text-decoration: none;
     display: inline-block;
@@ -2236,7 +2237,7 @@ only screen and (min-resolution: 2dppx) {
     cursor: pointer;
 }
 
-#top #top-nav-main a:hover {
+.top-nav-main a:hover {
     -moz-transition: all linear 0.2s;
     transition: all linear 0.2s;
     color:#599bcd;

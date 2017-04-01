@@ -2,20 +2,118 @@
 
 
 
+<style>
+
+.ac-gn-menuicon-bread-crust-top {
+    top: 23px;
+    -webkit-transition: -webkit-transform 0.2s 0.2s;
+    transition: -webkit-transform 0.2s 0.2s;
+    transition: transform 0.2s 0.2s;
+    transition: transform 0.2s 0.2s, -webkit-transform 0.2s 0.2s;
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px)
+}
+
+.ac-gn-menuicon-bread-bottom {
+    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+}
+
+
+.ac-gn-menuicon-bread-crust {
+    display: block;
+    width: 17px;
+    height: 1px;
+    background: black;;
+    position: absolute;
+    left: 16px;
+    z-index: 1;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s
+}
+    
+
+.ac-gn-menuicon-bread-top {
+    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    z-index: 4
+}
+
+.ac-gn-menuicon-bread {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)}
+
+</style>
+
+
 <header>
     <div class="show-sm">
         <div id="nav-toggle-box">
-            <div id="nav-toggle-brand">
-                <a href="/">Minha conta</a>
-            </div>
-            <a href="#" id="nav-toggle" data-component="toggleme" data-target="#top" data-loaded="true"><i class="kube-menu"></i></a>
+        <nav class="top-nav-main">
+            <ul>
+                <li data-value="es-ES">
+                    <div class="top-brand">
+                        <!--<a href="/"></a>-->
+
+
+                        <span class="ac-gn-menuicon-bread-top ac-gn-menuicon-bread">
+
+                            <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top" style="top: 24px"></span>
+                        </span>
+
+                        <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						    <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom" style="top: 26px"></span>
+					    </span>
+
+                    </div>
+                </li>
+                <li data-value="es-ES">
+                    <div class="top-brand">
+                        <a href="/"></a>
+                    </div>
+                </li>
+                <li data-value="es-ES">
+
+                    <i class="icon-user-header"></i>
+
+                </li>
+            </ul>
+
+        </nav>
+
+
+            <!--<div id="nav-toggle-brand">
+                    <div class="top-brand">
+                        <a href="/"></a>
+                    </div>
+            </div>-->
+            <!--<a href="#" id="nav-toggle" data-component="toggleme" data-target="#top" data-loaded="true"><i class="kube-menu"></i></a>-->
         </div>
     </div>
     <div id="top" class="hide-sm">
-        <nav id="top-nav-main">
+        <nav class="top-nav-main">
             <ul>
                 <li>
-                    <div id="top-brand">
+                    <div class="top-brand">
                         <a href="/"></a>
                     </div>
 
