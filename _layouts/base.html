@@ -15,8 +15,20 @@
 
         <link rel="stylesheet" href="/assets/css/flickity.css" />
         <link rel="stylesheet" href="/assets/css/master.css">
+        <!--<link rel="stylesheet" href="/assets/css/style.css">-->
 
         <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="C37 - CNC Blog Atom Feed">
+
+
+        <script type="text/javascript" src="/assets/js/library/flickity.js"></script>
+        <script type="text/javascript" src="/assets/js/library/utility.js"></script>
+        <script type="text/javascript" src="/assets/js/library/option-group.js"></script>
+        <script type="text/javascript" src="/assets/js/library/i18n.js"></script>
+        <script type="text/javascript" src="/assets/js/library/tab.js"></script>
+
+        <script type="text/javascript" src="/assets/js/application.js"></script>
+        <script type="text/javascript" src="/assets/js/user.js"></script>
+        
     </head>
     <body>
         {% if page.category != 404 %}
@@ -32,5 +44,80 @@
         {% if page.category != 404 %}
             {% include footer.html %}
         {% endif %}
+
+        <dialog id="dialog-user-auth" class="dialog size-250">
+            <div class="header">
+                <i class="icon-user"></i>
+                <strong>Sua Conta</strong>
+                <i id="button-user-auth-close" class="icon-cancel clickable right"></i>
+            </div>
+            <div class="body" style="padding: 10px 10px 0 10px">
+
+                <div class="text-center">
+                    <img src="/assets/img/logo.png" alt="" style="width: 70px">
+                </div>
+
+                <p class="text-center">
+                    Trabalhamos para levar os meios de produção ao alcance de <strong>todas as pessoas</strong>.
+                </p>
+
+                <div id="tab-user-auth" class="tab">
+                    <ul class="header">
+                        <li class="item active" data-ref="signin">Entrar</li>
+                        <li class="item" data-ref="signup">Criar uma nova conta</li>
+                    </ul>
+                    <div class="body" style="padding-bottom: 0">
+                        <div class="item active" data-ref="signin">
+                            <form id="form-user-signin" onsubmit="return false;">
+                                <label for="">Preencha suas informações</label>
+                                <!--<label for="">E-mail</label>-->
+                                <input id="text-user-signin-email" type="text" value="" placeholder="E-mail">
+                                <!--<label for="">Senha</label>-->
+                                <input id="text-user-signin-password" type="password" name="" value="" placeholder="Senha">
+                                <div class="text-right">
+                                    <input id="checkbox-user-signin" type="checkbox" checked>
+                                    <span class="checkbox" onclick="document.getElementById('checkbox-user-signin').checked = !document.getElementById('checkbox-user-signin').checked"> Permanecer conectado </span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="item" data-ref="signup">
+                            <form id="form-user-signup" onsubmit="return false;">
+                                <label for="">Preencha os campos abaixo</label>
+                                <input id="text-user-signup-first-name" type="text" value="" placeholder="Nome">
+                                <!--<label for="">Sobrenome</label>-->
+                                <input id="text-user-signup-last-name" type="text" name="" value="" placeholder="Sobrenome">
+                                <!--<label for="">E-mail</label>-->
+                                <input id="text-user-signup-email" type="text" name="" value="" placeholder="E-mail">
+                                <!--<label for="">Senha</label>-->
+                                <input id="text-user-signup-password" type="password" name="" value="" placeholder="Senha">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <p id="text-user-signin" class="text-center">
+                    <strong><a href="">Esqueceu sua a senha?</a></strong>
+                </p>
+
+                <p id="text-user-signup" class="text-center hide">
+                    Ao clicar em Criar conta, você concorda com nossos <a href="#">Termos</a> e que leu nossa <a href="#">Política de Privacidade</a>,
+                    incluindo nosso Uso de <a href="#">Cookies</a>.
+                </p>
+
+            </div>
+            <div class="footer">
+                <img id="img-user-auth-loader" src="/assets/img/loader.gif" alt="" style="margin-top: 6px;margin-left: 11px" class="hide">
+
+                <button id="button-user-auth-signin" class="button success right" form="form-user-signin">
+                    <i class="icon-ok-white"></i>
+                    <strong>Entrar</strong>
+                </button>
+                <button id="button-user-auth-signup" class="button success right hide" form="form-user-signup">
+                    <i class="icon-ok-white"></i>
+                    <strong>Criar conta</strong>
+                </button>
+            </div>
+        </dialog>
+        
     </body>
 </html>
