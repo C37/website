@@ -6,8 +6,8 @@ description: C37 - CNC website
 author:
   name: C37 Team
 
-source: 
-destination: _www
+source: src
+destination: www
 
 url: http://beta.c37.co
 atom_path: /blog/atom.xml

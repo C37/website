@@ -1,7 +1,7 @@
 /node_modules/
-/_www/*
-!/_www/.gitkeep
-*.!/_www/.gitkeep
+/www/*
+!/www/.gitkeep
+*.!/www/.gitkeep
 *.log
 .jekyll-metadata
 

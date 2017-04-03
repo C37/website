@@ -8,6 +8,10 @@
 
         [].forEach.call(optionsGroup, function (optionGroup) {
 
+            // e do tipo de selecao
+            var isSelected = optionGroup.dataset.hasOwnProperty("selected");
+
+
             // para mostrar o menu
             optionGroup.onclick = function (e) {
                 e.stopPropagation();
@@ -24,10 +28,12 @@
             // para cada item de list
             [].forEach.call(itens, function (item) {
 
-                // no load do componente verifico se ele esta selecionado
-                if (optionGroup.dataset.selected === item.dataset.value) {
-                    // add ao item a class de selecionado
-                    item.classList.add('selected');
+                if (isSelected) {
+                    // no load do componente verifico se ele esta selecionado
+                    if (optionGroup.dataset.selected === item.dataset.value) {
+                        // add ao item a class de selecionado
+                        item.classList.add('selected');
+                    }
                 }
 
                 // o evento click para cada list do componente
@@ -45,25 +51,29 @@
                             item.classList.remove('selected');
                         });
 
-                        // add ao button que estou a class de selecionado
-                        this.classList.add('selected');
+                        if (isSelected) {
+                            // add ao button que estou a class de selecionado
+                            this.classList.add('selected');
 
-                        // informo ao componente o valor do button selecionado
-                        this.parentNode.dataset.selected = this.dataset.value;
+                            // informo ao componente o valor do button selecionado
+                            // acho que esta duplicado e nao funciona
+                            // this.parentNode.dataset.selected = this.dataset.value;
+
+                            // vou montar a selecao do iten
+                            var textContent = (this.querySelector('a') || this.querySelector('span')).textContent,
+                                imgContent = this.querySelector('img').getAttribute('src');
+
+                            // neste momento sem display
+                            // this.parentNode.parentNode.parentNode.parentNode.querySelector('strong').textContent = textContent;
+                            this.parentNode.parentNode.parentNode.parentNode.querySelector('img').setAttribute('src', imgContent);
+
+                            // informo ao componente o valor do button selecionado
+                            this.parentNode.parentNode.parentNode.parentNode.dataset.selected = this.dataset.value;
+                        }
 
                         // escondo o menu com os itens
                         this.parentNode.parentNode.parentNode.style.display = "none";
 
-                        // vou montar a selecao do iten
-                        var textContent = (this.querySelector('a') || this.querySelector('span')).textContent,
-                            imgContent = this.querySelector('img').getAttribute('src');
-
-                        // neste momento sem display
-                        // this.parentNode.parentNode.parentNode.parentNode.querySelector('strong').textContent = textContent;
-                        this.parentNode.parentNode.parentNode.parentNode.querySelector('img').setAttribute('src', imgContent);
-
-                        // informo ao componente o valor do button selecionado
-                        this.parentNode.parentNode.parentNode.parentNode.dataset.selected = this.dataset.value;
 
                         // para o evento do item escolhido
                         // https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events

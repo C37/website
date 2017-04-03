@@ -1,0 +1,325 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+.row.gutters,
+.row.gutters>.row {
+    margin-left: -2%;
+}
+
+@media (max-width: 768px) {
+    .row.gutters,
+    .row.gutters>.row {
+        margin-left: 0;
+    }
+}
+
+.row.gutters>.col,
+.row.gutters>.row>.col {
+    margin-left: 2%;
+}
+
+@media (max-width: 768px) {
+    .row.gutters>.col,
+    .row.gutters>.row>.col {
+        margin-left: 0;
+    }
+}
+
+.row.around {
+    justify-content: space-around;
+}
+
+.row.between {
+    justify-content: space-between;
+}
+
+.row.auto .col {
+    flex-grow: 1;
+}
+
+.col-1 {
+    width: 8.33333%;
+}
+
+.offset-1 {
+    margin-left: 8.33333%;
+}
+
+.col-2 {
+    width: 16.66667%;
+}
+
+.offset-2 {
+    margin-left: 16.66667%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.offset-3 {
+    margin-left: 25%;
+}
+
+.col-4 {
+    width: 33.33333%;
+}
+
+.offset-4 {
+    margin-left: 33.33333%;
+}
+
+.col-5 {
+    width: 41.66667%;
+}
+
+.offset-5 {
+    margin-left: 41.66667%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.offset-6 {
+    margin-left: 50%;
+}
+
+.col-7 {
+    width: 58.33333%;
+}
+
+.offset-7 {
+    margin-left: 58.33333%;
+}
+
+.col-8 {
+    width: 66.66667%;
+}
+
+.offset-8 {
+    margin-left: 66.66667%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.offset-9 {
+    margin-left: 75%;
+}
+
+.col-10 {
+    width: 83.33333%;
+}
+
+.offset-10 {
+    margin-left: 83.33333%;
+}
+
+.col-11 {
+    width: 91.66667%;
+}
+
+.offset-11 {
+    margin-left: 91.66667%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.offset-12 {
+    margin-left: 100%;
+}
+
+.gutters>.col-1 {
+    width: calc(8.33333% - 2%);
+}
+
+.gutters>.offset-1 {
+    margin-left: calc(8.33333% + 2%) !important;
+}
+
+.gutters>.col-2 {
+    width: calc(16.66667% - 2%);
+}
+
+.gutters>.offset-2 {
+    margin-left: calc(16.66667% + 2%) !important;
+}
+
+.gutters>.col-3 {
+    width: calc(25% - 2%);
+}
+
+.gutters>.offset-3 {
+    margin-left: calc(25% + 2%) !important;
+}
+
+.gutters>.col-4 {
+    width: calc(33.33333% - 2%);
+}
+
+.gutters>.offset-4 {
+    margin-left: calc(33.33333% + 2%) !important;
+}
+
+.gutters>.col-5 {
+    width: calc(41.66667% - 2%);
+}
+
+.gutters>.offset-5 {
+    margin-left: calc(41.66667% + 2%) !important;
+}
+
+.gutters>.col-6 {
+    width: calc(50% - 2%);
+}
+
+.gutters>.offset-6 {
+    margin-left: calc(50% + 2%) !important;
+}
+
+.gutters>.col-7 {
+    width: calc(58.33333% - 2%);
+}
+
+.gutters>.offset-7 {
+    margin-left: calc(58.33333% + 2%) !important;
+}
+
+.gutters>.col-8 {
+    width: calc(66.66667% - 2%);
+}
+
+.gutters>.offset-8 {
+    margin-left: calc(66.66667% + 2%) !important;
+}
+
+.gutters>.col-9 {
+    width: calc(75% - 2%);
+}
+
+.gutters>.offset-9 {
+    margin-left: calc(75% + 2%) !important;
+}
+
+.gutters>.col-10 {
+    width: calc(83.33333% - 2%);
+}
+
+.gutters>.offset-10 {
+    margin-left: calc(83.33333% + 2%) !important;
+}
+
+.gutters>.col-11 {
+    width: calc(91.66667% - 2%);
+}
+
+.gutters>.offset-11 {
+    margin-left: calc(91.66667% + 2%) !important;
+}
+
+.gutters>.col-12 {
+    width: calc(100% - 2%);
+}
+
+.gutters>.offset-12 {
+    margin-left: calc(100% + 2%) !important;
+}
+
+@media (max-width: 768px) {
+    [class^='offset-'],
+    [class*=' offset-'] {
+        margin-left: 0;
+    }
+}
+
+.first {
+    order: -1;
+}
+
+.last {
+    order: 1;
+}
+
+@media (max-width: 768px) {
+    .row .col {
+        margin-left: 0;
+        width: 100%;
+    }
+    .row.gutters .col {
+        margin-bottom: 16px;
+    }
+    .first-sm {
+        order: -1;
+    }
+    .last-sm {
+        order: 1;
+    }
+}
+
+.align-center {
+    justify-content: center;
+}
+
+.align-right {
+    justify-content: flex-end;
+}
+
+.align-middle {
+    align-items: center;
+}
+
+.push-bottom {
+    margin-top: auto;
+}
+.gutters .column.push-middle, .push-middle {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.gutters .column.push-center, .push-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gutters .column.push-right, .push-right {
+    margin-left: auto;
+}
+
+
+
+
+
+.standart{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+.demo-grid{
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
+
+
+.demo-grid .row {
+    background: #ebf4fc;
+}
+
+
+.demo-grid .col {
+    background: #d8e9fa;
+}
