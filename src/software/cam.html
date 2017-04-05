@@ -4,68 +4,204 @@ title: C37 - CAM
 ---
 
 
-<div class="wrap">
+<style>
+    .myImage{
+        /* http://stackoverflow.com/questions/11736363/responsive-images-with-css */
+        max-width:100% !important;
+        max-height:100% !important;
+        display:block;
+    }
+    .containerImage{
+        /* http://stackoverflow.com/questions/5166574/vertical-align-text-in-block-element */
+        display: flex;
+        align-items: center;
+    }
+</style>            
 
 
-<a class="scroll-point pt-about" id="cam"></a>
-<div class="wrap">
-    <h2 class="icon icon-cam">CAM - Manufatura Auxiliada por Computador</h2>
-    <div class="row-fluid">
-        <div class="span7">
+
+<div class="grid fixed">
+
+		<script>
+			window.addEventListener('load', function () {
+				// https://developer.mozilla.org/pt-BR/docs/Web/API/Window/onscroll
+				window.onscroll = function (e) {
+
+					console.log(window.pageYOffset);
+
+					if (window.pageYOffset >= 48) {
+						document.querySelector('.nav-self').classList.add('ccc');
+					} else {
+						document.querySelector('.nav-self').classList.remove('ccc');
+					}
+
+				};
+			});
+		</script>
+
+		<style>
+			.ccc {
+				position: fixed;
+				top: 0px;
+				background-color: white;
+				opacity: 0.9;
+				/*margin: 0 auto;*/
+				width: 100%;
+				max-width: 1024px;
+				/*padding-left: 7px;*/
+				z-index: 44;
+			}
+
+			.ccc .right{
+				padding-right: 3px;
+
+			}
+
+		</style>
+
+
+		<div class="nav-self">
+			<div class="left">
+				<h3><a href="/software/cad.html">C37 - CAM </a></h3>
+
+			</div>
+			<!--<div class="" style="margin-top: auto;">-->
+			<div class="right">
+				<ul>
+					<li>
+						<a class="button" href="#">Visão Geral</a>
+					</li>
+					<li>
+						<a href="#">Interface</a>
+					</li>
+					<li>
+						<a href="#">Ferramentas</a>
+					</li>
+					<li>
+						<a href="#">Recursos</a>
+					</li>
+					<li>
+						<a href="#">Planos</a>
+					</li>
+					<li>
+						<button class="button success">Assinar</button>
+					</li>
+				</ul>
+			</div>
+		</div>    
+
+    <br>
+    <br>
+
+    <div class="row space">
+
+
+        <div class="column column-7 containerImage">
+
             <img src="/assets/img/software/cam.png" alt="" class="myImage" />
+
+
         </div>
-        <div class="span5">
-            <p>
+
+        <div class="column column-5">
+            
+            <p class="big text-center">
                 O C37 - CAM é o software da C37 responsável em abrir um arquivo obtido através de um projeto executado em nosso
                 <a
-                    href="#cad">C37 - CAD</a>, onde o usuário pode planejar e configurar o Plano de Trabalho.
+                    href="/software/cad.html">C37 - CAD</a>, onde o usuário pode planejar e configurar o Plano de Trabalho.
             </p>
-            <p>
+            <br>
+            <p class="big text-center">
                 É nele que é obtido o conceitual <a href="https://pt.wikipedia.org/wiki/C%C3%B3digo_G" target="_blank">Código G</a>,
-                arquivo que o <a href="#controller">C37 - Controlador</a> interpreta e administra para dar inicio ao processo
+                arquivo que o <a href="/software/controller.html">C37 - Controlador</a> interpreta e administra para dar inicio ao processo
                 de fabricação em sua <a href="#router-cnc">C37 - Router CNC</a>.
             </p>
-            <p>
-                Possui diversos recursos para a elaboração do Plano de Trabalho e permite que o usuário crie sua <strong>própria</strong>                bliblioteca de ferramentas e materias.
+            <br>
+            <p class="big text-center">
+                Possui diversos recursos para a elaboração do Plano de Trabalho e permite que o usuário crie sua <strong>própria</strong> bliblioteca de ferramentas e materias.
             </p>
+            
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="column column-12">
+
+                <p class="big">
+                    <strong>Ferramentas para configurar o Plano de Trabalho</strong>
+                </p>
+
+                <p>
+
+                <style>
+                    .list-link>li{
+                        margin-top: 12px;
+                    }
+                    .list-linkkkk>li{
+                        margin-top: 5px;
+                    }
+                </style>
+                    
+
+                    <ul class="list-link">
+                        <li>
+                            <i class="icon-milling-cut"></i>
+                            <strong>Cortar</strong>: Permite ao usuário escolher se deseja que a ferramenta de corte passe numa linha paralela
+                            e adjacente do lado de dentro ou de fora da linha de seu projeto, e tem a finalidade de separar a peça usinada
+                            da matéria prima.
+                        </li>
+                        <li>
+                            <i class="icon-milling-drill"></i>
+                            <strong>Furar</strong>: Permite ao usuário selecionar determinados círculos de seu projeto para que seja efetuada,
+                            uma operação de descida em espiral, com a função de confeccionar um furo com a ferramenta de corte.
+                        </li>
+                        <li>
+                            <i class="icon-milling-deepen"></i>
+                            <strong>Aprofundar</strong>: Permite ao usuário selecionar formas fechadas de seu projeto para efetuar um desgaste
+                            na superfície da matéria-prima. Este desgaste é configurado na profundidade que usuário desejar e necessitar.
+                        </li>
+                        <li>
+                            <i class="icon-milling-engrave"></i>
+                            <strong>Gravar</strong>: Permite ao usuário selecionar linhas de seu projeto e configurar com qual profundidade
+                            deseja que a ferramenta de corte passe coincidentemente na linha mediana do segmento escolhido.
+                        </li>
+                    </ul>
+
+                </p>
+
+                <p>
+                    Também é disponibilizado na versão <strong>gratuíta</strong>.
+                </p>
+                <!--<p>
+                    <strong>Ajuda e Assistência</strong>: <a href="https://www.facebook.com/groups/c37.cam" target="_blank">Grupo</a>,
+                    <a href="https://www.youtube.com/playlist?list=PL3ZPjyez7Wrq_K_yHumFAQGaFIJfypfJu&playnext=1" target="_blank">Primeiros Passos</a>        e Tutoriais
+                </p>-->
+                <p>
+                    Clique <a href="https://chrome.google.com/webstore/detail/c37-cam/kanmmcphjbpnojplaphiepkklcgmmkgd" target="_blank">aqui</a>        para instalar o C37 - CAM.
+                </p>
+                <p>
+                    <a href="http://cam.c37.co" target="_blank">Conheça</a> a <strong>segunda</strong> versão (na nuvem, em desenvolvimento) do C37 - CAM.
+                </p>
+
         </div>
     </div>
-    <br>
-    <br>
-    <p><strong>Ferramentas para configurar o Plano de Trabalho</strong></p>
-    <ul class="list mailing-list">
-        <li>
-            <i class="icon-milling-cut"></i>
-            <strong>Cortar</strong>: Permite ao usuário escolher se deseja que a ferramenta de corte passe numa linha paralela
-            e adjacente do lado de dentro ou de fora da linha de seu projeto, e tem a finalidade de separar a peça usinada
-            da matéria prima.
-        </li>
-        <li>
-            <i class="icon-milling-drill"></i>
-            <strong>Furar</strong>: Permite ao usuário selecionar determinados círculos de seu projeto para que seja efetuada,
-            uma operação de descida em espiral, com a função de confeccionar um furo com a ferramenta de corte.
-        </li>
-        <li>
-            <i class="icon-milling-deepen"></i>
-            <strong>Aprofundar</strong>: Permite ao usuário selecionar formas fechadas de seu projeto para efetuar um desgaste
-            na superfície da matéria-prima. Este desgaste é configurado na profundidade que usuário desejar e necessitar.
-        </li>
-        <li>
-            <i class="icon-milling-engrave"></i>
-            <strong>Gravar</strong>: Permite ao usuário selecionar linhas de seu projeto e configurar com qual profundidade
-            deseja que a ferramenta de corte passe coincidentemente na linha mediana do segmento escolhido.
-        </li>
-    </ul>
-    <p>
-        Também é disponibilizado na versão <strong>gratuíta</strong>.
-    </p>
-    <p>
-        <strong>Ajuda e Assistência</strong>: <a href="https://www.facebook.com/groups/c37.cam" target="_blank">Grupo</a>,
-        <a href="https://www.youtube.com/playlist?list=PL3ZPjyez7Wrq_K_yHumFAQGaFIJfypfJu&playnext=1" target="_blank">Primeiros Passos</a>        e Tutoriais
-    </p>
-    <p>
-        Clique <a href="https://chrome.google.com/webstore/detail/c37-cam/kanmmcphjbpnojplaphiepkklcgmmkgd" target="_blank">aqui</a>        para instalar o C37 - CAM.
-        <br>
-        <a href="http://cam.c37.co" target="_blank">Conheça</a> a <strong>segunda</strong> versão (na nuvem, em desenvolvimento) do C37 - CAM.
-    </p>
+
+
+
+
+
+
+
+
+
+
 </div>
+
+
+
+

@@ -1,318 +1,136 @@
-<a class="scroll-point pt-top" id="site-initial"></a>
-
-
-
 <style>
-
-
-header{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-
-}
-
-
-
-#top,
-#nav-toggle-box {
-    display: flex;
-    align-items: center;
-    max-width: 1024px;
-    height: 47px;
-    margin: 0 auto;
-    padding-right: 5px;
-}
-
-
-
-/*https://css-tricks.com/almanac/properties/j/justify-content/*/
-
-.top-brand a {
-    margin-top: 3px;
-    width: 60px;
-    height: 47px;
-    background:url(/assets/img/logo.png) no-repeat center/50%;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min--moz-device-pixel-ratio: 2),
-only screen and (-o-min-device-pixel-ratio: 2 / 1),
-only screen and (min-device-pixel-ratio: 2),
-only screen and (min-resolution: 192dpi),
-only screen and (min-resolution: 2dppx) {
-    #top #top-brand span,
-    #top #top-brand a {
-        /*background-image: url("../img/common/logo-2x.png");*/
-        background-size: 70px auto;
+    header.web-site .logo {
+        background: url('/assets/img/logo.svg') no-repeat center / 100% !important;
     }
-} 
-
-.top-nav-main> ul {
-    display: flex;
-    align-items: center;
-  justify-content: space-between; 
-  list-style: none;
-}
-
-.top-nav-main {
-    width: 100%;
-}
-
-.top-nav-main a {
-    font-size: 14px;
-    text-decoration: none;
-    display: inline-block;
-    color: #3b4854;
-    cursor: pointer;
-}
-
-.top-nav-main a:hover {
-    -moz-transition: all linear 0.2s;
-    transition: all linear 0.2s;
-    color:#599bcd;
-}
-
-
-
-@media (min-width: 768px) {
-    .show-sm {
-        display: none !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .hide-sm {
-        display: none !important;
-    }
-}
-
-
-
-.ac-gn-menuicon-bread-crust-top {
-    top: 23px;
-    -webkit-transition: -webkit-transform 0.2s 0.2s;
-    transition: -webkit-transform 0.2s 0.2s;
-    transition: transform 0.2s 0.2s;
-    transition: transform 0.2s 0.2s, -webkit-transform 0.2s 0.2s;
-    -webkit-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
-    transform: translateY(-3px)
-}
-
-.ac-gn-menuicon-bread-bottom {
-    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    -webkit-transform: rotate(0);
-    -ms-transform: rotate(0);
-    transform: rotate(0);
-}
-
-
-.ac-gn-menuicon-bread-crust {
-    display: block;
-    width: 17px;
-    height: 1px;
-    background: black;;
-    position: absolute;
-    left: 16px;
-    z-index: 1;
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s
-}
-    
-
-.ac-gn-menuicon-bread-top {
-    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    -webkit-transform: rotate(0);
-    -ms-transform: rotate(0);
-    transform: rotate(0);
-    z-index: 4
-}
-
-.ac-gn-menuicon-bread {
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    width: 48px;
-    height: 48px;
-    -webkit-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)}
-
 </style>
 
+<header class="web-site">
 
-<header>
-    <div class="show-sm">
-        <div id="nav-toggle-box">
-        <nav class="top-nav-main">
-            <ul>
-                <li data-value="es-ES">
-                    <div class="top-brand">
-                        <!--<a href="/"></a>-->
+    <div class="container">
 
-
-                        <span class="ac-gn-menuicon-bread-top ac-gn-menuicon-bread">
-
-                            <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top" style="top: 24px"></span>
-                        </span>
-
-                        <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
-						    <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom" style="top: 26px"></span>
-					    </span>
-
-                    </div>
-                </li>
-                <li data-value="es-ES">
-                    <div class="top-brand">
-                        <a href="/"></a>
-                    </div>
-                </li>
-                <li data-value="es-ES">
-
-                    <i class="icon-user-header"></i>
-
-                </li>
-            </ul>
-
-        </nav>
-
-
-            <!--<div id="nav-toggle-brand">
-                    <div class="top-brand">
-                        <a href="/"></a>
-                    </div>
-            </div>-->
-            <!--<a href="#" id="nav-toggle" data-component="toggleme" data-target="#top" data-loaded="true"><i class="kube-menu"></i></a>-->
-        </div>
-    </div>
-    <div id="top" class="hide-sm">
-        <nav class="top-nav-main">
+        <nav class="show-mobile">
             <ul>
                 <li>
-                    <div class="top-brand">
-                        <a href="/"></a>
+
+                    <div class="nav-mobile">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
                     </div>
 
+                    <script>
+                        window.addEventListener('load', function () {
+                            document.querySelector('.nav-mobile').onclick = function () {
+                                this.classList.toggle('active');
+                            };
+                        });
+                    </script>
+
                 </li>
-                <li><a href="/software/">Softwares</a></li>
-                <li><a href="/equipment/">Equipamentos</a></li>
-                <li><a href="/hardware/">Hardwares</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/learning/">Aprendizado</a></li>
-                <li><a href="/support/">Suporte</a></li>
                 <li>
-                    <i class="icon-search-header"></i>
+                    <a href="/">
+                        <i class="logo"></i>
+                    </a>
                 </li>
                 <li>
-                    <!--<i class="icon-user-header"></i>-->
 
+                    <div id="option-group-i18n" class="option-group" style="padding-right: 5px">
 
-            <div id="option-group-i18n" class="option-group">
+                        <i class="icon-user-20"></i>
 
-                <i class="icon-user-header"></i>
+                        <div class="menu right">
 
-                <div class="menu right">
+                            <div class="content">
+                                <ul class="option">
+                                    <li data-value="de-DE">
+                                        <img src="/assets/img/flags/BR.png" style="vertical-align: middle; width: 20px" alt="">
+                                        <span>Idioma</span>
+                                    </li>
+                                    <li data-value="de-DE">
+                                        <img src="/assets/img/icon-cart.svg" style="vertical-align: middle; width: 20px" alt="">
+                                        <span>Carrinho de Compras</span>
+                                    </li>
+                                    <li data-value="en-GB">
+                                        <img src="/assets/img/icon-favorite.svg" style="vertical-align: middle; width: 20px" alt="">
+                                        <span>Favoritos</span>
+                                    </li>
+                                    <li id="button-my-account">
+                                        <img src="/assets/img/icon-user.svg" style="vertical-align: middle; width: 20px" alt="">
+                                        <span>Minha conta</span>
+                                    </li>
+                                </ul>
+                            </div>
 
-                    <div class="content">
-                        <!--<div class="header">
-                            <strong data-i18n="i18n.option-group.header.text">Selecione o seu idioma</strong>
-                        </div>-->
-                        <ul class="option">
-                            <li data-value="de-DE">
-                                <img src="/assets/img/flags/BR.png" style="vertical-align: middle; width: 20px" alt="">
-                                <span>Idioma</span>
-                            </li>
-                            <li data-value="de-DE">
-                                <img src="/assets/img/icon-cart.svg" style="vertical-align: middle; width: 20px" alt="">
-                                <span>Carrinho de Compras</span>
-                            </li>
-                            <li data-value="en-GB">
-                                <img src="/assets/img/icon-favorite.svg" style="vertical-align: middle; width: 20px" alt="">
-                                <span>Favoritos</span>
-                            </li>
-                            <li id="button-my-account">
-                                <img src="/assets/img/icon-user.svg" style="vertical-align: middle; width: 20px" alt="">
-                                <span>Minha conta</span>
-                            </li>
-                        </ul>
+                        </div>
+
                     </div>
-
-                </div>
-
-
-
 
                 </li>
             </ul>
         </nav>
+
+        <nav class="hide-mobile">
+            <ul>
+                <li>
+                    <a href="/">
+                        <i class="logo"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/software/">Softwares</a>
+                </li>
+                <li>
+                    <a href="/equipment/">Equipamentos</a>
+                </li>
+                <li>
+                    <a href="/hardware/">Hardwares</a>
+                </li>
+                <li>
+                    <a href="/blog/">Blog</a>
+                </li>
+                <li>
+                    <a href="/learning/">Aprendizado</a>
+                </li>
+                <li>
+                    <a href="/support/">Suporte</a>
+                </li>
+                <li>
+                    <i class="icon-search-20"></i>
+                </li>
+                <li>
+                    <div id="option-group-i18n" class="option-group padding-right-0">
+
+                        <i class="icon-user-20"></i>
+
+                        <div class="menu right">
+
+                            <div class="content">
+                                <ul class="option">
+                                    <li data-value="de-DE">
+                                        <img src="/assets/img/flags/BR.png" style="vertical-align: middle; width: 20px" alt="">
+                                        <span>Idioma</span>
+                                    </li>
+                                    <li data-value="de-DE">
+                                        <img src="/assets/img/icon-cart.svg" style="vertical-align: middle; width: 20px" alt="">
+                                        <span>Carrinho de Compras</span>
+                                    </li>
+                                    <li data-value="en-GB">
+                                        <img src="/assets/img/icon-favorite.svg" style="vertical-align: middle; width: 20px" alt="">
+                                        <span>Favoritos</span>
+                                    </li>
+                                    <li id="button-my-account">
+                                        <img src="/assets/img/icon-user.svg" style="vertical-align: middle; width: 20px" alt="">
+                                        <span>Minha conta</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
     </div>
+
 </header>
-
-
-
-
-
-
-
-<!--<div id="header">
-
-    <div class="wrap">
-        {% if page.url != "/" %}
-            <a class="logo" href="/" title="C37 - Com você em todas as etapas"></a>
-        {% else %}
-            <a class="logo" href="#top" title="C37 - Com você em todas as etapas"></a>
-        {% endif %}
-        <div class="menu">
-            <a href="/software/">Softwares</a>
-            <a href="/equipment/">Equipamentos</a>
-            <a href="/hardware/">Hardwares</a>
-            <a href="/blog/">Blog</a>
-            <a href="/learning/">Aprendizado</a>
-            <a href="/support/">Suporte</a>
-        </div>
-        <form class="menu-dropdown">
-            <select id="menu-dropdown" onchange="location = this.options[this.selectedIndex].value;" style="width: 147px">
-                        <option value="#router-cnc">Router CNC</option>
-                        <option value="#cad">Softwares</option>
-                        <option value="#our-clients">Nossos Clientes</option>
-                        <option value="#support">Suporte & Assistência Técnica</option>
-                        <option value="mailto:vendas@c37.co?Subject=Compra C37 - Router CNC - Híbrida">Comprar</option>
-                    </select>
-            <script>
-                document.querySelector('#menu-dropdown').addEventListener('change', function (event) {
-
-                    var value = this.value;
-
-                    if (value.indexOf('http') !== -1) {
-                        location = '';
-
-                        var evLink = document.createElement('a');
-
-                        evLink.href = value;
-                        evLink.target = '_blank';
-                        document.body.appendChild(evLink);
-                        evLink.click();
-
-                        // Now delete it
-                        evLink.parentNode.removeChild(evLink);
-                    }
-                });
-            </script>
-        </form>
-    </div>
-    <div class="shadow"></div>
-    
-</div>
--->
-
-
-
-
-<!--<div class="header-placeholder"></div>-->

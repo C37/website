@@ -1,189 +1,81 @@
-
 <style>
+    footer.web-site .logo {
+        background: url('/assets/img/logo.svg') no-repeat center/100% !important;
+    }
 
-/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    footer.web-site .social.facebook {
+        background: url('/assets/img/social/facebook.svg') no-repeat center/100% !important;
+    }
 
-footer{
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    font-size: 12px;
-   padding-top: 7px;
-}
+    footer.web-site .social.pinterest {
+        background: url('/assets/img/social/pinterest.svg') no-repeat center/100% !important;
+    }
 
-footer>.container{
-    display: flex;
-    flex-flow: row wrap;
-    max-width: 1024px;
-     
-}
+    footer.web-site .social.instagram {
+        background: url('/assets/img/social/instagram.svg') no-repeat center/95% !important;
+    }
 
-footer>.container > * {
-  padding: 10px;
-  flex: 1 auto;
-}
-
-
-footer>.container>.left,
-footer>.container>.right{
-    /*border: 1px solid rebeccapurple;*/
-      flex-grow: 1;
-      align-self: center;
-
-}
-
-footer>.container>.right{
-    text-align: right;
-    padding-top: 0px !important;
-}
-
-footer>.container>.right>table{
-float: right;
-}
-
-
-@media all and (max-width: 768px) {
-  footer>.container>.left,
-  footer>.container>.right{ 
-      flex: 1 100%; 
-    /*border: 1px solid red;*/
-  }
-  footer>.container>.left>p>strong{
-      display: block;
-  }
-  footer>.container>.left>p{
-      text-align: center;
-  }
-  footer>.container>.right>table{
-      float: none;
-      margin: 0 auto;
-  }
-}
-
-
-.footer-logo {
-    display: block;
-    background: url('/assets/img/logo.svg') no-repeat center/100%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    margin: 0 auto;
-}
-
-
-.footer-social-facebook {
-    display: inline-block;
-    background: url('/assets/img/social-facebook.svg') no-repeat center/100%;
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    cursor: pointer;
-}
-.footer-social-pinterest {
-    display: inline-block;
-    background: url('/assets/img/social-pinterest.svg') no-repeat center/100%;
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;   
-    cursor: pointer;
-}
-.footer-social-instagram {
-    display: inline-block;
-    background: url('/assets/img/social-instagram.svg') no-repeat center/95%;
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-.footer-social-youtube {
-    display: inline-block;
-    background: url('/assets/img/social-youtube.svg') no-repeat center/100%;
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-
-
+    footer.web-site .social.youtube {
+        background: url('/assets/img/social/youtube.svg') no-repeat center/100% !important;
+    }
 </style>
 
-
-
-<footer>
-
+<footer class="web-site">
     <div class="container">
-
         <div class="left">
-
             <p>
                 <strong>Comunidade</strong>&nbsp;
-                <a href="/about.html" style="text-decoration: none">Sobre a C37</a>&nbsp;º
-                <a href="https://status.c37.co" style="text-decoration: none">Status</a>&nbsp;º
-                <a href="/open-source.html" style="text-decoration: none">Open Source</a>&nbsp;º
-                <a href="/assets/doc/C37-Terms.pdf" target="_blank" style="text-decoration: none">Termos</a> &nbsp;º
+                <a href="/about.html" style="text-decoration: none">Sobre a C37</a>&nbsp;●
+                <a href="https://status.c37.co" style="text-decoration: none">Status</a>&nbsp;●
+                <a href="/open-source.html" style="text-decoration: none">Open Source</a>&nbsp;●
+                <a href="/assets/doc/C37-Terms.pdf" target="_blank" style="text-decoration: none">Termos</a>&nbsp;●
                 <a href="/assets/doc/C37-Privacy.pdf" target="_blank" style="text-decoration: none">Política</a>
-
-                <br>
-
-                <strong>Social</strong>&nbsp;
-                <a href="https://www.facebook.com/c37.cnc" target="_blank" style="text-decoration: none">
-                    <i class="footer-social-facebook"></i>
-                </a>&nbsp;
-
-
-                <a href="https://br.pinterest.com/c37cnc/" target="_blank" style="text-decoration: none">
-                                    <i class="footer-social-pinterest"></i>
-
-                </a>&nbsp;
-                <a href="https://www.instagram.com/c37.cnc/" target="_blank" style="text-decoration: none">
-                                    <i class="footer-social-instagram"></i>
-                
-                
-                </a>&nbsp;
-                <a href="https://www.youtube.com/c/c37-cnc/" target="_blank" style="text-decoration: none">
-                                    <i class="footer-social-youtube"></i>
-                
-                </a>
-                
             </p>
-
+            <p>
+                <strong>Social</strong> &nbsp;
+                <a href="#" target="_blank">
+                    <i class="social facebook"></i>
+                </a>
+                &nbsp;
+                <a href="#" target="_blank">
+                    <i class="social pinterest"></i>
+                </a>
+                &nbsp;
+                <a href="#" target="_blank">
+                    <i class="social instagram"></i>
+                </a>
+                &nbsp;
+                <a href="#" target="_blank">
+                    <i class="social youtube"></i>
+                </a>
+            </p>
         </div>
         <div class="right">
-
             <table>
                 <tr>
                     <td>
                         <a href="#">
-                            <i class="footer-logo"></i>
-                            <strong>C37&reg; - {{ site.time | date: "%Y" }}</strong>
+                            <i class="logo"></i>
+                            <strong class="logo-caption">C37&reg; - {{ site.time | date: "%Y" }}</strong>
                         </a>
                     </td>
                 </tr>
             </table>
-
         </div>
-
     </div>
-
 </footer>
-
-
-
-
-<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>-->
-<!--<script type="text/javascript" src="/assets/js/library/smooth.js"></script>-->
-
 
 
 
 
 
 <script>
-    window.addEventListener('loader', function(){
+    window.addEventListener('loader', function () {
         ! function (e, n, t, a, c, o, s) {
             e.GoogleAnalyticsObject = c, e[c] = e[c] || function () {
                     (e[c].q = e[c].q || []).push(arguments)
-                }, e[c].l = 1 * new Date, o = n.createElement(t), s = n.getElementsByTagName(t)[0], o.async = 1, o.src =
+                }, e[c].l = 1 * new Date, o = n.createElement(t), s = n.getElementsByTagName(t)[0], o.async = 1,
+                o.src =
                 a, s.parentNode.insertBefore(o, s)
         }(window, document, "script", "//www.google-analytics.com/analytics.js", "ga")
         ga('create', 'UA-36787725-2', 'auto');
@@ -191,23 +83,14 @@ float: right;
         ga('send', 'pageview');
     });
 
-    (function(d, s, id) {
+    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)){
+        if (d.getElementById(id)) {
             return
         };
-        js = d.createElement(s); js.id = id;
+        js = d.createElement(s);
+        js.id = id;
         js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-
-<script>
-
-</script>
-
-    <!--<script src="https://apis.google.com/js/platform.js" async defer>-->
-
 </script>

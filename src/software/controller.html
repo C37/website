@@ -5,56 +5,184 @@ title: C37 - Controlador
 
 
 
+<style>
+    .myImage{
+        /* http://stackoverflow.com/questions/11736363/responsive-images-with-css */
+        max-width:100% !important;
+        max-height:100% !important;
+        display:block;
+    }
+    .containerImage{
+        /* http://stackoverflow.com/questions/5166574/vertical-align-text-in-block-element */
+        display: flex;
+        align-items: center;
+    }
+</style>            
 
-<a class="scroll-point pt-about" id="controller"></a>
-<div class="wrap">
-    <h2 class="icon icon-router">Controlador</h2>
-    <p>
-        Ao conectar a Router CNC em seu computador através do cabo USB<sup><small>(compatível com usb 2.0)</small></sup>,
-        você poderá acessar o software C37 - Controlador para operar sua máquina-ferramenta e dar inicio ao processo de fabricação.
-    </p>
-    <p>
-        <strong>Nele você:</strong>
-    </p>
+
+
+<div class="grid fixed">
+
+		<script>
+			window.addEventListener('load', function () {
+				// https://developer.mozilla.org/pt-BR/docs/Web/API/Window/onscroll
+				window.onscroll = function (e) {
+
+					console.log(window.pageYOffset);
+
+					if (window.pageYOffset >= 48) {
+						document.querySelector('.nav-self').classList.add('ccc');
+					} else {
+						document.querySelector('.nav-self').classList.remove('ccc');
+					}
+
+				};
+			});
+		</script>
+
+		<style>
+			.ccc {
+				position: fixed;
+				top: 0px;
+				background-color: white;
+				opacity: 0.9;
+				/*margin: 0 auto;*/
+				width: 100%;
+				max-width: 1024px;
+				/*padding-left: 7px;*/
+				z-index: 44;
+			}
+
+			.ccc .right{
+				padding-right: 3px;
+
+			}
+
+		</style>
+
+
+		<div class="nav-self">
+			<div class="left">
+				<h3><a href="/software/cad.html">C37 - Controlador</a></h3>
+
+			</div>
+			<!--<div class="" style="margin-top: auto;">-->
+			<div class="right">
+				<ul>
+					<li>
+						<a class="button" href="#">Visão Geral</a>
+					</li>
+					<li>
+						<a href="#">Versão Cloud</a>
+					</li>
+					<li>
+						<a href="#">Versão Desktop</a>
+					</li>
+					<li>
+						<a href="#">Recursos</a>
+					</li>
+					<li>
+						<a href="#">Planos</a>
+					</li>
+					<li>
+						<button class="button success">Assinar</button>
+					</li>
+				</ul>
+			</div>
+		</div>    
+
     <br>
-    <div class="row-fluid">
-        <div class="span5">
-            <ul class="list list-link" style="padding-top: 0px;">
-                <li>
-                    Manipula em <strong>tempo real</strong> os eixos X, Y e Z
-                </li>
-                <li>
-                    <strong>Controla</strong>, inicia, pausa ou para e continua a usinagem
-                </li>
-                <li>
-                    Define ponto zero
-                </li>
-                <li>
-                    Acompanha em <strong>tempo real</strong> a Ferramenta de Corte
-                </li>
-                <li>
-                    Tem informações <strong>detalhadas</strong> do Plano de Trabalho
-                </li>
-                <li>
-                    Sabe o <strong>tempo decorrido</strong> desde o início da execução do Plano de Trabalho
-                </li>
-                <li>
-                    É <strong>informado</strong> sobre o percentual de comandos concluídos no Plano de Trabalho
-                </li>
-            </ul>
+    <br>
+
+    <div class="row space">
+
+
+        <div class="column column-5 containerImage">
+            
+            <p class="large text-center">
+                Ao conectar a Router CNC em seu computador através do cabo USB<sup><small>(usb 2.0)</small></sup>,
+                você poderá acessar o software C37 - Controlador para operar sua máquina-ferramenta e dar inicio ao processo de fabricação.
+            </p>
+ 
+            
         </div>
-        <div class="span7">
-            <img src="/assets/img/software/router-cnc.png" alt="" class="myImage" />
+
+
+        <div class="column column-7 containerImage">
+
+            <img src="/assets/img/software/controller.png" alt="" class="myImage" />
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="column column-12">
+
+                <p class="large">
+                   <strong>Nele você:</strong>
+                </p>
+
+                <p>
+
+                <style>
+                    .list-link>li{
+                        list-style-type: square;
+                          list-style-position: inside;
+                        margin-top: 12px;
+                    }
+                    .list-linkkkk>li{
+                        margin-top: 5px;
+                    }
+                </style>
+                    
+
+                <ul class="list-link">
+                    <li>
+                        Manipula em <strong>tempo real</strong> os eixos X, Y e Z
+                    </li>
+                    <li>
+                        <strong>Controla</strong>, inicia, pausa ou para e continua a usinagem
+                    </li>
+                    <li>
+                        Define ponto zero
+                    </li>
+                    <li>
+                        Acompanha em <strong>tempo real</strong> a Ferramenta de Corte
+                    </li>
+                    <li>
+                        Tem informações <strong>detalhadas</strong> do Plano de Trabalho
+                    </li>
+                    <li>
+                        Sabe o <strong>tempo decorrido</strong> desde o início da execução do Plano de Trabalho
+                    </li>
+                    <li>
+                        É <strong>informado</strong> sobre o percentual de comandos concluídos no Plano de Trabalho
+                    </li>
+                </ul>
+
+                </p>
+
+                <br>
+                <br>
+                <br>
+
+                <p>
+                    Clique <a href="https://chrome.google.com/webstore/detail/c37-controlador/iodomfcbclgacbhdjmpjfcgdjecdkdhn" target="_blank">aqui</a>        para instalar o software C37 - Controlador.
+                </p>
+                <p>
+                    <a href="http://controller.c37.co" target="_blank">Conheça</a> a <strong>segunda</strong> versão (na nuvem, em desenvolvimento) do C37 - Controlador.
+
+                </p>
+
         </div>
     </div>
-    <br>
-    <p>
-        <strong>Ajuda e Assistência</strong>: <a href="https://www.facebook.com/groups/c37.controller" target="_blank">Grupo</a>,
-        <a href="https://www.youtube.com/playlist?list=PL3ZPjyez7Wro4DawLLZr4Gl1zWpQS0vjX" target="_blank">Primeiros Passos</a>        e Tutoriais
-    </p>
-    <p>
-        Clique <a href="https://chrome.google.com/webstore/detail/c37-controlador/iodomfcbclgacbhdjmpjfcgdjecdkdhn" target="_blank">aqui</a>        para instalar o software C37 - Controlador.
-        <br>
-        <a href="http://controller.c37.co" target="_blank">Conheça</a> a <strong>segunda</strong> versão (na nuvem, em desenvolvimento) do C37 - Controlador.
-    </p>
+
+
 </div>

@@ -2,23 +2,64 @@
 layout: base
 ---
 
+                                            <style>
+                                                .fres{
+                                                    margin-top: 60px;
+                                                }
+
+                                                .fres>li>h1{
+                                                    margin-top: 11px;
+                                                }
+                                                @media (max-width: 768px) {
+                                                    #milling-machine{
+                                                        width: 190px !important;
+                                                        margin-top: 20px !important;
+                                                    }
+                                                    .fres{
+                                                        margin-top: 40px;
+                                                        margin-left: 40px;
+                                                    }
+                                                    .fres>li>h1{
+                                                        font-size: 18px;
+                                                        line-height: 13px;
+                                                        margin-top: 1px;
+                                                    }
+                                                }
+                                                @media (max-width: 480px) {
+                                                    #milling-machine{
+                                                        width: 190px !important;
+                                                        margin-top: 20px !important;
+                                                    }
+                                                    .fres{
+                                                        margin-top: 40px;
+                                                        margin-left: 40px;
+                                                    }
+                                                    .fres>li>h1{
+                                                        font-size: 15px;
+                                                        line-height: 10px;
+                                                        margin-top: 1px;
+                                                    }
+                                                }
+                                            </style>
+
+
 
         <!--http://flickity.metafizzy.co/-->
         <div class="carousel" data-flickity='{ "autoPlay": 4000, "cellAlign": "left", "prevNextButtons": false}'>
 
             <div class="carousel-cell" style="background: url(/assets/img/grid.png) #eeeeee 50% 0%;">
 
-                <div class="grid leadin">
+            	<div class="grid fixed">
                     <div class="wrap">
                         <table border="0" style="width: 100%">
                             <tbody>
                                 <tr>
-                                    <td>
-                                        <img src="assets/img/DSC00510.png" alt="C37 - Com você em todas as etapas" style="margin-left: auto;margin-right: auto" />
+                                    <td style="text-align: center;">
+                                        <img src="assets/img/DSC00510.png" id="milling-machine" alt="C37 - Com você em todas as etapas" style="margin-left: auto;margin-right: auto;width: 400px;margin-top: 40px" />
                                     </td>
-                                    <td style="width: 50%; text-align: right">
-                                        <div style="float: right">
-                                            <ul class="text-block" style="text-align: left">
+                                    <td style="width: 50%;vertical-align: top;">
+                                        <div style="">
+                                            <ul class="text-block fres"  style="text-align: left">
                                                 <li>
                                                     <h1>a <strong>C37</strong> desenvolveu</h1>
                                                 </li>
@@ -37,9 +78,6 @@ layout: base
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="button-container">
-                            <a class="button" href="/equipment/">Conheça<label>esta nova Máquina-Ferramenta</label></a>
-                        </div>
                     </div>
                 </div>
 
@@ -92,39 +130,42 @@ layout: base
         </div>
 
 
+        <div class="grid fixed">
+
+			<div class="row">
+				<div class="column column-12">
+
+                    <h2 class="icon icon-c37">O que era distante agora está ao seu alcance</h2>
+                    <p>Para você que está chegando agora neste envolvente mundo das CNCs ou para você que já acompanha a evolução destas máquinas-ferramentas,
+                        a C37 oferece diferenciais que lhe deixará surpreso.</p>
+                    <p>Nossa Router CNC foi desenvolvida com o objetivo de tornar esta máquina-ferramenta em um equipamento doméstico de
+                        <strong>fácil transporte</strong>, <strong>simples de montar</strong>, com um <strong>tamanho versátil</strong> e
+                        uma <strong>área útil</strong> surpreendente. Para isso, nossa Router CNC foi composta em partes modulares, confeccionadas
+                        em Compensado e MDF oferecendo leveza e robustez.</p>
+                    <p>A característica pioneira é a conexão com a <strong>porta USB</strong><sup><small>(compatível com usb 2.0)</small></sup>,
+                        proporcionando a você usuário a diversidade de conecta-lá em computadores portáteis <strong>(notebooks)</strong>        ou computadores de mesa <strong>(desktops)</strong>.</p>
+                    <p>Porém, o ponto mais marcante deste segmento no <strong>mercado atual</strong> é a interação e <strong>disponibilidade gratuita</strong>        dos softwares CAD, CAM e do Controlador da Router CNC.</p>
+                    <a id="material-list" style="height: 20px;display: inline-block"></a>
+                    <p>O resultado é uma máquina <strong>tecnológica</strong>, <strong>precisa</strong>, <strong>economica</strong>, <strong>produtiva</strong>,
+                        <strong>intuitiva</strong> e <strong>prática</strong>.</p>
+                    <p>E ainda, com um valor que <i>desperta interesse</i>.</p>
+                    <p>
+                        <strong>Conheça a lista de materiais que nossa Router CNC usina:</strong>
+                    </p>
 
 
+                </div>
+			</div>
+			<div class="row">
+				<div class="column column-6">
 
-<!--<a class="scroll-point pt-about" id="solution"></a>-->
-<div class="wrap">
-    <h2 class="icon icon-c37">O que era distante agora está ao seu alcance</h2>
-    <p>Para você que está chegando agora neste envolvente mundo das CNCs ou para você que já acompanha a evolução destas máquinas-ferramentas,
-        a C37 oferece diferenciais que lhe deixará surpreso.</p>
-    <p>Nossa Router CNC foi desenvolvida com o objetivo de tornar esta máquina-ferramenta em um equipamento doméstico de
-        <strong>fácil transporte</strong>, <strong>simples de montar</strong>, com um <strong>tamanho versátil</strong> e
-        uma <strong>área útil</strong> surpreendente. Para isso, nossa Router CNC foi composta em partes modulares, confeccionadas
-        em Compensado e MDF oferecendo leveza e robustez.</p>
-    <p>A característica pioneira é a conexão com a <strong>porta USB</strong><sup><small>(compatível com usb 2.0)</small></sup>,
-        proporcionando a você usuário a diversidade de conecta-lá em computadores portáteis <strong>(notebooks)</strong>        ou computadores de mesa <strong>(desktops)</strong>.</p>
-    <p>Porém, o ponto mais marcante deste segmento no <strong>mercado atual</strong> é a interação e <strong>disponibilidade gratuita</strong>        dos softwares CAD, CAM e do Controlador da Router CNC.</p>
-    <a id="material-list" style="height: 20px;display: inline-block"></a>
-    <p>O resultado é uma máquina <strong>tecnológica</strong>, <strong>precisa</strong>, <strong>economica</strong>, <strong>produtiva</strong>,
-        <strong>intuitiva</strong> e <strong>prática</strong>.</p>
-    <p>E ainda, com um valor que <i>desperta interesse</i>.</p>
-    <p>
-        <strong>Conheça a lista de materiais que nossa Router CNC usina:</strong>
-    </p>
-    <br>
-    <table border="0" style="width: 100%">
-        <tbody>
-            <tr style="vertical-align: top">
-                <td style="width: 50%">
+
                     <ul class="list list-link">
                         <li>
                             <a href="https://www.pinterest.com/search/pins/?q=mdf+cnc" target="_blank">MDF - HDF - MDP - OSB</a>
                         </li>
                         <li>
-                            <a href="https://www.pinterest.com/search/pins/?q=plywood+cnc" target="_blank">Compensados</a>                            <sup>(naval, samaúma, virolinha, canela, cerejeira, etc)</sup>
+                            <a href="https://www.pinterest.com/search/pins/?q=plywood+cnc" target="_blank">Compensados</a> <sup>(naval, samaúma, virolinha, canela, cerejeira, etc)</sup>
                         </li>
                         <li>
                             <a href="https://www.pinterest.com/search/pins/?q=pine+cnc" target="_blank">Pinus</a>
@@ -148,8 +189,12 @@ layout: base
                             <a href="https://www.pinterest.com/search/pins/?q=Poliuretano+cnc" target="_blank">Resinas de Poliuretano</a>
                         </li>
                     </ul>
-                </td>
-                <td>
+
+
+                </div>
+				<div class="column column-6">
+
+
                     <ul class="list list-link">
                         <li>
                             <a href="https://www.pinterest.com/search/pins/?q=cork+cnc" target="_blank">Cortiça</a>
@@ -173,114 +218,133 @@ layout: base
                             Madeiras duras em geral
                         </li>
                     </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <strong style="float: right">Metais não são suportados</strong>
-</div>
-<hr>
-<a class="scroll-point pt-about" id="with-you"></a>
-<div class="wrap">
-    <h2 class="icon icon-with-you">Com você em todas as etapas</h2>
-    <p>
-        Num processo de criação da idéia até a obtenção do produto final, algumas etapas são essenciais para otimizar o trabalho.
-    </p>
-    <p>
-        E, quando falamos de trabalhos executados em nossa Router CNC, estamos falando de 3 etapas exclusivamente executadas em um
-        computador. São elas:
-    </p>
-    <ul class="list list-link">
-        <li>
-            <a href="https://www.youtube.com/playlist?list=PL3ZPjyez7WrpQ8FBfPvBpitWnw8jEz3EI" target="_blank">Criar seu Projeto</a>            - CAD
-        </li>
-        <li>
-            <a href="https://www.youtube.com/playlist?list=PL3ZPjyez7Wrq_K_yHumFAQGaFIJfypfJu" target="_blank">Configurar o Plano de Trabalho da Router CNC</a>            - CAM
-        </li>
-        <li>
-            <a href="https://www.youtube.com/playlist?list=PL3ZPjyez7WroQSCgiMgi2f5n5zrDGS92W" target="_blank">Acompanhar as Usinagens</a>            - Controlador da Router CNC
-        </li>
-    </ul>
-    <br>
-    <p>
-        Olhando para realidade do mercado mundial, a C37 tem o orgulho de dizer que oferecemos a Router CNC mais tecnologica e completa
-        deste segmento.
-    </p>
-    <p>
-        Disponibilizamos <strong>gratuitamente</strong> os softwares <a href="#cad">CAD</a>, <a href="#cam">CAM</a> e
-        <a href="#router-cnc">Controlador de sua Router CNC</a> em interfaces amigáveis, intuitivas e simples.
-    </p>
-    <p>
-        Voce aprenderá a utiliza-los da forma mais eficiente, <strong>sem a necessidade</strong> de cursos especializados;
-        familiarizando-se rapidamente com os recursos essenciais disponibilizados para obter o processo completo de criação.
-    </p>
-    <p>
-        E a inovação não para por aqui. Além de você poder usufruir destas versões gratuitas, as <strong>novas tecnologias</strong>        em que estes softwares foram desenvolvidos necessitam apenas da utilização do navegador
-        <a href="https://www.google.com.br/chrome/browser/desktop/" target="_blank">Google Chrome</a> em qualquer sistema
-        operacional em computadores desktop ou notebook.
-    </p>
-    <p>
-        Isso significa que você <strong>não precisará de um computador com características específicas</strong> de sistema
-        operacional, processador, memória ou espaço em seu disco rigido, pois nossos softwares não ocupam a memória de seu
-        computador e ainda mais, podem ser usados off-line(desconectados da internet). <sup><small><a href="#specifications">especificações</a></small></sup>
-    </p>
-    <p>
-        Venha para o nosso mundo CNC.
-    </p>
-    <br>
-    <p><strong>Acesse:</strong></p>
-    <ul class="list list-link">
-        <li>
-            <a href="#cad">CAD</a>
-        </li>
-        <li>
-            <a href="#cam">CAM</a>
-        </li>
-        <li>
-            <a href="#router-cnc">Router CNC</a>
-        </li>
-    </ul>
-</div>
-<hr>
-<a class="scroll-point pt-about" id="technological-innovations"></a>
-<div class="wrap">
-    <h2 class="icon icon-technology">Inovações tecnológicas</h2>
-    <p>
-        Permitir que os avanços tecnológicos andem lado a lado com a habilidade de produzir objetos demandados do mundo real agora
-        é realidade com a C37.
-    </p>
-    <p>
-        Confira as 3 inovações tecnológicas que tem o potencial de mudar a forma como você vai se relacionar com a nossa Router CNC:
-    </p>
-    <ul class="list">
-        <li>
-            <img src="assets/img/usb.svg" alt="" style="float: left;margin-right: 10px" />
-            <strong>Conexão via porta USB</strong><sup><small>(compatível com usb 2.0)</small></sup>
-            <span>
-                        : Parece meio óbvio, mas neste segmento máquinas-ferramentas possuiam apenas conexão via porta paralela o que limitava seu uso a um específico computador. A nossa 
-                        Router CNC possui entrada USB e por isso permite você conecta-la em quaisquer notebooks ou desktops para o desenvolvimento e produção de seus projetos
-                    </span>
-        </li>
-        <li>
-            <img src="assets/img/files.svg" alt="" style="float: left;margin-right: 10px" />
-            <strong>Abre arquivos do tipo</strong>
-            <span>
-                        : Foto (*.jpeg, *.jpg, *.gif, *.png), Engenharia (*.dxf), Scalable Vector Graphics (*.svg) e Fontes de Letras (*.woff, *.otf, *.ttf). No que diz respeito aos softwares CAD, o padrão universal de intercambio
-                        de dados é o .dxf (Drawing Exchange Format). Contudo, o nosso <a href="/#cad"><strong>C37 - CAD</strong></a> permite você abrir os arquivos citados acima, e por isso você tem disponivel 
-                        uma gama maior de possibilidades na elaboração, criação e edição de seus projetos.
-                    </span>
-        </li>
-        <li>
-            <img src="assets/img/browser.svg" alt="" style="float: left;margin-right: 10px" />
-            <strong>Desenvolvidos para a Internet</strong>
-            <span>
-                        : Nossos tres softwares CAD, CAM e Controlador da Router CNC são elaborados para rodar em Navegadores de Internet. Isso significa que você pode acessá-los e utilizá-los em vários 
-                        computadores e de qualquer lugar, ganhando mais tempo para seus projetos.
-                    </span>
-        </li>
-    </ul>
-</div>
-<hr>
+
+                </div>
+			</div>
+			<div class="row">
+                <div class="column column-12">
+                    <strong style="float: right">Metais não são suportados</strong>
+                </div>
+			</div>
+
+            <hr>
+
+            <div class="row">
+                <div class="column column-12">
+
+                    <h2 class="icon icon-with-you">Com você em todas as etapas</h2>
+                    <p>
+                        Num processo de criação da idéia até a obtenção do produto final, algumas etapas são essenciais para otimizar o trabalho.
+                    </p>
+                    <p>
+                        E, quando falamos de trabalhos executados em nossa Router CNC, estamos falando de 3 etapas exclusivamente executadas em um
+                        computador. São elas:
+                    </p>
+                    <ul class="list list-link">
+                        <li>
+                            <a href="https://www.youtube.com/playlist?list=PL3ZPjyez7WrpQ8FBfPvBpitWnw8jEz3EI" target="_blank">Criar seu Projeto</a>            - CAD
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/playlist?list=PL3ZPjyez7Wrq_K_yHumFAQGaFIJfypfJu" target="_blank">Configurar o Plano de Trabalho da Router CNC</a>            - CAM
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/playlist?list=PL3ZPjyez7WroQSCgiMgi2f5n5zrDGS92W" target="_blank">Acompanhar as Usinagens</a>            - Controlador da Router CNC
+                        </li>
+                    </ul>
+                    <br>
+                    <p>
+                        Olhando para realidade do mercado mundial, a C37 tem o orgulho de dizer que oferecemos a Router CNC mais tecnologica e completa
+                        deste segmento.
+                    </p>
+                    <p>
+                        Disponibilizamos <strong>gratuitamente</strong> os softwares <a href="#cad">CAD</a>, <a href="#cam">CAM</a> e
+                        <a href="#router-cnc">Controlador de sua Router CNC</a> em interfaces amigáveis, intuitivas e simples.
+                    </p>
+                    <p>
+                        Voce aprenderá a utiliza-los da forma mais eficiente, <strong>sem a necessidade</strong> de cursos especializados;
+                        familiarizando-se rapidamente com os recursos essenciais disponibilizados para obter o processo completo de criação.
+                    </p>
+                    <p>
+                        E a inovação não para por aqui. Além de você poder usufruir destas versões gratuitas, as <strong>novas tecnologias</strong>        em que estes softwares foram desenvolvidos necessitam apenas da utilização do navegador
+                        <a href="https://www.google.com.br/chrome/browser/desktop/" target="_blank">Google Chrome</a> em qualquer sistema
+                        operacional em computadores desktop ou notebook.
+                    </p>
+                    <p>
+                        Isso significa que você <strong>não precisará de um computador com características específicas</strong> de sistema
+                        operacional, processador, memória ou espaço em seu disco rigido, pois nossos softwares não ocupam a memória de seu
+                        computador e ainda mais, podem ser usados off-line(desconectados da internet). <sup><small><a href="#specifications">especificações</a></small></sup>
+                    </p>
+                    <p>
+                        Venha para o nosso mundo CNC.
+                    </p>
+
+
+                </div>
+            </div>
+
+            <hr>
+
+            <dvi class="row">
+                <div class="column column-12">
+
+
+                <style>
+                    .list-link>li{
+                        /*list-style-type: square;*/
+                          /*list-style-position: inside;*/
+                        margin-top: 15px;
+                    }
+                    .list-linkkkk>li{
+                        margin-top: 5px;
+                    }
+                </style>
+
+
+                    <h2 class="icon icon-technology">Inovações tecnológicas</h2>
+                    <p>
+                        Permitir que os avanços tecnológicos andem lado a lado com a habilidade de produzir objetos demandados do mundo real agora
+                        é realidade com a C37.
+                    </p>
+                    <p>
+                        Confira as 3 inovações tecnológicas que tem o potencial de mudar a forma como você vai se relacionar com a nossa Router CNC:
+                    </p>
+                    <ul class="list-link">
+                        <li>
+                            <img src="assets/img/usb.svg" alt="" style="float: left;margin-right: 10px" />
+                            <strong>Conexão via porta USB</strong><sup><small>(compatível com usb 2.0)</small></sup>
+                            <span>
+                                        : Parece meio óbvio, mas neste segmento máquinas-ferramentas possuiam apenas conexão via porta paralela o que limitava seu uso a um específico computador. A nossa 
+                                        Router CNC possui entrada USB e por isso permite você conecta-la em quaisquer notebooks ou desktops para o desenvolvimento e produção de seus projetos
+                                    </span>
+                        </li>
+                        <li>
+                            <img src="assets/img/files.svg" alt="" style="float: left;margin-right: 10px" />
+                            <strong>Abre arquivos do tipo</strong>
+                            <span>
+                                        : Foto (*.jpeg, *.jpg, *.gif, *.png), Engenharia (*.dxf), Scalable Vector Graphics (*.svg) e Fontes de Letras (*.woff, *.otf, *.ttf). No que diz respeito aos softwares CAD, o padrão universal de intercambio
+                                        de dados é o .dxf (Drawing Exchange Format). Contudo, o nosso <a href="/software/cad.html"><strong>C37 - CAD</strong></a> permite você abrir os arquivos citados acima, e por isso você tem disponivel 
+                                        uma gama maior de possibilidades na elaboração, criação e edição de seus projetos.
+                                    </span>
+                        </li>
+                        <li>
+                            <img src="assets/img/browser.svg" alt="" style="float: left;margin-right: 10px" />
+                            <strong>Desenvolvidos para a Internet</strong>
+                            <span>
+                                        : Nossos tres softwares CAD, CAM e Controlador da Router CNC são elaborados para rodar em Navegadores de Internet. Isso significa que você pode acessá-los e utilizá-los em vários 
+                                        computadores e de qualquer lugar, ganhando mais tempo para seus projetos.
+                                    </span>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </dvi>
+
+
+        </div>
+
+
+
 
 <!--
 

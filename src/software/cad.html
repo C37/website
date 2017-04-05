@@ -4,90 +4,225 @@ title: C37 - CAD
 ---
 
 
-<div class="wrap">
+
+<style>
+    .myImage{
+        /* http://stackoverflow.com/questions/11736363/responsive-images-with-css */
+        max-width:100% !important;
+        max-height:100% !important;
+        display:block;
+    }
+    .containerImage{
+        /* http://stackoverflow.com/questions/5166574/vertical-align-text-in-block-element */
+        display: flex;
+        align-items: center;
+    }
+</style>            
 
 
-    <h2 class="icon icon-cad">CAD - Desenho Auxiliado por Computador </h2>
-    <div class="row-fluid">
-        <div class="span5">
-            <p>
+
+
+<div class="grid fixed">
+
+		<script>
+			window.addEventListener('load', function () {
+				// https://developer.mozilla.org/pt-BR/docs/Web/API/Window/onscroll
+				window.onscroll = function (e) {
+
+					console.log(window.pageYOffset);
+
+					if (window.pageYOffset >= 48) {
+						document.querySelector('.nav-self').classList.add('ccc');
+					} else {
+						document.querySelector('.nav-self').classList.remove('ccc');
+					}
+
+				};
+			});
+		</script>
+
+		<style>
+			.ccc {
+				position: fixed;
+				top: 0px;
+				background-color: white;
+				opacity: 0.9;
+				/*margin: 0 auto;*/
+				width: 100%;
+				max-width: 1024px;
+				/*padding-left: 7px;*/
+				z-index: 44;
+			}
+
+			.ccc .right{
+				padding-right: 3px;
+
+			}
+
+		</style>
+
+
+		<div class="nav-self">
+			<div class="left">
+				<h3><a href="/software/cad.html">C37 - CAD </a></h3>
+
+			</div>
+			<!--<div class="" style="margin-top: auto;">-->
+			<div class="right">
+				<ul>
+					<li>
+						<a class="button" href="#">Visão Geral</a>
+					</li>
+					<li>
+						<a href="#">Interface</a>
+					</li>
+					<li>
+						<a href="#">Ferramentas</a>
+					</li>
+					<li>
+						<a href="#">Recursos</a>
+					</li>
+					<li>
+						<a href="#">Planos</a>
+					</li>
+					<li>
+						<button class="button success">Assinar</button>
+					</li>
+				</ul>
+			</div>
+		</div>    
+
+
+
+
+<br>
+<br>
+
+
+
+
+    <div class="row space">
+
+        <div class="column column-5">
+            
+            <p class="big text-center">
                 O C37 - CAD é um software desenvolvido para você criar, importar, visualizar, alterar e salvar projetos e obter os arquivos
                 necessários para a consolidação de seus trabalhos na sua Router CNC.
             </p>
-            <p>
+            <p class="big text-center">
                 Permite a visualização e edição de dados. Ideal para uso individual.
             </p>
-            <p>
+            <p class="big text-center">
                 E ainda, oferece aos usuários um conjunto de ferramentas intuitivas para atender seus diversos desafios de desenho no desenvolvimento
                 de seus projetos.
             </p>
+            
         </div>
-        <div class="span7">
+        <div class="column column-6 offset-1 containerImage">
+
             <img src="/assets/img/software/cad.png" alt="" class="myImage" />
+            
+        </div>
+
+    </div>
+
+<br>
+<br>
+
+
+
+    <div class="row">
+        <div class="column column-12">
+
+            <p class="big">
+                Veja alguns recursos e comandos que destacamos:
+            </p>
+            <p>
+
+                <style>
+                    .list-link>li{
+                        margin-top: 12px;
+                    }
+                    .list-linkkkk>li{
+                        margin-top: 5px;
+                    }
+                </style>
+
+                <ul class="list-link">
+                    <li>
+                        <strong>Ferramentas de Projeto</strong>: Desenhos em 2 dimensões
+                    </li>
+                    <li>
+                        <strong>Características da Interface</strong>: Acessibilidade e facilidade de uso; importação de projetos existentes
+                    </li>
+                    <li>
+                        <strong>Compatibilidade</strong>:
+                        <ul class="list-linkkkk">
+                            <li style="list-style: none;">
+                                &nbsp;&nbsp;&nbsp;Abre arquivos do tipo foto ( *.jpeg, *.jpg, *.gif, *.png)
+                            </li>
+                            <li style="list-style: none;">
+                                &nbsp;&nbsp;&nbsp;Arquivos do tipo Engenharia (*.dxf)
+                            </li>
+                            <li style="list-style: none;">
+                                &nbsp;&nbsp;&nbsp;Arquivos do tipo Vetor Escalar (*.svg)
+                            </li>
+                            <li style="list-style: none;">
+                                &nbsp;&nbsp;&nbsp;Arquivos do tipo Fontes de Letras (*.woff, *.otf, *.ttf)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Compatível</strong> com os sistemas operacionais: Windows, Mac OS X e Linux
+                    </li>
+                    <li>
+                        <strong>Ferramentas de Criação</strong>
+                        <ul class="list-linkkkk">
+                            <li style="list-style: none;">
+                                <i class="icon-trace"></i>
+                                <strong>Traços:</strong> Linha, Polilinha e Arco
+                            </li>
+                            <li style="list-style: none;">
+                                <i class="icon-curve"></i>
+                                <strong>Curvas:</strong> Spline , Bézier Cubica e Bézier Quadratica
+                            </li>
+                            <li style="list-style: none;">
+                                <i class="icon-form"></i>
+                                <strong>Formas:</strong> Circulos, Quadrados/Retangulos e Poligonos
+                            </li>
+                            <li style="list-style: none;">
+                                <i class="icon-utility"></i>
+                                <strong>Utilitários:</strong> Textos, Régua e Cotas
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </p>
+
+            
         </div>
     </div>
-    <br>
-    <p>
-        Veja alguns recursos e comandos que destacamos:
-    </p>
-    <ul class="list list-link">
-        <li>
-            <strong>Ferramentas de Projeto</strong>: Desenhos em 2 dimensões
-        </li>
-        <li>
-            <strong>Características da Interface</strong>: Acessibilidade e facilidade de uso; importação de projetos existentes
-        </li>
-        <li>
-            <strong>Compatibilidade</strong>:
-            <ul>
-                <li style="list-style: none;">
-                    &nbsp;&nbsp;&nbsp;Abre arquivos do tipo foto ( *.jpeg, *.jpg, *.gif, *.png)
-                </li>
-                <li style="list-style: none;">
-                    &nbsp;&nbsp;&nbsp;Arquivos do tipo Engenharia (*.dxf)
-                </li>
-                <li style="list-style: none;">
-                    &nbsp;&nbsp;&nbsp;Arquivos do tipo Vetor Escalar (*.svg)
-                </li>
-                <li style="list-style: none;">
-                    &nbsp;&nbsp;&nbsp;Arquivos do tipo Fontes de Letras (*.woff, *.otf, *.ttf)
-                </li>
-            </ul>
-        </li>
-        <li>
-            <strong>Compatível</strong> com os sistemas operacionais: Windows, Mac OS X e Linux
-        </li>
-        <li>
-            <strong>Ferramentas de Criação</strong>
-            <ul>
-                <li style="list-style: none;">
-                    <i class="icon-trace"></i>
-                    <strong>Traços:</strong> Linha, Polilinha e Arco
-                </li>
-                <li style="list-style: none;">
-                    <i class="icon-curve"></i>
-                    <strong>Curvas:</strong> Spline , Bézier Cubica e Bézier Quadratica
-                </li>
-                <li style="list-style: none;">
-                    <i class="icon-form"></i>
-                    <strong>Formas:</strong> Circulos, Quadrados/Retangulos e Poligonos
-                </li>
-                <li style="list-style: none;">
-                    <i class="icon-utility"></i>
-                    <strong>Utilitários:</strong> Textos, Régua e Cotas
-                </li>
-            </ul>
-        </li>
-    </ul>
-    <br>
-    <p>
-        <strong>Ajuda e Assistência</strong>: <a href="https://www.facebook.com/groups/c37.cad" target="_blank">Grupo</a>,
-        <a href="https://www.youtube.com/playlist?list=PL3ZPjyez7WrpQ8FBfPvBpitWnw8jEz3EI&playnext=1" target="_blank">Primeiros Passos</a> e Tutoriais
-    </p>
-    <p>
-        Clique <a href="https://chrome.google.com/webstore/detail/c37-cad/bacjohjidiopikbeocnpebloihebiane" target="_blank">aqui</a> para instalar a primeira versão do C37 - CAD.
-        <br>
-        <a href="http://cad.c37.co" target="_blank">Conheça</a> a <strong>segunda</strong> versão (na nuvem, em desenvolvimento) do C37 - CAD.
-    </p>
-</div>
 
+
+
+    <div class="row">
+
+        <div class="column column-12">
+
+                <!--<p>
+                    <strong>Ajuda e Assistência</strong>: <a href="https://www.facebook.com/groups/c37.cad" target="_blank">Grupo</a>,
+                    <a href="https://www.youtube.com/playlist?list=PL3ZPjyez7WrpQ8FBfPvBpitWnw8jEz3EI&playnext=1" target="_blank">Primeiros Passos</a> e Tutoriais
+                </p>-->
+                <p>
+                    Clique <a href="https://chrome.google.com/webstore/detail/c37-cad/bacjohjidiopikbeocnpebloihebiane" target="_blank">aqui</a> para instalar a primeira versão do C37 - CAD.
+                </p>
+                <p>
+                    <a href="http://cad.c37.co" target="_blank">Conheça</a> a <strong>segunda</strong> versão (na nuvem, em desenvolvimento) do C37 - CAD.
+                </p>
+
+        </div>
+
+    </div>
+
+</div>

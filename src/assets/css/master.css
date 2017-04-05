@@ -88,7 +88,7 @@ p + p {
     margin-top: 1em;
 }
 
-/*.button-container {
+.button-container {
     position: absolute;
     right: -5px;
     background: url(../img/shadow.png);
@@ -127,7 +127,7 @@ div.button:hover {
     font-size: 0.5em;
     height: 16px;
 }
-*/
+
 .clear {
     clear: both;
 }
@@ -196,7 +196,7 @@ hr {
 }*/
 
 
-.menu {
+/*.menu {
     padding: 16px 0;
     float: right;
 }
@@ -218,7 +218,7 @@ hr {
 .menu-dropdown {
     display: none;
     position: absolute;
-    /*right: 30px;*/
+    right: 30px;
     top: 32px;
     width: 100%;
     text-align: right;
@@ -226,7 +226,7 @@ hr {
 
 .menu-dropdown select {
     width: 100%;
-}
+}*/
 /*---------------------------------------------------
         Layout - Leadin
 ---------------------------------------------------*/
@@ -773,12 +773,12 @@ a.pt-about {
     .mailing-list {
         width: auto;
     }
-    .menu {
+    /*.menu {
         display: none;
     }
     .menu-dropdown {
         display: block;
-    }
+    }*/
 }
 
 @media all and (max-width: 720px) {
@@ -838,9 +838,9 @@ a.pt-about {
     .download-list .version {
         width: 28%;
     }
-    .menu-dropdown {
+    /*.menu-dropdown {
         top: 16px;
-    }
+    }*/
     /*#header,
     .header-placeholder {
         height: 52px;
