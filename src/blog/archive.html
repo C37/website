@@ -1,66 +1,88 @@
 ---
 layout: base
-title: C37 - Blog Arquivos
+title: Arquivos
 class: blog
 type: list
 ---
 
-<div id="content">
-  <h2 class="page-title">
-    <span class="container">{{ page.title }}</span>
-  </h2>
 
-  <br>
-  <br>
+<div class="grid fixed" style="margin-bottom: 0px">
 
-  <div class="container clearfix">
-    <article class="main">
-      <section class="content-chunk">
-
-        {% for post in site.posts %}
-          <p>
-            <a href="{{ post.url }}" class="post-date">
-              &raquo; {{ post.title }}
-            </a>
-            - {{ post.date | date: "%-d" }}
-              {% assign m = post.date | date: "%-m" %}
-              de
-              {% case m %}
-                {% when '1' %}Janeiro
-                {% when '2' %}Fevereiro	
-                {% when '3' %}Março
-                {% when '4' %}Abril
-                {% when '5' %}Maio
-                {% when '6' %}Junho
-                {% when '7' %}Julho
-                {% when '8' %}Agosto
-                {% when '9' %}Setembro
-                {% when '10' %}Outubro
-                {% when '11' %}Novembro
-                {% when '12' %}Dezembro
-              {% endcase %}
-              de
-              {{ post.date | date: "%Y" }}
-          </p>
-        {% endfor %}
-
-      </section>
-    </article>
-
-    <hr style="margin-top: 40px">
-    <a href="/blog">&laquo; Voltar para o Blog</a>
-    
+  <div class="row">
+    <div class="column column-12">
+      <h3 class="page-title" style="margin:0px; line-height: 90px;">
+        <img src="/assets/img/logo.svg" alt="" width="35px" style="vertical-align: middle; margin-left: 11px;margin-right: 5px;top: -2px;position: relative">
+        {{ page.title }}
+      </h3>
+    </div>
   </div>
 
-  {% if page.social_text %}
-    {% include social.html %}
-  {% endif %}
-
-
-  {% if page.class == 'documentation' %}
-    <div class="contribute-doc">
-      Found a typo? An unclear example? Help us improve our documentation by forking and sending your fixes and suggestions.
-      <br><a href="https://github.com/yeoman/yeoman.github.io/blob/source/app{{ page.url | replace:'.html','.md' }}">Improve this Page!</a>
-    </div>
-  {% endif %}
 </div>
+
+
+<div style="background: #f6f6f6;padding-top: 30px;padding-bottom: 25px">
+
+    <div class="grid fixed" style="margin-bottom: 0px">
+
+      <div class="row">
+        <div class="column column-12">
+
+          <section class="content-chunk">
+
+            {% for post in site.posts %}
+              <p>
+                <strong>
+                    <a href="{{ post.url }}" class="post-date">
+                      &raquo; {{ post.title }}
+                    </a>
+                </strong>
+                - {{ post.date | date: "%-d" }}
+                  {% assign m = post.date | date: "%-m" %}
+                  de
+                  {% case m %}
+                    {% when '1' %}Janeiro
+                    {% when '2' %}Fevereiro	
+                    {% when '3' %}Março
+                    {% when '4' %}Abril
+                    {% when '5' %}Maio
+                    {% when '6' %}Junho
+                    {% when '7' %}Julho
+                    {% when '8' %}Agosto
+                    {% when '9' %}Setembro
+                    {% when '10' %}Outubro
+                    {% when '11' %}Novembro
+                    {% when '12' %}Dezembro
+                  {% endcase %}
+                  de
+                  {{ post.date | date: "%Y" }}
+              </p>
+            {% endfor %}
+
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="grid fixed" style="margin-bottom: 0px">
+
+  <div class="row">
+    <div class="column column-12">
+
+          <div style="margin-top: 30px;margin-bottom: 30px">
+            <a  href="/blog">&laquo; Voltar para o Blog</a>
+          </div>
+
+
+    </div>
+  </div>
+
+</div>
+
+

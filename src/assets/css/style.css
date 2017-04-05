@@ -1,4 +1,4 @@
-/* 04/04/2017 16:44:30 */
+/* 05/04/2017 13:40:57 */
 /* global variables */
 /* global variables */
 /* global visual class */
@@ -21,7 +21,7 @@ html,
 body {
   height: 100%;
   color: #666665;
-  font: 15px 'lucida grande', tahoma, verdana, arial, sans-serif;
+  font: 14px 'lucida grande', tahoma, verdana, arial, sans-serif;
   margin: auto !important;
   padding: 0px;
 }
@@ -364,7 +364,7 @@ pre {
 /* https://imperavi.com/kube/docs/grid/ */
 /* grid */
 div.grid {
-  margin: 0px auto 0px;
+  margin: 0px auto 35px auto;
 }
 div.grid.debug {
   background-color: #E3DBDE;
@@ -601,36 +601,36 @@ div.row > [class*="column"] {
 /* space - offset */
 /* positioning */
 .first {
-  order: -1;
+  order: -1 !important;
 }
 .last {
-  order: 1;
+  order: 1 !important;
 }
 .around {
-  justify-content: space-around;
+  justify-content: space-around !important;
 }
 .align-center {
-  justify-content: center;
+  justify-content: center !important;
 }
 .align-right {
-  justify-content: flex-end;
+  justify-content: flex-end !important;
 }
 .align-middle {
-  align-items: center;
+  align-items: center !important;
 }
 .push-bottom {
-  margin-top: auto;
+  margin-top: auto !important;
 }
 .push-middle {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
 }
 .push-center {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .push-right {
-  margin-left: auto;
+  margin-left: auto !important;
 }
 /* positioning */
 div.example {

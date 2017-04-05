@@ -7,74 +7,163 @@ sidebar: sidebars/blog.html
 sidebarHTML: true
 ---
 
+<style>
 
-{% for post in paginator.posts %}
-  <article class="blog-post-preview">
-    <h2 class="blog-post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h2>
+#demo-media-grid {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 2%;
+  -moz-column-gap: 2%;
+  column-gap: 2%; }
+  #demo-media-grid > div {
+    display: inline-block;
+    width: 100%; }
+  @media (max-width: 768px) {
+    #demo-media-grid {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1; } }
+  #demo-media-grid > div {
+    font-family: Consolas, Monaco, "Courier New", monospace;
+    font-size: 12px;
+    padding: 8px 12px;
+    background: #eae2f2;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 80px; }
+  #demo-media-grid > div:nth-child(2n) {
+    height: 200px; }
+  #demo-media-grid > div:nth-child(5n) {
+    height: 120px; }
 
-    <a href="{{ post.url }}" class="blog-post-date">
-      <!--http://jekyll.tips/jekyll-casts/date-formatting/-->
-      <!--Publicado: {{ post.date | date: "%B %e, %Y" }}-->
-      Publicado em:
-      {% assign m = post.date | date: "%-m" %}
-      {{ post.date | date: "%-d" }}
-      de
-      {% case m %}
-        {% when '1' %}Janeiro
-        {% when '2' %}Fevereiro	
-        {% when '3' %}Março
-        {% when '4' %}Abril
-        {% when '5' %}Maio
-        {% when '6' %}Junho
-        {% when '7' %}Julho
-        {% when '8' %}Agosto
-        {% when '9' %}Setembro
-        {% when '10' %}Outubro
-        {% when '11' %}Novembro
-        {% when '12' %}Dezembro
-      {% endcase %}
-      de
-      {{ post.date | date: "%Y" }}
-      <!--as {{ post.date | date: "%R" }}-->
-    </a>
+</style>
 
-    <div class="blog-post-content">{{post.excerpt}}</div>
 
-    <a href="{{ post.url }}">Ver mais &raquo;</a>
-  </article>
-{% endfor %}
 
-<div class="blog-posts-extra" style="float: right;width: 200px; text-align: right">
-  <a href="/blog/archive.html">Ver todos os Posts</a>
+<div class="grid fixed">
+
+
+  <div class="row">
+
+    <div class="column column-12">
+
+
+      {% for post in paginator.posts %}
+        <article class="blog-post-preview">
+          <h2 class="blog-post-title">
+            <a href="{{ post.url }}">
+              {{ post.title }}
+            </a>
+          </h2>
+
+          <a href="{{ post.url }}" class="blog-post-date" style="padding-bottom: 15px;display: block">
+            <!--http://jekyll.tips/jekyll-casts/date-formatting/-->
+            <!--Publicado: {{ post.date | date: "%B %e, %Y" }}-->
+            Publicado em:
+            {% assign m = post.date | date: "%-m" %}
+            {{ post.date | date: "%-d" }}
+            de
+            {% case m %}
+              {% when '1' %}Janeiro
+              {% when '2' %}Fevereiro	
+              {% when '3' %}Março
+              {% when '4' %}Abril
+              {% when '5' %}Maio
+              {% when '6' %}Junho
+              {% when '7' %}Julho
+              {% when '8' %}Agosto
+              {% when '9' %}Setembro
+              {% when '10' %}Outubro
+              {% when '11' %}Novembro
+              {% when '12' %}Dezembro
+            {% endcase %}
+            de
+            {{ post.date | date: "%Y" }}
+            <!--as {{ post.date | date: "%R" }}-->
+          </a>
+
+          <div class="blog-post-content">{{post.excerpt}}</div>
+
+          <a href="{{ post.url }}">Ver mais &raquo;</a>
+        </article>
+      {% endfor %}    
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="column column-12">
+
+
+      <div class="blog-posts-extra" style="float: right;width: 200px; text-align: right">
+        <a href="/blog/archive.html">Ver todos os Posts</a>
+      </div>
+
+      {% if paginator.total_pages > 1 %}
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Anterior</a>
+        {% else %}
+          <span>&laquo; Anterior</span>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <em>{{ page }}</em>
+          {% elsif page == 1 %}
+            <a href="{{ '/blog/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+          {% else %}
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Próxima &raquo;</a>
+        {% else %}
+          <span>Próxima &raquo;</span>
+        {% endif %}
+      </div>
+      {% endif %}
+      
+    </div>
+  </div>
+
+
 </div>
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Anterior</a>
-  {% else %}
-    <span>&laquo; Anterior</span>
-  {% endif %}
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ '/blog/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Próxima &raquo;</a>
-  {% else %}
-    <span>Próxima &raquo;</span>
-  {% endif %}
-</div>
-{% endif %}
+
+
+
+
+<!--
+
+
+<div id="demo-media-grid">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+            </div>
+
+-->
+
+
 
