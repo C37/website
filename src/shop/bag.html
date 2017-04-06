@@ -1,0 +1,164 @@
+---
+layout: base
+title: Sacola
+---
+
+
+<style>
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+  empty-cells: show;
+  font-size: 15px;
+  line-height: 24px; }
+
+table caption {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #676b72; }
+
+th {
+  text-align: left;
+  font-weight: 700;
+  vertical-align: bottom; }
+
+td {
+  vertical-align: top; }
+
+tr.align-middle td,
+td.align-middle {
+  vertical-align: middle; }
+
+th,
+td {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+  th:first-child,
+  td:first-child {
+    padding-left: 0; }
+  th:last-child,
+  td:last-child {
+    padding-right: 0; }
+
+tfoot th,
+tfoot td {
+  color: rgba(49, 52, 57, 0.5); }
+
+table.bordered td,
+table.bordered th {
+  border: 1px solid rgba(0, 0, 0, 0.05); }
+
+table.striped tr:nth-child(odd) td {
+  background: #f8f8f8; }
+
+table.bordered td:first-child,
+table.bordered th:first-child,
+table.striped td:first-child,
+table.striped th:first-child {
+  padding-left: 1rem; }
+
+table.bordered td:last-child,
+table.bordered th:last-child,
+table.striped td:last-child,
+table.striped th:last-child {
+  padding-right: 1rem; }
+
+table.unstyled td,
+table.unstyled th {
+  border: none;
+  padding: 0; }
+
+.icon-nav-cad {
+    display: block;
+    background: url('../assets/img/logo-cad.svg') no-repeat center/100%;
+    width: 40px;
+    height: 27px;
+    margin: 0 auto;;
+}
+  
+
+</style>
+
+<div class="grid fixed" style="margin-bottom: 0px">
+
+  <div class="row">
+    <div class="column column-12">
+      <h3 class="page-title" style="margin-top:30px;margin-bottom:10px">
+        <img src="/assets/img/logo.svg" alt="" width="35px" style="vertical-align: middle; margin-left: 11px;margin-right: 5px;top: -2px;position: relative">
+        Itens na sua sacola
+      </h3>
+    </div>
+  </div>
+
+</div>
+<div class="grid fixed">
+
+  <div class="row align-center">
+    <div class="column column-10">
+
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th class="text-right">Valor Unitário</th>
+                    <th class="text-right">Valor Total</th>
+                </tr>
+            </thead>            
+            <tbody>
+                <tr>
+                    <td style="width:45px;">
+                        <i class="icon-nav-cad"></i>
+                    </td>
+                    <td>
+                        <span>Assinatura C37 - CAD</span> <small>Com renovação Mensal</small>
+                    </td>
+                    <td style="width:40px;">
+                        <input type="number" name="" value="0" increment="1" style="padding:0;margin:0px!important;">
+                    </td>
+                    <td class="text-right" style="width:100px;">
+                        <span>R$ 1,00</span>                        
+                    </td>
+                    <td class="text-right" style="width:80px;">
+                        <strong>R$ 1,00</strong>                        
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <strong>Valor Total</strong>
+                    </td>
+                    <td class="text-right">
+                        <strong>R$ 1,00</strong>
+                    </td>
+                </tr>
+            </tfoot>            
+
+        </table>
+
+
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row align-center">
+    <div class="column column-10 text-right">
+        <a href="/shop/checkout.html" >
+            <button class="button success">
+                Finalizar sua Compra
+            
+            </button>
+        </a>
+    </div>
+  </div>
+
+
+</div>

@@ -4,21 +4,30 @@
 
     function events() {
 
-        document.getElementById('button-my-account').addEventListener('click', function(){
-            user.auth.show();
-        })
-        
-        
-        //  onclick = function(){
-            
-        //     // this.parentNode.parentNode.parentNode.style.display = "none";
+        // verificando se temos usuario logado
+        c37.library.database.operation.list('profile', function (error, data) {
 
-        //     setTimeout(function() {
-        //         user.auth.show();
-        //     }, 1300);
+            if (data && Array.isArray(data) && data.length > 0) {
 
+                document.querySelectorAll('.button-signin').forEach(function (button) {
+                    button.classList.add('hide');
+                });
 
-        // };
+                document.querySelectorAll('.button-account').forEach(function (button) {
+                    button.querySelector('a').textContent = `${data[0]["first-name"]} ${data[0]["last-name"]}`;
+                    button.classList.remove('hide');
+                });
+
+            }
+
+        });
+
+        document.querySelectorAll('.button-signin').forEach(function (button) {
+            // addEventListener - para manter a heranca dos eventos
+            button.addEventListener('click', function () {
+                user.auth.show();
+            });
+        });
 
         // para tab de user-auth
         document.getElementById('tab-user-auth').addEventListener('active', function (e) {
@@ -100,11 +109,49 @@
                     document.getElementById('img-user-auth-loader').classList.add('hide');
                     document.getElementById('button-user-auth-signin').classList.remove('disabled');
 
+                    // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie ???
                     if (data.code === 200) {
 
-                        console.log(data);
+                        // console.log(JSON.parse(data.text))
+                        var data = JSON.parse(data.text);
 
-                        // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
+                        var session = {
+                            email: signin.email,
+                            "signed-in": signin.session["signed-in"]
+                        };
+
+                        c37.library.database.operation.add('session', session.email, session, function (error) {
+                            if (!error) {
+
+                                var profile = {
+                                    email: signin.email,
+                                    "first-name": data["first-name"],
+                                    "last-name": data["last-name"]
+                                };
+
+                                c37.library.database.operation.add('profile', profile.email, profile, function (error) {
+                                    if (!error) {
+
+                                        document.querySelectorAll('.button-signin').forEach(function (button) {
+                                            button.classList.add('hide');
+                                        });
+
+                                        document.querySelectorAll('.button-account').forEach(function (button) {
+                                            button.querySelector('a').textContent = `${data["first-name"]} ${data["last-name"]}`;
+                                            button.classList.remove('hide');
+                                        });
+
+                                        dialog.hide();
+
+                                    } else {
+                                        throw new Error('Session - Save - Failed to Save Session into Local Database');
+                                    }
+                                });
+
+                            } else {
+                                throw new Error('Session - Save - Failed to Save Session into Local Database');
+                            }
+                        });
 
                     }
 
@@ -232,7 +279,7 @@
     };
 
 
-    window.c37.library.utility.object.namespace(window, 'c37.application.account.user', user);
+    window.c37.library.utility.object.namespace(window, 'c37.application.website.user', user);
 
 
 })(window);

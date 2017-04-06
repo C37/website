@@ -71,6 +71,8 @@
                             this.parentNode.parentNode.parentNode.parentNode.dataset.selected = this.dataset.value;
                         }
 
+                        // debugger
+
                         // escondo o menu com os itens
                         this.parentNode.parentNode.parentNode.style.display = "none";
 

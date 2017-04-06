@@ -23,14 +23,30 @@ class: blog
 </div>
 
 
+<style>
+    .main img{
+        /* http://stackoverflow.com/questions/11736363/responsive-images-with-css */
+        max-width:100% !important;
+        max-height:100% !important;
+        display:block;
+        margin: auto;
+    }
+    .containerImage{
+        /* http://stackoverflow.com/questions/5166574/vertical-align-text-in-block-element */
+        display: flex;
+        align-items: center;
+    }
+</style>            
+
+
 
 <div style="background: #f6f6f6;">
 
   <div class="grid fixed">
 
-    <div class="row space">
+    <div class="row space align-center">
 
-      <div class="column column-9 push-center">
+      <div class="column column-8">
 
           <article class="main">
 
@@ -110,7 +126,7 @@ class: blog
 
     {% if page.category == nil %}
 
-        <div class="column column-3">
+        <div class="column column-3 hide-mobile">
 
             <nav class="context-nav">
               <ul>

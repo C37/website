@@ -1,4 +1,4 @@
-/* 05/04/2017 13:40:57 */
+/* 06/04/2017 02:18:53 */
 /* global variables */
 /* global variables */
 /* global visual class */
@@ -1960,7 +1960,12 @@ ul.menu.vertical > li:last-child {
   background: #599bcd;
   color: white;
 }
-.option-group > .menu > .content > .option > a {
+.option-group > .menu > .content > .option > li:hover > a {
+  transition: none;
+  color: white;
+}
+.option-group > .menu > .content > .option > li > a {
+  transition: none;
   color: #666666;
   display: inline-block;
 }
