@@ -1,4 +1,4 @@
-/* 06/04/2017 02:18:53 */
+/* 07/04/2017 17:27:34 */
 /* global variables */
 /* global variables */
 /* global visual class */
@@ -1863,6 +1863,7 @@ ul.menu.vertical > li:last-child {
   box-sizing: border-box;
   color: #393b3e;
   cursor: pointer;
+  margin-bottom: 9px;
   display: inline-block;
   font-weight: 500;
   padding: 3px 9px;
@@ -1880,10 +1881,16 @@ ul.menu.vertical > li:last-child {
   margin: 0px;
   padding: 0px;
 }
+.option-group > strong {
+  padding-right: 7px;
+}
 .option-group > strong:after {
   content: '';
   margin-left: 3px;
   display: inline-block;
+  position: relative;
+  margin-left: 5px;
+  top: -2px;
   width: 0;
   height: 0;
   border-style: solid;

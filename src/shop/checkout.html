@@ -7,7 +7,7 @@ title: Finalizar sua Compra
 <style>
 
 
-table {
+table.table {
   border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
@@ -16,26 +16,26 @@ table {
   font-size: 15px;
   line-height: 24px; }
 
-table caption {
+table.table caption {
   text-align: left;
   font-size: 14px;
   font-weight: 500;
   color: #676b72; }
 
-th {
+.table th {
   text-align: left;
   font-weight: 700;
   vertical-align: bottom; }
 
-td {
+.table td {
   vertical-align: top; }
 
-tr.align-middle td,
-td.align-middle {
+.table tr.align-middle td,
+.table td.align-middle {
   vertical-align: middle; }
 
-th,
-td {
+.table th,
+.table td {
   padding: 1rem 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
   th:first-child,
@@ -45,33 +45,34 @@ td {
   td:last-child {
     padding-right: 0; }
 
-tfoot th,
-tfoot td {
+.table tfoot th,
+.table tfoot td {
   color: rgba(49, 52, 57, 0.5); }
 
-table.bordered td,
-table.bordered th {
+table.table.bordered td,
+table.table.bordered th {
   border: 1px solid rgba(0, 0, 0, 0.05); }
 
-table.striped tr:nth-child(odd) td {
+table.table.striped tr:nth-child(odd) td {
   background: #f8f8f8; }
 
-table.bordered td:first-child,
-table.bordered th:first-child,
-table.striped td:first-child,
-table.striped th:first-child {
+table.table.bordered td:first-child,
+table.table.bordered th:first-child,
+table.table.striped td:first-child,
+table.table.striped th:first-child {
   padding-left: 1rem; }
 
-table.bordered td:last-child,
-table.bordered th:last-child,
-table.striped td:last-child,
-table.striped th:last-child {
+table.table.bordered td:last-child,
+table.table.bordered th:last-child,
+table.table.striped td:last-child,
+table.table.striped th:last-child {
   padding-right: 1rem; }
 
-table.unstyled td,
-table.unstyled th {
+table.table.unstyled td,
+table.table.unstyled th {
   border: none;
-  padding: 0; }
+  padding: 0; 
+}
 
 .icon-nav-cad {
     display: block;
@@ -105,8 +106,6 @@ table.unstyled th {
 
 
 
-
-
         <div class="collapse" data-loaded="true" style="margin-bottom:10px">
             
             <h4>
@@ -115,7 +114,7 @@ table.unstyled th {
             <div class="collapse-box" id="collapse-box-1" style="padding:3px 25px 25px 25px">
 
 
-              <table class="striped">
+              <table class="table striped">
                   <thead>
                       <tr>
                           <th></th>
@@ -170,6 +169,43 @@ table.unstyled th {
               <a class="collapse-toggle" rel="collapse-box-2">Endereço</a>
             </h4>
             <div class="collapse-box hide" id="collapse-box-2">
+
+
+                  <label style="display: block">Tipo de Endereço</label>
+
+
+                    <div id="option-group-i18n" class="option-group" style="padding-right: 5px" data-selected="residential">
+
+                        <img src="/assets/img/icon/type-residential.svg" style="vertical-align: middle; width: 20px" alt="">
+                        <strong>Residencial</strong>
+
+                        <div class="menu right">
+
+                            <div class="content">
+                                <ul class="option">
+                                    <li data-value="residential">
+                                        <img src="/assets/img/icon/type-residential.svg" style="vertical-align: middle; width: 20px" alt="">
+                                        <span>Residencial</span>
+                                    </li>
+                                    <li data-value="commercial">
+                                        <img src="/assets/img/icon/type-commercial.svg" style="vertical-align: middle; width: 20px" alt="">
+                                        <span>Comercial</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
                 <p>I look active on load.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
@@ -183,13 +219,6 @@ table.unstyled th {
             </div>
 
         </div>
-
-
-
-
-
-
-
 
 
 

@@ -63,9 +63,16 @@
                             var textContent = (this.querySelector('a') || this.querySelector('span')).textContent,
                                 imgContent = this.querySelector('img').getAttribute('src');
 
+                                // debugger
+
                             // neste momento sem display
-                            // this.parentNode.parentNode.parentNode.parentNode.querySelector('strong').textContent = textContent;
-                            this.parentNode.parentNode.parentNode.parentNode.querySelector('img').setAttribute('src', imgContent);
+                            if (this.parentNode.parentNode.parentNode.parentNode.querySelector('strong')) {
+                                this.parentNode.parentNode.parentNode.parentNode.querySelector('strong').textContent = textContent;
+                            }
+                            if (this.parentNode.parentNode.parentNode.parentNode.querySelector('img')) {
+                                this.parentNode.parentNode.parentNode.parentNode.querySelector('img').setAttribute('src', imgContent);
+                            }
+
 
                             // informo ao componente o valor do button selecionado
                             this.parentNode.parentNode.parentNode.parentNode.dataset.selected = this.dataset.value;
