@@ -103,58 +103,106 @@ table.unstyled th {
   <div class="row align-center">
     <div class="column column-10">
 
-        <table class="striped">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Descrição</th>
-                    <th>Quantidade</th>
-                    <th class="text-right">Valor Unitário</th>
-                    <th class="text-right">Valor Total</th>
-                </tr>
-            </thead>            
-            <tbody>
-                <tr>
-                    <td style="width:45px;">
-                        <i class="icon-nav-cad"></i>
-                    </td>
-                    <td>
-                        <span>Assinatura C37 - CAD</span> <small>Com renovação Mensal</small>
-                    </td>
-                    <td style="width:40px;">
-                        <input type="number" name="" value="0" increment="1" style="padding:0;margin:0px!important;">
-                    </td>
-                    <td class="text-right" style="width:100px;">
-                        <span>R$ 1,00</span>                        
-                    </td>
-                    <td class="text-right" style="width:80px;">
-                        <strong>R$ 1,00</strong>                        
-                    </td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="4">
-                        <strong>Valor Total</strong>
-                    </td>
-                    <td class="text-right">
-                        <strong>R$ 1,00</strong>
-                    </td>
-                </tr>
-            </tfoot>            
 
-        </table>
+
+
+
+        <div class="collapse" data-loaded="true" style="margin-bottom:10px">
+            
+            <h4>
+              <a class="collapse-toggle" rel="collapse-box-1">Produtos</a>
+            </h4>
+            <div class="collapse-box" id="collapse-box-1" style="padding:3px 25px 25px 25px">
+
+
+              <table class="striped">
+                  <thead>
+                      <tr>
+                          <th></th>
+                          <th>Descrição</th>
+                          <th>Quantidade</th>
+                          <th class="text-right">Valor Unitário</th>
+                          <th class="text-right">Valor Total</th>
+                      </tr>
+                  </thead>            
+                  <tbody>
+                      <tr>
+                          <td style="width:45px;">
+                              <i class="icon-nav-cad"></i>
+                          </td>
+                          <td>
+                              <span>Assinatura C37 - CAD</span> <small>Com renovação Mensal</small>
+                          </td>
+                          <td class="text-right" style="width:40px;">
+                              <span>1</span>
+                          </td>
+                          <td class="text-right" style="width:110px;">
+                              <span>R$ 1,00</span>                        
+                          </td>
+                          <td class="text-right" style="width:90px;">
+                              <strong>R$ 1,00</strong>                        
+                          </td>
+                      </tr>
+                  </tbody>
+                  <tfoot>
+                      <tr>
+                          <td colspan="4">
+                              <strong>Valor Total</strong>
+                          </td>
+                          <td class="text-right">
+                              <strong>R$ 1,00</strong>
+                          </td>
+                      </tr>
+                  </tfoot>            
+
+              </table>
+
+              <div class="text-right">
+                <button class="button success" style="padding-left:15px;padding-right:15px;margin-top:25px;">
+                    Continuar
+                </button>
+                
+              </div>
+
+            </div>
+
+            <h4>
+              <a class="collapse-toggle" rel="collapse-box-2">Endereço</a>
+            </h4>
+            <div class="collapse-box hide" id="collapse-box-2">
+                <p>I look active on load.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <h4>
+              <a class="collapse-toggle" rel="collapse-box-3">Pagamento</a>
+            </h4>
+            <div class="collapse-box hide" id="collapse-box-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
 
 
     </div>
   </div>
 
-  <br>
+
 
   <div class="row align-center">
     <div class="column column-10 text-right">
         <a href="/shop/order.html" >
-            <button class="button success" style="padding-left:15px;padding-right:15px">
+            <button class="button success hide" style="padding-left:15px;padding-right:15px">
                 Concluir
             </button>
         </a>
