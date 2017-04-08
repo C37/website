@@ -32,9 +32,6 @@
         // para tab de user-auth
         document.getElementById('tab-user-auth').addEventListener('active', function (e) {
 
-            dialog.hide();
-            dialog.show();
-
             if (e.detail.type === 'signin') {
                 document.getElementById('text-user-signin').classList.remove('hide');
                 document.getElementById('text-user-signup').classList.add('hide');
@@ -61,6 +58,10 @@
             document.getElementById('text-user-signup-last-name').classList.remove('required');
             document.getElementById('text-user-signup-email').classList.remove('required');
             document.getElementById('text-user-signup-password').classList.remove('required');
+
+            // para o tamanho do dialog
+            dialog.hide();
+            dialog.show();
 
         });
         // para tab de user-auth

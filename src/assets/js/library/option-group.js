@@ -60,8 +60,8 @@
                             // this.parentNode.dataset.selected = this.dataset.value;
 
                             // vou montar a selecao do iten
-                            var textContent = (this.querySelector('a') || this.querySelector('span')).textContent,
-                                imgContent = this.querySelector('img').getAttribute('src');
+                            var textContent = (this.querySelector('a') || this.querySelector('span')) ? (this.querySelector('a') || this.querySelector('span')).textContent : null,
+                                imgContent = this.querySelector('img') ? this.querySelector('img').getAttribute('src') : null;
 
                                 // debugger
 
