@@ -1,4 +1,4 @@
-/* 07/04/2017 23:55:44 */
+/* 08/04/2017 16:04:26 */
 /* global variables */
 /* global variables */
 /* global visual class */
@@ -42,7 +42,7 @@ p.big {
   line-height: 28px;
 }
 p.small {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
 }
 p.smaller {
@@ -1877,6 +1877,12 @@ ul.menu.vertical > li:last-child {
   background-image: linear-gradient(#fafafa, #dadada);
   background-repeat: repeat-x;
   border-color: #c5c5c5;
+}
+.option-group.width-100 {
+  width: 100% !important;
+}
+.option-group.text-center {
+  text-align: center;
 }
 .option-group > i {
   margin: 0px;
