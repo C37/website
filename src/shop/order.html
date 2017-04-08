@@ -6,91 +6,118 @@ title: Seu Pedido
 
 <style>
 
-table.table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  max-width: 100%;
-  width: 100%;
-  empty-cells: show;
-  font-size: 15px;
-  line-height: 24px; }
+    table.table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      max-width: 100%;
+      width: 100%;
+      empty-cells: show;
+      font-size: 15px;
+      line-height: 24px; }
 
-table.table caption {
-  text-align: left;
-  font-size: 14px;
-  font-weight: 500;
-  color: #676b72; }
+    table.table caption {
+      text-align: left;
+      font-size: 14px;
+      font-weight: 500;
+      color: #676b72; }
 
-.table th {
-  text-align: left;
-  font-weight: 700;
-  vertical-align: bottom; }
+    .table th {
+      text-align: left;
+      font-weight: 700;
+      vertical-align: bottom; }
 
-.table td {
-  vertical-align: top; }
+    .table td {
+      vertical-align: top; }
 
-.table tr.align-middle td,
-.table td.align-middle {
-  vertical-align: middle; }
+    .table tr.align-middle td,
+    .table td.align-middle {
+      vertical-align: middle; }
 
-.table th,
-.table td {
-  padding: 1rem 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-  th:first-child,
-  td:first-child {
-    padding-left: 0; }
-  th:last-child,
-  td:last-child {
-    padding-right: 0; }
-
-.table tfoot th,
-.table tfoot td {
-  color: rgba(49, 52, 57, 0.5); }
-
-table.table.bordered td,
-table.table.bordered th {
-  border: 1px solid rgba(0, 0, 0, 0.05); }
-
-table.table.striped tr:nth-child(odd) td {
-  background: #f8f8f8; }
-
-table.table.bordered td:first-child,
-table.table.bordered th:first-child,
-table.table.striped td:first-child,
-table.table.striped th:first-child {
-  padding-left: 1rem; }
-
-table.table.bordered td:last-child,
-table.table.bordered th:last-child,
-table.table.striped td:last-child,
-table.table.striped th:last-child {
-  padding-right: 1rem; }
-
-table.table.unstyled td,
-table.table.unstyled th {
-  border: none;
-  padding: 0; 
-}
+    .table th,
+    .table td {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05); 
+    }
 
 
-table.unstyled td,
-table.unstyled th {
-  border: none;
-  padding: 0; }
+    @media (min-width: 768px) {
+      .table th,
+      .table td {
+        padding: 11px;
+      }
+    }
+    @media (max-width: 768px) {
+      .table th,
+      .table td {
+        padding: 3px;
+      }
 
-.icon-nav-cad {
-    display: block;
-    background: url('../assets/img/logo-cad.svg') no-repeat center/100%;
-    width: 40px;
-    height: 27px;
-    margin: 0 auto;;
-}
-  
+        table th span{
+            width: 55px;
+            display: block;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+    }
+    
+
+      th:first-child,
+      td:first-child {
+        padding-left: 0; }
+      th:last-child,
+      td:last-child {
+        padding-right: 0; }
+
+    .table tfoot th,
+    .table tfoot td {
+      color: rgba(49, 52, 57, 0.5); }
+
+    table.table.bordered td,
+    table.table.bordered th {
+      border: 1px solid rgba(0, 0, 0, 0.05); }
+
+    table.table.striped tr:nth-child(odd) td {
+      background: #f8f8f8; }
+
+    table.table.bordered td:first-child,
+    table.table.bordered th:first-child,
+    table.table.striped td:first-child,
+    table.table.striped th:first-child {
+      padding-left: 1rem; }
+
+    table.table.bordered td:last-child,
+    table.table.bordered th:last-child,
+    table.table.striped td:last-child,
+    table.table.striped th:last-child {
+      padding-right: 1rem; }
+
+    table.table.unstyled td,
+    table.table.unstyled th {
+      border: none;
+      padding: 0; 
+    }
+
+
+    table.unstyled td,
+    table.unstyled th {
+      border: none;
+      padding: 0; }
+
+    .icon-nav-cad {
+        display: block;
+        background: url('../assets/img/logo-cad.svg') no-repeat center/100%;
+        width: 30px;
+        height: 27px;
+        margin: 0 auto;;
+    }
+      
 
 </style>
 
-<div class="grid fixed" style="margin-bottom: 0px">
+<div class="grid fixed">
 
   <div class="row">
     <div class="column column-6">
@@ -100,14 +127,10 @@ table.unstyled th {
       </h3>
     </div>
     <div class="column column-6 text-right">
-        <h3 style="margin-top:30px;margin-bottom:0px;padding-right:20px">Número - 65710827e968ecc4</h3>
+        <h3 style="margin-top:30px;margin-bottom:0px;padding-right:20px">Número - 5710827e9</h3>
     </div>
   </div>
 
-</div>
-
-
-<div class="grid fixed">
 
   <div class="row align-center">
     <div class="column column-10">
@@ -115,15 +138,15 @@ table.unstyled th {
             <thead>
                 <tr>
                     <th></th>
-                    <th>Descrição</th>
-                    <th>Quantidade</th>
-                    <th class="text-right">Valor Unitário</th>
-                    <th class="text-right">Valor Total</th>
+                    <th><span>Descrição</span></th>
+                    <th><span>Quantidade</span></th>
+                    <th class="text-right"><span>Valor Unitário</span></th>
+                    <th class="text-right"><span>Valor Total</span></th>
                 </tr>
             </thead>            
             <tbody>
                 <tr>
-                    <td style="width:45px;">
+                    <td style="padding-left: 5px">
                         <i class="icon-nav-cad"></i>
                     </td>
                     <td>
@@ -157,5 +180,7 @@ table.unstyled th {
     </div>
   </div>
 
-  
+
+
+
 </div>

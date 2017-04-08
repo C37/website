@@ -1,4 +1,4 @@
-/* 08/04/2017 16:04:26 */
+/* 08/04/2017 18:30:52 */
 /* global variables */
 /* global variables */
 /* global visual class */
@@ -364,7 +364,7 @@ pre {
 /* https://imperavi.com/kube/docs/grid/ */
 /* grid */
 div.grid {
-  margin: 0px auto 35px auto;
+  margin: 0px auto 25px auto;
 }
 div.grid.debug {
   background-color: #E3DBDE;
