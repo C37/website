@@ -38,7 +38,7 @@
         database: {
             name: 'C37-WEBSITE',
             debug: false,
-            version: 1,
+            version: 2,
             stores: {
                 settings: {
                     uuid: {
@@ -75,6 +75,24 @@
                         'index': true
                     }
                 },
+                bag:{
+                    uuid: {
+                        'type': 'string',
+                        'index': true
+                    },
+                    name: {
+                        'type': 'string',
+                        'index': true
+                    },
+                    value: {
+                        'type': 'number',
+                        'index': false
+                    },
+                    quantity: {
+                        'type': 'number',
+                        'index': false
+                    }
+                },
                 address: {
                     email: {
                         'type': 'string',
@@ -102,6 +120,7 @@
 
 
                     window.c37.application.website.user.initialize(config);
+                    window.c37.application.website.shop.initialize(config);
 
 
                     return callback ? callback(true) : true;

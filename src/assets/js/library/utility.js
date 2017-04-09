@@ -89,6 +89,9 @@
         parseFloat: function (float, decimal) {
             return Number(parseFloat(float).toFixed(decimal));
         },
+        parseNumber: function (float, decimal) {
+            return parseFloat(float).toFixed(decimal);
+        },
         // Converts from degrees to radians.
         radians: function (degrees) {
             return degrees * (Math.PI / 180);

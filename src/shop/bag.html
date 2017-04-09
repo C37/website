@@ -111,9 +111,29 @@ title: Sacola
         margin: 0 auto;;
     }
 
+</style>
 
-  
+<style>
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  width: 30px;
+  margin: auto;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
 
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 </style>
 
 <div class="grid fixed">
@@ -130,9 +150,21 @@ title: Sacola
   <div class="row align-center">
     <div class="column column-10">
 
-        <table class="table striped">
+      <div id="div-bag-verify" class="text-center">
+
+        <div class="loader"></div>
+        <h4 style="margin-top:15px">Verificando sua sacola</h4>
+
+      </div>
+
+      <div id="div-bag-empty" class="text-center hide">
+        <img src="/assets/img/icon-bag.svg" style="vertical-align: middle; width: 42px" alt="">
+        <h4 style="margin-top:15px">Sua sacola esta vazia</h4>
+      </div>
+
+        <table id="table-bag-products" class="table striped hide">
             <thead>
-                <tr>
+                <tr> 
                     <th></th>
                     <th><span>Descrição</span></th>
                     <th><span>Quantidade</span></th>
@@ -141,7 +173,7 @@ title: Sacola
                 </tr>
             </thead>            
             <tbody>
-                <tr>
+                <!--<tr>
                     <td style="padding-left: 5px">
                         <i class="icon-nav-cad"></i>
                     </td>
@@ -152,12 +184,12 @@ title: Sacola
                         <input type="number" name="" value="1" min="1" increment="1" style="padding:0;margin:0px!important;">
                     </td>
                     <td class="text-right" style="width:110px;">
-                        <span>R$ 1,00</span>                        
+                        <span>R$ 1,00</span>
                     </td>
                     <td class="text-right" style="width:90px;">
-                        <strong>R$ 1,00</strong>                        
+                        <strong>R$ 1,00</strong>
                     </td>
-                </tr>
+                </tr>-->
             </tbody>
             <tfoot>
                 <tr>
@@ -165,7 +197,7 @@ title: Sacola
                         <strong>Valor Total</strong>
                     </td>
                     <td class="text-right">
-                        <strong>R$ 1,00</strong>
+                        <strong id="strong-total-amount">R$ 1,00</strong>
                     </td>
                 </tr>
             </tfoot>            
@@ -174,7 +206,7 @@ title: Sacola
 
         <div class="text-right">
 
-          <a href="/shop/checkout.html">
+          <a id="link-bag-redirect" href="/shop/checkout.html" class="hide">
               <button class="button success" style="padding-left:15px;padding-right:15px;margin-top:25px;">
                   Finalizar sua Compra           
               </button>

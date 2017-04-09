@@ -280,7 +280,7 @@
     };
 
 
-    window.c37.library.utility.object.namespace(window, 'c37.application.website.user', user);
+            window.c37.library.utility.object.namespace(window, 'c37.application.website.user', user);
 
 
-})(window);
+        })(window);

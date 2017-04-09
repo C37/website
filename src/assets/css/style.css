@@ -1,4 +1,4 @@
-/* 08/04/2017 18:30:52 */
+/* 09/04/2017 01:05:08 */
 /* global variables */
 /* global variables */
 /* global visual class */
@@ -23,6 +23,7 @@ body {
   color: #666665;
   font: 14px 'lucida grande', tahoma, verdana, arial, sans-serif;
   margin: auto !important;
+  line-height: 22px;
   padding: 0px;
 }
 body:not(header),
@@ -186,6 +187,11 @@ h6 > a:hover {
   color: #599bcd !important;
   transition: all linear 0.2s !important;
 }
+h1.title {
+  font-size: 60px;
+  line-height: 64px;
+  margin-bottom: 8px;
+}
 h1 {
   font-size: 48px;
   line-height: 52px;
@@ -199,10 +205,10 @@ h3 {
   line-height: 32px;
 }
 h4 {
-  font-size: 14px;
+  font-size: 21px;
+  line-height: 32px;
 }
 h5 {
-  margin-top: 0px;
   font-size: 18px;
   line-height: 28px;
 }
