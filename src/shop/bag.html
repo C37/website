@@ -49,8 +49,8 @@ title: Sacola
         padding: 3px;
       }
             table th span{
-                width: 55px;
-                display: block;
+                width: 60px;
+                display: inline-block;
 
                 white-space: nowrap;
                 overflow: hidden;
@@ -111,6 +111,19 @@ title: Sacola
         margin: 0 auto;;
     }
 
+    .icon-remove {
+        display: block;
+        background: url('../assets/img/icon/remove.svg') no-repeat center/100%;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        margin: 5px auto;
+        cursor: pointer;
+    }
+
+    
+
+
 </style>
 
 <style>
@@ -168,6 +181,7 @@ title: Sacola
                     <th></th>
                     <th><span>Descrição</span></th>
                     <th><span>Quantidade</span></th>
+                    <th style="width: 30px"></th>
                     <th class="text-right"><span>Valor Unitário</span></th>
                     <th class="text-right"><span>Valor Total</span></th>
                 </tr>
@@ -193,7 +207,7 @@ title: Sacola
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="4">
+                    <td colspan="5">
                         <strong>Valor Total</strong>
                     </td>
                     <td class="text-right">

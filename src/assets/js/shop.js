@@ -39,13 +39,15 @@
                             tdDescription = document.createElement('td'),
                             tdQuantity = document.createElement('td'),
                             tdValue = document.createElement('td'),
-                            tdTotalValue = document.createElement('td');
+                            tdTotalValue = document.createElement('td'),
+                            tdRemove = document.createElement('td');
 
                         var imgProduct = document.createElement('i'),
                             spanDescription = document.createElement('span'),
                             inputQuantity = document.createElement('input'),
                             spanValue = document.createElement('span'),
-                            spanTotalValue = document.createElement('span');
+                            spanTotalValue = document.createElement('span'),
+                            imgRemove = document.createElement('i');
 
 
                         imgProduct.classList.add('icon-nav-cad');
@@ -54,6 +56,33 @@
 
                         spanDescription.textContent = product.name;
                         tdDescription.appendChild(spanDescription);
+
+                        imgRemove.classList.add('icon-remove');
+                        imgRemove.dataset.uuid = product.uuid;
+                        tdRemove.setAttribute('style', 'padding-left:3px;padding-right: 1px;')
+                        tdRemove.appendChild(imgRemove);
+
+                        imgRemove.onclick = function () {
+
+                            var uuid = this.dataset.uuid;
+
+                            this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+
+                            c37.library.database.operation.remove('bag', uuid, function (error) {
+                                if (calculeTotalAmount() === 0) {
+
+                                    // escondo a mensagem de sacola vazia
+                                    document.getElementById('div-bag-empty').classList.remove('hide');
+
+                                    // escondo a tabela
+                                    document.getElementById('table-bag-products').classList.add('hide');
+                                    document.getElementById('link-bag-redirect').classList.add('hide');
+
+                                }
+                            })
+
+                        }
+
 
                         inputQuantity.type = "number";
                         inputQuantity.value = product.quantity;
@@ -85,7 +114,6 @@
                         }
 
 
-
                         spanValue.textContent = 'R$ ' + c37.library.utility.math.parseNumber(product.value, 2);
                         tdValue.classList.add('text-right');
                         tdValue.setAttribute('style', 'width:110px');
@@ -99,9 +127,12 @@
                         tdTotalValue.appendChild(spanTotalValue);
 
 
+
+
                         trProduct.appendChild(tdImg);
                         trProduct.appendChild(tdDescription);
                         trProduct.appendChild(tdQuantity);
+                        trProduct.appendChild(tdRemove);
                         trProduct.appendChild(tdValue);
                         trProduct.appendChild(tdTotalValue);
 
@@ -140,7 +171,7 @@
         document.querySelectorAll('.total-value-product').forEach(function (item) {
 
             // http://stackoverflow.com/questions/10649064/how-to-use-regex-for-currency
-            var value = item.textContent.replace(/[^\d\.]/g,'');
+            var value = item.textContent.replace(/[^\d\.]/g, '');
 
             totalAmount += c37.library.utility.math.parseFloat(value, 2);
         });
@@ -148,6 +179,7 @@
         // atualizando o valor total para todos os itens
         document.getElementById('strong-total-amount').textContent = 'R$ ' + c37.library.utility.math.parseNumber(totalAmount, 2);
 
+        return totalAmount;
 
     }
 
