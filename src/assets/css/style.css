@@ -1,4 +1,4 @@
-/* 09/04/2017 01:05:08 */
+/* 09/04/2017 04:40:22 */
 /* global variables */
 /* global variables */
 /* global visual class */
@@ -1565,7 +1565,7 @@ button.button.warn {
 button.button.warn:hover,
 button.button.warn:active {
   background-color: #deb484;
-  background-image: linear-gradient(#f8eec7, #e2c19b);
+  background-image: linear-gradient(#f8eec7, #e2cc7a) !important;
   border-color: #e2c19b;
 }
 button.button.warn.disabled {
