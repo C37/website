@@ -9,6 +9,10 @@
 
         collapses.forEach(function (collapse) {
 
+            // para o set do valor
+            collapse.setSelected = setSelected;
+
+
             collapse.querySelectorAll('h4>a').forEach(function (item) {
 
                 item.onclick = function (e) {
@@ -38,7 +42,23 @@
     }
 
 
+    function setSelected(target) {
 
+        var collapse = this;
+
+        collapse.querySelectorAll('h4>a').forEach(function (item) {
+
+            item.classList.remove('selected');
+            document.getElementById(item.rel).classList.add('hide');
+
+            if (target === item.rel) {
+                item.classList.add('selected');
+                document.getElementById(item.rel).classList.remove('hide');
+            }
+
+        });
+
+    }
 
 
 

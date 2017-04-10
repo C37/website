@@ -77,7 +77,6 @@
             if (document.getElementById('text-user-signin-email').value === '') {
                 document.getElementById('text-user-signin-email').classList.add('required');
                 validationComplete = false;
-
             }
             if (document.getElementById('text-user-signin-password').value === '') {
                 document.getElementById('text-user-signin-password').classList.add('required');

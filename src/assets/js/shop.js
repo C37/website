@@ -1,6 +1,9 @@
 (function (window) {
     'use strict';
 
+    var _validationAddressSend = false;
+
+
     function events() {
 
         // para o botao de assinatura de cad
@@ -21,6 +24,9 @@
 
             };
         }
+        // para o botao de assinatura de cad
+
+
 
         // para o carregar da pagina de bag
         if (document.URL.indexOf('shop') > 0 && document.URL.indexOf('bag') > 0) {
@@ -30,24 +36,24 @@
                 // se tenho itens salvos na sacola
                 if (products && Array.isArray(products) && products.length > 0) {
 
+                    // os produtos
                     products.forEach(function (product) {
-
 
                         var trProduct = document.createElement('tr');
 
                         var tdImg = document.createElement('td'),
                             tdDescription = document.createElement('td'),
                             tdQuantity = document.createElement('td'),
+                            tdRemove = document.createElement('td'),
                             tdValue = document.createElement('td'),
-                            tdTotalValue = document.createElement('td'),
-                            tdRemove = document.createElement('td');
+                            tdTotalValue = document.createElement('td');
 
                         var imgProduct = document.createElement('i'),
                             spanDescription = document.createElement('span'),
                             inputQuantity = document.createElement('input'),
+                            imgRemove = document.createElement('i'),
                             spanValue = document.createElement('span'),
-                            spanTotalValue = document.createElement('span'),
-                            imgRemove = document.createElement('i');
+                            spanTotalValue = document.createElement('span');
 
 
                         imgProduct.classList.add('icon-nav-cad');
@@ -160,10 +166,227 @@
             });
 
         }
+        // para o carregar da pagina de bag
+
+
+
+        // para o carregar da pagina de checkout
+        if (document.URL.indexOf('shop') > 0 && document.URL.indexOf('checkout') > 0) {
+
+
+            // para o botao de continue em checkout - products
+            document.getElementById('button-checkout-products').onclick = function () {
+                document.getElementById('collapse-checkout').setSelected('collapse-send');
+            }
+            // para o botao de continue em checkout - products
+
+            // para o botao de continue em checkout - address send
+            document.getElementById('button-checkout-address-send').onclick = function () {
+
+                // removendo os requireds
+                document.getElementById('text-user-documment').classList.remove('required');
+                document.getElementById('text-user-phone-code').classList.remove('required');
+                document.getElementById('text-user-phone-number').classList.remove('required');
+                document.getElementById('text-address-street').classList.remove('required');
+                document.getElementById('text-address-district').classList.remove('required');
+                document.getElementById('text-address-zipcode').classList.remove('required');
+                document.getElementById('text-address-city').classList.remove('required');
+                document.getElementById('option-address-state').classList.remove('required');
+                // removendo os requireds
+
+                var validation = [];
+
+                if (document.getElementById('text-user-documment').value === '') {
+                    document.getElementById('text-user-documment').classList.add('required');
+                    validation.push('text-user-documment');
+                }
+
+                if (document.getElementById('text-user-phone-code').value === '') {
+                    document.getElementById('text-user-phone-code').classList.add('required');
+                    validation.push('text-user-phone-code');
+                }
+
+                if (document.getElementById('text-user-phone-number').value === '') {
+                    document.getElementById('text-user-phone-number').classList.add('required');
+                    validation.push('text-user-phone-number');
+                }
+
+                if (document.getElementById('text-address-street').value === '') {
+                    document.getElementById('text-address-street').classList.add('required');
+                    validation.push('text-address-street');
+                }
+
+                if (document.getElementById('text-address-district').value === '') {
+                    document.getElementById('text-address-district').classList.add('required');
+                    validation.push('text-address-district');
+                }
+
+                if (document.getElementById('text-address-zipcode').value === '') {
+                    document.getElementById('text-address-zipcode').classList.add('required');
+                    validation.push('text-address-zipcode');
+                }
+
+                if (document.getElementById('text-address-city').value === '') {
+                    document.getElementById('text-address-city').classList.add('required');
+                    validation.push('text-address-city');
+                }
+
+                if (document.getElementById('option-address-state').dataset.selected === '') {
+                    document.getElementById('option-address-state').classList.add('required');
+                    validation.push('option-address-state');
+                }
+
+                _validationAddressSend = (validation.length === 0);
+
+                // se estiver tudo verificado
+                if (_validationAddressSend) {
+                    // vamos para a aba de pagamento
+                    document.getElementById('collapse-checkout').setSelected('collapse-payment');
+                }
+
+            }
+            // para o botao de continue em checkout - address send
+
+            // para o botao de continue em checkout - payment
+            document.getElementById('button-checkout-payment').onclick = function () {
+
+                // atualizando a verificacao 
+                document.getElementById('button-checkout-address-send').click();
+
+                // esta atualmente validada?
+                if (_validationAddressSend) {
+
+                    // removendo os requireds
+                    document.getElementById('text-user-credit-card-name').classList.remove('required');
+                    document.getElementById('text-user-credit-card-number').classList.remove('required');
+                    document.getElementById('text-user-credit-card-code').classList.remove('required');
+                    document.getElementById('option-user-credit-card-month').classList.remove('required');
+                    document.getElementById('option-user-credit-card-year').classList.remove('required');
+                    // removendo os requireds
+
+                    var validation = [];
+
+                    if (document.getElementById('text-user-credit-card-name').value === '') {
+                        document.getElementById('text-user-credit-card-name').classList.add('required');
+                        validation.push('text-user-credit-card-name');
+                    }
+                    if (document.getElementById('text-user-credit-card-number').value === '') {
+                        document.getElementById('text-user-credit-card-number').classList.add('required');
+                        validation.push('text-user-credit-card-number');
+                    }
+                    if (document.getElementById('text-user-credit-card-code').value === '') {
+                        document.getElementById('text-user-credit-card-code').classList.add('required');
+                        validation.push('text-user-credit-card-code');
+                    }
+                    if (document.getElementById('option-user-credit-card-month').dataset.selected === '') {
+                        document.getElementById('option-user-credit-card-month').classList.add('required');
+                        validation.push('option-user-credit-card-month');
+                    }
+                    if (document.getElementById('option-user-credit-card-year').dataset.selected === '') {
+                        document.getElementById('option-user-credit-card-year').classList.add('required');
+                        validation.push('option-user-credit-card-year');
+                    }
+
+
+                    if (validation.length === 0) {
+
+                        // var 
+
+
+
+
+
+                    }
+
+
+                } else {
+                    // se nao estiver, votamos para o campo a ser preenchido
+                    document.getElementById('collapse-checkout').setSelected('collapse-send');
+                }
+
+            }
+            // para o botao de continue em checkout - payment
+
+
+            // preenchendo os produtos selecionados para a compra
+            shop.bag.list(function (error, products) {
+
+                // se tenho itens salvos na sacola
+                if (products && Array.isArray(products) && products.length > 0) {
+
+                    // os produtos
+                    products.forEach(function (product) {
+
+                        var trProduct = document.createElement('tr');
+
+                        var tdImg = document.createElement('td'),
+                            tdDescription = document.createElement('td'),
+                            tdQuantity = document.createElement('td'),
+                            tdValue = document.createElement('td'),
+                            tdTotalValue = document.createElement('td');
+
+                        var imgProduct = document.createElement('i'),
+                            spanDescription = document.createElement('span'),
+                            spantQuantity = document.createElement('span'),
+                            spanValue = document.createElement('span'),
+                            spanTotalValue = document.createElement('span');
+
+
+                        imgProduct.classList.add('icon-nav-cad');
+                        tdImg.setAttribute('style', 'padding-left: 5px');
+                        tdImg.appendChild(imgProduct);
+
+
+                        spanDescription.textContent = product.name;
+                        tdDescription.appendChild(spanDescription);
+
+
+                        spantQuantity.textContent = product.quantity;
+                        tdQuantity.appendChild(spantQuantity);
+
+
+                        spanValue.textContent = 'R$ ' + c37.library.utility.math.parseNumber(product.value, 2);
+                        tdValue.classList.add('text-right');
+                        tdValue.setAttribute('style', 'width:110px');
+                        tdValue.appendChild(spanValue);
+
+
+                        spanTotalValue.textContent = 'R$ ' + c37.library.utility.math.parseNumber(product.value * product.quantity, 2);
+                        tdTotalValue.classList.add('text-right');
+                        tdTotalValue.classList.add('total-value-product');
+                        tdTotalValue.setAttribute('style', 'width:110px');
+                        tdTotalValue.appendChild(spanTotalValue);
+
+
+                        trProduct.appendChild(tdImg);
+                        trProduct.appendChild(tdDescription);
+                        trProduct.appendChild(tdQuantity);
+                        trProduct.appendChild(tdValue);
+                        trProduct.appendChild(tdTotalValue);
+
+                        document.getElementById('table-checkout-products').querySelector('tbody').appendChild(trProduct);
+
+                    });
+
+                    calculeTotalAmount();
+
+
+                    document.getElementById('collapse-checkout').classList.remove('hide');
+
+                } else {
+                    // se nao, retorno para a a sacola
+                    window.location.href = "/shop/bag.html";
+                }
+
+            });
+
+        }
+        // para o carregar da pagina de checkout
 
     };
 
 
+    // para o calculo to valor total da sacola
     function calculeTotalAmount() {
 
         var totalAmount = 0;
@@ -185,12 +408,6 @@
 
 
 
-    // http://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro
-    function htmlToElement(html) {
-        var template = document.createElement('template');
-        template.innerHTML = html;
-        return template.content.firstChild;
-    }
 
 
     var shop = {

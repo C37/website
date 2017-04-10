@@ -1,4 +1,4 @@
-/* 09/04/2017 04:40:22 */
+/* 09/04/2017 21:32:43 */
 /* global variables */
 /* global variables */
 /* global visual class */
@@ -78,7 +78,7 @@ a.mark::after {
 input,
 input:focus,
 textarea {
-  height: 24px;
+  height: 26px;
   width: 100%;
   font-size: 11px;
   border: 1px solid #cccccc;
@@ -146,9 +146,12 @@ span {
 small {
   display: inline-block;
   position: relative;
-  font-size: 10px;
+  font-size: 12px;
   text-align: left;
   margin: 0 0 2px 0;
+}
+small.smaller {
+  font-size: 10px;
 }
 hr {
   border: 1px solid #eee;
@@ -263,6 +266,15 @@ h5 {
   font-size: 21px;
 }
 /* font sizes */
+/* lista */
+ul.square-inside > li {
+  list-style-position: inside;
+  list-style-type: square;
+}
+ul.smaller {
+  font-size: 12px;
+}
+/* lista */
 /* para quando simplesmente clicavel */
 .clickable {
   cursor: pointer !important;
@@ -278,9 +290,11 @@ h5 {
   display: inline !important;
 }
 /* para quando simplesmente in-line */
+/* para quando simplesmente padding-right-0 */
 .padding-right-0 {
   padding-right: 0px !important;
 }
+/* para quando simplesmente padding-right-0 */
 #hero {
   padding-top: 0px;
   padding-bottom: 40px;
@@ -1872,7 +1886,7 @@ ul.menu.vertical > li:last-child {
   margin-bottom: 9px;
   display: inline-block;
   font-weight: 500;
-  height: 24px;
+  height: 26px;
   padding: 1px 9px;
   position: relative;
 }
@@ -1886,6 +1900,11 @@ ul.menu.vertical > li:last-child {
 }
 .option-group.width-100 {
   width: 100% !important;
+}
+.option-group.required {
+  border: 1px solid firebrick;
+  background-color: #FFD5D5;
+  background-image: none;
 }
 .option-group.text-center {
   text-align: center;

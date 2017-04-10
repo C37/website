@@ -5,170 +5,168 @@ title: Finalizar sua Compra
 
 
 <style>
-
-
-        table.table {
+    table.table {
         border-collapse: collapse;
         border-spacing: 0;
         max-width: 100%;
         width: 100%;
         empty-cells: show;
-        line-height: 24px; }
+        line-height: 24px;
+    }
 
-        table.table caption {
+    table.table caption {
         text-align: left;
         font-size: 14px;
         font-weight: 500;
-        color: #676b72; }
+        color: #676b72;
+    }
 
-        .table th {
+    .table th {
         text-align: left;
         font-weight: 700;
-        vertical-align: bottom; }
+        vertical-align: bottom;
+    }
 
-        .table td {
-        vertical-align: top; }
+    .table td {
+        vertical-align: top;
+    }
 
-        .table tr.align-middle td,
-        .table td.align-middle {
-        vertical-align: middle; }
+    .table tr.align-middle td,
+    .table td.align-middle {
+        vertical-align: middle;
+    }
 
+    .table th,
+    .table td {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+
+    @media (min-width: 768px) {
         .table th,
         .table td {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05); 
+            padding: 11px;
         }
+    }
 
-
-        @media (min-width: 768px) {
-            .table th,
-            .table td {
-                padding: 11px;
-            }
+    @media (max-width: 768px) {
+        .table th,
+        .table td {
+            padding: 3px;
         }
-        @media (max-width: 768px) {
-            .table th,
-            .table td {
-                padding: 3px;
-            }
-            table th span{
-                width: 55px;
-                display: block;
-
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-        }
-            
-        th:first-child,
-        td:first-child {
-            padding-left: 0; }
-        th:last-child,
-        td:last-child {
-            padding-right: 0; }
-
-        .table tfoot th,
-        .table tfoot td {
-        color: rgba(49, 52, 57, 0.5); }
-
-        table.table.bordered td,
-        table.table.bordered th {
-        border: 1px solid rgba(0, 0, 0, 0.05); }
-
-        table.table.striped tr:nth-child(odd) td {
-        background: #f8f8f8; }
-
-        table.table.bordered td:first-child,
-        table.table.bordered th:first-child,
-        table.table.striped td:first-child,
-        table.table.striped th:first-child {
-        padding-left: 1rem; }
-
-        table.table.bordered td:last-child,
-        table.table.bordered th:last-child,
-        table.table.striped td:last-child,
-        table.table.striped th:last-child {
-        padding-right: 1rem; }
-
-        table.table.unstyled td,
-        table.table.unstyled th {
-        border: none;
-        padding: 0; 
-        }
-
-        .icon-nav-cad {
+        table th span {
+            width: 55px;
             display: block;
-            background: url('../assets/img/logo-cad.svg') no-repeat center/100%;
-            width: 30px;
-            height: 27px;
-            margin: 0 auto;;
-        }
-        
 
-        @media (min-width: 768px) {
-            .xxe {
-                padding: 24px 32px 15px;
-            }
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-        @media (max-width: 768px) {
-            .xxe {
-                padding: 20px 0 0 0 !important;
-            }
-            .bbb {
-                margin-right: 32px !important;
-            }
+    }
+
+    th:first-child,
+    td:first-child {
+        padding-left: 0;
+    }
+
+    th:last-child,
+    td:last-child {
+        padding-right: 0;
+    }
+
+    .table tfoot th,
+    .table tfoot td {
+        color: rgba(49, 52, 57, 0.5);
+    }
+
+    table.table.bordered td,
+    table.table.bordered th {
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    table.table.striped tr:nth-child(odd) td {
+        background: #f8f8f8;
+    }
+
+    table.table.bordered td:first-child,
+    table.table.bordered th:first-child,
+    table.table.striped td:first-child,
+    table.table.striped th:first-child {
+        padding-left: 1rem;
+    }
+
+    table.table.bordered td:last-child,
+    table.table.bordered th:last-child,
+    table.table.striped td:last-child,
+    table.table.striped th:last-child {
+        padding-right: 1rem;
+    }
+
+    table.table.unstyled td,
+    table.table.unstyled th {
+        border: none;
+        padding: 0;
+    }
+
+    .icon-nav-cad {
+        display: block;
+        background: url('../assets/img/logo-cad.svg') no-repeat center/100%;
+        width: 30px;
+        height: 27px;
+        margin: 0 auto;
+        ;
+    }
+
+
+    @media (min-width: 768px) {
+        .reponsiveXxe {
+            padding: 24px 32px 15px;
         }
+    }
 
-        
-
+    @media (max-width: 768px) {
+        .reponsiveXxe {
+            padding: 20px 0 0 0 !important;
+        }
+        .bbb {
+            margin-right: 32px !important;
+        }
+    }
 </style>
 
 <div class="grid fixed">
 
-  <div class="row spacep">
-    <div class="column column-6">
-      <h3 class="page-title" style="margin-top:30px;margin-bottom:10px">
-        <img src="/assets/img/logo.svg" alt="" width="35px" style="vertical-align: middle; margin-left: 11px;margin-right: 5px;top: -2px;position: relative">
-        Finalizar sua Compra
-      </h3>
+    <div class="row spacep">
+        <div class="column column-6">
+            <h3 class="page-title" style="margin-top:30px;margin-bottom:10px">
+                <img src="/assets/img/logo.svg" alt="" width="35px" style="vertical-align: middle; margin-left: 11px;margin-right: 5px;top: -2px;position: relative">                Finalizar sua Compra
+            </h3>
+        </div>
+        <div class="column column-5 push-bottom text-right">
+            <a href="/shop/bag.html">
+                <button class="button warn" style="margin-bottom: 17px;">
+                    <img src="/assets/img/icon/bag-warn.svg" style="vertical-align: middle; width: 20px;" alt="">
+                    Voltar para Sacola
+                </button>
+            </a>
+        </div>
     </div>
-    <div class="column column-5 push-bottom text-right">
-        
-        <a href="/shop/bag.html">
-        
-            <button class="button warn" style="margin-bottom: 17px;">
-                <img src="/assets/img/icon/bag-warn.svg" style="vertical-align: middle; width: 20px;" alt="">
-                Voltar para Sacola
-            </button>
-        
-        </a>
+
+    <div class="row align-center">
+        <div class="column column-10">
+
+            <div id="collapse-checkout" class="collapse hide" style="margin-bottom:10px">
 
 
-      <!--<h4 class="page-title" style="margin-top:30px;margin-bottom:10px">
-      </h4>-->
-    </div>
-  </div>
+                <h4>
+                    <a class="collapse-toggle" rel="collapse-products">Produtos</a>
+                </h4>
+                <div class="collapse-box reponsiveXxe" id="collapse-products">
 
+                    <div class="row space">
+                        <div class="column column-12">
 
-  <div class="row align-center">
-    <div class="column column-10">
-
-
-
-        <div class="collapse" data-loaded="true" style="margin-bottom:10px">
-            
-            <h4>
-              <a class="collapse-toggle" rel="collapse-box-1">Produtos</a>
-            </h4>
-            <div class="collapse-box xxe" id="collapse-box-1">
-
-
-                <div class="row space">
-                    <div class="column column-12">
-
-
-                            <table class="table striped">
+                            <table id="table-checkout-products" class="table striped">
                                 <thead>
                                     <tr>
                                         <th></th>
@@ -177,9 +175,9 @@ title: Finalizar sua Compra
                                         <th class="text-right"><span>Valor Unitário</span></th>
                                         <th class="text-right"><span>Valor Total</span></th>
                                     </tr>
-                                </thead>            
+                                </thead>
                                 <tbody>
-                                    <tr>
+                                    <!--<tr>
                                         <td style="padding-left: 5px">
                                             <i class="icon-nav-cad"></i>
                                         </td>
@@ -195,7 +193,7 @@ title: Finalizar sua Compra
                                         <td class="text-right" style="width:90px;">
                                             <strong>R$ 1,00</strong>                        
                                         </td>
-                                    </tr>
+                                    </tr>-->
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -203,142 +201,101 @@ title: Finalizar sua Compra
                                             <strong>Valor Total</strong>
                                         </td>
                                         <td class="text-right">
-                                            <strong>R$ 1,00</strong>
+                                            <strong id="strong-total-amount">R$ 1,00</strong>
                                         </td>
                                     </tr>
-                                </tfoot>            
-
+                                </tfoot>
                             </table>
 
                             <div class="text-right">
-                                <button class="button success bbb" style="padding-left:15px;padding-right:15px;margin-top:25px;">
+                                <button id="button-checkout-products" class="button success bbb" style="padding-left:15px;padding-right:15px;margin-top:25px;">
                                     Continuar
                                 </button>
-                                
                             </div>
 
-
-
+                        </div>
                     </div>
+
                 </div>
 
 
+                <h4>
+                    <a class="collapse-toggle" rel="collapse-send">Informações de envio</a>
+                </h4>
+                <div class="collapse-box hide" id="collapse-send">
+
+                    <div class="row space">
+
+                        <div class="column column-6">
+
+                            <label>Documento (CPF)</label>
+                            <input id="text-user-documment" type="text">
+
+                            <!--
+                                <label>Nome da empresa (opcional)</label>
+                                <input id="text-user-send-company" type="text">
+                            -->
+
+                            <div class="row space">
+                                <div class="column column-4">
+                                    <label>DDD</label>
+                                    <input id="text-user-phone-code" type="text" value="">
+                                </div>
+                                <div class="column column-8">
+                                    <label>Número de telefone principal</label>
+                                    <input id="text-user-phone-number" type="text" value="">
+                                </div>
+                            </div>
 
 
-            </div>
-
-            <h4>
-              <a class="collapse-toggle" rel="collapse-box-2">Endereço de envio</a>
-            </h4>
-            <div class="collapse-box hide" id="collapse-box-2">
-
-
-                <div class="row space">
-
-                    <div class="column column-6">
-
-
-                            <label style="display: block">Tipo de Endereço</label>
-
-                            <div id="option-group-i18n" class="option-group" style="padding-right: 5px" data-selected="residential">
-
+                            <label style="display: block">Endereço de</label>
+                            <div id="option-address-type" class="option-group" data-selected="home">
                                 <img src="/assets/img/icon/type-residential.svg" style="vertical-align: middle; width: 20px" alt="">
-                                <strong>Residencial</strong>
-
+                                <strong>Casa</strong>
                                 <div class="menu right">
-
                                     <div class="content">
                                         <ul class="option">
-                                            <li data-value="residential">
+                                            <li data-value="home">
                                                 <img src="/assets/img/icon/type-residential.svg" style="vertical-align: middle; width: 20px" alt="">
-                                                <span>Residencial</span>
+                                                <span>Casa</span>
                                             </li>
-                                            <li data-value="commercial">
+                                            <li data-value="work">
                                                 <img src="/assets/img/icon/type-commercial.svg" style="vertical-align: middle; width: 20px" alt="">
-                                                <span>Comercial</span>
+                                                <span>Trabalho</span>
                                             </li>
                                         </ul>
                                     </div>
-
                                 </div>
-
                             </div>
 
-                            <label>Nome</label>
-                            <input id="text-user-signup-first-name" type="text" value="">
-
-                            <label>Sobrenome</label>
-                            <input id="text-user-signup-last-name" type="text" name="" value="">
-
-                            <label>Nome da empresa (opcional)</label>
-                            <input id="text-user-signup-last-name" type="text" name="" value="">
-
-                            <label>CPF</label>
-                            <input id="text-user-signup-last-name" type="text" name="" value="">
-
-
-                            <div class="row space">
-
-                                <div class="column column-8">
-
-                                    <label>DDD</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
-
-                                </div>
-                                <div class="column column-4">
-
-                                    <label>Número de telefone principal</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
-
-                                </div>
-
-                            </div>                            
-
-
                             <label>Logradouro</label>
-                            <input id="text-user-signup-last-name" type="text" name="" value="">
+                            <input id="text-address-street" type="text">
 
                             <label>Complemento</label>
-                            <input id="text-user-signup-last-name" type="text" name="" value="">
+                            <input id="text-address-complement" type="text">
 
                             <div class="row space">
-
-                                <div class="column column-4">
-
-                                    <label>Bairro</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
-
-
-                                </div>
                                 <div class="column column-8">
-
-                                    <label>CEP</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
-
-
+                                    <label>Bairro</label>
+                                    <input id="text-address-district" type="text">
                                 </div>
-
-                            </div>                            
-
+                                <div class="column column-4">
+                                    <label>CEP</label>
+                                    <input id="text-address-zipcode" type="text">
+                                </div>
+                            </div>
 
                             <div class="row space">
-
                                 <div class="column column-6">
-
                                     <label>Cidade/Município</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
-
+                                    <input id="text-address-city" type="text">
                                 </div>
+
                                 <div class="column column-6">
-
                                     <label>Estado</label>
-
-                                    <div id="option-group-i18n" class="option-group width-100 text-center" style="padding-right: 5px" data-selected="">
-
+                                    <div id="option-address-state" class="option-group width-100 text-center" data-selected="">
                                         <strong>Selecione</strong>
-
                                         <div class="menu right">
-
                                             <div class="content">
                                                 <ul class="option">
                                                     <li data-value="AC">
@@ -430,547 +387,450 @@ title: Finalizar sua Compra
                                                     </li>
                                                 </ul>
                                             </div>
-
                                         </div>
-
                                     </div>
-
-
-
-
-
-
-
                                 </div>
-
-                            </div>                            
-
+                            </div>
 
 
-
-                    </div>
-                    <div class="column column-5 offset-1 ">
-
-                        <style>
-                            .list-link>li{
-                                margin-bottom: 15px;
-                                list-style-position: inside;
-                                list-style-type: square;
-                                font-size: 12px;
-                            }
-                        </style>
-
-                        <p>
-                            <strong>Política de Envio da C37</strong> | <strong><a href="#">Saiba mais</a></strong>
-                        </p>
-
-                        <ul class="list-link">
-                            <li>
-                                <span>Sua assinatura será solicitada para entrega</span>
-                            </li>
-                            <li>
-                                <span>Não fazemos entregas para caixas postais</span>
-                            </li>
-                            <li>
-                                <span>O tempo estimado de entrega inclui o tempo de preparação do produto e o tempo de envio</span>
-                            </li>
-                            <li>
-                                <span>
+                        </div>
+                        <div class="column column-5 offset-1 ">
+                            <p>
+                                <strong>Política de Envio da C37</strong> | <strong><a href="#">Saiba mais</a></strong>
+                            </p>
+                            <ul class="square-inside smaller">
+                                <li>
+                                    <span>Sua assinatura será solicitada para entrega</span>
+                                </li>
+                                <li>
+                                    <span>Não fazemos entregas para caixas postais</span>
+                                </li>
+                                <li>
+                                    <span>O tempo estimado de entrega inclui o tempo de preparação do produto e o tempo de envio</span>
+                                </li>
+                                <li>
+                                    <span>
                                     Informamos que entidades legais/pessoas jurídicas que são contributes de ICMS (aquelas que possuem Inscrição Estadual) podem estar sujeitas ao pagamento de valores adicionais de ICMS dependendo do Estado de destino da mercadoria. Por favor, verifique com o seu consultor tributário ou contador para evitar responsabilidades fiscais adicionais.
                                 </span>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
+                        </div>
 
+                    </div>
 
+                    <div class="text-right">
+                        <button id="button-checkout-address-send" class="button success" style="padding-left:15px;padding-right:15px;margin-top:25px;">
+                            Continuar
+                        </button>
                     </div>
 
                 </div>
 
 
+                <h4>
+                    <a class="collapse-toggle" rel="collapse-payment">Pagamento</a>
+                </h4>
+                <div class="collapse-box hide" id="collapse-payment">
 
+                    <div class="row space">
 
+                        <div class="column column-6">
+                            <div id="payment-credit-card" class="">
 
-              <div class="text-right">
-                <button class="button success" style="padding-left:15px;padding-right:15px;margin-top:25px;">
-                    Continuar
-                </button>
-                
-              </div>
+                                <style>
+                                    .card {
+                                        background: url(/assets/img/sprite-cards.png) no-repeat 0 -100px;
+                                        background-size: 1480px 31px;
+                                        display: inline-block;
+                                        position: static !important;
+                                        text-indent: -5000em;
+                                    }
 
+                                    .card {
+                                        height: 30px;
+                                        width: 59px;
+                                    }
 
+                                    .card.visa {
+                                        background-position: 0 0;
+                                    }
 
+                                    .card.mastercard {
+                                        background-position: -55px 0;
+                                    }
 
+                                    .card.american-express {
+                                        background-position: -110px 0;
+                                    }
+                                </style>
 
+                                <p>
+                                    <strong>Método de Pagamento</strong>
+                                </p>
 
+                                <ul>
+                                    <li class="card visa"></li>
+                                    <li class="card mastercard"></li>
+                                    <li class="card american-express"></li>
+                                </ul>
 
-            </div>
+                                <label>Nome impresso no cartão</label>
+                                <input id="text-user-credit-card-name" type="text">
 
-            <h4>
-              <a class="collapse-toggle" rel="collapse-box-3">Pagamento</a>
-            </h4>
-            <div class="collapse-box hide" id="collapse-box-3">
-
-
-                <div class="row align-center" style="margin-bottom: 11px">
-
-                    <div class="column column-5">
-
-                    <div id="checkbox-probe-mode" class="button checkbox horizontal" data-selected="credit-card">
-                        <button id="button-probe-mode-explore" class="button text-center" data-value="credit-card" data-i18n="[data-hint-title]controls.box.footer.explore-level-material.explore.hint.title;[data-hint-text]controls.box.footer.explore-level-material.explore.hint.text">
-                            <img src="/assets/img/icon/credit-card.svg" style="vertical-align: middle; width: 18px" alt="">
-                            <span>Cartão de crédito</span>
-                        </button>
-                        <button id="button-probe-mode-level" class="button text-center" data-value="ticket" data-i18n="[data-hint-title]controls.box.footer.explore-level-material.level.hint.title;[data-hint-text]controls.box.footer.explore-level-material.level.hint.text">
-                            <img src="/assets/img/icon/ticket.svg" style="vertical-align: middle; width: 18px" alt="">
-                            <span>Boleto</span>
-                        </button>
-                    </div>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="row space">
-
-                    <div class="column column-6">
-
-                        <p>
-                            <strong>Contato para cobrança</strong> | <small><strong><a href="#">As mesmas informações de envio</a></strong></small>
-                        </p>
-
-
-                            <label>Nome</label>
-                            <input id="text-user-signup-first-name" type="text" value="">
-
-                            <label>Sobrenome</label>
-                            <input id="text-user-signup-last-name" type="text" name="" value="">
-
-                            <label>Nome da empresa (opcional)</label>
-                            <input id="text-user-signup-last-name" type="text" name="" value="">
-
-                            <div class="row space">
-
-                                <div class="column column-4">
-
-                                    <label>DDD</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
-
-                                </div>
-                                <div class="column column-8">
-
-                                    <label>Número de telefone principal</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
-
+                                <div class="row space">
+                                    <div class="column column-7">
+                                        <label>Número do cartão</label>
+                                        <input id="text-user-credit-card-number" type="text">
+                                    </div>
+                                    <div class="column column-5">
+                                        <label>Código de segurança</label>
+                                        <input id="text-user-credit-card-code" type="text">
+                                    </div>
                                 </div>
 
-                            </div>                            
 
-                            <label>Endereço de e-mail</label>
-                            <input id="text-user-signup-last-name" type="email" name="" value="">
+                                <label>Vencimento</label>
 
-                            <br>
-                            <br>
-
-                        <p>
-                            <strong>Endereço de cobrança</strong> | <small><strong><a href="#">As mesmas informações de envio</a></strong></small>
-                        </p>
-
-
-                            <label>Logradouro</label>
-                            <input id="text-user-signup-last-name" type="text" name="" value="">
-
-                            <label>Complemento</label>
-                            <input id="text-user-signup-last-name" type="text" name="" value="">
-
-                            <div class="row space">
-
-                                <div class="column column-8">
-
-                                    <label>Bairro</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
-
-
+                                <div id="option-user-credit-card-month" class="option-group" data-selected="">
+                                    <strong>Mês</strong>
+                                    <div class="menu left" style="width: 65px">
+                                        <div class="content">
+                                            <ul class="option">
+                                                <li data-value="01">
+                                                    <span>01</span>
+                                                </li>
+                                                <li data-value="02">
+                                                    <span>02</span>
+                                                </li>
+                                                <li data-value="03">
+                                                    <span>03</span>
+                                                </li>
+                                                <li data-value="04">
+                                                    <span>04</span>
+                                                </li>
+                                                <li data-value="05">
+                                                    <span>05</span>
+                                                </li>
+                                                <li data-value="06">
+                                                    <span>06</span>
+                                                </li>
+                                                <li data-value="07">
+                                                    <span>07</span>
+                                                </li>
+                                                <li data-value="08">
+                                                    <span>08</span>
+                                                </li>
+                                                <li data-value="09">
+                                                    <span>09</span>
+                                                </li>
+                                                <li data-value="10">
+                                                    <span>10</span>
+                                                </li>
+                                                <li data-value="11">
+                                                    <span>11</span>
+                                                </li>
+                                                <li data-value="12">
+                                                    <span>12</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="column column-4">
 
-                                    <label>CEP</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
+                                <div id="option-user-credit-card-year" class="option-group" data-selected="">
+                                    <strong>Ano</strong>
+                                    <div class="menu left" style="width: 70px">
+                                        <div class="content">
 
-
-                                </div>
-
-                            </div>                            
-
-
-                            <div class="row space">
-
-                                <div class="column column-6">
-
-                                    <label>Cidade/Município</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
-
-                                </div>
-                                <div class="column column-6">
-
-                                    <label>Estado</label>
-
-                                    <div id="option-group-i18n" class="option-group width-100 text-center" style="padding-right: 5px" data-selected="">
-
-                                        <strong>Selecione</strong>
-
-                                        <div class="menu right">
-
-                                            <div class="content">
-                                                <ul class="option">
-                                                    <li data-value="AC">
-                                                        <span>Acre</span>
-                                                    </li>
-                                                    <li data-value="AL">
-                                                        <span>Alagoas</span>
-                                                    </li>
-                                                    <li data-value="AP">
-                                                        <span>Amapá</span>
-                                                    </li>
-                                                    <li data-value="AM">
-                                                        <span>Amazonas</span>
-                                                    </li>
-                                                    <li data-value="BA">
-                                                        <span>Bahia</span>
-                                                    </li>
-                                                    <li data-value="CE">
-                                                        <span>Ceará</span>
-                                                    </li>
-                                                    <li data-value="DF">
-                                                        <span>Distrito Federal</span>
-                                                    </li>
-                                                    <li data-value="ES">
-                                                        <span>Espírito Santo</span>
-                                                    </li>
-                                                    <li data-value="GO">
-                                                        <span>Goiás</span>
-                                                    </li>
-                                                    <li data-value="MA">
-                                                        <span>Maranhão</span>
-                                                    </li>
-                                                    <li data-value="MT">
-                                                        <span>Mato Grosso</span>
-                                                    </li>
-                                                    <li data-value="MS">
-                                                        <span>Mato Grosso do Sul</span>
-                                                    </li>
-                                                    <li data-value="MG">
-                                                        <span>Minas Gerais</span>
-                                                    </li>
-                                                    <li data-value="PA">
-                                                        <span>Pará</span>
-                                                    </li>
-                                                    <li data-value="PB">
-                                                        <span>Paraíba</span>
-                                                    </li>
-                                                    <li data-value="PR">
-                                                        <span>Paraná</span>
-                                                    </li>
-                                                    <li data-value="PE">
-                                                        <span>Pernambuco</span>
-                                                    </li>
-                                                    <li data-value="PI">
-                                                        <span>Piauí</span>
-                                                    </li>
-                                                    </li>
-                                                    <li data-value="RJ">
-                                                        <span>Rio de Janeiro</span>
-                                                    </li>
-                                                    </li>
-                                                    <li data-value="RN">
-                                                        <span>Rio Grande do Norte</span>
-                                                    </li>
-                                                    </li>
-                                                    <li data-value="RS">
-                                                        <span>Rio Grande do Sul</span>
-                                                    </li>
-                                                    </li>
-                                                    <li data-value="RO">
-                                                        <span>Rondônia</span>
-                                                    </li>
-                                                    </li>
-                                                    <li data-value="RR">
-                                                        <span>Roraima</span>
-                                                    </li>
-                                                    </li>
-                                                    <li data-value="SC">
-                                                        <span>Santa Catarina</span>
-                                                    </li>
-                                                    <li data-value="SP">
-                                                        <span>São Paulo</span>
-                                                    </li>
-                                                    <li data-value="SE">
-                                                        <span>Sergipe</span>
-                                                    </li>
-                                                    <li data-value="TO">
-                                                        <span>Tocantins</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                            <ul class="option">
+                                                <li data-value="2017">
+                                                    <span>2017</span>
+                                                </li>
+                                                <li data-value="2018">
+                                                    <span>2018</span>
+                                                </li>
+                                                <li data-value="2019">
+                                                    <span>2019</span>
+                                                </li>
+                                                <li data-value="2020">
+                                                    <span>2020</span>
+                                                </li>
+                                                <li data-value="2021">
+                                                    <span>2021</span>
+                                                </li>
+                                                <li data-value="2022">
+                                                    <span>2022</span>
+                                                </li>
+                                                <li data-value="2023">
+                                                    <span>2023</span>
+                                                </li>
+                                                <li data-value="2024">
+                                                    <span>2024</span>
+                                                </li>
+                                                <li data-value="2025">
+                                                    <span>2025</span>
+                                                </li>
+                                                <li data-value="2026">
+                                                    <span>2026</span>
+                                                </li>
+                                                <li data-value="2027">
+                                                    <span>2027</span>
+                                                </li>
+                                                <li data-value="2028">
+                                                    <span>2028</span>
+                                                </li>
+                                                <li data-value="2029">
+                                                    <span>2029</span>
+                                                </li>
+                                                <li data-value="2030">
+                                                    <span>2030</span>
+                                                </li>
+                                                <li data-value="2031">
+                                                    <span>2031</span>
+                                                </li>
+                                                <li data-value="2032">
+                                                    <span>2032</span>
+                                                </li>
+                                                <li data-value="2033">
+                                                    <span>2033</span>
+                                                </li>
+                                                <li data-value="2034">
+                                                    <span>2034</span>
+                                                </li>
+                                                <li data-value="2035">
+                                                    <span>2035</span>
+                                                </li>
+                                                <li data-value="2036">
+                                                    <span>2036</span>
+                                                </li>
+                                                <li data-value="2037">
+                                                    <span>2037</span>
+                                                </li>
+                                            </ul>
 
                                         </div>
-
                                     </div>
-
-
                                 </div>
 
-                            </div>                            
 
+                            </div>
+                        </div>
 
+                        <div class="column column-6">
+                            <p>
+                                <strong>Importante</strong>
+                            </p>
+                            <p class="small">
+                                Mesmo no caso de pagamento em várias parcelas de pequeno valor, lembre-se que o valor total da compra não pode
+                                exceder o limite de seu cartão. Esta é a regra de aprovação adotada pelas administradoras
+                                de cartão de crédito. Para sua segurança, as informações de crédito poderão passar por uma
+                                análise interna sujeita à confirmação via contato telefônico ou e-mail.
 
+                            </p>
+                        </div>
 
                     </div>
-                    <div class="column column-6">
 
-
-                        <div id="payment-credit-card" class="">
-
-                            <style>
-
-                                .card{
-                                    background: url(/assets/img/sprite-cards.png) no-repeat 0 -100px;
-                                    background-size: 1480px 31px;
-                                    display: inline-block;
-                                    position: static !important;
-                                    text-indent: -5000em;
-                                }
-                                .card {
-                                    height: 30px;
-                                    width: 59px;
-                                }                            
-                                .card.visa{
-                                    background-position: 0 0;
-                                }
-                                .card.mastercard{
-                                    background-position: -55px 0;
-                                }
-                                .card.american-express{
-                                    background-position: -110px 0;
-                                }
-
-                            </style>
-
-
-                            <p>
-                                <strong>Método de Pagamento</strong>
-                            </p>
-
-                            <ul>
-                                <li class="card visa"></li>
-                                <li class="card mastercard"></li>
-                                <li class="card american-express"></li>
-                            </ul>
-
-                            <div class="row space">
-                                <div class="column column-7">
-                                    <label>Número do cartão</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
-                                </div>
-                                <div class="column column-5">
-                                    <label>Código de segurança</label>
-                                    <input id="text-user-signup-last-name" type="text" name="" value="">
-                                </div>
-                            </div>
-
-                            <label>Vencimento</label>
-
-                            <div id="option-group-i18n" class="option-group" style="padding-right: 5px" data-selected="">
-
-                                <strong>Mês</strong>
-
-                                <div class="menu right">
-
-                                    <div class="content">
-                                        <ul class="option">
-                                            <li data-value="01">
-                                                <span>01</span>
-                                            </li>
-                                            <li data-value="02">
-                                                <span>02</span>
-                                            </li>
-                                            <li data-value="03">
-                                                <span>03</span>
-                                            </li>
-                                            <li data-value="04">
-                                                <span>04</span>
-                                            </li>
-                                            <li data-value="05">
-                                                <span>05</span>
-                                            </li>
-                                            <li data-value="06">
-                                                <span>06</span>
-                                            </li>
-                                            <li data-value="07">
-                                                <span>07</span>
-                                            </li>
-                                            <li data-value="08">
-                                                <span>08</span>
-                                            </li>
-                                            <li data-value="09">
-                                                <span>09</span>
-                                            </li>
-                                            <li data-value="10">
-                                                <span>10</span>
-                                            </li>
-                                            <li data-value="11">
-                                                <span>11</span>
-                                            </li>
-                                            <li data-value="12">
-                                                <span>12</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div id="option-group-i18n" class="option-group" style="padding-right: 5px" data-selected="">
-
-                                <strong>Ano</strong>
-
-                                <div class="menu right">
-
-                                    <div class="content">
-                                        <ul class="option">
-                                            <li data-value="2017">
-                                                <span>2017</span>
-                                            </li>
-                                            <li data-value="2018">
-                                                <span>2018</span>
-                                            </li>
-                                            <li data-value="2019">
-                                                <span>2019</span>
-                                            </li>
-                                            <li data-value="2020">
-                                                <span>2020</span>
-                                            </li>
-                                            <li data-value="2021">
-                                                <span>2021</span>
-                                            </li>
-                                            <li data-value="2022">
-                                                <span>2022</span>
-                                            </li>
-                                            <li data-value="2023">
-                                                <span>2023</span>
-                                            </li>
-                                            <li data-value="2024">
-                                                <span>2024</span>
-                                            </li>
-                                            <li data-value="2025">
-                                                <span>2025</span>
-                                            </li>
-                                            <li data-value="2026">
-                                                <span>2026</span>
-                                            </li>
-                                            <li data-value="2027">
-                                                <span>2027</span>
-                                            </li>
-                                            <li data-value="2028">
-                                                <span>2028</span>
-                                            </li>
-                                            <li data-value="2029">
-                                                <span>2029</span>
-                                            </li>
-                                            <li data-value="2030">
-                                                <span>2030</span>
-                                            </li>
-                                            <li data-value="2031">
-                                                <span>2031</span>
-                                            </li>
-                                            <li data-value="2032">
-                                                <span>2032</span>
-                                            </li>
-                                            <li data-value="2033">
-                                                <span>2033</span>
-                                            </li>
-                                            <li data-value="2034">
-                                                <span>2034</span>
-                                            </li>
-                                            <li data-value="2035">
-                                                <span>2035</span>
-                                            </li>
-                                            <li data-value="2036">
-                                                <span>2036</span>
-                                            </li>
-                                            <li data-value="2037">
-                                                <span>2037</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                        <div id="payment-ticket" class="hide">
-
-                            <p class="small">
-                                Receba um desconto de <strong>-5%</strong> ao pagar com Boleto Bancário.
-                            </p>
-
-                            <p class="small">
-                                Assim que você finalizar seu pedido, um boleto será emitido para possibilitar o pagamento. Aguarde até 3 dias úteis para o processamento do pagamento. Após recebermos seu pagamento, enviaremos os detalhes da estimativa de entrega.
-                            </p>
-
-                        </div>
-
-
-
-
-
+                    <div class="text-right">
+                        <button id="button-checkout-payment" class="button success" style="padding-left:15px;padding-right:15px">
+                            Concluir sua compra
+                        </button>
                     </div>
 
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <div class="text-right">
-
-                <a href="/shop/order.html" >
-                    <button class="button success" style="padding-left:15px;padding-right:15px">
-                            Concluir sua compra
-                    </button>
-                </a>
-
-
-
-              </div>
-
 
 
             </div>
 
         </div>
-
-
-
-
     </div>
-  </div>
-
 
 </div>
+
+
+
+
+
+<!--<div class="row align-center" style="margin-bottom: 11px">
+
+<div class="column column-5">
+
+    <div id="checkbox-probe-mode" class="button checkbox horizontal" data-selected="credit-card">
+        <button id="button-probe-mode-explore" class="button text-center" data-value="credit-card" data-i18n="[data-hint-title]controls.box.footer.explore-level-material.explore.hint.title;[data-hint-text]controls.box.footer.explore-level-material.explore.hint.text">
+            <img src="/assets/img/icon/credit-card.svg" style="vertical-align: middle; width: 18px" alt="">
+            <span>Cartão de crédito</span>
+        </button>
+        <button id="button-probe-mode-level" class="button text-center" data-value="ticket" data-i18n="[data-hint-title]controls.box.footer.explore-level-material.level.hint.title;[data-hint-text]controls.box.footer.explore-level-material.level.hint.text">
+            <img src="/assets/img/icon/ticket.svg" style="vertical-align: middle; width: 18px" alt="">
+            <span>Boleto</span>
+        </button>
+    </div>
+
+</div>
+
+</div>-->
+
+<!--<div id="payment-ticket" class="hide">
+
+    <p class="small">
+        Receba um desconto de <strong>-5%</strong> ao pagar com Boleto Bancário.
+    </p>
+
+    <p class="small">
+        Assim que você finalizar seu pedido, um boleto será emitido para possibilitar o pagamento. Aguarde até 3 dias úteis para
+        o processamento do pagamento. Após recebermos seu pagamento, enviaremos os detalhes da
+        estimativa de entrega.
+    </p>
+
+</div>-->
+
+<!--
+<div class="column column-6">
+
+    <p>
+        <strong>Endereço de cobrança</strong> | <small><strong><a href="#">As mesmas informações de envio</a></strong></small>
+    </p>
+
+    <label>Logradouro</label>
+    <input id="text-user-address-payment-street" type="text" value="">
+
+    <label>Complemento</label>
+    <input id="text-user-address-payment-complement" type="text">
+
+    <div class="row space">
+
+        <div class="column column-8">
+
+            <label>Bairro</label>
+            <input id="text-user-address-payment-district" type="text">
+
+        </div>
+        <div class="column column-4">
+
+            <label>CEP</label>
+            <input id="text-user-address-payment-zipcode" type="text">
+
+        </div>
+
+    </div>
+
+    <div class="row space">
+
+        <div class="column column-6">
+
+            <label>Cidade/Município</label>
+            <input id="text-user-address-payment-city" type="text">
+
+        </div>
+        <div class="column column-6">
+
+            <label>Estado</label>
+
+            <div id="option-address-payment-state" class="option-group width-100 text-center" style="padding-right: 5px" data-selected="">
+
+                <strong>Selecione</strong>
+
+                <div class="menu right">
+
+                    <div class="content">
+                        <ul class="option">
+                            <li data-value="AC">
+                                <span>Acre</span>
+                            </li>
+                            <li data-value="AL">
+                                <span>Alagoas</span>
+                            </li>
+                            <li data-value="AP">
+                                <span>Amapá</span>
+                            </li>
+                            <li data-value="AM">
+                                <span>Amazonas</span>
+                            </li>
+                            <li data-value="BA">
+                                <span>Bahia</span>
+                            </li>
+                            <li data-value="CE">
+                                <span>Ceará</span>
+                            </li>
+                            <li data-value="DF">
+                                <span>Distrito Federal</span>
+                            </li>
+                            <li data-value="ES">
+                                <span>Espírito Santo</span>
+                            </li>
+                            <li data-value="GO">
+                                <span>Goiás</span>
+                            </li>
+                            <li data-value="MA">
+                                <span>Maranhão</span>
+                            </li>
+                            <li data-value="MT">
+                                <span>Mato Grosso</span>
+                            </li>
+                            <li data-value="MS">
+                                <span>Mato Grosso do Sul</span>
+                            </li>
+                            <li data-value="MG">
+                                <span>Minas Gerais</span>
+                            </li>
+                            <li data-value="PA">
+                                <span>Pará</span>
+                            </li>
+                            <li data-value="PB">
+                                <span>Paraíba</span>
+                            </li>
+                            <li data-value="PR">
+                                <span>Paraná</span>
+                            </li>
+                            <li data-value="PE">
+                                <span>Pernambuco</span>
+                            </li>
+                            <li data-value="PI">
+                                <span>Piauí</span>
+                            </li>
+                            </li>
+                            <li data-value="RJ">
+                                <span>Rio de Janeiro</span>
+                            </li>
+                            </li>
+                            <li data-value="RN">
+                                <span>Rio Grande do Norte</span>
+                            </li>
+                            </li>
+                            <li data-value="RS">
+                                <span>Rio Grande do Sul</span>
+                            </li>
+                            </li>
+                            <li data-value="RO">
+                                <span>Rondônia</span>
+                            </li>
+                            </li>
+                            <li data-value="RR">
+                                <span>Roraima</span>
+                            </li>
+                            </li>
+                            <li data-value="SC">
+                                <span>Santa Catarina</span>
+                            </li>
+                            <li data-value="SP">
+                                <span>São Paulo</span>
+                            </li>
+                            <li data-value="SE">
+                                <span>Sergipe</span>
+                            </li>
+                            <li data-value="TO">
+                                <span>Tocantins</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+-->

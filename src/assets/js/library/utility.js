@@ -827,6 +827,15 @@
 
 
 
+
+    // http://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro
+    function htmlToElement(html) {
+        var template = document.createElement('template');
+        template.innerHTML = html;
+        return template.content.firstChild;
+    }
+
+
     // http://stackoverflow.com/questions/12487352/how-do-i-pause-and-resume-a-timer
     //    var clock = {
     //        totalSeconds: 0,
