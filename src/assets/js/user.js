@@ -14,7 +14,7 @@
                 });
 
                 document.querySelectorAll('.button-account').forEach(function (button) {
-                    button.querySelector('a').textContent = `${data[0]["first-name"]} ${data[0]["last-name"]}`;
+                    button.querySelector('a>span').textContent = `${data[0]["first-name"]} ${data[0]["last-name"]}`;
                     button.classList.remove('hide');
                 });
 
