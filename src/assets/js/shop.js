@@ -176,12 +176,12 @@
 
             // para o botao de continue em checkout - products
             document.getElementById('button-checkout-products').onclick = function () {
-                document.getElementById('collapse-checkout').setSelected('collapse-send');
+                document.getElementById('collapse-checkout').setSelected('collapse-address');
             }
             // para o botao de continue em checkout - products
 
-            // para o botao de continue em checkout - address send
-            document.getElementById('button-checkout-address-send').onclick = function () {
+            // para o botao de continue em checkout - address
+            document.getElementById('button-checkout-address').onclick = function () {
 
                 // removendo os requireds
                 document.getElementById('text-user-documment').classList.remove('required');
@@ -245,13 +245,13 @@
                 }
 
             }
-            // para o botao de continue em checkout - address send
+            // para o botao de continue em checkout - address
 
             // para o botao de continue em checkout - payment
             document.getElementById('button-checkout-payment').onclick = function () {
 
                 // atualizando a verificacao 
-                document.getElementById('button-checkout-address-send').click();
+                document.getElementById('button-checkout-address').click();
 
                 // esta atualmente validada?
                 if (_validationAddressSend) {
@@ -290,14 +290,66 @@
 
                     if (validation.length === 0) {
 
-                        var document = {};
 
-                        var address = {
+                        c37.library.database.operation.list('session', function (error, sessions) {
 
-                        };
+                            // a validacao para o usuario autenticado
+                            if (!error && sessions && Array.isArray(sessions) && sessions.length > 0) {
+
+                                // vou buscar a lista de produtos
+                                c37.library.database.operation.list('bag', function (error, products) {
+
+                                    // monto o pedido
+                                    var order = {
+                                        uuid: c37.library.utility.math.uuid(16, 16),
+                                        user: {
+                                            uuid: sessions[0].uuid,
+                                            document: {
+                                                type: 'CPF',
+                                                number: document.getElementById('text-user-documment').value
+                                            },
+                                        },
+                                        products: products,
+                                        address: {
+                                            type: document.getElementById('option-address-type').dataset.selected,
+                                            street: document.getElementById('text-address-street').value,
+                                            complement: document.getElementById('text-address-complement').value,
+                                            district: document.getElementById('text-address-district').value,
+                                            zipcode: document.getElementById('text-address-zipcode').value,
+                                            city: document.getElementById('text-address-city').value,
+                                            state: document.getElementById('option-address-state').value
+                                        },
+                                        payment: {
+                                            "credit-card": {
+                                                name: document.getElementById('text-user-credit-card-name').value,
+                                                number: document.getElementById('text-user-credit-card-number').value,
+                                                code: document.getElementById('text-user-credit-card-code').value,
+                                                validity: {
+                                                    month: document.getElementById('option-user-credit-card-month').dataset.selected,
+                                                    year: document.getElementById('option-user-credit-card-year').dataset.selected
+                                                }
+                                            }
+
+                                        }
+                                    };
 
 
 
+                                    console.log(order);
+
+
+
+
+
+                                });
+
+
+                            } else {
+                                c37.application.website.user.auth.show();
+                            }
+
+
+                        });
 
 
                     }

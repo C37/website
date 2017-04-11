@@ -116,6 +116,7 @@
                         var data = JSON.parse(data.text);
 
                         var session = {
+                            uuid: data.uuid,
                             email: signin.email,
                             "signed-in": signin.session["signed-in"]
                         };
@@ -124,6 +125,7 @@
                             if (!error) {
 
                                 var profile = {
+                                    uuid: data.uuid,
                                     email: signin.email,
                                     "first-name": data["first-name"],
                                     "last-name": data["last-name"]
