@@ -1,4 +1,4 @@
-/* 10/04/2017 00:35:59 */
+/* 11/04/2017 13:43:01 */
 /* global variables */
 /* global variables */
 /* global visual class */
@@ -25,10 +25,6 @@ body {
   margin: auto !important;
   line-height: 22px;
   padding: 0px;
-}
-body:not(header),
-body:not(footer) {
-  padding: 0px 5px;
 }
 p {
   display: block;
@@ -394,6 +390,24 @@ div.grid.fixed {
 }
 div.grid.fluid {
   width: 100%;
+}
+@media (min-width: 768px) {
+  div.grid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .show-mobile {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  div.grid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .hide-mobile {
+    display: none !important;
+  }
 }
 /* grid */
 /* row */

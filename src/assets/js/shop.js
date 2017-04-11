@@ -13,7 +13,7 @@
                 var product = {
                     // uuid: c37.library.utility.math.uuid(16, 16),
                     uuid: '182f2ded6d07ec4b',
-                    name: '	Assinatura C37 - CAD',
+                    name: 'Assinatura C37 - CAD',
                     value: 1.09,
                     quantity: 1
                 };
@@ -307,7 +307,7 @@
                                             document: {
                                                 type: 'CPF',
                                                 number: document.getElementById('text-user-documment').value
-                                            },
+                                            }
                                         },
                                         products: products,
                                         address: {
@@ -317,7 +317,7 @@
                                             district: document.getElementById('text-address-district').value,
                                             zipcode: document.getElementById('text-address-zipcode').value,
                                             city: document.getElementById('text-address-city').value,
-                                            state: document.getElementById('option-address-state').value
+                                            state: document.getElementById('option-address-state').dataset.selected
                                         },
                                         payment: {
                                             "credit-card": {
@@ -333,6 +333,29 @@
                                         }
                                     };
 
+
+                                    c37.library.utility.net.request({
+                                        method: "POST",
+                                        url: "https://us-central1-c37-account.cloudfunctions.net/order",
+                                        body: JSON.stringify(order)
+                                    }).then(data => {
+
+                                        console.log(data);
+
+
+                                        // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie ???
+                                        if (data.code === 201) {
+
+
+
+
+
+                                        }
+
+
+
+
+                                    });
 
 
                                     console.log(order);
