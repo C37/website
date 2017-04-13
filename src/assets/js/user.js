@@ -112,8 +112,8 @@
                     // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie ???
                     if (data.code === 200) {
 
-                        // console.log(JSON.parse(data.text))
-                        var data = JSON.parse(data.text);
+                        // console.log(JSON.parse(data.message))
+                        var data = JSON.parse(data.message);
 
                         var session = {
                             uuid: data.uuid,

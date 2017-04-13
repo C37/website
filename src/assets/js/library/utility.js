@@ -888,7 +888,7 @@
                 // https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
                 resolve({
                     code: xhr.status,
-                    text: xhr.response || xhr.responseText
+                    message: xhr.response || xhr.responseText
                 });
 
                 // if (xhr.status >= 200 && xhr.status < 300) {
@@ -969,7 +969,7 @@
                     url: "https://freegeoip.net/json/"
                 }).then(data => {
                     if (data.code === 200) {
-                        net.info.data = JSON.parse(data.text);
+                        net.info.data = JSON.parse(data.message);
                         // console.log(net.info.data)
                     }
                 });

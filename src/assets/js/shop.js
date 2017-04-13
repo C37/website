@@ -310,6 +310,7 @@
                                             }
                                         },
                                         products: products,
+                                        amount: document.getElementById('strong-total-amount').textContent.replace(/[^\d\.]/g, ''),
                                         address: {
                                             type: document.getElementById('option-address-type').dataset.selected,
                                             street: document.getElementById('text-address-street').value,
@@ -321,6 +322,7 @@
                                         },
                                         payment: {
                                             "credit-card": {
+                                                brand: "visa",
                                                 name: document.getElementById('text-user-credit-card-name').value,
                                                 number: document.getElementById('text-user-credit-card-number').value,
                                                 code: document.getElementById('text-user-credit-card-code').value,
@@ -341,6 +343,7 @@
                                     }).then(data => {
 
                                         console.log(data);
+                                        console.log(JSON.parse(data.message));
 
 
                                         // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie ???
@@ -380,7 +383,7 @@
 
                 } else {
                     // se nao estiver, votamos para o campo a ser preenchido
-                    document.getElementById('collapse-checkout').setSelected('collapse-send');
+                    document.getElementById('collapse-checkout').setSelected('collapse-address');
                 }
 
             }
@@ -484,6 +487,8 @@
         return totalAmount;
 
     }
+
+
 
 
 
