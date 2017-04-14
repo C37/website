@@ -35,3 +35,5 @@ category: instructions
 <br>
 
 <small style="float:right">para Andrea</small>
+
+2017.04.13 - migrar para HEXO - https://hexo.io/

@@ -37,8 +37,8 @@
         },
         database: {
             name: 'C37-WEBSITE',
-            debug: false,
-            version: 2,
+            debug: true,
+            version: 1,
             stores: {
                 settings: {
                     uuid: {
@@ -61,16 +61,12 @@
                         'index': false
                     }
                 },
-                profile: {
+                user: {
+                    uuid: {
+                        'type': 'string',
+                        'index': true
+                    },
                     email: {
-                        'type': 'string',
-                        'index': true
-                    },
-                    "first-name": {
-                        'type': 'string',
-                        'index': true
-                    },
-                    "last-name": {
                         'type': 'string',
                         'index': true
                     }
@@ -93,15 +89,11 @@
                         'index': false
                     }
                 },
-                address: {
-                    email: {
+                order: {
+                    uuid: {
                         'type': 'string',
                         'index': true
-                    },
-                    type: {
-                        'type': 'string',
-                        'index': true
-                    },
+                    }
                 }
             }
         }

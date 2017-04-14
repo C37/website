@@ -7,7 +7,7 @@
     function events() {
 
         // para o botao de assinatura de cad
-        if (document.URL.indexOf('cad') > 0) {
+        if (document.URL.indexOf('shop') === -1  && document.URL.indexOf('cad') > 0) {
             document.getElementById('button-cad-subscribe').onclick = function () {
 
                 var product = {
@@ -168,11 +168,8 @@
         }
         // para o carregar da pagina de bag
 
-
-
         // para o carregar da pagina de checkout
         if (document.URL.indexOf('shop') > 0 && document.URL.indexOf('checkout') > 0) {
-
 
             // para o botao de continue em checkout - products
             document.getElementById('button-checkout-products').onclick = function () {
@@ -290,23 +287,26 @@
 
                     if (validation.length === 0) {
 
-
-                        c37.library.database.operation.list('session', function (error, sessions) {
+                        c37.library.database.operation.list('user', function (error, users) {
 
                             // a validacao para o usuario autenticado
-                            if (!error && sessions && Array.isArray(sessions) && sessions.length > 0) {
+                            if (!error && users && Array.isArray(users) && users.length > 0) {
 
                                 // vou buscar a lista de produtos
                                 c37.library.database.operation.list('bag', function (error, products) {
 
                                     // monto o pedido
                                     var order = {
-                                        uuid: c37.library.utility.math.uuid(16, 16),
+                                        uuid: c37.library.utility.math.uuid(11, 16),
                                         user: {
-                                            uuid: sessions[0].uuid,
+                                            uuid: users[0].uuid,
                                             document: {
                                                 type: 'CPF',
                                                 number: document.getElementById('text-user-documment').value
+                                            },
+                                            phone: {
+                                                code: document.getElementById('text-user-phone-code').value,
+                                                number: document.getElementById('text-user-phone-number').value
                                             }
                                         },
                                         products: products,
@@ -334,7 +334,10 @@
 
                                         }
                                     };
+                                    // monto o pedido
 
+                                    document.getElementById('div-checkout-verify').classList.remove('hide');
+                                    document.getElementById('button-checkout-payment').classList.add('disabled');
 
                                     c37.library.utility.net.request({
                                         method: "POST",
@@ -342,33 +345,23 @@
                                         body: JSON.stringify(order)
                                     }).then(data => {
 
-                                        console.log(data);
-                                        console.log(JSON.parse(data.message));
-
-
                                         // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie ???
                                         if (data.code === 201) {
 
+                                            // limpamos a sacola
+                                            shop.bag.clear();
 
+                                            var order = JSON.parse(data.message);
 
-
+                                            c37.library.database.operation.add('order', order.uuid, order, function (error) {
+                                                window.location.href = "/shop/order.html#" + order.uuid;
+                                            });
 
                                         }
 
-
-
-
                                     });
 
-
-                                    console.log(order);
-
-
-
-
-
                                 });
-
 
                             } else {
                                 c37.application.website.user.auth.show();
@@ -376,7 +369,6 @@
 
 
                         });
-
 
                     }
 
@@ -465,7 +457,119 @@
         }
         // para o carregar da pagina de checkout
 
+        // para o carregar da pagina de order
+        if (document.URL.indexOf('shop') > 0 && document.URL.indexOf('order') > 0) {
+
+            var orderUuid = document.URL.split('#')[document.URL.split('#').length - 1];
+
+            if (orderUuid.length === 11) {
+
+                c37.library.database.operation.get('order', orderUuid, function (error, order) {
+                    if (!error && order) {
+
+                        console.log(order);
+
+                        // preenchendo o numero do pedido
+                        document.querySelectorAll('.span-order-number').forEach(function(element) {
+                            element.textContent = order.uuid;
+                        }, this);;
+
+                        // preenchendo os produtos que compoe o pedido
+                        order.products.forEach(function (product) {
+
+                            var trProduct = document.createElement('tr');
+
+                            var tdImg = document.createElement('td'),
+                                tdDescription = document.createElement('td'),
+                                tdQuantity = document.createElement('td'),
+                                tdValue = document.createElement('td'),
+                                tdTotalValue = document.createElement('td');
+
+                            var imgProduct = document.createElement('i'),
+                                spanDescription = document.createElement('span'),
+                                spantQuantity = document.createElement('span'),
+                                spanValue = document.createElement('span'),
+                                spanTotalValue = document.createElement('span');
+
+
+                            imgProduct.classList.add('icon-nav-cad');
+                            tdImg.setAttribute('style', 'padding-left: 5px');
+                            tdImg.appendChild(imgProduct);
+
+
+                            spanDescription.textContent = product.name;
+                            tdDescription.appendChild(spanDescription);
+
+
+                            spantQuantity.textContent = product.quantity;
+                            tdQuantity.classList.add('text-right');
+                            tdQuantity.appendChild(spantQuantity);
+
+
+                            spanValue.textContent = 'R$ ' + c37.library.utility.math.parseNumber(product.value, 2);
+                            tdValue.classList.add('text-right');
+                            tdValue.setAttribute('style', 'width:110px');
+                            tdValue.appendChild(spanValue);
+
+
+                            spanTotalValue.textContent = 'R$ ' + c37.library.utility.math.parseNumber(product.value * product.quantity, 2);
+                            tdTotalValue.classList.add('text-right');
+                            tdTotalValue.classList.add('total-value-product');
+                            tdTotalValue.setAttribute('style', 'width:110px');
+                            tdTotalValue.appendChild(spanTotalValue);
+
+
+                            trProduct.appendChild(tdImg);
+                            trProduct.appendChild(tdDescription);
+                            trProduct.appendChild(tdQuantity);
+                            trProduct.appendChild(tdValue);
+                            trProduct.appendChild(tdTotalValue);
+
+                            document.getElementById('table-order-products').querySelector('tbody').appendChild(trProduct);
+
+                        });
+
+                        calculeTotalAmount();
+
+
+                        document.getElementById('span-user-documment').textContent = order.user.document.number;
+                        document.getElementById('span-user-phone-code').textContent = order.user.phone.code;
+                        document.getElementById('span-user-phone-number').textContent = order.user.phone.number;
+
+                        document.getElementById('span-address-type').textContent = (order.address.type === 'home' ? 'Casa' : 'Trabalho');
+                        document.getElementById('span-address-street').textContent = order.address.street;
+                        document.getElementById('span-address-complement').textContent = order.address.complement;
+                        document.getElementById('span-address-district').textContent = order.address.district;
+                        document.getElementById('span-address-zipcode').textContent = order.address.zipcode;
+                        document.getElementById('span-address-city').textContent = order.address.city;
+                        document.getElementById('span-address-state').textContent = order.address.state;
+
+
+                        document.getElementById('span-user-credit-card-name').textContent = order.payment["credit-card"].name;
+                        document.getElementById('span-user-credit-card-number').textContent = order.payment["credit-card"].number;
+
+
+
+                        // apresento o numero do pedido e o pedido
+                        document.getElementById('div-order-number').classList.remove('hide');
+                        document.getElementById('div-order').classList.remove('hide');
+                        // apresento o numero do pedido e o pedido
+
+
+                    } else {
+                        window.location.href = "/shop/bag.html";
+                    }
+                });
+
+            } else {
+                window.location.href = "/shop/bag.html";
+            }
+
+        }
+        // para o carregar da pagina de order
+
     };
+
 
 
     // para o calculo to valor total da sacola
@@ -531,6 +635,17 @@
             remove: function (uuid) {
 
                 return delete _products[uuid];
+
+            },
+            clear: function () {
+
+                c37.library.database.operation.list('bag', function (error, products) {
+                    if (!error && Array.isArray(products) && products.length > 0) {
+                        products.forEach(function (product) {
+                            c37.library.database.operation.remove('bag', product.uuid);
+                        });
+                    }
+                });
 
             },
             list: function (callback) {

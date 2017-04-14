@@ -52,7 +52,7 @@ title: Seu Pedido
       }
 
         table th span{
-            width: 55px;
+            width: 50px;
             display: block;
 
             white-space: nowrap;
@@ -115,6 +115,10 @@ title: Seu Pedido
     }
       
 
+    h4 {
+      margin-top: 20px;
+    }
+
 </style>
 
 <div class="grid fixed">
@@ -126,56 +130,162 @@ title: Seu Pedido
         Seu Pedido
       </h3>
     </div>
-    <div class="column column-6 text-right">
-        <h3 style="margin-top:30px;margin-bottom:0px;padding-right:20px">Número - 5710827e9</h3>
+    <div class="column column-6 text-right hide" id="div-order-number">
+        <h3 style="margin-top:30px;margin-bottom:0px;padding-right:20px">Número - <span class="span-order-number">5710827e9</span></h3>
     </div>
   </div>
 
 
   <div class="row align-center">
     <div class="column column-10">
-        <table class="table striped">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th><span>Descrição</span></th>
-                    <th><span>Quantidade</span></th>
-                    <th class="text-right"><span>Valor Unitário</span></th>
-                    <th class="text-right"><span>Valor Total</span></th>
-                </tr>
-            </thead>            
-            <tbody>
-                <tr>
-                    <td style="padding-left: 5px">
-                        <i class="icon-nav-cad"></i>
-                    </td>
-                    <td>
-                        <span>Assinatura C37 - CAD</span> <small>Com renovação Mensal</small>
-                    </td>
-                    <td class="text-right" style="width:40px;">
-                        <span>1</span>
-                    </td>
-                    <td class="text-right" style="width:110px;">
-                        <span>R$ 1,00</span>
-                    </td>
-                    <td class="text-right" style="width:90px;">
-                        <strong>R$ 1,00</strong>                        
-                    </td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="4">
-                        <strong>Valor Total</strong>
-                    </td>
-                    <td class="text-right">
-                        <strong>R$ 1,00</strong>
-                    </td>
-                </tr>
-            </tfoot>            
 
-        </table>
+      <div id="div-order" class="hide">
 
+          <h4>Produtos</h4>
+
+          <table id="table-order-products" class="table striped">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th><span>Descrição</span></th>
+                      <th class="text-right"><span>Quantidade</span></th>
+                      <th class="text-right"><span>Valor Unitário</span></th>
+                      <th class="text-right"><span>Valor Total</span></th>
+                  </tr>
+              </thead>            
+              <tbody>
+                  <!--<tr>
+                      <td style="padding-left: 5px">
+                          <i class="icon-nav-cad"></i>
+                      </td>
+                      <td>
+                          <span>Assinatura C37 - CAD</span> <small>Com renovação Mensal</small>
+                      </td>
+                      <td class="text-right" style="width:40px;">
+                          <span>1</span>
+                      </td>
+                      <td class="text-right" style="width:110px;">
+                          <span>R$ 1,00</span>
+                      </td>
+                      <td class="text-right" style="width:90px;">
+                          <strong>R$ 1,00</strong>                        
+                      </td>
+                  </tr>-->
+              </tbody>
+              <tfoot>
+                  <tr>
+                      <td colspan="4">
+                          <strong>Valor Total</strong>
+                      </td>
+                      <td class="text-right">
+                      <strong id="strong-total-amount">R$ 1,00</strong>
+                      </td>
+                  </tr>
+              </tfoot>            
+          </table>
+
+
+          <div class="row space">
+
+            <div class="column column-6">
+
+                <h4>Informações de envio</h4>
+
+                <label for=""><strong>Documento</strong></label>
+                <span id="span-user-documment">&nbsp;</span>
+
+                <div class="row space">
+                    <div class="column column-4">
+                        <label><strong>DDD</strong></label>
+                        <span id="span-user-phone-code">&nbsp;</span>
+                    </div>
+                    <div class="column column-8">
+                        <label><strong>Número de telefone principal</strong></label>
+                        <span id="span-user-phone-number">&nbsp;</span>
+                    </div>
+                </div>
+
+                <label style="display: block"><strong>Endereço de</strong></label>
+                <span id="span-address-type">&nbsp;</span>
+
+                <label style="display: block"><strong>Logradouro</strong></label>
+                <span id="span-address-street">&nbsp;</span>
+
+                <label style="display: block"><strong>Complemento</strong></label>
+                <span id="span-address-complement">&nbsp;</span>
+
+                <div class="row space">
+                    <div class="column column-8">
+                        <label><strong>Bairro</strong></label>
+                        <span id="span-address-district">&nbsp;</span>
+                    </div>
+                    <div class="column column-4">
+                        <label><strong>CEP</strong></label>
+                        <span id="span-address-zipcode">&nbsp;</span>
+                    </div>
+                </div>
+
+                <div class="row space">
+                    <div class="column column-6">
+                        <label><strong>Cidade/Município</strong></label>
+                        <span id="span-address-city">&nbsp;</span>
+                    </div>
+
+                    <div class="column column-6">
+                        <label><strong>Estado</strong></label>
+                        <span id="span-address-state">&nbsp;</span>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="column column-6">
+
+                <h4>Pagamento</h4>
+
+                <label><strong>Nome impresso no cartão</strong></label>
+                <span id="span-user-credit-card-name" type="text">&nbsp;</span>
+
+                <label><strong>Número do cartão</strong></label>
+                <span id="span-user-credit-card-number" type="text">&nbsp;</span>
+
+
+                <br>
+                <br>
+
+                <div class="message success">
+                    <div class="header">
+                        <strong>Status do Pedido</strong>
+                    </div>
+                    <div class="content">
+                        <div class="text-center">
+                            <img src="/assets/img/order-success.svg" style="margin:auto;width: 40px">
+                        </div>
+                        <p class="big text-center">
+                            Seu pedido de número <strong class="span-order-number">4065c930441</strong> foi realizado com sucesso
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
 
     </div>
   </div>

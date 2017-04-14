@@ -5,16 +5,16 @@
     function events() {
 
         // verificando se temos usuario logado
-        c37.library.database.operation.list('profile', function (error, data) {
+        c37.library.database.operation.list('user', function (error, user) {
 
-            if (data && Array.isArray(data) && data.length > 0) {
+            if (user && Array.isArray(user) && user.length > 0) {
 
                 document.querySelectorAll('.button-signin').forEach(function (button) {
                     button.classList.add('hide');
                 });
 
                 document.querySelectorAll('.button-account').forEach(function (button) {
-                    button.querySelector('a>span').textContent = `${data[0]["first-name"]} ${data[0]["last-name"]}`;
+                    button.querySelector('a>span').textContent = `${user[0].profile["first-name"]} ${user[0].profile["last-name"]}`;
                     button.classList.remove('hide');
                 });
 
@@ -113,10 +113,10 @@
                     if (data.code === 200) {
 
                         // console.log(JSON.parse(data.message))
-                        var data = JSON.parse(data.message);
+                        var user = JSON.parse(data.message);
 
                         var session = {
-                            uuid: data.uuid,
+                            uuid: user.uuid,
                             email: signin.email,
                             "signed-in": signin.session["signed-in"]
                         };
@@ -124,14 +124,7 @@
                         c37.library.database.operation.add('session', session.email, session, function (error) {
                             if (!error) {
 
-                                var profile = {
-                                    uuid: data.uuid,
-                                    email: signin.email,
-                                    "first-name": data["first-name"],
-                                    "last-name": data["last-name"]
-                                };
-
-                                c37.library.database.operation.add('profile', profile.email, profile, function (error) {
+                                c37.library.database.operation.add('user', user.uuid, user, function (error) {
                                     if (!error) {
 
                                         document.querySelectorAll('.button-signin').forEach(function (button) {
@@ -139,7 +132,7 @@
                                         });
 
                                         document.querySelectorAll('.button-account').forEach(function (button) {
-                                            button.querySelector('a').textContent = `${data["first-name"]} ${data["last-name"]}`;
+                                            button.querySelector('a>span').textContent = `${user.profile["first-name"]} ${user.profile["last-name"]}`;
                                             button.classList.remove('hide');
                                         });
 

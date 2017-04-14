@@ -132,6 +132,31 @@ title: Finalizar sua Compra
             margin-right: 32px !important;
         }
     }
+
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 6px solid #3498db;
+      width: 30px;
+      margin: auto;
+      height: 30px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+
+
+
 </style>
 
 <div class="grid fixed">
@@ -625,8 +650,18 @@ title: Finalizar sua Compra
                                 exceder o limite de seu cartão. Esta é a regra de aprovação adotada pelas administradoras
                                 de cartão de crédito. Para sua segurança, as informações de crédito poderão passar por uma
                                 análise interna sujeita à confirmação via contato telefônico ou e-mail.
+                            </p>
+
+                            <p>
+
+                                <div id="div-checkout-verify" class="text-center hide" style="margin-top: 15px;">
+                                    <div class="loader" style="margin-bottom: 10px"></div>
+                                    <h4 style="margin-top:15px">Validando seu Pedido</h4>
+                                </div>
 
                             </p>
+
+
                         </div>
 
                     </div>
