@@ -57,6 +57,10 @@
         };
     }
 
+    function release(name) {
+        indexedDB.deleteDatabase(name);
+    }
+
     function add(store, key, doc, callback) {
 
         var transaction = db.transaction([store, store.concat('-index')], 'readwrite'),
@@ -266,7 +270,8 @@
 
     window.c37.library.database = {
         manager: {
-            initialize: initialize
+            initialize: initialize,
+            release: release
         },
         operation: {
             add: add,

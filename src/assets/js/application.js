@@ -37,7 +37,7 @@
         },
         database: {
             name: 'C37-WEBSITE',
-            debug: true,
+            debug: false,
             version: 1,
             stores: {
                 settings: {

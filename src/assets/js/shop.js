@@ -1,13 +1,20 @@
 (function (window) {
     'use strict';
 
-    var _validationAddressSend = false;
+    var _validationAddressSend = false,
+        _config = null;
 
 
     function events() {
 
+        // para a manutencao do banco de dados
+        if (document.URL.indexOf('release') > 0) {
+            c37.library.database.manager.release(_config.database.name);
+        }
+        // para a manutencao do banco de dados
+
         // para o botao de assinatura de cad
-        if (document.URL.indexOf('shop') === -1  && document.URL.indexOf('cad') > 0) {
+        if (document.URL.indexOf('shop') === -1 && document.URL.indexOf('cad') > 0) {
             document.getElementById('button-cad-subscribe').onclick = function () {
 
                 var product = {
@@ -337,6 +344,7 @@
                                     // monto o pedido
 
                                     document.getElementById('div-checkout-verify').classList.remove('hide');
+                                    document.getElementById('div-checkout-failure').classList.add('hide');
                                     document.getElementById('button-checkout-payment').classList.add('disabled');
 
                                     c37.library.utility.net.request({
@@ -346,7 +354,7 @@
                                     }).then(data => {
 
                                         // https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie ???
-                                        if (data.code === 201) {
+                                        if (data.code === 200) {
 
                                             // limpamos a sacola
                                             shop.bag.clear();
@@ -356,6 +364,32 @@
                                             c37.library.database.operation.add('order', order.uuid, order, function (error) {
                                                 window.location.href = "/shop/order.html#" + order.uuid;
                                             });
+
+                                        }
+
+                                        // nao autorizado - verificar mensagem
+                                        if (data.code === 401) {
+
+                                            var integrationMessage = JSON.parse(data.message);
+
+                                            console.log(integrationMessage);
+
+
+
+
+                                            document.getElementById('div-checkout-verify').classList.add('hide');
+                                            document.getElementById('div-checkout-failure').classList.remove('hide');
+                                            document.getElementById('button-checkout-payment').classList.remove('disabled');
+
+
+
+
+                                        }
+
+                                        // erro no servidor
+                                        if (data.code === 500) {
+
+                                            console.log(JSON.parse(data.message));
 
                                         }
 
@@ -470,7 +504,7 @@
                         console.log(order);
 
                         // preenchendo o numero do pedido
-                        document.querySelectorAll('.span-order-number').forEach(function(element) {
+                        document.querySelectorAll('.span-order-number').forEach(function (element) {
                             element.textContent = order.uuid;
                         }, this);;
 
@@ -600,6 +634,8 @@
 
     var shop = {
         initialize: function (config) {
+
+            _config = config;
 
             events();
 
