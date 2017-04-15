@@ -371,18 +371,17 @@
                                         if (data.code === 401) {
 
                                             var integrationMessage = JSON.parse(data.message);
+                                            // console.log(integrationMessage);
 
-                                            console.log(integrationMessage);
-
-
-
+                                            if (integrationMessage.status.code === 5) {
+                                                document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, tente outro cartão de crédito.';
+                                            } else {
+                                                document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, verifique com a administradora de seu cartão de crédito.';
+                                            }
 
                                             document.getElementById('div-checkout-verify').classList.add('hide');
                                             document.getElementById('div-checkout-failure').classList.remove('hide');
                                             document.getElementById('button-checkout-payment').classList.remove('disabled');
-
-
-
 
                                         }
 
