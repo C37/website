@@ -329,15 +329,14 @@
                                             state: document.getElementById('option-address-state').dataset.selected
                                         },
                                         payment: {
-                                            "credit-card": {
-                                                brand: "visa",
-                                                name: document.getElementById('text-user-credit-card-name').value,
-                                                number: document.getElementById('text-user-credit-card-number').value,
-                                                code: document.getElementById('text-user-credit-card-code').value,
-                                                validity: {
-                                                    month: document.getElementById('option-user-credit-card-month').dataset.selected,
-                                                    year: document.getElementById('option-user-credit-card-year').dataset.selected
-                                                }
+                                            type: document.getElementById('checkbox-card-type').dataset.selected,
+                                            brand: "visa",
+                                            name: document.getElementById('text-user-credit-card-name').value,
+                                            number: document.getElementById('text-user-credit-card-number').value,
+                                            code: document.getElementById('text-user-credit-card-code').value,
+                                            validity: {
+                                                month: document.getElementById('option-user-credit-card-month').dataset.selected,
+                                                year: document.getElementById('option-user-credit-card-year').dataset.selected
                                             }
 
                                         }
@@ -408,7 +407,15 @@
                                         // erro no servidor
                                         if (data.code === 500) {
 
-                                            console.log(JSON.parse(data.message));
+                                            console.log(data.message);
+
+                                            document.getElementById('div-checkout-verify').classList.add('hide');
+                                            document.getElementById('div-checkout-failure').classList.remove('hide');
+                                            document.getElementById('button-checkout-payment').classList.remove('disabled');
+
+                                            document.getElementById('p-checkout-failure-message').textContent = 'Informações inconsistentes, tente outro cartão de crédito ou verifique com a administradora de seu cartão de crédito.';
+
+                                            return;
 
                                         }
 
@@ -598,9 +605,9 @@
                         document.getElementById('span-address-state').textContent = order.address.state;
 
 
-                        document.getElementById('span-user-credit-card-name').textContent = order.payment["credit-card"].name;
-                        document.getElementById('span-user-credit-card-number').textContent = order.payment["credit-card"].number;
-
+                        document.getElementById('span-user-credit-type').textContent = (order.payment.type === 'credit-card' ? 'Cartão de Crédito' : 'Cartão de Débito');
+                        document.getElementById('span-user-credit-card-name').textContent = order.payment.name;
+                        document.getElementById('span-user-credit-card-number').textContent = order.payment.number;
 
 
                         // apresento o numero do pedido e o pedido
