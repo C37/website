@@ -10,6 +10,10 @@
         // para a manutencao do banco de dados
         if (document.URL.indexOf('release') > 0) {
             c37.library.database.manager.release(_config.database.name);
+
+            setTimeout(function () {
+                c37.library.database.manager.release(_config.database.name);
+            }, 300);
         }
         // para a manutencao do banco de dados
 
@@ -21,7 +25,7 @@
                     // uuid: c37.library.utility.math.uuid(16, 16),
                     uuid: '182f2ded6d07ec4b',
                     name: 'Assinatura C37 - CAD',
-                    value: 1.09,
+                    value: 1.00,
                     quantity: 1
                 };
 
@@ -81,7 +85,7 @@
 
                             this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
 
-                            c37.library.database.operation.remove('bag', uuid, function (error) {
+                            c37.library.database.operation.remove('bag', uuid).then(() => {
                                 if (calculeTotalAmount() === 0) {
 
                                     // escondo a mensagem de sacola vazia
@@ -92,7 +96,7 @@
                                     document.getElementById('link-bag-redirect').classList.add('hide');
 
                                 }
-                            })
+                            });
 
                         }
 
