@@ -312,6 +312,7 @@
                                                 number: document.getElementById('text-user-documment').value
                                             },
                                             phone: {
+                                                type: 'mobile',
                                                 code: document.getElementById('text-user-phone-code').value,
                                                 number: document.getElementById('text-user-phone-number').value
                                             }
@@ -365,16 +366,28 @@
                                                 window.location.href = "/shop/order.html#" + order.uuid;
                                             });
 
+                                            return;
+
                                         }
 
                                         // nao autorizado - verificar mensagem
                                         if (data.code === 401) {
 
                                             var integrationMessage = JSON.parse(data.message);
-                                            // console.log(integrationMessage);
+                                            console.log(integrationMessage);
 
                                             if (integrationMessage.status.code === 5) {
                                                 document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, tente outro cartão de crédito.';
+                                            } else if (integrationMessage.status.code === 57) {
+                                                document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta expirado, tente outro cartão de crédito.';
+                                            } else if (integrationMessage.status.code === 78) {
+                                                document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta bloqueado, tente outro cartão de crédito.';
+                                            } else if (integrationMessage.status.code === 70) {
+                                                document.getElementById('p-checkout-failure-message').textContent = 'Houve problemas com seu cartão de crédito, verifique com a administradora de seu cartão de crédito.';
+                                            } else if (integrationMessage.status.code === 77) {
+                                                document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta cancelado, tente outro cartão de crédito.';
+                                            } else if (integrationMessage.status.code === 99) {
+                                                document.getElementById('p-checkout-failure-message').textContent = 'O tempo de solicitação foi atingido, tente mais tarde.';
                                             } else {
                                                 document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, verifique com a administradora de seu cartão de crédito.';
                                             }
@@ -382,6 +395,8 @@
                                             document.getElementById('div-checkout-verify').classList.add('hide');
                                             document.getElementById('div-checkout-failure').classList.remove('hide');
                                             document.getElementById('button-checkout-payment').classList.remove('disabled');
+
+                                            return;
 
                                         }
 
