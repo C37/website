@@ -109,70 +109,84 @@
         };
     }
 
-    function remove(store, key, callback) {
+    function remove(store, key) {
 
-        var stringRange = keyRange.bound([key, ''], successor([key, ''])),
-            transaction = db.transaction([store, store.concat('-index')], 'readwrite'),
-            storeData = transaction.objectStore(store),
-            storeIndex = transaction.objectStore(store.concat('-index'));
+        return new Promise(function (resolve, reject) {
 
-        storeIndex.openCursor(stringRange).onsuccess = function (event) {
-            var result = event.target.result,
-                request = null;
+            var stringRange = keyRange.bound([key, ''], successor([key, ''])),
+                transaction = db.transaction([store, store.concat('-index')], 'readwrite'),
+                storeData = transaction.objectStore(store),
+                storeIndex = transaction.objectStore(store.concat('-index'));
 
-            if (result) { // eliminando os dados do index
-                request = storeIndex.delete(result.primaryKey);
+            storeIndex.openCursor(stringRange).onsuccess = function (event) {
+                var result = event.target.result,
+                    request = null;
 
-                request.onerror = function () {
-                    return console.log(request.error);
-                };
-                request.onsuccess = function (event) {
-                    return true;
-                };
+                if (result) { // eliminando os dados do index
+                    request = storeIndex.delete(result.primaryKey);
 
-                result.continue();
-            } else { // por ultimo, o documento
-                request = storeData.delete(key);
+                    request.onerror = function () {
+                        return console.log(request.error);
+                    };
+                    request.onsuccess = function (event) {
+                        return true;
+                    };
 
-                request.onerror = function () {
-                    return console.log(request.error);
-                };
-                request.onsuccess = function () {
-                    return true;
-                };
+                    result.continue();
+                } else { // por ultimo, o documento
+                    request = storeData.delete(key);
+
+                    request.onerror = function () {
+                        return console.log(request.error);
+                    };
+                    request.onsuccess = function () {
+                        return true;
+                    };
+                }
+            };
+
+            transaction.onerror = function () {
+                return reject(transaction.error);
             }
-        };
+            transaction.oncomplete = function () {
+                return resolve(true);
+            }
 
-        transaction.onerror = function () {
-            return callback ? callback(transaction.error) : null;
-        }
-        transaction.oncomplete = function () {
-            return callback ? callback(null, true) : null;
-        }
+        });
+
     }
 
     function list(store, callback) {
 
-        var transaction = db.transaction([store], 'readonly'),
-            storeData = transaction.objectStore(store),
-            docs = [];
+        return new Promise(function (resolve, reject) {
 
-        storeData.openCursor().onsuccess = function (event) {
-            var result = event.target.result;
-            if (result) {
 
-                docs.push(result.value);
+            var transaction = db.transaction([store], 'readonly'),
+                storeData = transaction.objectStore(store),
+                docs = [];
 
-                result.continue();
-            }
-        };
+            storeData.openCursor().onsuccess = function (event) {
+                var result = event.target.result;
+                if (result) {
 
-        transaction.onerror = function () {
-            return callback(transaction.error);
-        };
-        transaction.oncomplete = function () {
-            return callback(null, docs);
-        };
+                    docs.push(result.value);
+
+                    result.continue();
+                }
+            };
+
+            transaction.onerror = function () {
+                reject(transaction.error);
+                return callback ? callback(transaction.error) : null;
+            };
+            transaction.oncomplete = function () {
+                resolve(docs);
+                return callback ? callback(null, docs) : null;
+            };
+
+
+        });
+
 
     }
 

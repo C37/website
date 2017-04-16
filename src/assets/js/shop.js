@@ -299,6 +299,13 @@
                             // a validacao para o usuario autenticado
                             if (!error && users && Array.isArray(users) && users.length > 0) {
 
+                                // https://github.com/ContaAzul/creditcard.js
+                                var creditCard = new CreditCard();
+                                var creditCardBrand = creditCard.getCreditCardNameByNumber(document.getElementById('text-user-credit-card-number').value);
+
+                                creditCardBrand = creditCardBrand.indexOf('invalid') > -1 ? "Visa" : creditCardBrand;
+
+
                                 // vou buscar a lista de produtos
                                 c37.library.database.operation.list('bag', function (error, products) {
 
@@ -330,7 +337,7 @@
                                         },
                                         payment: {
                                             type: document.getElementById('checkbox-card-type').dataset.selected,
-                                            brand: "visa",
+                                            brand: creditCardBrand,
                                             name: document.getElementById('text-user-credit-card-name').value,
                                             number: document.getElementById('text-user-credit-card-number').value,
                                             code: document.getElementById('text-user-credit-card-code').value,
@@ -357,20 +364,17 @@
                                         if (data.code === 200) {
 
                                             // limpamos a sacola
-                                            shop.bag.clear();
+                                            shop.bag.clear().then(function () {
 
-                                            // ela esta realmente limpa
-                                            setTimeout(function () {
-                                                shop.bag.clear();
-                                            }, 300);
+                                                var order = JSON.parse(data.message);
 
-                                            var order = JSON.parse(data.message);
+                                                c37.library.database.operation.add('order', order.uuid, order, function (error) {
+                                                    window.location.href = "/shop/order.html#" + order.uuid;
+                                                });
 
-                                            c37.library.database.operation.add('order', order.uuid, order, function (error) {
-                                                window.location.href = "/shop/order.html#" + order.uuid;
+                                                return;
+
                                             });
-
-                                            return;
 
                                         }
 
@@ -701,12 +705,20 @@
             },
             clear: function () {
 
-                c37.library.database.operation.list('bag', function (error, products) {
-                    if (!error && Array.isArray(products) && products.length > 0) {
+                return new Promise(function (resolve, reject) {
+
+                    c37.library.database.operation.list('bag').then((products) => {
+
+                        var promises = [];
+
                         products.forEach(function (product) {
-                            c37.library.database.operation.remove('bag', product.uuid);
+                            promises.push(c37.library.database.operation.remove('bag', product.uuid));
                         });
-                    }
+
+                        resolve(Promise.all(promises));
+
+                    });
+
                 });
 
             },
