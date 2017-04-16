@@ -360,6 +360,11 @@
                                             // limpamos a sacola
                                             shop.bag.clear();
 
+                                            // ela esta realmente limpa
+                                            setTimeout(function () {
+                                                shop.bag.clear();
+                                            }, 300);
+
                                             var order = JSON.parse(data.message);
 
                                             c37.library.database.operation.add('order', order.uuid, order, function (error) {
