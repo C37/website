@@ -81,7 +81,7 @@
 
                         imgRemove.onclick = function () {
 
-                            var uuid = this.dataset.uuid;
+                            var uuid = this.dataset.uuid; 
 
                             this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
 
