@@ -332,7 +332,7 @@
                                         user: {
                                             uuid: users[0].uuid,
                                             document: {
-                                                type: 'CPF',
+                                                type: 'cpf',
                                                 number: document.getElementById('text-user-documment').value
                                             },
                                             phone: {
