@@ -81,7 +81,7 @@
 
                         imgRemove.onclick = function () {
 
-                            var uuid = this.dataset.uuid; 
+                            var uuid = this.dataset.uuid;
 
                             this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
 
@@ -181,6 +181,15 @@
 
         // para o carregar da pagina de checkout
         if (document.URL.indexOf('shop') > 0 && document.URL.indexOf('checkout') > 0) {
+
+            // para o campo de cartao de credito
+            VMasker(document.getElementById('text-user-credit-card-number')).maskPattern('9999999999999999999');
+            // para o campo de cartao de credito
+
+            // para o campo de codigo de seguranca
+            VMasker(document.getElementById('text-user-credit-card-code')).maskPattern('9999');
+            // para o campo de codigo de seguranca
+
 
             // para o botao de continue em checkout - products
             document.getElementById('button-checkout-products').onclick = function () {
@@ -309,6 +318,7 @@
 
                                 creditCardBrand = creditCardBrand.indexOf('invalid') > -1 ? "Visa" : creditCardBrand;
 
+                                debugger
 
                                 // vou buscar a lista de produtos
                                 c37.library.database.operation.list('bag', function (error, products) {
@@ -381,6 +391,13 @@
                                             });
 
                                         }
+
+
+                                        // limpando os campos do cartao de credito
+                                        document.getElementById('text-user-credit-card-number').value = '';
+                                        // limpando os campos do codigo de ceguranca
+                                        document.getElementById('text-user-credit-card-code').value = '';
+
 
                                         // nao autorizado - verificar mensagem
                                         if (data.code === 401) {
