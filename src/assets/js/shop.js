@@ -30,7 +30,10 @@
                 };
 
                 shop.bag.add(product, function () {
-                    window.location.href = "/shop/bag.html";
+                    setTimeout(function () {
+                        window.location.href = "/shop/bag.html";
+                    }, 400);
+
                 });
 
             };
@@ -390,57 +393,60 @@
 
                                             });
 
-                                        }
+                                        } else {
 
 
-                                        // limpando os campos do cartao de credito
-                                        document.getElementById('text-user-credit-card-number').value = '';
-                                        // limpando os campos do codigo de ceguranca
-                                        document.getElementById('text-user-credit-card-code').value = '';
+                                            // limpando os campos do cartao de credito
+                                            document.getElementById('text-user-credit-card-number').value = '';
+                                            // limpando os campos do codigo de ceguranca
+                                            document.getElementById('text-user-credit-card-code').value = '';
 
 
-                                        // nao autorizado - verificar mensagem
-                                        if (data.code === 401) {
+                                            // nao autorizado - verificar mensagem
+                                            if (data.code === 401) {
 
-                                            var integrationMessage = JSON.parse(data.message);
-                                            console.log(integrationMessage);
+                                                var integrationMessage = JSON.parse(data.message);
+                                                console.log(integrationMessage);
 
-                                            if (integrationMessage.status.code === 5) {
-                                                document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, tente outro cartão de crédito.';
-                                            } else if (integrationMessage.status.code === 57) {
-                                                document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta expirado, tente outro cartão de crédito.';
-                                            } else if (integrationMessage.status.code === 78) {
-                                                document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta bloqueado, tente outro cartão de crédito.';
-                                            } else if (integrationMessage.status.code === 70) {
-                                                document.getElementById('p-checkout-failure-message').textContent = 'Houve problemas com seu cartão de crédito, verifique com a administradora de seu cartão de crédito.';
-                                            } else if (integrationMessage.status.code === 77) {
-                                                document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta cancelado, tente outro cartão de crédito.';
-                                            } else if (integrationMessage.status.code === 99) {
-                                                document.getElementById('p-checkout-failure-message').textContent = 'O tempo de solicitação foi atingido, tente mais tarde.';
-                                            } else {
-                                                document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, verifique com a administradora de seu cartão de crédito.';
+                                                if (integrationMessage.status.code === 5) {
+                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, tente outro cartão de crédito.';
+                                                } else if (integrationMessage.status.code === 57) {
+                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta expirado, tente outro cartão de crédito.';
+                                                } else if (integrationMessage.status.code === 78) {
+                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta bloqueado, tente outro cartão de crédito.';
+                                                } else if (integrationMessage.status.code === 70) {
+                                                    document.getElementById('p-checkout-failure-message').textContent = 'Houve problemas com seu cartão de crédito, verifique com a administradora de seu cartão de crédito.';
+                                                } else if (integrationMessage.status.code === 77) {
+                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta cancelado, tente outro cartão de crédito.';
+                                                } else if (integrationMessage.status.code === 99) {
+                                                    document.getElementById('p-checkout-failure-message').textContent = 'O tempo de solicitação foi atingido, tente mais tarde.';
+                                                } else {
+                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, verifique com a administradora de seu cartão de crédito.';
+                                                }
+
+                                                document.getElementById('div-checkout-verify').classList.add('hide');
+                                                document.getElementById('div-checkout-failure').classList.remove('hide');
+                                                document.getElementById('button-checkout-payment').classList.remove('disabled');
+
+                                                return;
+
                                             }
 
-                                            document.getElementById('div-checkout-verify').classList.add('hide');
-                                            document.getElementById('div-checkout-failure').classList.remove('hide');
-                                            document.getElementById('button-checkout-payment').classList.remove('disabled');
+                                            // erro no servidor
+                                            if (data.code === 500) {
 
-                                            return;
+                                                console.log(data.message);
 
-                                        }
+                                                document.getElementById('div-checkout-verify').classList.add('hide');
+                                                document.getElementById('div-checkout-failure').classList.remove('hide');
+                                                document.getElementById('button-checkout-payment').classList.remove('disabled');
 
-                                        // erro no servidor
-                                        if (data.code === 500) {
+                                                document.getElementById('p-checkout-failure-message').textContent = 'Informações inconsistentes, tente outro cartão de crédito ou verifique com a administradora de seu cartão de crédito.';
 
-                                            console.log(data.message);
+                                                return;
 
-                                            document.getElementById('div-checkout-verify').classList.add('hide');
-                                            document.getElementById('div-checkout-failure').classList.remove('hide');
-                                            document.getElementById('button-checkout-payment').classList.remove('disabled');
+                                            }
 
-                                            document.getElementById('p-checkout-failure-message').textContent = 'Informações inconsistentes, tente outro cartão de crédito ou verifique com a administradora de seu cartão de crédito.';
-
-                                            return;
 
                                         }
 
