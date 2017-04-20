@@ -321,7 +321,7 @@
 
                                 creditCardBrand = creditCardBrand.indexOf('invalid') > -1 ? "Visa" : creditCardBrand;
 
-                                debugger
+                                // debugger
 
                                 // vou buscar a lista de produtos
                                 c37.library.database.operation.list('bag', function (error, products) {
@@ -420,6 +420,8 @@
                                                     document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta cancelado, tente outro cartão de crédito.';
                                                 } else if (integrationMessage.status.code === 99) {
                                                     document.getElementById('p-checkout-failure-message').textContent = 'O tempo de solicitação foi atingido, tente mais tarde.';
+                                                } else if (integrationMessage.status.code === 51) {
+                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, tente outro cartão de crédito.';
                                                 } else {
                                                     document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, verifique com a administradora de seu cartão de crédito.';
                                                 }
