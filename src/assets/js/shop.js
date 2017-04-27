@@ -408,23 +408,25 @@
                                                 var integrationMessage = JSON.parse(data.message);
                                                 console.log(integrationMessage);
 
-                                                if (integrationMessage.status.code === 5) {
-                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, tente outro cartão de crédito.';
-                                                } else if (integrationMessage.status.code === 57) {
-                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta expirado, tente outro cartão de crédito.';
-                                                } else if (integrationMessage.status.code === 78) {
-                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta bloqueado, tente outro cartão de crédito.';
-                                                } else if (integrationMessage.status.code === 70) {
-                                                    document.getElementById('p-checkout-failure-message').textContent = 'Houve problemas com seu cartão de crédito, verifique com a administradora de seu cartão de crédito.';
-                                                } else if (integrationMessage.status.code === 77) {
-                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta cancelado, tente outro cartão de crédito.';
-                                                } else if (integrationMessage.status.code === 99) {
-                                                    document.getElementById('p-checkout-failure-message').textContent = 'O tempo de solicitação foi atingido, tente mais tarde.';
-                                                } else if (integrationMessage.status.code === 51) {
-                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, tente outro cartão de crédito.';
-                                                } else {
-                                                    document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, verifique com a administradora de seu cartão de crédito.';
-                                                }
+                                                if (integrationMessage.status.code === 0) {
+                                                    document.getElementById('p-checkout-failure-message').innerHTML =  'Seu pagamento não foi autorizado, tente outro cartão ou verifique com a administradora de seu cartão. <br> Código: ' + integrationMessage.status.message;
+                                                } else if (integrationMessage.status.code === 3) {
+                                                    document.getElementById('p-checkout-failure-message').innerHTML =   'Seu pagamento não foi autorizado, tente outro cartão de crédito. <br> Código: ' + integrationMessage.status.message;
+                                                } else if (integrationMessage.status.code === 13) {
+                                                    document.getElementById('p-checkout-failure-message').textContent = 'Falha no processamento do pagamento. Tente mais tarde ou entre em contato com um de nossos canais de atendimento';
+                                                } 
+                                                
+                                                // else if (integrationMessage.status.code === 70) {
+                                                //     document.getElementById('p-checkout-failure-message').textContent = 'Houve problemas com seu cartão de crédito, verifique com a administradora de seu cartão de crédito.';
+                                                // } else if (integrationMessage.status.code === 77) {
+                                                //     document.getElementById('p-checkout-failure-message').textContent = 'Seu cartão esta cancelado, tente outro cartão de crédito.';
+                                                // } else if (integrationMessage.status.code === 99) {
+                                                //     document.getElementById('p-checkout-failure-message').textContent = 'O tempo de solicitação foi atingido, tente mais tarde.';
+                                                // } else if (integrationMessage.status.code === 51) {
+                                                //     document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, tente outro cartão de crédito.';
+                                                // } else {
+                                                //     document.getElementById('p-checkout-failure-message').textContent = 'Seu pedido nao foi autorizado, verifique com a administradora de seu cartão de crédito.';
+                                                // }
 
                                                 document.getElementById('div-checkout-verify').classList.add('hide');
                                                 document.getElementById('div-checkout-failure').classList.remove('hide');
@@ -443,7 +445,7 @@
                                                 document.getElementById('div-checkout-failure').classList.remove('hide');
                                                 document.getElementById('button-checkout-payment').classList.remove('disabled');
 
-                                                document.getElementById('p-checkout-failure-message').textContent = 'Informações inconsistentes, tente outro cartão de crédito ou verifique com a administradora de seu cartão de crédito.';
+                                                document.getElementById('p-checkout-failure-message').textContent = 'Informações inconsistentes, tente outro cartão ou verifique com a administradora.';
 
                                                 return;
 
