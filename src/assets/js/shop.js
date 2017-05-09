@@ -406,7 +406,7 @@
                                             if (data.code === 401) {
 
                                                 var integrationMessage = JSON.parse(data.message);
-                                                console.log(integrationMessage);
+                                                // console.log(integrationMessage);
 
                                                 if (integrationMessage.status.code === 0) {
                                                     document.getElementById('p-checkout-failure-message').innerHTML =  'Seu pagamento não foi autorizado, tente outro cartão ou verifique com a administradora de seu cartão. <br> Código: ' + integrationMessage.status.message;
@@ -439,7 +439,7 @@
                                             // erro no servidor
                                             if (data.code === 500) {
 
-                                                console.log(data.message);
+                                                // console.log(data.message);
 
                                                 document.getElementById('div-checkout-verify').classList.add('hide');
                                                 document.getElementById('div-checkout-failure').classList.remove('hide');
@@ -562,7 +562,7 @@
                 c37.library.database.operation.get('order', orderUuid, function (error, order) {
                     if (!error && order) {
 
-                        console.log(order);
+                        // console.log(order);
 
                         // preenchendo o numero do pedido
                         document.querySelectorAll('.span-order-number').forEach(function (element) {
