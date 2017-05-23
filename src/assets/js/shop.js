@@ -40,6 +40,29 @@
         }
         // para o botao de assinatura de cad
 
+        // para o botao de compra de C37 - Router CNC
+        if (document.URL.indexOf('shop') === -1 && document.URL.indexOf('equipment') > 0 && document.URL.indexOf('75') > 0) {
+            document.getElementById('button-router-cnc-buy').onclick = function () {
+
+                var product = {
+                    // uuid: c37.library.utility.math.uuid(16, 16),
+                    uuid: 'fc3db275ccc3ec0c',
+                    name: 'C37 - Router CNC - 75',
+                    value: 4061.00,
+                    quantity: 1
+                };
+
+                shop.bag.add(product, function () {
+                    setTimeout(function () {
+                        window.location.href = "/shop/bag.html";
+                    }, 400);
+
+                });
+
+            };
+        }
+        // para o botao de compra de C37 - Router CNC
+
 
 
         // para o carregar da pagina de bag
@@ -192,6 +215,8 @@
             // para o campo de codigo de seguranca
             VMasker(document.getElementById('text-user-credit-card-code')).maskPattern('9999');
             // para o campo de codigo de seguranca
+
+
 
 
             // para o botao de continue em checkout - products
@@ -361,7 +386,8 @@
                                             validity: {
                                                 month: document.getElementById('option-user-credit-card-month').dataset.selected,
                                                 year: document.getElementById('option-user-credit-card-year').dataset.selected
-                                            }
+                                            },
+                                            installment: document.getElementById('option-buy-installment').dataset.selected
 
                                         }
                                     };
@@ -409,13 +435,13 @@
                                                 // console.log(integrationMessage);
 
                                                 if (integrationMessage.status.code === 0) {
-                                                    document.getElementById('p-checkout-failure-message').innerHTML =  'Seu pagamento não foi autorizado, tente outro cartão ou verifique com a administradora de seu cartão. <br> Código: ' + integrationMessage.status.message;
+                                                    document.getElementById('p-checkout-failure-message').innerHTML = 'Seu pagamento não foi autorizado, tente outro cartão ou verifique com a administradora de seu cartão. <br> Código: ' + integrationMessage.status.message;
                                                 } else if (integrationMessage.status.code === 3) {
-                                                    document.getElementById('p-checkout-failure-message').innerHTML =   'Seu pagamento não foi autorizado, tente outro cartão de crédito. <br> Código: ' + integrationMessage.status.message;
+                                                    document.getElementById('p-checkout-failure-message').innerHTML = 'Seu pagamento não foi autorizado, tente outro cartão de crédito. <br> Código: ' + integrationMessage.status.message;
                                                 } else if (integrationMessage.status.code === 13) {
                                                     document.getElementById('p-checkout-failure-message').textContent = 'Falha no processamento do pagamento. Tente mais tarde ou entre em contato com um de nossos canais de atendimento';
-                                                } 
-                                                
+                                                }
+
                                                 // else if (integrationMessage.status.code === 70) {
                                                 //     document.getElementById('p-checkout-failure-message').textContent = 'Houve problemas com seu cartão de crédito, verifique com a administradora de seu cartão de crédito.';
                                                 // } else if (integrationMessage.status.code === 77) {
@@ -539,6 +565,35 @@
 
                     calculeTotalAmount();
 
+                    // verificando se vamos habilitar o parcelamento
+                    var totalAmount = document.getElementById('strong-total-amount').textContent.replace(/[^\d\.]/g, '');
+                    totalAmount = parseFloat(totalAmount);
+                    console.log(totalAmount)
+
+                    if (totalAmount > 3000){
+
+                        // vamos preencher os valores do parcelamento
+                        for (var i = 1; i <= 12; i++) {
+                          
+                            var element = document.getElementById('span-buy-installment-'+ i);
+
+                            if (element) {
+                                if (i === 1) {
+                                    element.textContent +=  ' ' + document.getElementById('strong-total-amount').textContent;
+                                    document.getElementById('strong-buy-installment').textContent +=  ' ' + document.getElementById('strong-total-amount').textContent;
+                                }  else {
+                                    element.textContent +=  ' R$' + c37.library.utility.math.parseNumber((totalAmount / i), 2) + ' sem juros';
+                                }
+                            }
+                            
+                        }
+
+                        // vamos preencher os valores do parcelamento
+
+                        document.getElementById('div-buy-installment').classList.remove('hide');
+                    }
+                    // verificando se vamos habilitar o parcelamento
+
 
                     document.getElementById('collapse-checkout').classList.remove('hide');
 
@@ -649,7 +704,6 @@
                         document.getElementById('div-order-number').classList.remove('hide');
                         document.getElementById('div-order').classList.remove('hide');
                         // apresento o numero do pedido e o pedido
-
 
                     } else {
                         window.location.href = "/shop/bag.html";
@@ -769,4 +823,4 @@
     window.c37.library.utility.object.namespace(window, 'c37.application.website.shop', shop);
 
 
-})(window);
+    })(window);
