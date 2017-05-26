@@ -48,7 +48,7 @@
                     // uuid: c37.library.utility.math.uuid(16, 16),
                     uuid: 'fc3db275ccc3ec0c',
                     name: 'C37 - Router CNC - 75',
-                    value: 4061.00,
+                    value: 3930.00,
                     quantity: 1
                 };
 
